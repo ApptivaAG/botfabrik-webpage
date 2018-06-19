@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "globals": {
+    "graphql": true
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      { "components": ["Link"], "specialLink": ["to"] }
+    ]
+  }
+}
