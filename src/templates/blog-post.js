@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import Container from '../components/Container'
+import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 const HeadArea = styled.div``
@@ -94,15 +95,17 @@ export const BlogPostTemplate = ({
     font-weight: 400;
   `
   return (
-    <section>
-      <Container>
-        <Header title={title} image={image} />
-        <Description>{description}</Description>
-        {author && <Published author={author} date={date} />}
-        <PostContent content={content} />
-        <Navigation next={navigation.next} prev={navigation.prev} />
-      </Container>
-    </section>
+    <Layout>
+      <section>
+        <Container>
+          <Header title={title} image={image} />
+          <Description>{description}</Description>
+          {author && <Published author={author} date={date} />}
+          <PostContent content={content} />
+          <Navigation next={navigation.next} prev={navigation.prev} />
+        </Container>
+      </section>
+    </Layout>
   )
 }
 
@@ -136,9 +139,9 @@ export const pageQuery = graphql`
         path
         image {
           childImageSharp {
-            sqip(numberOfPrimitives: 16, blur: 6) {
-              dataURI
-            }
+            # sqip(numberOfPrimitives: 16, blur: 6) {
+            #   dataURI
+            # }
             sizes {
               ...GatsbyImageSharpSizes_withWebp_noBase64
             }
