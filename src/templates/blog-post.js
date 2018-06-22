@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
@@ -22,13 +22,7 @@ const HeaderTitle = styled.h1`
 const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle>{title}</HeaderTitle>
-    <Img
-      style={{ width: '100%' }}
-      sizes={{
-        ...image.childImageSharp.sizes,
-        base64: image.childImageSharp.sqip.dataURI,
-      }}
-    />
+    <Img style={{ width: '100%' }} sizes={image.childImageSharp.fluid} />
   </HeadArea>
 )
 
@@ -109,7 +103,7 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default ({ data, pathContext }) => {
+export default ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
@@ -119,7 +113,7 @@ export default ({ data, pathContext }) => {
       content={post.html}
       contentComponent={HTMLContent}
       metaData={post.frontmatter}
-      navigation={pathContext}
+      navigation={pageContext}
     />
   )
 }
@@ -142,8 +136,8 @@ export const pageQuery = graphql`
             # sqip(numberOfPrimitives: 16, blur: 6) {
             #   dataURI
             # }
-            sizes {
-              ...GatsbyImageSharpSizes_withWebp_noBase64
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
