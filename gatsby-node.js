@@ -29,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     const { edges } = result.data.allMarkdownRemark
 
-    edges.forEach(({ node }, index) => {
+    return edges.forEach(({ node }, index) => {
       const prev = index === 0 ? false : edges[index - 1].node
       const next = index === edges.length - 1 ? false : edges[index + 1].node
       const { id } = node

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
@@ -22,6 +22,7 @@ export default ({ children }) => (
         site {
           siteMetadata {
             title
+            url
           }
         }
       }
@@ -29,7 +30,9 @@ export default ({ children }) => (
     render={data => (
       <Fragment>
         <Helmet
-          titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+          titleTemplate={`%s | ${data.site.siteMetadata.title} | ${
+            data.site.siteMetadata.url
+          }`}
           defaultTitle={data.site.siteMetadata.title}
         />
         <Header siteTitle={data.site.siteMetadata.title} />

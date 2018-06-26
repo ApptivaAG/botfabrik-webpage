@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Botfabrik',
+    url: 'botfabrik.netlify.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

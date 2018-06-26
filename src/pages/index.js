@@ -1,10 +1,19 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+
 import Layout from '../components/Layout'
 import Container from '../components/Container'
+import Seo from '../components/Seo'
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <Helmet>
+      <title>Welcom</title>
+    </Helmet>
+
+    <Seo />
+
     <section>
       <Container>
         <h1>Hi people</h1>

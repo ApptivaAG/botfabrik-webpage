@@ -2,10 +2,12 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
 import Container from '../components/Container'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Seo from '../components/Seo'
 
 const HeadArea = styled.div``
 
@@ -90,6 +92,10 @@ export const BlogPostTemplate = ({
   `
   return (
     <Layout>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <Seo />
       <section>
         <Container>
           <Header title={title} image={image} />
