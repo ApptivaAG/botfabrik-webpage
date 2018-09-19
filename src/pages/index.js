@@ -1,29 +1,39 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
-import Container from '../components/Container'
+import ContainerDefault from '../components/Container'
 import Seo from '../components/Seo'
+import Chatbot from '../components/Chatbot'
+
+const Container = ContainerDefault.extend`
+  display: grid;
+  grid-template: 'Content Chatbot' auto / 1fr 300px;
+`
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Helmet>
-      <title>Welcom</title>
-    </Helmet>
-
     <Seo />
 
     <section>
       <Container>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
+        <Chatbot />
+        <div>
+          <h1>Individuelle Chatbots von A-Z</h1>
+          <ul>
+            <li>Konzept</li>
+            <li>Inhalt und Texte</li>
+            <li>Umsetzung</li>
+            <li>Integration</li>
+            <li>Training</li>
+          </ul>
 
-        {data.blogs.edges.map(({ node }) => (
-          <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
-        ))}
+          {data.blogs.edges.map(({ node }) => (
+            <Link key={node.frontmatter.path} to={node.frontmatter.path}>
+              {node.frontmatter.title}
+            </Link>
+          ))}
+        </div>
       </Container>
     </section>
   </Layout>
