@@ -5,6 +5,7 @@ import styled, { injectGlobal } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Header from './Header'
+import Footer from './Footer'
 import fontFace from './font-face'
 
 // eslint-disable-next-line no-unused-expressions
@@ -13,6 +14,9 @@ injectGlobal`
   ${fontFace}
 
   html, body, #___gatsby {
+    height: 100%;
+  }
+  #___gatsby > div {
     height: 100%;
   }
 
@@ -31,11 +35,10 @@ const Wrapper = styled.div`
     'Content' 1fr
     'Footer';
 
-  height: 100%;
+  min-height: 100%;
 `
 const Content = styled.div`
   grid-area: Content;
-  overflow: auto;
 `
 
 export default ({ children }) => (
@@ -60,6 +63,7 @@ export default ({ children }) => (
         />
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>{children}</Content>
+        <Footer />
       </Wrapper>
     )}
   />
