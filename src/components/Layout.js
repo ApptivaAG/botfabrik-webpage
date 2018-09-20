@@ -1,12 +1,17 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { injectGlobal } from 'styled-components'
+import styled, { injectGlobal, ThemeProvider } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Header from './Header'
 import Footer from './Footer'
 import fontFace from './font-face'
+
+const theme = {
+  primary: '#008FD7',
+  white: 'white',
+}
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -49,22 +54,26 @@ export default ({ children }) => (
           siteMetadata {
             title
             url
+            about
           }
         }
       }
     `}
-    render={data => (
-      <Wrapper>
-        <Helmet
-          titleTemplate={`%s | ${data.site.siteMetadata.title} | ${
-            data.site.siteMetadata.url
-          }`}
-          defaultTitle={data.site.siteMetadata.title}
-        />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>{children}</Content>
-        <Footer />
-      </Wrapper>
-    )}
+    render={data => {
+      const { about, title, url } = data.site.siteMetadata
+      return (
+        <ThemeProvider theme={theme}>
+          <Wrapper>
+            <Helmet
+              titleTemplate={`%s | ${title} | ${url}`}
+              defaultTitle={title}
+            />
+            <Header siteTitle={title} />
+            <Content>{children}</Content>
+            <Footer about={about} />
+          </Wrapper>
+        </ThemeProvider>
+      )
+    }}
   />
 )
