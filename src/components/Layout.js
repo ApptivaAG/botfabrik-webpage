@@ -35,16 +35,10 @@ injectGlobal`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template:
-    'Header'
-    'Content' 1fr
-    'Footer';
-
+  grid: auto 1fr auto / auto;
   min-height: 100%;
 `
-const Content = styled.div`
-  grid-area: Content;
-`
+const Content = styled.div``
 
 export default ({ children }) => (
   <StaticQuery

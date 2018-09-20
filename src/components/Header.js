@@ -6,7 +6,6 @@ import styled from '../../node_modules/styled-components'
 const Wrapper = styled.header`
   position: sticky;
   top: 0;
-  grid-area: Header;
 
   background-color: #f9f9f9;
   z-index: 90;

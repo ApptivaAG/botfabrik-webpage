@@ -5,7 +5,6 @@ import Container from './Container'
 import Center from './Center'
 
 const Wrapper = styled.footer`
-  grid-area: Footer;
   font-size: 0.8em;
   color: ${p => p.theme.white};
   background-color: ${p => p.theme.primary};
