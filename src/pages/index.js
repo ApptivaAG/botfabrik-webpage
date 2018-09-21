@@ -15,7 +15,12 @@ import allianz from '../img/allianz-cinema-logo.png'
 
 const Container = ContainerDefault.extend`
   display: grid;
-  grid-template: 'Content Chatbot' auto / 1fr 320px;
+  grid-template:
+    'Content'
+    'Chatbot' 640px;
+  @media (min-width: 800px) {
+    grid-template: 'Content Chatbot' auto / 1fr 320px;
+  }
 `
 const Thin = styled.span`
   font-weight: 200;
