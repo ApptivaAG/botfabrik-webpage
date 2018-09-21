@@ -9,8 +9,9 @@ import Footer from './Footer'
 import fontFace from './font-face'
 
 const theme = {
-  primary: '#008FD7',
+  primary: '#00A0DD',
   white: 'white',
+  text: '#333',
 }
 
 // eslint-disable-next-line no-unused-expressions
@@ -27,6 +28,7 @@ injectGlobal`
 
   html {
     font-size: 20px;
+    color: ${theme.text};
     font-family: Gentona, sans-serif;
     font-weight: 200;
   }
