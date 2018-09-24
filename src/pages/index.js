@@ -94,12 +94,13 @@ const IndexPage = ({ data }) => (
             </Title>
           </SpeachBubble>
           <List>
-            <li>Konzept</li>
-            <li>Inhalt und Texte</li>
-            <li>Umsetzung</li>
+            <li>Strategie</li>
+            <li>Konzept & Inhalte</li>
+            <li>Implementierung</li>
             <li>Integration</li>
-            <li>Training</li>
+            <li>Training & Betrieb</li>
           </List>
+          <button>Mehr erfahren</button>
         </div>
       </Container>
     </Section>
@@ -115,7 +116,51 @@ const IndexPage = ({ data }) => (
     </Section>
     <Section>
       <ContainerDefault>
-        <h1>Blog</h1>
+        <h2>Leistungen</h2>
+        Illu und Beschreibung pro Punkt
+        <ul>
+          <li>Strategie</li>
+          <li>Konzept & Inhalte</li>
+          <li>Implementierung</li>
+          <li>Integration</li>
+          <li>Training</li>
+        </ul>
+      </ContainerDefault>
+    </Section>
+    <Section dark>
+      <ContainerDefault>
+        <h2>Referenzen</h2>
+      </ContainerDefault>
+    </Section>
+    <Section>
+      <ContainerDefault>
+        <h2>Technologien</h2>
+        <h3>Messaging Plattformen</h3>
+        <ul>
+          <li>Web </li>
+          <li>Facebook Messenger</li>
+          <li>Skype</li>
+          <li>Skype for Business</li>
+          <li>Telegram</li>
+          <li>Slack</li>
+        </ul>
+        <h3>Sprachverarbeitung</h3>
+        <ul>
+          <li>Dialogflow</li>
+          <li>Wit.ai</li>
+          <li>RASA</li>
+          <li>LUIS</li>
+        </ul>
+      </ContainerDefault>
+    </Section>
+    <Section dark>
+      <ContainerDefault>
+        <h2>Testimonials</h2>
+      </ContainerDefault>
+    </Section>
+    <Section>
+      <ContainerDefault>
+        <h2>Blog</h2>
         <div>
           {data.blogs.edges.map(({ node }) => (
             <Link key={node.frontmatter.path} to={node.frontmatter.path}>
