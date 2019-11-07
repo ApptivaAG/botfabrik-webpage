@@ -22,6 +22,7 @@ export default () => (
       title="Chatbot"
       src="https://pit.botfabrik.ch/webclient"
       frameBorder="0"
+      allow="microphone"
     />
   </Wrapper>
 )
