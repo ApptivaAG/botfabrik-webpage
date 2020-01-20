@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import styled, { injectGlobal, ThemeProvider } from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import styledNormalize from 'styled-normalize'
 
 import Header from './Header'
@@ -14,8 +14,7 @@ const theme = {
   text: '#333',
 }
 
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
   ${fontFace}
 
@@ -35,41 +34,40 @@ injectGlobal`
 
 `
 
-const Wrapper = styled.div`
+const Grid = styled.div`
   display: grid;
   grid: auto 1fr auto / auto;
   min-height: 100%;
 `
-const Content = styled.div``
+const Content = styled.main`
+  display: block;
+`
 
-export default ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            title
-            url
-            about
-          }
-        }
+const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+        url
+        about
       }
-    `}
-    render={data => {
-      const { about, title, url } = data.site.siteMetadata
-      return (
-        <ThemeProvider theme={theme}>
-          <Wrapper>
-            <Helmet
-              titleTemplate={`%s | ${title} | ${url}`}
-              defaultTitle={title}
-            />
-            <Header siteTitle={title} />
-            <Content>{children}</Content>
-            <Footer about={about} />
-          </Wrapper>
-        </ThemeProvider>
-      )
-    }}
-  />
-)
+    }
+  }
+`
+
+export default ({ children }) => {
+  const data = useStaticQuery(query)
+  const { about, title, url } = data.site.siteMetadata
+
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Grid>
+        <Helmet titleTemplate={`%s | ${title} | ${url}`} defaultTitle={title} />
+        <Header siteTitle={title} />
+        <Content>{children}</Content>
+        <Footer about={about} />
+      </Grid>
+    </ThemeProvider>
+  )
+}

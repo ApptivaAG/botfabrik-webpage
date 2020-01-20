@@ -13,7 +13,7 @@ import ringier from '../img/ringier-logo-3.svg'
 import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
 
-const Container = ContainerDefault.extend`
+const Container = styled(ContainerDefault)`
   display: grid;
   grid-template:
     'Content'
