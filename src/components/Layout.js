@@ -11,7 +11,7 @@ import fontFace from './font-face'
 const theme = {
   primary: '#00A0DD',
   white: 'white',
-  text: '#333',
+  text: '#2e2e2e',
 }
 
 const GlobalStyle = createGlobalStyle`
