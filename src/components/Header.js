@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Container from './Container'
 import styled from '../../node_modules/styled-components'
 import logo from '../img/logo.svg'
+import { Container } from '../styles'
 
 const Wrapper = styled.header`
   position: sticky;
@@ -32,7 +32,7 @@ const Logo = styled.div`
   img {
     height: 4em;
     width: 4em;
-    margin-right: .6em;
+    margin-right: 0.6em;
   }
 `
 

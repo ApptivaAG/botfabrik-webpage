@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import Container from './Container'
-import Center from './Center'
+import { Container, Center } from '../styles'
 
 const Wrapper = styled.footer`
   font-size: 0.8em;
@@ -36,10 +35,12 @@ const Footer = ({ about }) => (
         <div>
           <h2>Kontakt</h2>
           <p>
-            Botfabrik <br />by Apptiva AG
+            Botfabrik <br />
+            by Apptiva AG
           </p>
           <p>
-            Neuenkirchstrasse 19 <br />6203 Sempach Station
+            Neuenkirchstrasse 19 <br />
+            6203 Sempach Station
           </p>
           <p>+41 79 407 00 83</p>
           <p>mensch@botfabrik.ch</p>

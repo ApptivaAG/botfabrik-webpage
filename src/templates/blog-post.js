@@ -4,10 +4,10 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
 
-import Container from '../components/Container'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Seo from '../components/Seo'
+import { Section, Container } from '../styles'
 
 const HeadArea = styled.div``
 
@@ -23,8 +23,10 @@ const HeaderTitle = styled.h1`
 
 const Header = ({ title, image }) => (
   <HeadArea>
-    <HeaderTitle>{title}</HeaderTitle>
-    <Img style={{ width: '100%' }} sizes={image.childImageSharp.fluid} />
+    <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
+    {image && (
+      <Img style={{ width: '100%' }} sizes={image.childImageSharp.fluid} />
+    )}
   </HeadArea>
 )
 
@@ -65,12 +67,12 @@ const Navigation = ({ next, prev }) => {
   return (
     <LayoutNavigation>
       {prev && (
-        <NavigationLinks to={prev.frontmatter.path}>
+        <NavigationLinks to={prev.frontmatter.permalink}>
           {prev.frontmatter.title}
         </NavigationLinks>
       )}
       {next && (
-        <NavigationLinks to={next.frontmatter.path}>
+        <NavigationLinks to={next.frontmatter.permalink}>
           {next.frontmatter.title}
         </NavigationLinks>
       )}
@@ -96,7 +98,7 @@ export const BlogPostTemplate = ({
         <title>{title}</title>
       </Helmet>
       <Seo />
-      <section>
+      <Section>
         <Container>
           <Header title={title} image={image} />
           <Description>{description}</Description>
@@ -104,7 +106,7 @@ export const BlogPostTemplate = ({
           <PostContent content={content} />
           <Navigation next={navigation.next} prev={navigation.prev} />
         </Container>
-      </section>
+      </Section>
     </Layout>
   )
 }
@@ -132,16 +134,13 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        description
+        seo
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")
-        path
+        permalink
         image {
           childImageSharp {
-            # sqip(numberOfPrimitives: 16, blur: 6) {
-            #   dataURI
-            # }
             fluid {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }

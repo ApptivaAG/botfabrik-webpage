@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
-import ContainerDefault from '../components/Container'
 import Seo from '../components/Seo'
 import Chatbot from '../components/Chatbot'
 
@@ -12,6 +11,8 @@ import bubbleArrow from '../img/bubblearrow.svg'
 import ringier from '../img/ringier-logo-3.svg'
 import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
+import Testimonials from '../components/Testimonials'
+import { Section, Container as ContainerDefault } from '../styles'
 
 const Container = styled(ContainerDefault)`
   display: grid;
@@ -48,10 +49,7 @@ const SpeachBubble = styled.div`
     width: 3em;
   }
 `
-const Section = styled.section`
-  padding: 3em 0;
-  background-color: ${p => (p.dark ? '#f8f8f8' : p.theme.white)};
-`
+
 const List = styled.ul`
   font-weight: 300;
   line-height: 1.4;
@@ -100,7 +98,7 @@ const IndexPage = ({ data }) => (
             <li>Integration</li>
             <li>Training & Betrieb</li>
           </List>
-          <button>Mehr erfahren</button>
+          <button type="button">Mehr erfahren</button>
         </div>
       </Container>
     </Section>
@@ -125,11 +123,6 @@ const IndexPage = ({ data }) => (
           <li>Integration</li>
           <li>Training</li>
         </ul>
-      </ContainerDefault>
-    </Section>
-    <Section dark>
-      <ContainerDefault>
-        <h2>Referenzen</h2>
       </ContainerDefault>
     </Section>
     <Section>
@@ -163,9 +156,29 @@ const IndexPage = ({ data }) => (
         <h2>Blog</h2>
         <div>
           {data.blogs.edges.map(({ node }) => (
-            <Link key={node.frontmatter.path} to={node.frontmatter.path}>
-              {node.frontmatter.title}
-            </Link>
+            <div>
+              <Link
+                key={node.frontmatter.permalink}
+                to={node.frontmatter.permalink}
+              >
+                {node.frontmatter.title}
+              </Link>
+            </div>
+          ))}
+        </div>
+        <Link to="blog">Zum Botfabrik Blog</Link>
+      </ContainerDefault>
+    </Section>
+    <Section>
+      <ContainerDefault>
+        <h2>Chatbot-FAQ</h2>
+        <div>
+          {data.pages.nodes.map(({ frontmatter }) => (
+            <div>
+              <Link key={frontmatter.permalink} to={frontmatter.permalink}>
+                {frontmatter.title}
+              </Link>
+            </div>
           ))}
         </div>
       </ContainerDefault>
@@ -188,7 +201,8 @@ export const indexPageQuery = graphql`
           id
           frontmatter {
             title
-            path
+            permalink
+            date(formatString: "DD.MM.YYYY")
             image {
               childImageSharp {
                 fixed(height: 150, width: 300) {
@@ -199,8 +213,21 @@ export const indexPageQuery = graphql`
                 # }
               }
             }
-            date(formatString: "DD.MM.YYYY")
           }
+        }
+      }
+    }
+    pages: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "page" } } }
+    ) {
+      nodes {
+        excerpt(pruneLength: 140)
+        id
+        frontmatter {
+          title
+          permalink
+          date(formatString: "DD.MM.YYYY")
         }
       }
     }

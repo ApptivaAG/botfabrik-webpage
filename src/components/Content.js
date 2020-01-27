@@ -75,22 +75,21 @@ const Markdown = styled.div`
       flex: 1 1 14rem;
       margin: 0 1rem 1rem;
     }
-
   }
 
   .custom-block-avatar {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid #ececec; 
-    border-radius: 50%; 
+    border: 5px solid #ececec;
+    border-radius: 50%;
     overflow: hidden;
 
     & > p {
       margin: 0;
     }
     @media (min-width: 640px) {
-      width: 200px; 
+      width: 200px;
     }
   }
 
@@ -116,6 +115,17 @@ const Markdown = styled.div`
     box-shadow: none !important;
   }
 
+  .gatsby-resp-image-wrapper[style*='float:right'] {
+    max-width: 240px !important;
+    margin-left: 2em !important;
+    img {
+      position: relative !important;
+    }
+    span {
+      padding-bottom: 0 !important;
+    }
+  }
+
   .emojione {
     height: 1em;
     bottom: -3px;
@@ -125,8 +135,6 @@ const Markdown = styled.div`
   .gatsby-highlight {
     font-size: 0.8em;
   }
-
-}
 `
 
 export default ({ content, className }) => (

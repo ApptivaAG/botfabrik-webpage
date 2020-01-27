@@ -13,7 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             frontmatter {
-              path
+              permalink
               templateKey
               title
             }
@@ -34,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
       const next = index === edges.length - 1 ? null : edges[index + 1].node
       const { id } = node
       createPage({
-        path: node.frontmatter.path,
+        path: node.frontmatter.permalink,
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
@@ -48,5 +48,43 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 
-  return posts
+  const pages = graphql(`
+    query {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { frontmatter: { templateKey: { regex: "/page/" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              permalink
+              templateKey
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const { edges } = result.data.allMarkdownRemark
+
+    return edges.forEach(({ node }) => {
+      createPage({
+        path: path.join('/', node.frontmatter.permalink, '/'),
+        component: path.resolve(
+          `src/templates/${String(node.frontmatter.templateKey)}.js`
+        ),
+        // additional data can be passed via context
+        context: {
+          id: node.id,
+        },
+      })
+    })
+  })
+
+  return Promise.all([posts, pages])
 }

@@ -23,6 +23,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'wr8dkl0x',
+        dataset: 'production',
+      },
+    },
+    'gatsby-source-sanity-transform-images',
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -33,10 +41,22 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 1024,
+              wrapperStyle: fluidResult => {
+                return fluidResult.aspectRatio < 1.2 && `float:right;`
+              },
             },
           },
+          `gatsby-remark-embedder`,
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
+          },
+          `gatsby-remark-external-links`,
         ],
       },
     },
+    `gatsby-plugin-catch-links`,
   ],
 }

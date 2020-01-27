@@ -1,38 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import styledNormalize from 'styled-normalize'
+import styled, { ThemeProvider } from 'styled-components'
 
 import Header from './Header'
 import Footer from './Footer'
-import fontFace from './font-face'
-
-const theme = {
-  primary: '#00A0DD',
-  white: 'white',
-  text: '#2e2e2e',
-}
-
-const GlobalStyle = createGlobalStyle`
-  ${styledNormalize}
-  ${fontFace}
-
-  html, body, #___gatsby {
-    height: 100%;
-  }
-  #___gatsby > div {
-    height: 100%;
-  }
-
-  html {
-    font-size: 20px;
-    color: ${theme.text};
-    font-family: Gentona, sans-serif;
-    font-weight: 200;
-  }
-
-`
+import { GlobalStyle, theme } from '../styles'
 
 const Grid = styled.div`
   display: grid;
