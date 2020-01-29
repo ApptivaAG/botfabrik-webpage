@@ -52,7 +52,7 @@ exports.createPages = ({ actions, graphql }) => {
     query {
       allMarkdownRemark(
         limit: 1000
-        filter: { frontmatter: { templateKey: { regex: "/page/" } } }
+        filter: { frontmatter: { templateKey: { regex: "/page|know-how/" } } }
       ) {
         edges {
           node {

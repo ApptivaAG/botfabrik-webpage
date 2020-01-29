@@ -13,6 +13,7 @@ import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
 import Testimonials from '../components/Testimonials'
 import { Section, Container as ContainerDefault } from '../styles'
+import KnowHow from '../components/KnowHow'
 
 const Container = styled(ContainerDefault)`
   display: grid;
@@ -112,6 +113,7 @@ const IndexPage = ({ data }) => (
         </Customers>
       </ContainerDefault>
     </Section>
+    <KnowHow />
     <Section>
       <ContainerDefault>
         <h2>Leistungen</h2>
