@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 20px;
     color: ${p => p.theme.text};
     font-family: Gentona, sans-serif;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   p {
@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    ${'' /* higher contrast for accessability*/}
+    ${'' /* higher contrast for accessability */}
     color: ${p => p.theme.primarySave};
     font-weight: 500;
     
