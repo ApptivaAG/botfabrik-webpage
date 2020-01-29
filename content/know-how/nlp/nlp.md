@@ -6,6 +6,7 @@ permalink: /nlp
 author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./logo.svg
+id: 20
 summary: 
   Wir sind erfahren in der Wahl der passenden NLP-Komponente
   (natural language processing) damit ihre Anforderungen gedeckt sind

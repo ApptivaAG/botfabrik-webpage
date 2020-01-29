@@ -6,11 +6,10 @@ permalink: /chatbot-inhalte
 author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./logo.svg
+id: 10
 summary: 
-  Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten
-  wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde
-  immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+  Nach über zwei duzend Chatbot-Projekten und vielzähligen Workshops zusammen mit unseren Kunden, ist das Erarbeiten von Chatbots und deren Inhalt für uns nichts mehr aussergewöhnliches. Nutzen sie unser Know-How.
 
 ---
 
-Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+Mit über zwei duzend Chatbot-Projekten und vielzähligen Workshops ist das Erarbeiten von Chatbots und deren Inhalt für uns nicht mehr ausgewöhnlich. Nutzen sie unser Know-How.
