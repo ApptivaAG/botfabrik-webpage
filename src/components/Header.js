@@ -9,6 +9,7 @@ const HeaderElement = styled.header`
   position: sticky;
   top: 0;
   background-color: ${props => props.theme.lightBg};
+  border-bottom: 1px solid #eee;
   z-index: 90;
 `
 
@@ -75,9 +76,9 @@ const MenuButton = styled.div`
     transform: translate3d(-20rem, 0px, 0px);
   }
 `
-const NavItemsLink = styled(Link).attrs(props => ({
+const NavItemsLink = styled(Link).attrs({
   activeClassName: 'active',
-}))`
+})`
   display: inline-block;
   font-size: 1.1em;
   font-weight: 500;
@@ -119,7 +120,7 @@ const Header = () => (
       <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
         <NavItemsLink to="/dienstleistungen">Dienstleistungen</NavItemsLink>
-        <NavItemsLink to="/die-botfabrik">Die Botfabrik</NavItemsLink>
+        <NavItemsLink to="/ueber-uns">Die Botfabrik</NavItemsLink>
         <NavItemsLink to="/blog">Blog</NavItemsLink>
         <NavItemsLink to="/kontakt">Kontakt</NavItemsLink>
       </Navigation>
