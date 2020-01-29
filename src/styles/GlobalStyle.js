@@ -26,9 +26,9 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    ${'' /* higher contrast for accessability */}
-    ${'' /* color: hsla(200, 100%, 35%, 1);  */}
-    font-weight: 400;
+    ${'' /* higher contrast for accessability*/}
+    color: ${p => p.theme.primarySave};
+    font-weight: 500;
     
     .gatsby-image-wrapper {
       transition: transform 0.3s;
