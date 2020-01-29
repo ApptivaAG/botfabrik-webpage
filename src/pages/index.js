@@ -12,7 +12,7 @@ import ringier from '../img/ringier-logo-3.svg'
 import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
 import Testimonials from '../components/Testimonials'
-import { Section, Container as ContainerDefault } from '../styles'
+import { Section, Container as ContainerDefault, Button } from '../styles'
 import KnowHow from '../components/KnowHow'
 
 const Container = styled(ContainerDefault)`
@@ -168,7 +168,9 @@ const IndexPage = ({ data }) => (
             </div>
           ))}
         </div>
-        <Link to="blog">Zum Botfabrik Blog</Link>
+        <Button as={Link} to="blog">
+          Zum Botfabrik Blog
+        </Button>
       </ContainerDefault>
     </Section>
     <Section>
