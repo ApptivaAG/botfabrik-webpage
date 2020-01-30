@@ -36,27 +36,19 @@ CAN kann für unterschiedliche Bedürfnisse im Kundendienst eingesetzt werden:
 
 Mit CAN profitieren Sie von einer ganzen Reihe von Vorteilen:
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Extrem schnelle Reaktionszeiten
+### Extrem schnelle Reaktionszeiten
 
 CAN antwortet durchschnittlich in unter 5 Sekunden. Somit erhalten Ihre Kunden praktisch in Echtzeit ein Feedback.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### 24h
+### 24h
 
 CAN steht Ihren Kunden zu jeder Tages- und Nachtzeit zur Verfügung.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Zuvorkommend
+### Zuvorkommend
 
 CAN hat immer gute Laune und ist sich für keine Aufgabe zu schade. Er ist äusserst zuvorkommend und steht Ihren Kunden in vielen Situation zur Seite.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Tiefe Kosten
+### Tiefe Kosten
 
 Mit CAN können Sie mehr Anfragen mit weniger Personal bewältigen.
 
@@ -82,19 +74,19 @@ CAN muss nicht auf alles eine Antwort haben, um Sie zu unterstützen. Wenn CAN e
 
 CAN setzt auf vier Komponenten auf um die Kunden vollumfänglich zu unterstützten:
 
-##### Neuronales Netz
+### Neuronales Netz
 
 CAN entscheidet mit Hilfe eines neuronalen Netzes was die Absicht des Kunden ist. Je mehr Trainingsdaten CAN zur Verfügung stehen, um so besser sind seine Entscheidungen. Trainingsdaten können z.B. klassifizierte E-Mails oder bestehende Chat-Verläufe sein.
 
-##### Hinterlegte Prozess­schritte
+### Hinterlegte Prozess­schritte
 
 Jede Absicht bedarf einer speziellen Schrittfolge die CAN mit den Kunden durchgeht. Hat der Kunde z.B. ein defektes Geräte, so sind andere Schritte notwendig als bei Fragen zur aktuellen Rechnung.
 
-##### Massgeschneiderte Logik
+### Massgeschneiderte Logik
 
 CAN ist in dem Sinn speziell, dass er die Kunden nicht bloss informiert, sondern auch tätig wird. So kann CAN z.B. Adressen ändern oder Leistungen anpassen. Dazu wird je nach Tätigkeitsschritt massgeschneiderte Logik ausgeführt.
 
-##### Integriert in Ihre Systemumgebung
+### Integriert in Ihre Systemumgebung
 
 Je besser CAN in Ihre Systemumgebung integriert ist, um so besser kann CAN dem Kunden zur Seite stehen. CAN kann mit den Kunden über den Versandstatus, offene Rechnungen oder Kontendaten sprechen, wenn er Zugriff auf die entsprechende Systeme hat.
 
@@ -104,27 +96,19 @@ Verbinden Sie CAN mit den Plattformen,
 wo Sie Kontakt mit Ihren Kunden pflegen,  
 damit CAN Ihre Kunden unterstützen kann.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Ihre Webseite
+### Ihre Webseite
 
 Ist CAN auf Ihrer Unternehmens-Webseite eingebunden, so kann er Ihre Besucher und Kunden auf Ihrer eigenen Webseite unterstützen.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Twitter
+### Twitter
 
 Ist CAN mit Ihrem Twitter-Kanal verbunden, so kann er Ihre Follower unterstützen.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Facebook
+### Facebook
 
 Ist CAN mit Ihrem Facebook-Seite verbunden, so kann er Ihre Fans unterstützen.
 
-<span class="sow-icon-fontawesome" data-sow-icon="" style="font-size: 40px; color: #a0a0a0"></span>
-
-##### Mail
+### Mail
 
 Ist CAN mit Ihrem E-Mail-Konto verbunden, so kann er Sie beim Beantworten von Mails unterstützen.
 
@@ -132,6 +116,4 @@ Ist CAN mit Ihrem E-Mail-Konto verbunden, so kann er Sie beim Beantworten von Ma
 
 Profitieren Sie von höheren Reaktionszeiten und kleineren Aufwänden im Kundendienst mit CAN. Melden Sie sich noch heute für die CAN-Beta an und Sie werden kontaktiert, sobald CAN für Sie bereit ist.
 
-[  
-<span>  
-Jetzt für die Beta anmelden </span> ](https://botfabrik.typeform.com/to/kMax2z)
+[Jetzt für die Beta anmelden](https://botfabrik.typeform.com/to/kMax2z)

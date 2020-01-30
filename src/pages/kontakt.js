@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import { Container, Section } from '../styles'
 import ContactForm from '../components/ContactForm'
-import Employees from '../components/Employees'
 
 const Grid = styled.div`
   display: grid;
@@ -55,8 +54,7 @@ const Kontakt = () => {
           </Grid>
         </Container>
       </Section>
-      <Employees />
-      <Section>
+      <Section dark>
         <Container>
           <h2>Standort</h2>
           <p>

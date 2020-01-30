@@ -13,13 +13,11 @@ tag: []
 ---
 
 Chatbots können heutzutage schon sehr schlau sein. Doch allwissend sind sie natürlich bei weitem nicht. In Fällen, bei denen der Bot nicht mehr weiter weiss, ist es hilfreich, wenn er menschliche Unterstützung heranziehen kann.
-
 ![](fb_conversation.png)
 
 ## Handover: Bot -&gt; Inbox
 
 Doch wie übergibt der Bot die Konversation nun an die Inbox? Die Lösung heisst [Facebook Handover Protocol](https://developers.facebook.com/docs/messenger-platform/handover-protocol). Der Bot muss beim Handover die ID des Benutzers und die ID der Page-Inbox angeben. Verläuft dieses Handover erfolgreich, landen die Nachrichten fortan in der Inbox der Page. Somit steht dem Live-Chat zwischen Benutzer und Page-Betreiber nichts mehr im Weg.
-
 ![](fb_inbox.png)
 
 ## Und retour

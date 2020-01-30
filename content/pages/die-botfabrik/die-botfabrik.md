@@ -23,19 +23,6 @@ Bots sind unser aller Leidenschaft und wir freuen uns über jeden Tag, an dem wi
 
 
 
-## Kontakt
-
-Wir sind immer interessiert am Austausch, deshalb zögere nicht mit uns in Kontakt zu treten.
-
-<a class="negative-btn-block chatbot-action" data-chatbot-message="Ich habe Interesse an einem Bot">  
-![](pit.svg)  
-via Pit
-</a>
-
-[![](http://www.botfabrik.ch/wp-content/uploads/2017/01/envelope.svg)mensch@​botfabrik.ch](mailto:mensch@botfabrik.ch)
-
-[![](http://www.botfabrik.ch/wp-content/uploads/2017/01/phone.svg)+41 41 322 26 26](tel:+41413222626)
-
 ## Standort
 
 Die Botfabrik befindet sich in Sempach an der Autobahn A2 und der Bahnlinie zwischen Luzern und Sursee.

@@ -1,61 +1,69 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import Chatbot from '../components/Chatbot'
 
+import pit from '../img/pit.svg'
 import bubbleArrow from '../img/bubblearrow.svg'
+import arrowLeft from '../img/arrowLeft.svg'
 
 import ringier from '../img/ringier-logo-3.svg'
 import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
 import Testimonials from '../components/Testimonials'
-import { Section, Container as ContainerDefault, Button } from '../styles'
+import { Section, Container, Button } from '../styles'
 import KnowHow from '../components/KnowHow'
 
-const Container = styled(ContainerDefault)`
+const Grid = styled(Container)`
+  grid: 'value-prop value-prop' 'pit services' / 190px 320px;
   display: grid;
-  grid-template:
-    'Content'
-    'Chatbot' 640px;
-  @media (min-width: 800px) {
-    grid-template: 'Content Chatbot' auto / 1fr 320px;
+  gap: 2em;
+  @media (min-width: 1240px) {
+    grid: 'value-prop pit services' auto / 1fr 190px 320px;
   }
 `
-const Thin = styled.span`
-  font-weight: 200;
-`
-const Title = styled.h1`
-  line-height: 0.9;
-  margin: -0.2em 0 0 0;
-`
+
 const SpeachBubble = styled.div`
   position: relative;
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1em;
+  font-weight: 500;
   padding: 1em 1em;
-  margin: 1em 0;
   color: ${p => p.theme.white};
   background-color: ${p => p.theme.primary};
 
-  ::after {
-    display: block;
-    position: absolute;
-    content: url("${bubbleArrow}");
-    right: 2em;
-    bottom: -2em;
-    height: 2em;
-    width: 3em;
-  }
+  ${p =>
+    p.left
+      ? css`
+        margin-left: 1em;
+        
+        ::after {
+          display: block;
+          position: absolute;
+          content: url("${arrowLeft}");
+          left: -1.3em;
+          top: 1.4em;
+          height: 3em;
+          width: 1.4em;
+        }
+      `
+      : css`
+        ::after {
+          display: block;
+          position: absolute;
+          content: url("${bubbleArrow}");
+          right: 2em;
+          bottom: -2em;
+          height: 2em;
+          width: 3em;
+        }
+      `}
 `
 
 const List = styled.ul`
-  font-weight: 300;
   line-height: 1.4;
-  font-size: 1.3em;
-  margin-left: 0.6em;
 `
 const CustomerTitle = styled.h1`
   font-size: 1.7em;
@@ -82,40 +90,46 @@ const IndexPage = ({ data }) => (
     <Seo />
 
     <Section>
-      <Container>
-        <Chatbot />
-        <div>
-          <SpeachBubble>
-            <Title>
-              <Thin>Individuelle</Thin> <br />
-              Chatbots
-              <br /> <Thin>von A-Z</Thin>
-            </Title>
-          </SpeachBubble>
-          <List>
-            <li>Strategie</li>
-            <li>Konzept & Inhalte</li>
-            <li>Implementierung</li>
-            <li>Integration</li>
-            <li>Training & Betrieb</li>
-          </List>
-          <button type="button">Mehr erfahren</button>
+      <Grid>
+        <div css="grid-area: value-prop">
+          <h2 css="font-weight: 200; margin-top: 0">
+            Sorge für echte Entlastung mit passgenauen{' '}
+            <b css="font-weight: 600">Chatbots</b> in dein Unternehmen
+            integriert.
+          </h2>
+          <Button type="button">Mehr erfahren</Button>
         </div>
-      </Container>
+        <div css="grid-area: pit">
+          <img src={pit} alt="Pit" />
+        </div>
+        <div css="grid-area: services">
+          <SpeachBubble left>
+            Wir untersützen bei Chatbot
+            <List>
+              <li>Strategie</li>
+              <li>Konzept und Inhalte</li>
+              <li>Entwicklung </li>
+              <li>Integration (tech & org) </li>
+              <li>Training und Pflege</li>
+              <li>Betrieb</li>
+            </List>
+          </SpeachBubble>
+        </div>
+      </Grid>
     </Section>
     <Section dark>
-      <ContainerDefault>
+      <Container>
         <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
         <Customers>
           <img src={ringier} alt="Ringier Logo" />
           <img src={sanagate} alt="Sanagate Logo" />
           <img src={allianz} alt="Allianz Cinema Logo" />
         </Customers>
-      </ContainerDefault>
+      </Container>
     </Section>
     <KnowHow />
     <Section>
-      <ContainerDefault>
+      <Container>
         <h2>Leistungen</h2>
         Illu und Beschreibung pro Punkt
         <ul>
@@ -125,10 +139,10 @@ const IndexPage = ({ data }) => (
           <li>Integration</li>
           <li>Training</li>
         </ul>
-      </ContainerDefault>
+      </Container>
     </Section>
     <Section>
-      <ContainerDefault>
+      <Container>
         <h2>Technologien</h2>
         <h3>Messaging Plattformen</h3>
         <ul>
@@ -146,15 +160,15 @@ const IndexPage = ({ data }) => (
           <li>RASA</li>
           <li>LUIS</li>
         </ul>
-      </ContainerDefault>
+      </Container>
     </Section>
     <Section dark>
-      <ContainerDefault>
+      <Container>
         <h2>Testimonials</h2>
-      </ContainerDefault>
+      </Container>
     </Section>
     <Section>
-      <ContainerDefault>
+      <Container>
         <h2>Blog</h2>
         <div>
           {data.blogs.edges.map(({ node }) => (
@@ -171,10 +185,10 @@ const IndexPage = ({ data }) => (
         <Button as={Link} to="blog">
           Zum Botfabrik Blog
         </Button>
-      </ContainerDefault>
+      </Container>
     </Section>
     <Section>
-      <ContainerDefault>
+      <Container>
         <h2>Chatbot-FAQ</h2>
         <div>
           {data.pages.nodes.map(({ frontmatter }) => (
@@ -185,7 +199,7 @@ const IndexPage = ({ data }) => (
             </div>
           ))}
         </div>
-      </ContainerDefault>
+      </Container>
     </Section>
   </Layout>
 )

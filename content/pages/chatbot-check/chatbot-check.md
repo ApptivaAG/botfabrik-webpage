@@ -14,7 +14,9 @@ seo: 'Chancen, Möglichkeiten und Strategien für Chatbots. Die Botfabrik bietet
 
 ## Fragen, Chancen und Strategien rundum Chatbots
 
-[![](Check.svg)](https://www.botfabrik.ch/wp-content/uploads/2018/01/Check.svg)Die Botfabrik bietet neu den kostenlosen Chatbot-Check an. Der Chatbot-Check ist für Dich, wenn Du:
+![Chatbot-Check](Check.svg)
+
+Die Botfabrik bietet neu den kostenlosen Chatbot-Check an. Der Chatbot-Check ist für Dich, wenn Du:
 
 - Fragen zu Chatbots hast
 - Wissen möchtest, wie Chatbots Euch unterstützen können

@@ -20,7 +20,6 @@ const HeaderTitle = styled.h1`
   line-height: 1;
   text-align: center;
 `
-
 const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />

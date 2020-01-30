@@ -6,6 +6,10 @@ const Container = styled.div`
   max-width: 960px;
   padding-right: 1em;
   padding-left: 1em;
+
+  @media (min-width: 768px) {
+    padding-right: 20rem;
+  }
 `
 
 export default Container

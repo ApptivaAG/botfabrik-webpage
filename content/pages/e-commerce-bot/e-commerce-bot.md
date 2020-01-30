@@ -16,37 +16,35 @@ Unser E-Commerce Bot eignet sich für Betreiber von Webshops und Webseiten, welc
 
 ![E-Commerce Bot](order.png)
 
-> Wenn Besucher auf deine Website kommen, wollen sie Antworten auf deine Produkte oder Dienstleistungen. Wenn sie diese Antworten nicht finden können, kommen sie vielleicht nie wieder. Hier können dir Chatbots deinen Tag retten.
+Wenn Besucher auf deine Website kommen, wollen sie Antworten auf deine Produkte oder Dienstleistungen. Wenn sie diese Antworten nicht finden können, kommen sie vielleicht nie wieder. Hier können dir Chatbots deinen Tag retten.
 
->## Kurz erklärt, was unser E-Commerce Bot kann
+> ## Kurz erklärt, was unser E-Commerce Bot kann
 >
->### Beratung
+> ### Beratung
 >
->Der Bot hilft aus einer grossen Auswahl das richtige Produkt zu finden.
+> Der Bot hilft aus einer grossen Auswahl das richtige Produkt zu finden.
 >
->### Conversion-Steigerung
+> ### Conversion-Steigerung
 >
->Der Bot bahnt die Conversion an und führt gezielt zum Abschluss.
+> Der Bot bahnt die Conversion an und führt gezielt zum Abschluss.
 >
->### Bestellungen generieren
+> ### Bestellungen generieren
 >
->Der Bot kann einfache Produkte direkt verkaufen oder Termine vereinbaren.
+> Der Bot kann einfache Produkte direkt verkaufen oder Termine vereinbaren.
 >
->### Zusatzverkäufe
+> ### Zusatzverkäufe
 >
->Der Bot schlägt passende Zusatzprodukte vor und erklärt deren Vorteile.
+> Der Bot schlägt passende Zusatzprodukte vor und erklärt deren Vorteile.
 >
->### Identifizierung
+> ### Identifizierung
 >
->Der Bot unterstützt Informations-Suchende und identifiziert diese für die Nachverfolgung der Leads.
+> Der Bot unterstützt Informations-Suchende und identifiziert diese für die Nachverfolgung der Leads.
 
 ## Verkaufsberatung wie im Schuhladen
 
 E-Commerce Bots beraten Kunden als ob sie in einem physischen Lokal einkaufen würden.
 
-![](ecommerce-shoe.png)
-
-## Beispiele
+![e-Commerce von Schuhen](ecommerce-shoe.png)
 
 Bots bieten dir viele Möglichkeiten, den Erfolg deiner Webseite zu steigern. Lass dich von den folgenden Beispielen inspirieren:
 

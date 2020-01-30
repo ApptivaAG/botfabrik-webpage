@@ -112,7 +112,7 @@ const Header = () => (
           <img src={logo} alt="Logo" />
           <div>
             <h1>Botfabrik</h1>
-            <h2>Chatbots von A-Z</h2>
+            <h2>Passgenaue Chatbot-Lösungen</h2>
           </div>
         </Link>
       </Logo>

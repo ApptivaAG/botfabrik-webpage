@@ -41,11 +41,15 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 1024,
+              linkImagesToOriginal: false, // because of zoom
               wrapperStyle: fluidResult => {
-                return fluidResult.aspectRatio < 1.2 && `float:right;`
+                return fluidResult.aspectRatio < 1.2
+                  ? 'width: 360px;'
+                  : 'width: 100%;'
               },
             },
           },
+          `gatsby-remark-images-medium-zoom`,
           `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-copy-linked-files`,

@@ -48,14 +48,14 @@ Ein Bot kann mit einer Pendenzenliste gefüttert werden, deren Einhaltung er dan
 ### E-Commerce Bot
 
 Unser E-Commerce eignet sich für Betreiber von Webshops und Webseiten, welche das Ziel haben, ihren Besuchern etwas zu verkaufen oder diese zu identifizieren.  
-[Mehr erfahren](https://www.botfabrik.ch/e-commerce-bot/)
+[Mehr erfahren](/e-commerce-bot/)
 
 ### Kundendienst Bot
 
 Unser Kundendienst Bot ist prädestiniert dafür, um Routinefragen zu beantworten. Er kann dies im Chat tun oder automatisiert E-Mails beantworten.  
-[Mehr erfahren](http://www.botfabrik.ch/kundendienst-bot/)
+[Mehr erfahren](/kundendienst-bot/)
 
 ### Werbe Bots
 
 Bots bieten gerade im Marketing unzählige Einsatzmöglichkeiten. Der Fantasie sind kaum Grenzen gesetzt.  
-[Mehr erfahren](http://www.botfabrik.ch/werbe-bot/)
+[Mehr erfahren](/werbe-bot/)

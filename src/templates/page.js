@@ -23,30 +23,9 @@ const HeaderTitle = styled.h1`
 
 const Header = ({ title }) => (
   <HeadArea>
-    <HeaderTitle>{title}</HeaderTitle>
+    <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
   </HeadArea>
 )
-
-const Published = ({ author, date }) => {
-  const Div = styled.div`
-    margin-top: 2rem;
-    color: #0009;
-    font-size: 0.8rem;
-  `
-  const Author = styled.span`
-    font-weight: 400;
-    text-transform: capitalize;
-  `
-  const Date = styled.span`
-    font-weight: 400;
-  `
-  return (
-    <Div>
-      Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
-      <Date>{date}</Date>
-    </Div>
-  )
-}
 
 export const PageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
@@ -65,7 +44,6 @@ export const PageTemplate = ({ content, contentComponent, metaData }) => {
         <Container>
           <Header title={title} />
           <Description>{seo}</Description>
-          {author && <Published author={author} date={date} />}
           <PostContent content={content} />
         </Container>
       </Section>
