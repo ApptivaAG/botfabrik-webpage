@@ -17,6 +17,12 @@ const Container = styled(DefaultContainer)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  max-width: calc(960px + 20rem);
+
+  @media (min-width: 768px) {
+    padding-right: 1em;
+  }
 `
 
 const Logo = styled.div`
