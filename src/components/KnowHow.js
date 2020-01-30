@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import { Section, Container } from '../styles'
+import { Section, Container, Button } from '../styles'
 
 const Grid = styled.div`
   @media (min-width: 1024px) {
@@ -48,9 +48,13 @@ const KnowHowItem = (
         alt={title}
       />
       <p css="grid-area: content; margin: 0;">{summary}</p>
-      <Link css="grid-area: button; justify-self: end;" to={permalink}>
+      <Button
+        as={Link}
+        css="grid-area: button; justify-self: end; align-self: start;"
+        to={permalink}
+      >
         Mehr
-      </Link>
+      </Button>
     </Grid>
   )
 }
