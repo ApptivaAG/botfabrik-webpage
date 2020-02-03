@@ -3,7 +3,17 @@ import Container from './Container'
 import GlobalStyle from './GlobalStyle'
 import Section from './Section'
 import Button from './Button'
+import Cols from './Cols'
 import theme from './theme'
 import fontFace from './font-face'
 
-export { Center, Container, GlobalStyle, Section, Button, theme, fontFace }
+export {
+  Center,
+  Container,
+  GlobalStyle,
+  Section,
+  Button,
+  Cols,
+  theme,
+  fontFace,
+}

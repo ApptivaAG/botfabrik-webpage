@@ -21,8 +21,6 @@ Zu unseren Kompetenzen gehören
 
 Bots sind unser aller Leidenschaft und wir freuen uns über jeden Tag, an dem wir Bots entwickeln dürfen.
 
-
-
 ## Standort
 
 Die Botfabrik befindet sich in Sempach an der Autobahn A2 und der Bahnlinie zwischen Luzern und Sursee.

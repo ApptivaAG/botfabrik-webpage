@@ -11,11 +11,20 @@ const UeberUns = () => {
         <Container>
           <h1>Über uns</h1>
           <p>
-            In der Botfabrik entwickeln wir kundenindividuelle Bots und Chatbots
-            und integrieren diese bei Bedarf in die bestehende IT Struktur. Wir
-            sind zu 100% unabhängig und können somit die Tools und Technologien
-            einsetzen, die die geforderten Anforderungen und Ziele ideal
-            erfüllen.
+            Seit 2016 entwickeln wir in der Botfabrik kundenindividuelle
+            Chatbots und integrieren diese bei Bedarf in bestehende IT- und
+            Organisations-Strukturen.
+          </p>
+          <p>
+            Dazu hecken wir Strategien für Chatbots aus, erstellen entsprechende
+            Konzepte, implementieren Chatbots, unterstützen bei und verfassen
+            Inhalte für Chatbots, integrieren und trainieren diese und stellen
+            den Betrieb von Chatbots sicher.
+          </p>
+          <p>
+            Wir sind zu 100% unabhängig und können somit die Tools und
+            Technologien einsetzen, die die geforderten Anforderungen und Ziele
+            ideal erfüllen.
           </p>
         </Container>
       </Section>

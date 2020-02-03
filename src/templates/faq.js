@@ -26,7 +26,7 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-export const PageTemplate = ({ content, contentComponent, metaData }) => {
+export const FaqTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const { title, seo } = metaData
 
@@ -51,22 +51,22 @@ export const PageTemplate = ({ content, contentComponent, metaData }) => {
 }
 
 export default ({ data }) => {
-  const { page } = data
+  const { faq } = data
 
-  page.frontmatter.excerpt = page.excerpt
+  faq.frontmatter.excerpt = faq.excerpt
 
   return (
-    <PageTemplate
-      content={page.html}
+    <FaqTemplate
+      content={faq.html}
       contentComponent={HTMLContent}
-      metaData={page.frontmatter}
+      metaData={faq.frontmatter}
     />
   )
 }
 
-export const pageQuery = graphql`
-  query PageByID($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
+export const faqQuery = graphql`
+  query FaqByID($id: String!) {
+    faq: markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(pruneLength: 300)

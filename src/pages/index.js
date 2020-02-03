@@ -13,7 +13,7 @@ import ringier from '../img/ringier-logo-3.svg'
 import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
 import Testimonials from '../components/Testimonials'
-import { Section, Container, Button } from '../styles'
+import { Section, Container, Button, Cols } from '../styles'
 import KnowHow from '../components/KnowHow'
 
 const Grid = styled(Container)`
@@ -62,9 +62,7 @@ const SpeachBubble = styled.div`
       `}
 `
 
-const List = styled.ul`
-  line-height: 1.4;
-`
+const List = styled.ul``
 const CustomerTitle = styled.h1`
   font-size: 1.7em;
   color: #cbcbcb;
@@ -104,7 +102,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div css="grid-area: services">
           <SpeachBubble left>
-            Wir untersützen bei Chatbot
+            Wir untersützen bei Chatbot...
             <List>
               <li>Strategie</li>
               <li>Konzept und Inhalte</li>
@@ -130,49 +128,15 @@ const IndexPage = ({ data }) => (
     <KnowHow />
     <Section>
       <Container>
-        <h2>Leistungen</h2>
-        Illu und Beschreibung pro Punkt
-        <ul>
-          <li>Strategie</li>
-          <li>Konzept & Inhalte</li>
-          <li>Implementierung</li>
-          <li>Integration</li>
-          <li>Training</li>
-        </ul>
-      </Container>
-    </Section>
-    <Section>
-      <Container>
-        <h2>Technologien</h2>
-        <h3>Messaging Plattformen</h3>
-        <ul>
-          <li>Web </li>
-          <li>Facebook Messenger</li>
-          <li>Skype</li>
-          <li>Skype for Business</li>
-          <li>Telegram</li>
-          <li>Slack</li>
-        </ul>
-        <h3>Sprachverarbeitung</h3>
-        <ul>
-          <li>Dialogflow</li>
-          <li>Wit.ai</li>
-          <li>RASA</li>
-          <li>LUIS</li>
-        </ul>
-      </Container>
-    </Section>
-    <Section dark>
-      <Container>
-        <h2>Testimonials</h2>
-      </Container>
-    </Section>
-    <Section>
-      <Container>
         <h2>Blog</h2>
-        <div>
+        <Cols css="margin-bottom: 2em;">
           {data.blogs.edges.map(({ node }) => (
-            <div>
+            <div
+              css={`
+                padding: 1em;
+                background: ${p => p.theme.lightBg};
+              `}
+            >
               <Link
                 key={node.frontmatter.permalink}
                 to={node.frontmatter.permalink}
@@ -181,24 +145,10 @@ const IndexPage = ({ data }) => (
               </Link>
             </div>
           ))}
-        </div>
+        </Cols>
         <Button as={Link} to="blog">
           Zum Botfabrik Blog
         </Button>
-      </Container>
-    </Section>
-    <Section>
-      <Container>
-        <h2>Chatbot-FAQ</h2>
-        <div>
-          {data.pages.nodes.map(({ frontmatter }) => (
-            <div>
-              <Link key={frontmatter.permalink} to={frontmatter.permalink}>
-                {frontmatter.title}
-              </Link>
-            </div>
-          ))}
-        </div>
       </Container>
     </Section>
   </Layout>
@@ -232,20 +182,6 @@ export const indexPageQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-    pages: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "page" } } }
-    ) {
-      nodes {
-        excerpt(pruneLength: 140)
-        id
-        frontmatter {
-          title
-          permalink
-          date(formatString: "DD.MM.YYYY")
         }
       }
     }

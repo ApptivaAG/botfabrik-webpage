@@ -11,6 +11,10 @@ const Wrapper = styled.footer`
   h2 {
     margin: 2em 0 1em;
   }
+
+  a {
+    color: ${p => p.theme.white};
+  }
 `
 const Grid = styled.div`
   display: grid;
@@ -47,8 +51,9 @@ const Footer = ({ about }) => (
         </div>
         <div>
           <h2>Quick Links</h2>
-          <p>Apptiva AG</p>
+          <a href="https://apptiva.ch">Apptiva AG</a>
           <p>Twitter</p>
+          <Link to="faq">Häufig gestellte Fragen</Link>
         </div>
       </Grid>
       <CopyWrite>

@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  li {
+    margin-bottom: 0.5em;
+  }
+
   pre {
     padding: 1rem;
     background-color: hsla(0, 0%, 0%, 0.02);
