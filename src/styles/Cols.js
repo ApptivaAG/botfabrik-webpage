@@ -4,7 +4,7 @@ const Cols = styled.div`
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(${p => p.minWidht || '12em'}, 1fr)
+    minmax(${p => p.minWidth || '12em'}, 1fr)
   );
   gap: 1em;
 `
