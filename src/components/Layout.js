@@ -1,11 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled, { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider, css } from 'styled-components'
 
 import Header from './Header'
 import Footer from './Footer'
 import { GlobalStyle, theme } from '../styles'
+import CallToAction from './CallToAction'
 
 const Grid = styled.div`
   display: grid;
@@ -14,6 +15,11 @@ const Grid = styled.div`
 `
 const Content = styled.main`
   display: block;
+  ${p => p.callToAction === false && css`
+    section:last-child {
+      padding-bottom: 6em;
+    }
+  `}
 `
 
 const query = graphql`
@@ -28,7 +34,7 @@ const query = graphql`
   }
 `
 
-export default ({ children }) => {
+export default ({ children, className, callToAction = true }) => {
   const data = useStaticQuery(query)
   const { about, title, url } = data.site.siteMetadata
 
@@ -38,7 +44,8 @@ export default ({ children }) => {
       <Grid>
         <Helmet titleTemplate={`%s | ${title} | ${url}`} defaultTitle={title} />
         <Header siteTitle={title} />
-        <Content>{children}</Content>
+        <Content className={className} callToAction={callToAction}>{children}</Content>
+        {callToAction && <CallToAction />}
         <Footer about={about} />
       </Grid>
     </ThemeProvider>
