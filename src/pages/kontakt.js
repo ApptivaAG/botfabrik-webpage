@@ -28,10 +28,14 @@ const ContactInfo = styled.a`
   font-weight: 500;
   margin-bottom: 1.4em !important;
 `
+const Address = styled.address`
+  font-weight: 500;
+  font-style: normal;
+`
 
 const Kontakt = () => {
   return (
-    <Layout>
+    <Layout callToAction={false}>
       <Section>
         <Container>
           <h1>Kontakt</h1>
@@ -61,11 +65,10 @@ const Kontakt = () => {
             Die Botfabrik befindet sich in Sempach an der Autobahn A2 und der
             Bahnlinie zwischen Luzern und Sursee.
           </p>
-          <address>
+          <Address>
             Neuenkirchstrasse 19 <br />
-            6203 Sempach <br />
-            Station
-          </address>
+            6203 Sempach Station
+          </Address>
 
           <iframe
             css="margin-top: 3em;"

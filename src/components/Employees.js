@@ -27,7 +27,7 @@ const Employee = styled.div`
   margin-right: auto;
 `
 const Avatar = styled(Img)`
-  border: 3px solid #eee;
+  border: 3px solid ${p => p.theme.primary};
   border-radius: 50%;
   margin-right: 1em;
   transform: translateZ(0); /* Safari bug rounded image flicker  */
