@@ -1,14 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import { Container, Section, Cols } from '../styles'
-
-const FaqItem = styled.div`
-  padding: 1em;
-  background: ${p => p.theme.lightBg};
-`
+import LinkItem from '../components/LinkItem'
 
 const FaqPage = ({ data }) => {
   const { faqs } = data
@@ -20,11 +15,13 @@ const FaqPage = ({ data }) => {
           <p>Was wir immer mal wieder gefragt werden.</p>
           <Cols>
             {faqs.nodes.map(({ frontmatter }) => (
-              <FaqItem key={frontmatter.permalink}>
-                <Link to={frontmatter.permalink}>
-                  <h2 css="font-size: 1.2em;">{frontmatter.question}</h2>
-                </Link>
-              </FaqItem>
+              <LinkItem
+                align="left"
+                to={frontmatter.permalink}
+                key={frontmatter.permalink}
+              >
+                <h2 css="margin: 0; font-size: 1em;">{frontmatter.question}</h2>
+              </LinkItem>
             ))}
           </Cols>
         </Container>

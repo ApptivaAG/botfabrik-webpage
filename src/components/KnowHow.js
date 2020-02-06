@@ -1,18 +1,24 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Section, Container, Button } from '../styles'
+import { Section, Container } from '../styles'
 
-const Grid = styled.div`
-  @media (min-width: 1024px) {
+const Grid = styled(Container)`
+  padding: 0;
+  div {
     display: grid;
-    grid: 'title title title' ${props =>
-        props.left
-          ? '"pit content content" auto "pit . button" 1fr'
-          : '"content content pit" auto ". button pit" 1fr'} / 10em 1fr 10em;
+    grid: 'title' 'pit' 'content';
+    @media (min-width: 1024px) {
+      grid: ${props =>
+          props.left
+            ? '"pit title title" "pit content content" auto "pit . button" 1fr'
+            : '"title title pit" "content content pit" auto ". button pit" 1fr'} / 16em 1fr 16em;
+    }
+    gap: 1em 2em;
+    margin: 2em 0;
+    padding: 1.5em;
+    background: ${p => p.theme.lightBg};
   }
-  gap: 2em;
-  margin: 2em 0;
 `
 
 const query = graphql`
@@ -40,21 +46,16 @@ const KnowHowItem = (
   index
 ) => {
   return (
-    <Grid left={index % 2}>
-      <h3 css="grid-area: title; margin: 0;">{title}</h3>
-      <img
-        css="grid-area: pit; max-width: 10em;"
-        src={image.publicURL}
-        alt={title}
-      />
-      <p css="grid-area: content; margin: 0;">{summary}</p>
-      <Button
-        as={Link}
-        css="grid-area: button; justify-self: end; align-self: start;"
-        to={permalink}
-      >
-        Mehr
-      </Button>
+    <Grid left={index % 2} key={permalink}>
+      <div>
+        <h3 css="grid-area: title; margin: 0;">{title}</h3>
+        <img
+          css="grid-area: pit; max-width: 16em; max-height: 8em;"
+          src={image.publicURL}
+          alt={title}
+        />
+        <p css="grid-area: content; margin: 0;">{summary}</p>
+      </div>
     </Grid>
   )
 }
@@ -65,8 +66,11 @@ const KnowHow = () => {
     <Section>
       <Container>
         <h2>Unsere Kompetenzen</h2>
-        {list.nodes.map(KnowHowItem)}
-        <h3>Weitere Kompetenzen</h3>
+      </Container>
+
+      {list.nodes.map(KnowHowItem)}
+      <Container>
+        <h3 css="margin-top: 3em;">Weitere Kompetenzen</h3>
         <ul>
           <li>die Konzeption von Chatbots</li>
           <li>
