@@ -120,7 +120,7 @@ const Header = () => (
       <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
         <NavItemsLink to="/dienstleistungen">Dienstleistungen</NavItemsLink>
-        <NavItemsLink to="/ueber-uns">Die Botfabrik</NavItemsLink>
+        <NavItemsLink to="/ueber-uns">Über uns</NavItemsLink>
         <NavItemsLink to="/blog">Blog</NavItemsLink>
         <NavItemsLink to="/kontakt">Kontakt</NavItemsLink>
       </Navigation>
