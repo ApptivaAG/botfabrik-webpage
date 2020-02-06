@@ -5,13 +5,9 @@ status: publish
 permalink: /live-chat
 author: 'Philip Schönholzer'
 templateKey: know-how
-image: ./logo.svg
+image: ./livechat.svg
 id: 30
-summary: 
-  Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten
+summary: Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten
   wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde
   immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
-
----
-
-Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+---Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.

@@ -5,11 +5,7 @@ status: publish
 permalink: /system-integration
 author: 'Philip Schönholzer'
 templateKey: know-how
-image: ./logo.svg
+image: ./systeme.svg
 id: 40
-summary: 
-  Dank unserem Hintergrund in der Entwicklung von Business-Software, fällt uns das Integrieren von Umsystem leicht. Bei vielen Chatbot-Projekten sorgten wir dafür, dass der Chatbot auch Actions ausführt oder oder dynamischen Inhalte anzeigt.
-
----
-
-Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+summary: Dank unserem Hintergrund in der Entwicklung von Business-Software, fällt uns das Integrieren von Umsystem leicht. Bei vielen Chatbot-Projekten sorgten wir dafür, dass der Chatbot auch Actions ausführt oder oder dynamischen Inhalte anzeigt.
+---Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.

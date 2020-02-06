@@ -5,11 +5,7 @@ status: publish
 permalink: /organisatorische-integration
 author: 'Philip Schönholzer'
 templateKey: know-how
-image: ./logo.svg
+image: ./org.svg
 id: 50
-summary: 
-  Ein Chatbot hat auch Einfluss auf die tägliche Arbeit einer Organisation. Wer pflegt den Chatbot? Wer macht Live-Chat? Wie arbeiten Fachabteilungen zusammen? Wir helfen ihnen den Chatbot optimal in ihr Unternehmen einzubinden.
-
----
-
-Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+summary: Ein Chatbot hat auch Einfluss auf die tägliche Arbeit einer Organisation. Wer pflegt den Chatbot? Wer macht Live-Chat? Wie arbeiten Fachabteilungen zusammen? Wir helfen ihnen den Chatbot optimal in ihr Unternehmen einzubinden.
+---Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.

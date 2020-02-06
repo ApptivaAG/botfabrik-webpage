@@ -7,7 +7,7 @@ status: publish
 permalink: /dienstleistung/entwicklung
 author: 'Philip Schönholzer'
 templateKey: service
-image: ./logo.svg
+image: ./entwicklung.svg
 ---
 
 Mit über zwei duzend Chatbot-Projekten und vielzähligen Workshops ist das Erarbeiten von Chatbots und deren Inhalt für uns nicht mehr ausgewöhnlich. Nutzen sie unser Know-How.

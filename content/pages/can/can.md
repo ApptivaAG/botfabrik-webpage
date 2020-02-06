@@ -10,13 +10,7 @@ seo-title: 'CAN - Der zuvorkommende Kundendienst-Bot'
 seo: 'Mit CAN haben Sie automatisch eine höhere Kundendienst-Qualität. CAN ist immer freundlich und antwortet innerhalb von 5 Sekunden zu jeder Tages- und Nachtzeit. Bewältigen Sie zudem mehr Anfragen mit weniger Personal.'
 ---
 
-Automatisch höhere Kundendienst-Qualität
-
 ![](can-chat.svg)
-
-[  
-<span>  
-Jetzt für die Beta anmelden </span> ](https://botfabrik.typeform.com/to/kMax2z)
 
 ## Was ist CAN
 
@@ -115,5 +109,3 @@ Ist CAN mit Ihrem E-Mail-Konto verbunden, so kann er Sie beim Beantworten von Ma
 ## Jetzt Profitieren
 
 Profitieren Sie von höheren Reaktionszeiten und kleineren Aufwänden im Kundendienst mit CAN. Melden Sie sich noch heute für die CAN-Beta an und Sie werden kontaktiert, sobald CAN für Sie bereit ist.
-
-[Jetzt für die Beta anmelden](https://botfabrik.typeform.com/to/kMax2z)

@@ -5,7 +5,7 @@ status: publish
 permalink: /chatbot-inhalte
 author: 'Philip Schönholzer'
 templateKey: know-how
-image: ./logo.svg
+image: ./inhalte.svg
 id: 10
 summary: Nach über zwei duzend Chatbot-Projekten und vielzähligen Workshops zusammen mit unseren Kunden, ist das Erarbeiten von Chatbots und ansprechenden Inhalt, für uns nichts mehr aussergewöhnliches. Nutzen sie unser Know-How.
 ---
