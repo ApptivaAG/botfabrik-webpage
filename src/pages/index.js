@@ -4,6 +4,10 @@ import styled, { css } from 'styled-components'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import KnowHow from '../components/KnowHow'
+import LinkItem from '../components/LinkItem'
+
+import { Section, Container, Button, Cols } from '../styles'
 
 import pit from '../img/pit.svg'
 import bubbleArrow from '../img/bubblearrow.svg'
@@ -12,16 +16,36 @@ import arrowLeft from '../img/arrowLeft.svg'
 import ringier from '../img/ringier-logo-3.svg'
 import sanagate from '../img/sanagate.svg'
 import allianz from '../img/allianz-cinema-logo.png'
-import Testimonials from '../components/Testimonials'
-import { Section, Container, Button, Cols } from '../styles'
-import KnowHow from '../components/KnowHow'
+import post from '../img/post-2.svg'
+import energie360 from '../img/energie360.svg'
+import maxonMotor from '../img/maxon-motor-2.svg'
+import suva from '../img/suva.svg'
+
+const IndexLayout = styled(Layout)`
+  h2 {
+    font-size: 2em;
+  }
+`
 
 const Grid = styled(Container)`
-  grid: 'value-prop value-prop' 'pit services' / 190px 320px;
+  grid: 'value-prop' 'pit' 'services' 'c2a';
   display: grid;
   gap: 2em;
+  @media (min-width: 640px) and (max-width: 1240px) {
+    grid: 'value-prop value-prop' 'pit services' 'c2a c2a' / 190px 320px;
+  }
   @media (min-width: 1240px) {
-    grid: 'value-prop pit services' auto / 1fr 190px 320px;
+    grid: 'value-prop pit services' auto 'c2a c2a c2a' / 1fr 190px 320px;
+  }
+`
+
+const ValueProposition = styled.p`
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: 1.1;
+  margin-top: 0;
+  b {
+    font-weight: 600;
   }
 `
 
@@ -31,8 +55,8 @@ const SpeachBubble = styled.div`
   font-size: 1em;
   font-weight: 500;
   padding: 1em 1em;
-  color: ${p => p.theme.white};
-  background-color: ${p => p.theme.primary};
+  color: ${p => p.theme.text};
+  background-color: ${p => p.theme.darkBg};
 
   ${p =>
     p.left
@@ -67,38 +91,37 @@ const CustomerTitle = styled.h1`
   font-size: 1.7em;
   color: #cbcbcb;
   text-align: center;
+  margin-bottom: 1em;
 `
 const Customers = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 -0.5rem;
 
   & > img {
-    flex: 1 1 6rem;
+    flex: 0 1 8rem;
     width: 100%;
     margin: 1em 2em;
-    text-align: center;
+    max-width: 8em;
   }
 `
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <IndexLayout>
     <Seo />
 
-    <Section>
+    <Section css="margin-top: 4em;">
       <Grid>
         <div css="grid-area: value-prop">
-          <h2 css="font-weight: 200; margin-top: 0">
-            Sorge für echte Entlastung mit passgenauen{' '}
-            <b css="font-weight: 600">Chatbots</b> in dein Unternehmen
-            integriert.
-          </h2>
-          <Button type="button">Mehr erfahren</Button>
+          <ValueProposition>
+            Sorge sie für echte <b>Entlastung</b> mit integrierten, passgenauen{' '}
+            <b>Chatbots</b>, die ihre Anwender begeistern.
+          </ValueProposition>
         </div>
         <div css="grid-area: pit">
-          <img src={pit} alt="Pit" />
+          <img css="max-width: 300px;" src={pit} alt="Pit" />
         </div>
         <div css="grid-area: services">
           <SpeachBubble left>
@@ -106,13 +129,20 @@ const IndexPage = ({ data }) => (
             <List>
               <li>Strategie</li>
               <li>Konzept und Inhalte</li>
-              <li>Entwicklung </li>
-              <li>Integration (tech & org) </li>
+              <li>Entwicklung</li>
+              <li>Integration (tech & org)</li>
               <li>Training und Pflege</li>
               <li>Betrieb</li>
             </List>
           </SpeachBubble>
         </div>
+        <Button
+          css="grid-area: c2a; justify-self: center; margin-top: 2em;"
+          as={Link}
+          to="/dienstleistungen"
+        >
+          Zu unseren Dienstleistungen
+        </Button>
       </Grid>
     </Section>
     <Section dark>
@@ -122,28 +152,29 @@ const IndexPage = ({ data }) => (
           <img src={ringier} alt="Ringier Logo" />
           <img src={sanagate} alt="Sanagate Logo" />
           <img src={allianz} alt="Allianz Cinema Logo" />
+          <img src={energie360} alt="Energie 360°" />
+          <img src={maxonMotor} alt="maxon motor" />
+          <img src={post} alt="Die Post" />
+          <img css="height: 1.2em;" src={suva} alt="Suva" />
         </Customers>
       </Container>
     </Section>
     <KnowHow />
-    <Section>
+    <Section dark>
       <Container>
         <h2>Blog</h2>
         <Cols css="margin-bottom: 2em;">
           {data.blogs.edges.map(({ node }) => (
-            <div
+            <LinkItem
+              key={node.frontmatter.permalink}
+              to={node.frontmatter.permalink}
               css={`
-                padding: 1em;
-                background: ${p => p.theme.lightBg};
+                background: ${p => p.theme.white};
+                border: 1px solid ${p => p.theme.primary};
               `}
             >
-              <Link
-                key={node.frontmatter.permalink}
-                to={node.frontmatter.permalink}
-              >
-                {node.frontmatter.title}
-              </Link>
-            </div>
+              {node.frontmatter.title}
+            </LinkItem>
           ))}
         </Cols>
         <Button as={Link} to="blog">
@@ -151,7 +182,7 @@ const IndexPage = ({ data }) => (
         </Button>
       </Container>
     </Section>
-  </Layout>
+  </IndexLayout>
 )
 
 export default IndexPage
