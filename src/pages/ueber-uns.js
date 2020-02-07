@@ -1,10 +1,25 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import { Container, Section } from '../styles'
 import Employees from '../components/Employees'
 
+const query = graphql`
+  query {
+    officeImage: file(absolutePath: { regex: "/buero.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
 const UeberUns = () => {
+  const { officeImage } = useStaticQuery(query)
   return (
     <Layout>
       <Section>
@@ -28,6 +43,7 @@ const UeberUns = () => {
           </p>
         </Container>
       </Section>
+      <Img fluid={officeImage.childImageSharp.fluid} />
       <Employees />
     </Layout>
   )

@@ -1,6 +1,8 @@
 import React from 'react'
-
 import styled from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+
 import Layout from '../components/Layout'
 import { Container, Section } from '../styles'
 import ContactForm from '../components/ContactForm'
@@ -33,7 +35,21 @@ const Address = styled.address`
   font-style: normal;
 `
 
+const query = graphql`
+  query {
+    buildingImage: file(absolutePath: { regex: "/gebaeude.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
 const Kontakt = () => {
+  const { buildingImage } = useStaticQuery(query)
+
   return (
     <Layout callToAction={false}>
       <Section>
@@ -58,9 +74,11 @@ const Kontakt = () => {
           </Grid>
         </Container>
       </Section>
+      <Img fluid={buildingImage.childImageSharp.fluid} />
       <Section dark>
         <Container>
           <h2>Standort</h2>
+
           <p>
             Die Botfabrik befindet sich in Sempach an der Autobahn A2 und der
             Bahnlinie zwischen Luzern und Sursee.
