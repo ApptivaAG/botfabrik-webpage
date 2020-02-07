@@ -2,7 +2,7 @@
 title: 'Can &#8211; der zuvorkommende Kundendienst-Bot'
 date: '2017-02-24T14:50:56+00:00'
 status: publish
-permalink: /can
+permalink: /dienstleistungen/can
 author: 'Linus Hüsler'
 templateKey: page
 id: 139

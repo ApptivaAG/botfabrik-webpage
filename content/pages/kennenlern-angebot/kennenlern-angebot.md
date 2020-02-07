@@ -2,7 +2,7 @@
 title: Kennenlern-AngeBot
 date: '2018-07-26T15:59:18+00:00'
 status: publish
-permalink: /kennenlern-angebot
+permalink: /dienstleistungen/kennenlern-angebot
 author: 'Linus Hüsler'
 templateKey: page
 id: 809

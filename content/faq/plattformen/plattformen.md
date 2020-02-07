@@ -2,7 +2,7 @@
 title: Plattformen
 date: '2017-06-30T11:56:50+00:00'
 status: publish
-permalink: /plattformen
+permalink: /faq/plattformen
 author: 'Linus Hüsler'
 templateKey: faq
 id: 353

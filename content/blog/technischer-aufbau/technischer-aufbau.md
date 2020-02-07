@@ -1,6 +1,6 @@
 ---
 title: Technischer Aufbau von Chatbots
-permalink: technischer-aufbau-von-chatbots
+permalink: /blog/technischer-aufbau-von-chatbots
 templateKey: blog-post
 image: ./technischer-aufbau.png
 date: 2020-01-23T11:16:49

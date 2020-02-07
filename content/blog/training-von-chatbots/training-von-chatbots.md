@@ -2,7 +2,7 @@
 title: 'Training von Chatbots'
 date: '2018-05-17T13:48:13+00:00'
 status: publish
-permalink: /2018/05/17/training-von-chatbots
+permalink: /blog/2018/05/17/training-von-chatbots
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 736

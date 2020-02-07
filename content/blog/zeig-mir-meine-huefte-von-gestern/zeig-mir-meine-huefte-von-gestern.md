@@ -2,7 +2,7 @@
 title: 'Zeig mir meine Hüfte von gestern'
 date: '2018-07-24T09:49:15+00:00'
 status: publish
-permalink: /2018/07/24/zeig-mir-meine-huefte-von-gestern
+permalink: /blog/2018/07/24/zeig-mir-meine-huefte-von-gestern
 author: 'Linus Hüsler'
 templateKey: blog-post
 id: 783

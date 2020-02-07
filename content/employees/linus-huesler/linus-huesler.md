@@ -1,6 +1,6 @@
 ---
 templateKey: employee
-slug: /linus-huesler
+slug: /ueber-uns/linus-huesler
 name: Linus Hüsler
 claim: Ordentlich überraschender Entwerfer
 preview: linus-huesler-prev.jpg

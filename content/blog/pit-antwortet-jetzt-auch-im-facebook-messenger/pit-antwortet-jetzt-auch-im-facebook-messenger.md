@@ -2,7 +2,7 @@
 title: 'Pit antwortet jetzt auch im Facebook Messenger'
 date: '2017-07-11T21:16:33+00:00'
 status: publish
-permalink: /2017/07/11/pit-antwortet-jetzt-auch-im-facebook-messenger
+permalink: /blog/2017/07/11/pit-antwortet-jetzt-auch-im-facebook-messenger
 author: 'Linus Hüsler'
 templateKey: blog-post
 id: 399

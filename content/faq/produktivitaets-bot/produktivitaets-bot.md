@@ -2,7 +2,7 @@
 title: 'Produktivitäts Bot'
 date: '2017-06-30T11:44:49+00:00'
 status: publish
-permalink: /produktivitaets-bot
+permalink: /faq/produktivitaets-bot
 author: 'Linus Hüsler'
 templateKey: faq
 id: 349

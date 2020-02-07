@@ -2,7 +2,7 @@
 title: 'Der Bot, dein Freund und Helfer'
 date: '2018-12-19T08:00:13+00:00'
 status: publish
-permalink: /2018/12/19/der-bot-dein-freund-und-helfer
+permalink: /blog/2018/12/19/der-bot-dein-freund-und-helfer
 author: admin
 templateKey: blog-post
 id: 877

@@ -2,7 +2,7 @@
 title: 'Bestell- und Postsales Bot'
 date: '2017-01-16T08:17:23+00:00'
 status: publish
-permalink: /bestell-und-postsales-bot
+permalink: /faq/bestell-und-postsales-bot
 author: admin
 templateKey: faq
 id: 73

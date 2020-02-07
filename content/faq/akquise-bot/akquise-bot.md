@@ -2,7 +2,7 @@
 title: 'Akquise Bot'
 date: '2017-01-16T08:10:45+00:00'
 status: publish
-permalink: /akquise-bot
+permalink: /faq/akquise-bot
 author: admin
 templateKey: faq
 id: 66

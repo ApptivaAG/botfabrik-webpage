@@ -2,7 +2,7 @@
 title: 'Werbe Bot'
 date: '2017-01-16T08:15:57+00:00'
 status: publish
-permalink: /werbe-bot
+permalink: /faq/werbe-bot
 author: admin
 templateKey: faq
 id: 71

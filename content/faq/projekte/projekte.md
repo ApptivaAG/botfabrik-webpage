@@ -2,7 +2,7 @@
 title: Projekte
 date: '2017-06-23T15:29:22+00:00'
 status: publish
-permalink: /projekte
+permalink: /faq/projekte
 author: 'Philip Schönholzer'
 templateKey: faq
 id: 228

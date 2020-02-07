@@ -2,7 +2,7 @@
 title: 'Chatbot mit Spracheingabe steuern'
 date: '2019-11-08T15:22:08+00:00'
 status: publish
-permalink: /2019/11/08/chatbot-mit-spracheingabe-steuern
+permalink: /blog/2019/11/08/chatbot-mit-spracheingabe-steuern
 author: admin
 templateKey: blog-post
 id: 947

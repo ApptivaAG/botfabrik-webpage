@@ -1,6 +1,6 @@
 ---
 templateKey: employee
-slug: /patrik-stutz
+slug: /ueber-uns/patrik-stutz
 name: Patrik Stutz
 claim: Entdeckungsfreudiger Tüftler
 preview: patrik-stutz-prev.jpg

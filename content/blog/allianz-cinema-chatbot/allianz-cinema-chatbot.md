@@ -2,7 +2,7 @@
 title: 'Allianz Cinema Chatbot'
 date: '2017-07-20T15:00:44+00:00'
 status: publish
-permalink: /2017/07/20/allianz-cinema-chatbot
+permalink: /blog/2017/07/20/allianz-cinema-chatbot
 author: 'Linus Hüsler'
 templateKey: blog-post
 id: 469

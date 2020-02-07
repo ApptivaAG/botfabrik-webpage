@@ -2,7 +2,7 @@
 title: 'Kundendienst Bot'
 date: '2017-01-16T08:14:12+00:00'
 status: publish
-permalink: /kundendienst-bot
+permalink: /faq/kundendienst-bot
 author: admin
 templateKey: faq
 id: 69

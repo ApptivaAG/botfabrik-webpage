@@ -2,7 +2,7 @@
 title: 'Kundendienst-Chatbot der Sanagate'
 date: '2017-10-31T17:25:08+00:00'
 status: publish
-permalink: /2017/10/31/kundendienst-chatbot-der-sanagate
+permalink: /blog/2017/10/31/kundendienst-chatbot-der-sanagate
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 577

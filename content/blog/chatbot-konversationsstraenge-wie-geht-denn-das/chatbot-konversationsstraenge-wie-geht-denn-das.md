@@ -2,7 +2,7 @@
 title: 'Chatbot-Konversationsstränge &#8211; wie geht denn das?'
 date: '2018-12-17T08:42:13+00:00'
 status: publish
-permalink: /2018/12/17/chatbot-konversationsstraenge-wie-geht-denn-das
+permalink: /blog/2018/12/17/chatbot-konversationsstraenge-wie-geht-denn-das
 author: Markus Tanner
 templateKey: blog-post
 id: 861

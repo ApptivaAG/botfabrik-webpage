@@ -2,7 +2,7 @@
 title: 'Chatbot für Skype for Business'
 date: '2018-01-08T10:22:14+00:00'
 status: publish
-permalink: /2018/01/08/chatbot-fuer-skype-for-business
+permalink: /blog/2018/01/08/chatbot-fuer-skype-for-business
 author: 'Roman Schaller'
 templateKey: blog-post
 id: 628

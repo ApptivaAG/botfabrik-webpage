@@ -2,7 +2,7 @@
 title: 'Auch Bots haben Gefühle'
 date: '2018-07-09T15:29:41+00:00'
 status: publish
-permalink: /2018/07/09/auch-bots-haben-gefuehle
+permalink: /blog/2018/07/09/auch-bots-haben-gefuehle
 author: admin
 templateKey: blog-post
 id: 769

@@ -4,7 +4,7 @@ title: Betrieb von Chatbots
 subtitle: Hosting, Betrieb und Support von Chatbots
 date: '2020-01-26T11:09:49+00:00'
 status: publish
-permalink: /dienstleistung/betrieb
+permalink: /dienstleistungen/betrieb
 author: 'Philip Schönholzer'
 templateKey: service
 image: ./support.svg

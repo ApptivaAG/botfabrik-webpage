@@ -4,7 +4,7 @@ title: Inhalte erarbeiten
 subtitle: Workshops und Tools zur Erarbeitung von Chatbot-Inhalten
 date: '2020-01-26T11:09:49+00:00'
 status: publish
-permalink: /dienstleistung/inhalte-erarbeiten
+permalink: /dienstleistungen/inhalte-erarbeiten
 author: 'Philip Schönholzer'
 templateKey: service
 image: ./konzept.svg

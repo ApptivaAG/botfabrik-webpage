@@ -1,6 +1,6 @@
 ---
 templateKey: employee
-slug: /david-decker
+slug: /ueber-uns/david-decker
 name: David Decker
 claim: Wissensstaubsauger
 preview: david-decker-prev.jpg
@@ -33,11 +33,8 @@ skills:
     items:
       - name: Englisch
         value: 95
+---# Meine Erfahrungen
 
----
-
-# Meine Erfahrungen
-
-Bereits als Kind haben mich die logischen Abläufe im Computer fasziniert. Diese Faszination hat mich nie verlassen, allerdings hatte ich viele Interessen, sodass ich erst auf Umwegen über ein Musikstudium zum Programmieren gefunden habe. 
+Bereits als Kind haben mich die logischen Abläufe im Computer fasziniert. Diese Faszination hat mich nie verlassen, allerdings hatte ich viele Interessen, sodass ich erst auf Umwegen über ein Musikstudium zum Programmieren gefunden habe.
 
 Als Gitarrenlehrer habe ich viel Freude, Inhalte zur Verständlichkeit zu vereinfachen. Als Entwickler nehme ich diese Einstellung mit.

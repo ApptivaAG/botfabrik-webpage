@@ -2,7 +2,7 @@
 title: Chatbot-Check
 date: '2018-02-06T16:25:14+00:00'
 status: publish
-permalink: /chatbot-check
+permalink: /dienstleistungen/chatbot-check
 author: 'Philip Schönholzer'
 templateKey: page
 id: 636

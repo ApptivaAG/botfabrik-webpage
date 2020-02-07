@@ -2,7 +2,7 @@
 title: 'E-Commerce Bot'
 date: '2017-06-30T10:30:31+00:00'
 status: publish
-permalink: /e-commerce-bot
+permalink: /faq/e-commerce-bot
 author: 'Linus Hüsler'
 templateKey: faq
 id: 290

@@ -2,7 +2,7 @@
 title: 'Was kostet ein Chatbot?'
 date: '2018-04-03T08:58:51+00:00'
 status: publish
-permalink: /2018/04/03/was-kostet-ein-chatbot
+permalink: /blog/2018/04/03/was-kostet-ein-chatbot
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 701

@@ -2,7 +2,7 @@
 title: 'FAQ Bot'
 date: '2017-01-13T21:56:33+00:00'
 status: publish
-permalink: /faq-bot
+permalink: /faq/faq-bot
 author: admin
 templateKey: faq
 id: 8

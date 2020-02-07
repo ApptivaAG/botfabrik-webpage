@@ -2,7 +2,7 @@
 title: 'Facebook Chatbot: Unterhaltung an echte Person übergeben'
 date: '2018-05-08T10:10:17+00:00'
 status: publish
-permalink: /2018/05/08/facebook-chatbot-unterhaltung-an-echte-person-uebergeben
+permalink: /blog/2018/05/08/facebook-chatbot-unterhaltung-an-echte-person-uebergeben
 author: admin
 templateKey: blog-post
 id: 716

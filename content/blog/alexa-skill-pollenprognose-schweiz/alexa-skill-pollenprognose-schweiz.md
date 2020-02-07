@@ -2,7 +2,7 @@
 title: 'Alexa, öffne Pollenprognose Schweiz!'
 date: '2019-03-08T09:41:06+00:00'
 status: publish
-permalink: /2019/03/08/alexa-skill-pollenprognose-schweiz
+permalink: /blog/2019/03/08/alexa-skill-pollenprognose-schweiz
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 903

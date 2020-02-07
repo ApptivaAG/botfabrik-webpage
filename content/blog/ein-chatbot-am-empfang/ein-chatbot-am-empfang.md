@@ -2,7 +2,7 @@
 title: 'Ein Chatbot am Empfang'
 date: '2018-07-26T12:07:49+00:00'
 status: publish
-permalink: /2018/07/26/ein-chatbot-am-empfang
+permalink: /blog/2018/07/26/ein-chatbot-am-empfang
 author: 'Roman Schaller'
 templateKey: blog-post
 id: 750

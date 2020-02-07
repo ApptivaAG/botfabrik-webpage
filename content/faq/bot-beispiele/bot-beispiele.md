@@ -2,7 +2,7 @@
 title: 'Bot Beispiele'
 date: '2017-02-24T17:15:16+00:00'
 status: publish
-permalink: /bot-beispiele
+permalink: /faq/bot-beispiele
 author: 'Linus Hüsler'
 templateKey: faq
 question: In welchen Bereichen können Bots und Chatbots eingesetzt werden?

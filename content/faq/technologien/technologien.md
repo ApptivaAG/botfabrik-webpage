@@ -2,7 +2,7 @@
 title: Technologien
 date: '2017-02-24T16:43:09+00:00'
 status: publish
-permalink: /technologien
+permalink: /faq/technologien
 author: 'Linus Hüsler'
 templateKey: faq
 id: 169

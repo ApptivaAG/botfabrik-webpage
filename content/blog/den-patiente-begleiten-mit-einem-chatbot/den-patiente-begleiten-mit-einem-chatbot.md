@@ -2,7 +2,7 @@
 title: 'Den Patienten begleiten &#8211; mit einem Chatbot'
 date: '2017-06-23T17:23:34+00:00'
 status: publish
-permalink: /2017/06/23/den-patiente-begleiten-mit-einem-chatbot
+permalink: /blog/2017/06/23/den-patiente-begleiten-mit-einem-chatbot
 author: 'Philip Schönholzer'
 templateKey: blog-post
 id: 276

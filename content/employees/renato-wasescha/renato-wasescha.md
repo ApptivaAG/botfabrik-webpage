@@ -1,6 +1,6 @@
 ---
 templateKey: employee
-slug: /renato-wasescha
+slug: /ueber-uns/renato-wasescha
 name: Renato Wasescha
 claim: Ausdauernder Lösungsfinder
 preview: renato-wasescha-prev.jpg
