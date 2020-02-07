@@ -8,17 +8,16 @@ const Button = styled.button`
   font-weight: 500;
   color: white;
   background-color: ${props => props.theme.primary};
-  transition: transform 30ms ease-out;
-  transform: translate3d(0, 0, 0);
+  transition: transform 100ms ease-out;
   box-sizing: border-box;
   cursor: pointer;
 
   &:hover {
-    transform: translate3d(0, -1px, 0);
+    transform: scale(1.02);
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: scale(0.98);
   }
 
   @media (max-width: 380px) {

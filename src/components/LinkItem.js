@@ -13,6 +13,10 @@ const Item = styled.div`
   &:hover {
     transform: scale(1.02);
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
 `
 
 const LinkItem = ({ to, children, className, align }) => (

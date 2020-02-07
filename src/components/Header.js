@@ -97,10 +97,14 @@ const NavItemsLink = styled(Link).attrs({
     }
   }
 
-  transition: transform 30ms ease-out;
+  transition: transform 100ms ease-out;
 
   &:hover {
-    transform: translateY(-1px);
+    transform: scale(1.06);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 `
 

@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Seo from '../components/Seo'
 import { Section, Container } from '../styles'
+import LinkItem from '../components/LinkItem'
 
 const HeadArea = styled.div``
 
@@ -50,30 +51,24 @@ const Published = ({ author, date }) => {
   )
 }
 
-const Navigation = ({ next, prev }) => {
-  const LayoutNavigation = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -0.5em;
-  `
-  const NavigationLinks = styled(Link)`
-    padding: 0.5em;
-    margin: 0.5em;
-    background-color: #eee;
-    border-radius: 0.2em;
-  `
+const LayoutNavigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -0.5em;
+`
 
+const Navigation = ({ next, prev }) => {
   return (
     <LayoutNavigation>
       {prev && (
-        <NavigationLinks to={prev.frontmatter.permalink}>
+        <LinkItem to={prev.frontmatter.permalink}>
           {prev.frontmatter.title}
-        </NavigationLinks>
+        </LinkItem>
       )}
       {next && (
-        <NavigationLinks to={next.frontmatter.permalink}>
+        <LinkItem to={next.frontmatter.permalink}>
           {next.frontmatter.title}
-        </NavigationLinks>
+        </LinkItem>
       )}
     </LayoutNavigation>
   )
