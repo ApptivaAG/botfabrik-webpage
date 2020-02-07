@@ -20,6 +20,37 @@ const LinkItem = styled(LinkItemDefault)`
     margin: 0;
   }
 `
+export const item = (frontmatter, excerpt) => {
+  return (
+    <LinkItem
+      to={frontmatter.permalink}
+      key={frontmatter.permalink}
+      align="left"
+    >
+      <h2
+        css="grid-area: title"
+        dangerouslySetInnerHTML={{ __html: frontmatter.title }}
+      />
+      {frontmatter.image && (
+        <Img
+          css="grid-area: image; justify-self: center;"
+          fixed={frontmatter.image.childImageSharp.fixed}
+        />
+      )}
+      <p css="grid-area: excerpt">{excerpt}</p>
+      <p
+        css={`
+          grid-area: date;
+          @media (max-width: 768px) {
+            justify-self: right;
+          }
+        `}
+      >
+        <small>{frontmatter.date}</small>
+      </p>
+    </LinkItem>
+  )
+}
 
 const BlogPage = ({ data }) => {
   const { blogs } = data
@@ -30,35 +61,7 @@ const BlogPage = ({ data }) => {
           <h1>Botfabrik Blog</h1>
           <p>Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots.</p>
           {blogs.nodes.map(({ excerpt, frontmatter }) => {
-            return (
-              <LinkItem
-                to={frontmatter.permalink}
-                key={frontmatter.permalink}
-                align="left"
-              >
-                <h2
-                  css="grid-area: title"
-                  dangerouslySetInnerHTML={{ __html: frontmatter.title }}
-                />
-                {frontmatter.image && (
-                  <Img
-                    css="grid-area: image; justify-self: center;"
-                    fixed={frontmatter.image.childImageSharp.fixed}
-                  />
-                )}
-                <p css="grid-area: excerpt">{excerpt}</p>
-                <p
-                  css={`
-                    grid-area: date;
-                    @media (max-width: 768px) {
-                      justify-self: right;
-                    }
-                  `}
-                >
-                  <small>{frontmatter.date}</small>
-                </p>
-              </LinkItem>
-            )
+            return item(frontmatter, excerpt)
           })}
         </Container>
       </Section>

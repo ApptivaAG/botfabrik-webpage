@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Seo from '../components/Seo'
 import { Section, Container } from '../styles'
-import LinkItem from '../components/LinkItem'
+import { item } from '../pages/blog'
 
 const HeadArea = styled.div``
 
@@ -51,25 +51,13 @@ const Published = ({ author, date }) => {
   )
 }
 
-const LayoutNavigation = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 0 -0.5em;
-`
+const LayoutNavigation = styled.div``
 
 const Navigation = ({ next, prev }) => {
   return (
     <LayoutNavigation>
-      {prev && (
-        <LinkItem to={prev.frontmatter.permalink}>
-          {prev.frontmatter.title}
-        </LinkItem>
-      )}
-      {next && (
-        <LinkItem to={next.frontmatter.permalink}>
-          {next.frontmatter.title}
-        </LinkItem>
-      )}
+      {prev && item(prev.frontmatter, prev.excerpt)}
+      {next && item(next.frontmatter, next.excerpt)}
     </LayoutNavigation>
   )
 }

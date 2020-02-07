@@ -7,15 +7,32 @@ exports.createPages = ({ actions, graphql }) => {
     query {
       allMarkdownRemark(
         limit: 1000
-        filter: { frontmatter: { templateKey: { regex: "/post/" } } }
+        filter: { frontmatter: { templateKey: { regex: "/blog-post/" } } }
       ) {
         edges {
           node {
+            excerpt(pruneLength: 140)
             id
             frontmatter {
+              title
               permalink
               templateKey
-              title
+              date(formatString: "DD.MM.YYYY")
+              image {
+                childImageSharp {
+                  fixed(width: 300) {
+                    srcSet
+                    srcWebp
+                    src
+                    base64
+                    width
+                    srcSetWebp
+                    aspectRatio
+                    height
+                    originalName
+                  }
+                }
+              }
             }
           }
         }
