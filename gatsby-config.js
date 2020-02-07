@@ -70,6 +70,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
-    'gatsby-plugin-netlify-cache',
+    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-netlify-cache`,
   ],
 }
