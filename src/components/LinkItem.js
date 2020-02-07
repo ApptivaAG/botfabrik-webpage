@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Item = styled.div`
   box-sizing: border-box;
   height: 100%;
-  padding: 1em;
+  padding: 1.5em 1em;
   background: ${p => p.theme.lightBg};
   color: black;
   text-align: ${p => (p.align ? p.align : 'center')};
@@ -16,6 +16,11 @@ const Item = styled.div`
 
   &:active {
     transform: scale(0.98);
+  }
+  h2,
+  h3,
+  p {
+    margin: 0;
   }
 `
 

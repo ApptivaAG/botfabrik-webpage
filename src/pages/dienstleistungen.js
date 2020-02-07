@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import styled from 'styled-components'
 import Layout from '../components/Layout'
 import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
@@ -27,16 +26,6 @@ const query = graphql`
   }
 `
 
-const LinkItemStyled = styled(LinkItem)`
-  padding: 1.5em 1em;
-  h2 {
-    margin: 0;
-  }
-  p {
-    margin-top: 0;
-  }
-`
-
 const Dienstleistungen = () => {
   const { services } = useStaticQuery(query)
   return (
@@ -48,11 +37,15 @@ const Dienstleistungen = () => {
           <Cols minWidth="16em">
             {services.nodes.map(
               ({ frontmatter: { title, subtitle, permalink, image } }) => (
-                <LinkItemStyled to={permalink} key={permalink}>
+                <LinkItem to={permalink} key={permalink}>
                   <h2>{title}</h2>
                   <p>{subtitle}</p>
-                  <img css="height: 10em;" src={image.publicURL} alt="" />
-                </LinkItemStyled>
+                  <img
+                    css="margin-top: 1em; height: 10em;"
+                    src={image.publicURL}
+                    alt=""
+                  />
+                </LinkItem>
               )
             )}
           </Cols>
@@ -69,12 +62,11 @@ const Dienstleistungen = () => {
               `}
               to="/dienstleistungen/kennenlern-angebot"
             >
-              Chatbots kennenlernen
-              <br />
-              <small>
+              <h3>Chatbots kennenlernen</h3>
+              <p>
                 Einsatz, Vorteile, Funktion, Technologie von Chatbots
                 kennenlernen
-              </small>
+              </p>
             </LinkItem>
             <LinkItem
               css={`
@@ -83,9 +75,8 @@ const Dienstleistungen = () => {
               `}
               to="/dienstleistungen/chatbot-check"
             >
-              Chatbot-Check
-              <br />
-              <small>Fragen, Chance und Strategien um Chatbots klären</small>
+              <h3>Chatbot-Check</h3>
+              <p>Fragen, Chance und Strategien um Chatbots klären</p>
             </LinkItem>
             <LinkItem
               css={`
@@ -94,9 +85,9 @@ const Dienstleistungen = () => {
               `}
               to="/dienstleistungen/can"
             >
-              CAN
-              <br />
-              <small>Der zuvorkommende Kundendienst-Bot</small>
+              <h3>CAN</h3>
+
+              <p>Der zuvorkommende Kundendienst-Bot</p>
             </LinkItem>
           </Cols>
         </Container>
