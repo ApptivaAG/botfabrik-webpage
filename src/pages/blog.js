@@ -55,7 +55,7 @@ export const item = (frontmatter, excerpt) => {
 const BlogPage = ({ data }) => {
   const { blogs } = data
   return (
-    <Layout>
+    <Layout calltoActionDark>
       <Section>
         <Container>
           <h1>Botfabrik Blog</h1>

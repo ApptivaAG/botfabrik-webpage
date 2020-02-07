@@ -15,11 +15,13 @@ const Grid = styled.div`
 `
 const Content = styled.main`
   display: block;
-  ${p => p.callToAction === false && css`
-    section:last-child {
-      padding-bottom: 6em;
-    }
-  `}
+  ${p =>
+    p.callToAction === false &&
+    css`
+      section:last-child {
+        padding-bottom: 6em;
+      }
+    `}
 `
 
 const query = graphql`
@@ -34,7 +36,12 @@ const query = graphql`
   }
 `
 
-export default ({ children, className, callToAction = true }) => {
+export default ({
+  children,
+  className,
+  callToAction = true,
+  calltoActionDark,
+}) => {
   const data = useStaticQuery(query)
   const { about, title, url } = data.site.siteMetadata
 
@@ -44,8 +51,10 @@ export default ({ children, className, callToAction = true }) => {
       <Grid>
         <Helmet titleTemplate={`%s | ${title} | ${url}`} defaultTitle={title} />
         <Header siteTitle={title} />
-        <Content className={className} callToAction={callToAction}>{children}</Content>
-        {callToAction && <CallToAction />}
+        <Content className={className} callToAction={callToAction}>
+          {children}
+        </Content>
+        {callToAction && <CallToAction dark={calltoActionDark} />}
         <Footer about={about} />
       </Grid>
     </ThemeProvider>

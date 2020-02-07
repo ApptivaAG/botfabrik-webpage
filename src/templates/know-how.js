@@ -32,10 +32,10 @@ export const KnowHowTemplate = ({ content, contentComponent, metaData }) => {
   const { title, image, summary } = metaData
 
   const Description = styled.p`
-    font-weight: 400;
+    font-weight: 600;
   `
   return (
-    <Layout>
+    <Layout calltoActionDark>
       <Helmet>
         <title>{title}</title>
       </Helmet>
