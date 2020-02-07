@@ -10,4 +10,6 @@ templateKey: service
 image: ./support.svg
 ---
 
-Mit über zwei duzend Chatbot-Projekten und vielzähligen Workshops ist das Erarbeiten von Chatbots und deren Inhalt für uns nicht mehr ausgewöhnlich. Nutzen sie unser Know-How.
+Kaum sind die Inhalte des Chatbots zusammengestellt, kommt schnell die Fragen nach dem Hosting und Betrieb eines Chatbots auf. Je nach Datenschutzanforderungen hosten wir die Chatbots an den geeigneten Orten. Chatbots von uns entwickelt können ihrem Rechenzentrum, in der Schweiz (meistens bei der Swisscom) oder auch bei Amazon, Google oder Microsoft gehostet werden.
+
+Wir unterstützen sie beim Betrieb oder übernehmen den Betrieb von Chatbots, so wie sie es wünschen.

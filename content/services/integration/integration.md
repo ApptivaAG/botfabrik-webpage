@@ -10,4 +10,11 @@ templateKey: service
 image: ./systeme.svg
 ---
 
-Mit über zwei duzend Chatbot-Projekten und vielzähligen Workshops ist das Erarbeiten von Chatbots und deren Inhalt für uns nicht mehr ausgewöhnlich. Nutzen sie unser Know-How.
+Was häufig bei Chatbots vergessen geht, aber grosse Auswirkungen auf den Erfolg eines Chatbot-Projekts hat, sind die Integrationen des Chatbots. Dies hat ganz viele Facetten.
+
+- Wo erscheint der Chatbot? Auf einer Webseite oder doch auf einer Messenger-Plattform?
+- Auf welche Systeme greift der Chatbot wie zu?
+- Wer und wann wird der Live-Chat betreut?
+- Wer ist für das Pflegen und die Inhalte des Chatbots zuständig?
+
+Wir helfen gerne bei der technischen und organisatorischen Integration ihres Chatbots.

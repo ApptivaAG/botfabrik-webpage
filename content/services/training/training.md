@@ -10,4 +10,6 @@ templateKey: service
 image: ./training.svg
 ---
 
-Mit über zwei duzend Chatbot-Projekten und vielzähligen Workshops ist das Erarbeiten von Chatbots und deren Inhalt für uns nicht mehr ausgewöhnlich. Nutzen sie unser Know-How.
+Im Verlauf eines Chatbot-Projekts und während dem produktiven Einsatz, geht es darum den Chatbot laufend zu verbessern. Dazu gehört bei einem Freitext-Chatbot ganz klar das Training der natürlichen Sprachverarbeitung (NLP/NLU).
+
+Wir unterstützen sie gerne bei der Optimierung des NLP-Modells mit unterschiedlichen Techniken und Tools. So bieten wir beispielsweise einen [Datenmodell-Test](https://apptiva.ch/datenmodell-eines-chatbots-testen) an. Profitieren sie zudem von unserem Know-How im Bereich von NLP und den möglichen Tools und Diensten.
