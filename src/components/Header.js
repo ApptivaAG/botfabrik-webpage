@@ -119,10 +119,18 @@ const Header = () => (
 
       <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
-        <NavItemsLink to="/dienstleistungen">Dienstleistungen</NavItemsLink>
-        <NavItemsLink to="/ueber-uns">Über uns</NavItemsLink>
-        <NavItemsLink to="/blog">Blog</NavItemsLink>
-        <NavItemsLink to="/kontakt">Kontakt</NavItemsLink>
+        <NavItemsLink to="/dienstleistungen" partiallyActive>
+          Dienstleistungen
+        </NavItemsLink>
+        <NavItemsLink to="/ueber-uns" partiallyActive>
+          Über uns
+        </NavItemsLink>
+        <NavItemsLink to="/blog" partiallyActive>
+          Blog
+        </NavItemsLink>
+        <NavItemsLink to="/kontakt" partiallyActive>
+          Kontakt
+        </NavItemsLink>
       </Navigation>
     </Container>
   </HeaderElement>
