@@ -67,7 +67,7 @@ const Dienstleistungen = () => {
                 background: white;
                 border: 1px solid ${p => p.theme.primary};
               `}
-              to="kennenlern-angebot"
+              to="/dienstleistungen/kennenlern-angebot"
             >
               Chatbots kennenlernen
               <br />
@@ -81,7 +81,7 @@ const Dienstleistungen = () => {
                 background: white;
                 border: 1px solid ${p => p.theme.primary};
               `}
-              to="chatbot-check"
+              to="/dienstleistungen/chatbot-check"
             >
               Chatbot-Check
               <br />
@@ -92,7 +92,7 @@ const Dienstleistungen = () => {
                 background: white;
                 border: 1px solid ${p => p.theme.primary};
               `}
-              to="can"
+              to="/dienstleistungen/can"
             >
               CAN
               <br />
