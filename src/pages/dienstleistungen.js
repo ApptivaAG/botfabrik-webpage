@@ -44,7 +44,7 @@ const Dienstleistungen = () => {
                   <h2>{title}</h2>
                   <p>{subtitle}</p>
                   <img
-                    css="flex: 1; max-width: 90%; align-self: center; margin-top: 1em; height: 10em;"
+                    css="flex: 1; max-width: 80%; align-self: center; margin-top: 1em; height: 10em;"
                     src={image.publicURL}
                     alt=""
                   />
