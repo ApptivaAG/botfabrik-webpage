@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     line-height: 1.3;
+    font-weight: 300;
   }
 
   a {
@@ -30,13 +31,17 @@ const GlobalStyle = createGlobalStyle`
     color: ${p => p.theme.primarySave};
     font-weight: 500;
     
-    .gatsby-image-wrapper {
+    > .gatsby-image-wrapper {
       transition: transform 0.3s;
 
       &:hover {
         transform: scale(1.06);
       }
     }
+  }
+
+  small{
+    color: ${p => p.theme.lightText};
   }
 
   li {
@@ -47,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 1rem;
     background-color: hsla(0, 0%, 0%, 0.02);
     overflow-x: auto;
-    border: 1px #eee solid;
+    border: 1px ${p => p.theme.darkBg} solid;
   }
 
   blockquote {

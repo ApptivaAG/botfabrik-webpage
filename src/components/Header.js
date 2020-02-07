@@ -9,7 +9,7 @@ const HeaderElement = styled.header`
   position: sticky;
   top: 0;
   background-color: ${props => props.theme.lightBg};
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid ${p => p.theme.darkBg};
   z-index: 90;
 `
 
