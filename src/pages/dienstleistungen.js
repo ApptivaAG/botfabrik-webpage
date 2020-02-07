@@ -25,7 +25,6 @@ const query = graphql`
     }
   }
 `
-
 const Dienstleistungen = () => {
   const { services } = useStaticQuery(query)
   return (
@@ -37,11 +36,15 @@ const Dienstleistungen = () => {
           <Cols minWidth="16em">
             {services.nodes.map(
               ({ frontmatter: { title, subtitle, permalink, image } }) => (
-                <LinkItem to={permalink} key={permalink}>
+                <LinkItem
+                  to={permalink}
+                  key={permalink}
+                  css="display: flex; flex-direction: column;"
+                >
                   <h2>{title}</h2>
                   <p>{subtitle}</p>
                   <img
-                    css="margin-top: 1em; height: 10em;"
+                    css="flex: 1; max-width=100%; margin-top: 1em; height: 10em;"
                     src={image.publicURL}
                     alt=""
                   />

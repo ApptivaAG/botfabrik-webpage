@@ -52,7 +52,7 @@ module.exports = {
               linkImagesToOriginal: false, // because of zoom
               wrapperStyle: fluidResult => {
                 return fluidResult.aspectRatio < 1.2
-                  ? 'width: 360px;'
+                  ? 'max-width: 360px !important;'
                   : 'width: 100%;'
               },
             },

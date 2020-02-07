@@ -13,7 +13,8 @@ const Markdown = styled.div`
     margin-bottom: 0.6em;
   }
 
-  img {
+  img,
+  video {
     max-width: 100%;
   }
 
