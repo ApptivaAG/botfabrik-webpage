@@ -6,6 +6,7 @@ const Cols = styled.div`
     auto-fill,
     minmax(${p => p.minWidth || '12em'}, 1fr)
   );
+  grid-auto-rows: 1fr;
   gap: 1em;
 `
 
