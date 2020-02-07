@@ -30,14 +30,14 @@ module.exports = {
         name: 'images',
       },
     },
-    {
-      resolve: 'gatsby-source-sanity',
-      options: {
-        projectId: 'wr8dkl0x',
-        dataset: 'production',
-      },
-    },
-    'gatsby-source-sanity-transform-images',
+    // {
+    //   resolve: 'gatsby-source-sanity',
+    //   options: {
+    //     projectId: 'wr8dkl0x',
+    //     dataset: 'production',
+    //   },
+    // },
+    // 'gatsby-source-sanity-transform-images',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

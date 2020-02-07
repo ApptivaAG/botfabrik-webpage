@@ -17,7 +17,6 @@
     "gatsby-remark-images": "^3.1.42",
     "gatsby-remark-images-medium-zoom": "^1.4.0",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-source-sanity": "^5.0.5",
     "gatsby-source-sanity-transform-images": "0.0.4",
     "gatsby-transformer-remark": "^2.6.48",
     "gatsby-transformer-sharp": "^2.3.13",
