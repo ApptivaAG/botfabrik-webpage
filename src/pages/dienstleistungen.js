@@ -47,7 +47,9 @@ const Dienstleistungen = () => {
                     css="flex: 1; max-width: 80%; align-self: center; margin-top: 1em; height: 10em;"
                     src={image.publicURL}
                     loading="lazy"
-                    alt=""
+                    alt={title}
+                    width="240"
+                    height="160"
                   />
                 </LinkItem>
               )

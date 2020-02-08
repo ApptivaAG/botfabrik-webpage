@@ -54,6 +54,8 @@ const KnowHowItem = (
           src={image.publicURL}
           loading="lazy"
           alt={title}
+          width="300"
+          height="160"
         />
         <p css="grid-area: content; margin: 0;">{summary}</p>
       </div>
