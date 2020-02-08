@@ -15,7 +15,7 @@ export default () => (
       }
     `}
     render={({ site: { siteMetadata: data } }) => (
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'de-CH' }}>
         {/* General tags */}
         <meta name="description" content={data.title} />
         <meta name="image" content={data.url} />
