@@ -52,6 +52,7 @@ const KnowHowItem = (
         <img
           css="grid-area: pit; max-width: 16em; max-height: 8em;"
           src={image.publicURL}
+          loading="lazy"
           alt={title}
         />
         <p css="grid-area: content; margin: 0;">{summary}</p>

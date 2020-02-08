@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
 
@@ -23,7 +23,9 @@ const HeaderTitle = styled.h1`
 const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
-    {image && <img css="width: 100%; height: 20em;" src={image.publicURL} />}
+    {image && (
+      <img css="width: 100%; height: 20em;" src={image.publicURL} alt={title} />
+    )}
   </HeadArea>
 )
 

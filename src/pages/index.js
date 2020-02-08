@@ -149,13 +149,13 @@ const IndexPage = ({ data }) => (
       <Container>
         <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
         <Customers>
-          <img src={ringier} alt="Ringier Logo" />
-          <img src={sanagate} alt="Sanagate Logo" />
-          <img src={allianz} alt="Allianz Cinema Logo" />
-          <img src={energie360} alt="Energie 360°" />
-          <img src={maxonMotor} alt="maxon motor" />
-          <img src={post} alt="Die Post" />
-          <img css="height: 1.2em;" src={suva} alt="Suva" />
+          <img src={ringier} loading="lazy" alt="Ringier Logo" />
+          <img src={sanagate} loading="lazy" alt="Sanagate Logo" />
+          <img src={allianz} loading="lazy" alt="Allianz Cinema Logo" />
+          <img src={energie360} loading="lazy" alt="Energie 360°" />
+          <img src={maxonMotor} loading="lazy" alt="maxon motor" />
+          <img src={post} loading="lazy" alt="Die Post" />
+          <img css="height: 1.2em;" src={suva} loading="lazy" alt="Suva" />
         </Customers>
       </Container>
     </Section>
