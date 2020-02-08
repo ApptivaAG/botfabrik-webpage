@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 const lozad = require('lozad')
 
-exports.onInitialClientRender = () => {
+exports.onRouteUpdate = () => {
   const observer = lozad()
   observer.observe()
 }
