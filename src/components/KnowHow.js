@@ -51,7 +51,8 @@ const KnowHowItem = (
         <h3 css="grid-area: title; margin: 0;">{title}</h3>
         <img
           css="grid-area: pit; max-width: 16em; max-height: 8em;"
-          src={image.publicURL}
+          data-src={image.publicURL}
+          className="lozad"
           loading="lazy"
           alt={title}
           width="300"

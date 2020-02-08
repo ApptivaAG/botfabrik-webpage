@@ -45,7 +45,8 @@ const Dienstleistungen = () => {
                   <p>{subtitle}</p>
                   <img
                     css="flex: 1; max-width: 80%; align-self: center; margin-top: 1em; height: 10em;"
-                    src={image.publicURL}
+                    data-src={image.publicURL}
+                    className="lozad"
                     loading="lazy"
                     alt={title}
                     width="240"

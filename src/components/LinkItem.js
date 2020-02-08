@@ -6,7 +6,7 @@ const Item = styled.div`
   box-sizing: border-box;
   height: 100%;
   padding: 1.5em 1em;
-  background: ${p => p.theme.lightBg};
+  background: ${p => p.theme.darkBg};
   color: black;
   text-align: ${p => (p.align ? p.align : 'center')};
   transition: transform 0.2s;

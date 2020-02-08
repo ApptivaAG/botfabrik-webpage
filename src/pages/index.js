@@ -149,13 +149,63 @@ const IndexPage = ({ data }) => (
       <Container>
         <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
         <Customers>
-          <img src={ringier} loading="lazy" alt="Ringier Logo" />
-          <img src={sanagate} loading="lazy" alt="Sanagate Logo" />
-          <img src={allianz} loading="lazy" alt="Allianz Cinema Logo" />
-          <img src={energie360} loading="lazy" alt="Energie 360°" />
-          <img src={maxonMotor} loading="lazy" alt="maxon motor" />
-          <img src={post} loading="lazy" alt="Die Post" />
-          <img css="height: 1.2em;" src={suva} loading="lazy" alt="Suva" />
+          <img
+            className="lozad"
+            data-src={ringier}
+            loading="lazy"
+            alt="Ringier Logo"
+            width="160"
+            height="50"
+          />
+          <img
+            className="lozad"
+            data-src={sanagate}
+            loading="lazy"
+            alt="Sanagate Logo"
+            width="160"
+            height="50"
+          />
+          <img
+            className="lozad"
+            data-src={allianz}
+            loading="lazy"
+            alt="Allianz Cinema Logo"
+            width="160"
+            height="50"
+          />
+          <img
+            className="lozad"
+            data-src={energie360}
+            loading="lazy"
+            alt="Energie 360°"
+            width="160"
+            height="50"
+          />
+          <img
+            className="lozad"
+            data-src={maxonMotor}
+            loading="lazy"
+            alt="maxon motor"
+            width="160"
+            height="50"
+          />
+          <img
+            className="lozad"
+            data-src={post}
+            loading="lazy"
+            alt="Die Post"
+            width="160"
+            height="50"
+          />
+          <img
+            className="lozad"
+            css="height: 1.2em;"
+            data-src={suva}
+            loading="lazy"
+            alt="Suva"
+            width="160"
+            height="50"
+          />
         </Customers>
       </Container>
     </Section>
