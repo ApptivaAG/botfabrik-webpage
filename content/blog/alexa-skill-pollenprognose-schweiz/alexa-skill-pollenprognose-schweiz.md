@@ -10,7 +10,7 @@ image: ./paul-green-120592-unsplash.jpg
 category:
   - Allgemein
 tag: []
-seo: ''
+description: 'Ist es möglich Schweizer Alexa-Skills zu entwickeln und zu publizieren? Was sind die Chancen von lokalen Skills?'
 ---
 
 Alexa-Skills sind Apps welche dem smarten Lautsprecher von Amazon neue Fähigkeiten beibringen. So haben wir von der Botfabrik z.B. den Pollenprognose-Skill entwickelt. Mit diesem Skill kann Alexa nun in der täglichen Zusammenfassung („Alexa, was ist meine tägliche Zusammenfassung“) Auskunft zur aktuellen Pollensituation geben.

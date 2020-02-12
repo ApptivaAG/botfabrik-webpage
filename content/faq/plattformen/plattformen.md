@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: faq
 id: 353
 question: Auf welchen Plattformen können Bots und Chatbots ihre Dienste verrichten?
-seo: 'Auf welchen Plattformen können Bots ihre Dienste verrichten?'
+description: 'Auf welchen Plattformen können Bots ihre Dienste verrichten?'
 ---
 
 <https://youtube.com/watch?v=srx-r2HqDq0>

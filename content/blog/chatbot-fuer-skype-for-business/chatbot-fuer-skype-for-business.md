@@ -11,7 +11,7 @@ category:
 tag: []
 seo-keywords:
   - 'Skype for Business'
-seo: 'Skype for Business bietet einige Vorteile für Chatbots. Die Botfabrik hat nun Skype for Business fest in ihren Chatbot integriert.'
+description: 'Skype for Business bietet einige Vorteile für Chatbots. Die Botfabrik hat nun Skype for Business fest in ihren Chatbot integriert.'
 ---
 
 Die meisten Chatbots laufen auf Facebook Messenger, eigenen Webseiten, Slack oder Telegram. Während diese Plattformen viele Möglichkeiten bieten, sind sie für den internen Gebruch im Unternehmen nicht geeignet oder nicht zugelassen. Im Gegensatz dazu ist Skype for Business meist seit Jahren im Einsatz oder eine Installation geplant. Wir möchten hier ein paar Vorteile von Skype for Business aufzeigen.

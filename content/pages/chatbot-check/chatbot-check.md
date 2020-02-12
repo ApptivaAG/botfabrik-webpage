@@ -9,7 +9,7 @@ id: 636
 seo-keywords:
   - Chatbot-Check
 seo-title: 'Chatbot-Check - Fragen, Chance und Strategien um Chatbots klären'
-seo: 'Chancen, Möglichkeiten und Strategien für Chatbots. Die Botfabrik bietet neu den kostenlosen Chatbot-Check an. Der Chatbot-Check ist für Dich, wenn Du Fragen zu Chatbots hast, wissen möchtest wie Chatbots Euer Unternehmen unterstützen können oder eine Ideen im Bereich Chatbots mit einem Experten besprechen möchtest.'
+description: 'Chancen, Möglichkeiten und Strategien für Chatbots. Die Botfabrik bietet neu den kostenlosen Chatbot-Check an. Der Chatbot-Check ist für Dich, wenn Du Fragen zu Chatbots hast, wissen möchtest wie Chatbots Euer Unternehmen unterstützen können oder eine Ideen im Bereich Chatbots mit einem Experten besprechen möchtest.'
 ---
 
 ## Fragen, Chancen und Strategien rundum Chatbots

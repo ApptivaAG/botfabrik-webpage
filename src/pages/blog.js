@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import LinkItemDefault from '../components/LinkItem'
 import { Container, Section } from '../styles'
+import Seo from '../components/Seo'
 
 const LinkItem = styled(LinkItemDefault)`
   display: grid;
@@ -55,7 +56,8 @@ export const item = (frontmatter, excerpt) => {
 const BlogPage = ({ data }) => {
   const { blogs } = data
   return (
-    <Layout calltoActionDark>
+    <Layout calltoActionDark> 
+      <Seo title="Blog" description="Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots." />
       <Section>
         <Container>
           <h1>Botfabrik Blog</h1>
@@ -64,7 +66,7 @@ const BlogPage = ({ data }) => {
             return item(frontmatter, excerpt)
           })}
         </Container>
-      </Section>
+      </Section> 
     </Layout>
   )
 }

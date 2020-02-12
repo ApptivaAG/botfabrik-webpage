@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: faq
 id: 290
 question: Was ist ein eCommerce Chatbot?
-seo: 'Unser E-Commerce Bot eignet sich für Betreiber von Webshops und Webseiten um ihren Besuchern etwas zu verkaufen oder diese zu identifizieren.'
+description: 'Unser E-Commerce Bot eignet sich für Betreiber von Webshops und Webseiten um ihren Besuchern etwas zu verkaufen oder diese zu identifizieren.'
 seo-keywords:
   - 'E-Commerce Bot'
 seo-title: 'Chatbots für Retail und E-Commerce für Webshops und Webseiten'

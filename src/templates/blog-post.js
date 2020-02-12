@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -76,10 +75,14 @@ export const BlogPostTemplate = ({
   `
   return (
     <Layout calltoActionDark>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-      <Seo />
+      <Seo
+        title={title}
+        description={description}
+        image={image && image.childImageSharp.resize.src}
+        author={author}
+        date={date}
+        isBlogPost
+      />
       <Section>
         <Container>
           <Header title={title} image={image} />
@@ -116,7 +119,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        seo
+        description
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")

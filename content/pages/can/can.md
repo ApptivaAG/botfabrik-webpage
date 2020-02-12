@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: page
 id: 139
 seo-title: 'CAN - Der zuvorkommende Kundendienst-Bot'
-seo: 'Mit CAN haben Sie automatisch eine höhere Kundendienst-Qualität. CAN ist immer freundlich und antwortet innerhalb von 5 Sekunden zu jeder Tages- und Nachtzeit. Bewältigen Sie zudem mehr Anfragen mit weniger Personal.'
+description: 'Mit CAN haben Sie automatisch eine höhere Kundendienst-Qualität. CAN ist immer freundlich und antwortet innerhalb von 5 Sekunden zu jeder Tages- und Nachtzeit. Bewältigen Sie zudem mehr Anfragen mit weniger Personal.'
 ---
 
 ![](can-chat.svg)

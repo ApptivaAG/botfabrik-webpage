@@ -110,7 +110,7 @@ const Customers = styled.div`
 
 const IndexPage = ({ data }) => (
   <IndexLayout>
-    <Seo />
+    <Seo title="Home" />
 
     <Section css="margin-top: 4em;">
       <Grid>

@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import { Container, Section } from '../styles'
 import ContactForm from '../components/ContactForm'
+import Seo from '../components/Seo'
 
 const Grid = styled.div`
   display: grid;
@@ -52,6 +53,10 @@ const Kontakt = () => {
 
   return (
     <Layout callToAction={false}>
+      <Seo
+        title="Kontakt"
+        description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."
+      />
       <Section>
         <Container>
           <h1>Kontakt</h1>

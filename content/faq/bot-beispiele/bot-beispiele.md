@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: faq
 question: In welchen Bereichen können Bots und Chatbots eingesetzt werden?
 id: 179
-seo: 'In welchen Bereichen können Bots und Chatbots eingesetzt werden? Hier einige Beispiele.'
+description: 'In welchen Bereichen können Bots und Chatbots eingesetzt werden? Hier einige Beispiele.'
 ---
 
 Es gibt unzählige Varianten von Bots, die deinen Alltag vereinfachen können. In der Botfabrik programmieren wir zum Beispiel die folgenden Exemplare:

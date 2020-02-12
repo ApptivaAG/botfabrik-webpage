@@ -10,7 +10,7 @@ image: ./Fluance-Cockpit.png
 category:
   - Allgemein
 tag: []
-seo: 'Wir einen Chatbot entwickelt, der Ärzte und Pflegende assistiert und ihnen Auskunft über ihre Patienten liefert. Das spezielle dabei ist, dass der Chatbot die Sprache seiner Anwender spricht. “Zeig mir meine Hüfte von gestern” ist ein solches Beispiel.'
+description: 'Wir einen Chatbot entwickelt, der Ärzte und Pflegende assistiert und ihnen Auskunft über ihre Patienten liefert. Das spezielle dabei ist, dass der Chatbot die Sprache seiner Anwender spricht. “Zeig mir meine Hüfte von gestern” ist ein solches Beispiel.'
 ---
 
 Zusammen mit der Fluance AG haben wir einen Chatbot entwickelt, der Ärzte und Pflegende assistiert und ihnen Auskunft über ihre Patienten liefert.

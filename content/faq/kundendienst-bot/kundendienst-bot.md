@@ -7,7 +7,7 @@ author: admin
 templateKey: faq
 id: 69
 question: Was ist ein Kundendienst-Chatbot?
-seo: 'Unser Kundendienst Bot ist prädestiniert dafür, um Routinefragen zu beantworten. Er kann dies im Chat tun oder automatisiert E-Mails beantworten.'
+description: 'Unser Kundendienst Bot ist prädestiniert dafür, um Routinefragen zu beantworten. Er kann dies im Chat tun oder automatisiert E-Mails beantworten.'
 ---
 
 Unser Kundendienst Bot ist prädestiniert dafür, um Routinefragen zu beantworten. Er kann dies im Chat tun oder automatisiert E-Mails beantworten.

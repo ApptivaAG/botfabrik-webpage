@@ -7,7 +7,7 @@ author: admin
 templateKey: faq
 id: 8
 question: Was ist ein FAQ-Chatbot?
-seo: 'Der FAQ Bot beantwortet häufig gestellte Fragen und entlastet damit deine Mitarbeiter.'
+description: 'Der FAQ Bot beantwortet häufig gestellte Fragen und entlastet damit deine Mitarbeiter.'
 ---
 
 Der FAQ Bot unterstützt Kunden bei Problemen, vor und nach dem Einkauf.

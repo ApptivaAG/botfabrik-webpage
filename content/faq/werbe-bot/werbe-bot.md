@@ -7,7 +7,7 @@ author: admin
 templateKey: faq
 id: 71
 question: Was ist ein Werbe-Chatbot?
-seo: 'Bots bieten gerade im Marketing unzählige Einsatzmöglichkeiten. Der Fantasie sind kaum Grenzen gesetzt.'
+description: 'Bots bieten gerade im Marketing unzählige Einsatzmöglichkeiten. Der Fantasie sind kaum Grenzen gesetzt.'
 seo-keywords:
   - Marketing
 ---

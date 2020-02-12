@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: page
 id: 809
 image: ./Kennenlern-AngeBot.png
-seo: 'Chatbots liegen im Trend. Doch was genau ist eigentlich ein Chatbot und wie könnte ein Chatbot in deinem Unternehmen von Nutzen sein? Dies und vieles mehr erfährst du in unserem Kennenlern-AngeBot Workshop.'
+description: 'Chatbots liegen im Trend. Doch was genau ist eigentlich ein Chatbot und wie könnte ein Chatbot in deinem Unternehmen von Nutzen sein? Dies und vieles mehr erfährst du in unserem Kennenlern-AngeBot Workshop.'
 ---
 
 Chatbots liegen im Trend. Doch was genau ist eigentlich ein Chatbot und wie könnte ein Chatbot in deinem Unternehmen von Nutzen sein? Ist das alles nur Hype oder steckt da auch wirklich was dahinter? In unserem Workshop “Kennenlern-AngeBot” durchleuchten wir diese Fragen und erarbeiten mit deinem Team zusammen einen lauffähigen Chatbot, der in dein Unternehmen passt.

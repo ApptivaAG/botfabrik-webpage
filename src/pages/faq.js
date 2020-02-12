@@ -4,11 +4,17 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
+import Seo from '../components/Seo'
 
 const FaqPage = ({ data }) => {
   const { faqs } = data
   return (
     <Layout>
+      <Seo
+        title="Häufig gestellte Fragen"
+        description="Was wir immer mal wieder gefragt werden."
+      />
+
       <Section>
         <Container>
           <h1>Häufig gestellte Fragen</h1>

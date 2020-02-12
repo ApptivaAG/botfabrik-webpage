@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: faq
 id: 349
 question: Was ist ein Produktivitäts-Chatbot?
-seo: 'Unsere Bots helfen wiederkehrende Abläufe effizienter zu organisieren, Fehler zu reduzieren und Mitarbeiter von Routinearbeiten zu entlasten.'
+description: 'Unsere Bots helfen wiederkehrende Abläufe effizienter zu organisieren, Fehler zu reduzieren und Mitarbeiter von Routinearbeiten zu entlasten.'
 ---
 
 Unsere Produktivitäts-Bots helfen wiederkehrende Abläufe effizienter zu organisieren, Fehler zu reduzieren und Mitarbeiter von Routinearbeiten zu entlasten.

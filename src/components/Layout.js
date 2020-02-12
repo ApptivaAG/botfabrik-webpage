@@ -29,7 +29,6 @@ const query = graphql`
     site {
       siteMetadata {
         title
-        url
         about
       }
     }
@@ -42,14 +41,13 @@ export default ({
   callToAction = true,
   calltoActionDark,
 }) => {
-  const data = useStaticQuery(query)
-  const { about, title, url } = data.site.siteMetadata
+  const { about, title } = useStaticQuery(query).site.siteMetadata
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Grid>
-        <Helmet titleTemplate={`%s | ${title} | ${url}`} defaultTitle={title} />
+        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title} />
         <Header siteTitle={title} />
         <Content className={className} callToAction={callToAction}>
           {children}

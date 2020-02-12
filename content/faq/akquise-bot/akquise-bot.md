@@ -7,7 +7,7 @@ author: admin
 templateKey: faq
 id: 66
 question: Was ist ein Akquise-Bot?
-seo: 'Der Akquise Bot chattet mit den Besuchern auf deiner Webseite und macht sie zu Kunden.'
+description: 'Der Akquise Bot chattet mit den Besuchern auf deiner Webseite und macht sie zu Kunden.'
 ---
 
 Der Akquise Bot gewinnt für Dich neue Kunden. So begrüsst er Besucher aktiv und versucht diese in der Kaufentscheidung zu unterstützen.

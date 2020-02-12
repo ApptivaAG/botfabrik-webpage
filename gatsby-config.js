@@ -1,7 +1,9 @@
+const domain = 'https://botfabrik.netlify.com'
+
 module.exports = {
   siteMetadata: {
     title: 'Botfabrik',
-    url: 'botfabrik.netlify.com',
+    url: domain,
     about: `In der Botfabrik entwickeln wir individuelle Chatbot-Lösungen von A-Z für alle Lebenslagen. 
     Wir hecken Strategien aus, erstellen Konzepte und setzen diese schliesslich um. 
     Es entstehen Chatbots für den Kundendienst, das Marketing, die Produktivität oder im Bereich des E-Commerces.
@@ -10,6 +12,11 @@ module.exports = {
     Seit der Gründung 2016 konnte die Botfabrik namhafte Kunden gewinnen und mit erfolgreichen Projekten überzeugen: 
     Ringier, Sanagate AG, Energie 360° AG, Allianz Cinema, Suva und die Post CH AG. 
     Aber auch kleinere Unternehmen konnte die Botfabrik mit interessanten Lösungen begeistern.`,
+    description:
+      'Sorge sie für echte Entlastung mit integrierten, passgenauen Chatbots, die ihre Anwender begeistern.',
+    logo: `/img/logo-1200x630.png`,
+    twitter: '@ApptivaTeam',
+    fbAppId: '',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

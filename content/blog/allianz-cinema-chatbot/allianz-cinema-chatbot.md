@@ -12,7 +12,7 @@ category:
 tag: []
 seo-keywords:
   - 'Allianz Cinema Chatbot'
-seo: 'Während der Openair Saison antwortet das schlaue Botcorn häufig gestellte Fragen rund ums Allianz Cinema direkt im Facebook Messenger.'
+description: 'Während der Openair Saison antwortet das schlaue Botcorn häufig gestellte Fragen rund ums Allianz Cinema direkt im Facebook Messenger.'
 ---
 
 Im Juni 2017 haben wir zusammen mit der Kreativagentur [SiR MaRY](http://sirmary.com) einen Chatbot fürs [Allianz Cinema](https://allianzcinema.ch/) erstellt. Seit über 25 Jahren begeistert das heutige Allianz Cinema an den Standorten Zürich, Basel und Lausanne jeden Sommer zahlreiche Filmfans.

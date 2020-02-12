@@ -9,7 +9,7 @@ id: 399
 category:
   - Allgemein
 tag: []
-seo: 'Unser Chatbot Pit präsentiert sich neu den mehr als 1.2 Milliarden Menschen die den Facebook Messenger jeden Monat verwenden.'
+description: 'Unser Chatbot Pit präsentiert sich neu den mehr als 1.2 Milliarden Menschen die den Facebook Messenger jeden Monat verwenden.'
 seo-keywords:
   - 'Facebook Messenger'
 ---

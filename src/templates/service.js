@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -27,21 +26,18 @@ const Header = ({ title }) => (
 
 export const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, seo } = metaData
+  const { title, subtitle } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
     <Layout calltoActionDark>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-      <Seo />
+      <Seo title={title} description={subtitle} />
       <Section>
         <Container>
           <Header title={title} />
-          <Description>{seo}</Description>
+          <Description>{subtitle}</Description>
           <PostContent content={content} />
         </Container>
       </Section>
@@ -71,7 +67,7 @@ export const serviceQuery = graphql`
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        seo
+        subtitle
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")
@@ -80,11 +76,3 @@ export const serviceQuery = graphql`
     }
   }
 `
-
-// {
-//   childImageSharp {
-//     sizes {
-//       ...GatsbyImageSharpSizes
-//     }
-//   }
-// }

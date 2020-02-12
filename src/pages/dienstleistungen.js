@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/Layout'
 import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
+import Seo from '../components/Seo'
 
 const query = graphql`
   query {
@@ -29,6 +30,11 @@ const Dienstleistungen = () => {
   const { services } = useStaticQuery(query)
   return (
     <Layout>
+      <Seo
+        title="Dienstleistungen"
+        description="Wir bieten Dienstleistungen rund um die Entwicklung und den Betrieb von Chatbots."
+      />
+
       <Section>
         <Container>
           <h1>Dienstleistungen</h1>

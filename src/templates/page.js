@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -28,21 +27,18 @@ const Header = ({ title }) => (
 
 export const PageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, seo } = metaData
+  const { title, description } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
     <Layout calltoActionDark>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-      <Seo />
+      <Seo title={title} description={description} />
       <Section>
         <Container>
           <Header title={title} />
-          <Description>{seo}</Description>
+          <Description>{description}</Description>
           <PostContent content={content} />
         </Container>
       </Section>
@@ -72,7 +68,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        seo
+        description
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")

@@ -8,9 +8,7 @@ templateKey: blog-post
 id: 736
 category:
   - Allgemein
-tag: []
-post_format: []
-seo: 'Chatbots mit natürlicher Sprachverarbeitung (NLP) benötigen Training. Wir erhalten zu Thema "Training" immer wieder Fragen: Wie funktioniert es und wieviel Aufwand steckt dahinter. Entsprechend wollte wir das Thema kurz beleuchten.'
+description: 'Chatbots mit natürlicher Sprachverarbeitung (NLP) benötigen Training. Wir erhalten zu Thema "Training" immer wieder Fragen: Wie funktioniert es und wieviel Aufwand steckt dahinter. Entsprechend wollte wir das Thema kurz beleuchten.'
 seo-keywords:
   - Training
 ---

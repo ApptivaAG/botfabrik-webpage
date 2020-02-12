@@ -7,7 +7,7 @@ author: 'Linus Hüsler'
 templateKey: faq
 id: 169
 question: Welche Technologien setzen wir für Chatbots ein?
-seo: 'Technologien und Plattformen für die Entwicklung von Bots und Chatbots.'
+description: 'Technologien und Plattformen für die Entwicklung von Bots und Chatbots.'
 ---
 
 Unsere Bots werden mit Liebe nach traditioneller Handwerkskunst entwickelt. Bei der Entwicklung achten wir auf eine botgerechete Haltung.

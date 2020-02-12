@@ -7,7 +7,7 @@ author: admin
 templateKey: faq
 id: 73
 question: Was ist ein Bestell- und Postsales-Bot?
-seo: 'Der Bestell- und Postsales Bot unterstützt den Kunden während und nach dem Einkaufen.'
+description: 'Der Bestell- und Postsales Bot unterstützt den Kunden während und nach dem Einkaufen.'
 inline_featured_image:
   - '0'
 ---

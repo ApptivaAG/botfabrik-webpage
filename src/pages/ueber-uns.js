@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import { Container, Section } from '../styles'
 import Employees from '../components/Employees'
+import Seo from '../components/Seo'
 
 const query = graphql`
   query {
@@ -22,6 +23,8 @@ const UeberUns = () => {
   const { officeImage } = useStaticQuery(query)
   return (
     <Layout>
+      <Seo title="Über uns" description="Wer ist die Botfabrik?" />
+
       <Section>
         <Container>
           <h1>Über uns</h1>
