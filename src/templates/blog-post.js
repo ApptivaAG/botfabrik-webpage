@@ -68,7 +68,7 @@ export const BlogPostTemplate = ({
   navigation,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, description, author, date } = metaData
+  const { title, image, description, author, date, isoDate } = metaData
 
   const Description = styled.p`
     font-weight: 600;
@@ -80,7 +80,7 @@ export const BlogPostTemplate = ({
         description={description}
         image={image && image.childImageSharp.resize.src}
         author={author}
-        date={date}
+        date={isoDate}
         isBlogPost
       />
       <Section>
@@ -122,7 +122,7 @@ export const pageQuery = graphql`
         description
         author
         date(formatString: "DD.MM.YYYY")
-        isoDate: date(formatString: "DD-MM-YYYY")
+        isoDate: date(formatString: "YYYY-MM-DD")
         permalink
         image {
           childImageSharp {
