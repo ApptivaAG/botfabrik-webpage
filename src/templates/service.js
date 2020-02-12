@@ -26,14 +26,14 @@ const Header = ({ title }) => (
 
 export const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, subtitle } = metaData
+  const { title, subtitle, permalink } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
     <Layout calltoActionDark>
-      <Seo title={title} description={subtitle} />
+      <Seo title={title} description={subtitle} slug={permalink} />
       <Section>
         <Container>
           <Header title={title} />

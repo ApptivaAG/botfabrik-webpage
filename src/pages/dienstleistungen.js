@@ -26,13 +26,14 @@ const query = graphql`
     }
   }
 `
-const Dienstleistungen = () => {
+const Dienstleistungen = ({ location }) => {
   const { services } = useStaticQuery(query)
   return (
     <Layout>
       <Seo
         title="Dienstleistungen"
         description="Wir bieten Dienstleistungen rund um die Entwicklung und den Betrieb von Chatbots."
+        slug={location.pathname}
       />
 
       <Section>

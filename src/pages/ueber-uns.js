@@ -19,11 +19,15 @@ const query = graphql`
   }
 `
 
-const UeberUns = () => {
+const UeberUns = ({ location }) => {
   const { officeImage } = useStaticQuery(query)
   return (
     <Layout>
-      <Seo title="Über uns" description="Wer ist die Botfabrik?" />
+      <Seo
+        title="Über uns"
+        description="Wer ist die Botfabrik?"
+        slug={location.pathname}
+      />
 
       <Section>
         <Container>

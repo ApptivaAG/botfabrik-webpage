@@ -53,11 +53,15 @@ export const item = (frontmatter, excerpt) => {
   )
 }
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location }) => {
   const { blogs } = data
   return (
-    <Layout calltoActionDark> 
-      <Seo title="Blog" description="Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots." />
+    <Layout calltoActionDark>
+      <Seo
+        title="Blog"
+        description="Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots."
+        slug={location.pathname}
+      />
       <Section>
         <Container>
           <h1>Botfabrik Blog</h1>
@@ -66,7 +70,7 @@ const BlogPage = ({ data }) => {
             return item(frontmatter, excerpt)
           })}
         </Container>
-      </Section> 
+      </Section>
     </Layout>
   )
 }

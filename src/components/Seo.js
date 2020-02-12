@@ -8,7 +8,7 @@ const query = graphql`
       siteMetadata {
         title
         description
-        url
+        baseUrl
         logo
         twitter
         fbAppId
@@ -95,7 +95,7 @@ const Seo = ({
   title: titleCurrent,
   description: descriptionCurrent,
   image: imageCurrent,
-  url: urlCurrent,
+  slug,
   author,
   date,
   isBlogPost,
@@ -103,7 +103,7 @@ const Seo = ({
   const {
     title: titleDefault,
     description: descriptionDefault,
-    url: urlDefault,
+    baseUrl: urlDefault,
     logo: imageDefault,
     twitter,
     fbAppId,
@@ -111,7 +111,7 @@ const Seo = ({
 
   const title = titleCurrent || titleDefault
   const description = descriptionCurrent || descriptionDefault
-  const url = urlCurrent || urlDefault
+  const url = slug ? `${urlDefault}${slug}` : urlDefault
   const image = urlDefault + (imageCurrent || imageDefault)
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -121,6 +121,8 @@ const Seo = ({
     image,
     imageDefault,
     description,
+    url,
+    urlDefault,
     author,
     date,
   })

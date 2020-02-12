@@ -6,13 +6,14 @@ import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
 import Seo from '../components/Seo'
 
-const FaqPage = ({ data }) => {
+const FaqPage = ({ data, location }) => {
   const { faqs } = data
   return (
     <Layout>
       <Seo
         title="Häufig gestellte Fragen"
         description="Was wir immer mal wieder gefragt werden."
+        slug={location.pathname}
       />
 
       <Section>

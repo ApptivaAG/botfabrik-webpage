@@ -48,7 +48,7 @@ const query = graphql`
   }
 `
 
-const Kontakt = () => {
+const Kontakt = ({ location }) => {
   const { buildingImage } = useStaticQuery(query)
 
   return (
@@ -56,6 +56,7 @@ const Kontakt = () => {
       <Seo
         title="Kontakt"
         description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."
+        slug={location.pathname}
       />
       <Section>
         <Container>

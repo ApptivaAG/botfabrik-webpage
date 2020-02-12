@@ -68,7 +68,7 @@ export const BlogPostTemplate = ({
   navigation,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, description, author, date, isoDate } = metaData
+  const { title, image, description, author, date, isoDate,permalink } = metaData
 
   const Description = styled.p`
     font-weight: 600;
@@ -81,6 +81,7 @@ export const BlogPostTemplate = ({
         image={image && image.childImageSharp.resize.src}
         author={author}
         date={isoDate}
+        slug={permalink}
         isBlogPost
       />
       <Section>

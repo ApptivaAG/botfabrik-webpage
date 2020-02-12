@@ -1,9 +1,7 @@
-const domain = 'https://botfabrik.netlify.com'
-
 module.exports = {
   siteMetadata: {
     title: 'Botfabrik',
-    url: domain,
+    baseUrl: 'https://botfabrik.netlify.com',
     about: `In der Botfabrik entwickeln wir individuelle Chatbot-Lösungen von A-Z für alle Lebenslagen. 
     Wir hecken Strategien aus, erstellen Konzepte und setzen diese schliesslich um. 
     Es entstehen Chatbots für den Kundendienst, das Marketing, die Produktivität oder im Bereich des E-Commerces.
