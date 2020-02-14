@@ -65,7 +65,7 @@ const Textarea = props => <Input as="textarea" {...props} />
 const BASE_PRICE = 199
 
 const BUBBLE_LINK = (
-  <a target="_blank" rel="noopener noreferrer" href="https://bubblecms.io">
+  <a target="_blank" rel="noopener noreferrer" href="https://bubblecms.io/de">
     Bubble CMS
   </a>
 )
@@ -131,7 +131,11 @@ const encode = data =>
 class Preisrechner extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { price: BASE_PRICE, name: '', email: '', message: '' }
+    const initialState = { price: BASE_PRICE, name: '', email: '', message: '' }
+    additionalFeatures.forEach(f => {
+      initialState[f.name] = false
+    })
+    this.state = initialState
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -203,56 +207,58 @@ class Preisrechner extends React.Component {
               Hier können sie herausfinden, wie viel ein Chatbot mit den von
               ihnen gewünschten Funktionen pro Monat kostet.
             </p>
+
+            <Cols minWidth="20em">
+              <div>
+                <h2>Basispaket</h2>
+                <FieldSet>
+                  {basicFeatures.map(f => (
+                    <Feature key={f}>
+                      <label htmlFor={f}>
+                        <FeatureInput
+                          checked
+                          readOnly
+                          type="checkbox"
+                          name={f}
+                        />
+                        &nbsp; {f}
+                      </label>
+                    </Feature>
+                  ))}
+                </FieldSet>
+              </div>
+              <div>
+                <h2>Zusätzliche Funktionen</h2>
+                <FieldSet>
+                  {additionalFeatures.map(f => (
+                    <Feature key={f.name}>
+                      <label htmlFor={f.name}>
+                        <FeatureInput
+                          // eslint-disable-next-line react/destructuring-assignment
+                          checked={this.state[f.name]}
+                          id={f.name}
+                          type="checkbox"
+                          name={f.name}
+                          onClick={this.handleClick}
+                          onChange={() => {}}
+                        />
+                        &nbsp; {f.displayName}
+                      </label>
+                    </Feature>
+                  ))}
+                </FieldSet>
+              </div>
+            </Cols>
+            <Price>CHF {price}</Price>
+            <PriceInfo>pro Monat</PriceInfo>
+            <br />
+            <br />
             <form
               name="contact-preisrechner"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
-              <Cols minWidth="20em">
-                <div>
-                  <h2>Basispaket</h2>
-                  <FieldSet>
-                    {basicFeatures.map(f => (
-                      <Feature key={f}>
-                        <label htmlFor={f}>
-                          <FeatureInput
-                            checked
-                            readOnly
-                            type="checkbox"
-                            name={f}
-                          />
-                          &nbsp; {f}
-                        </label>
-                      </Feature>
-                    ))}
-                  </FieldSet>
-                </div>
-                <div>
-                  <h2>Zusätzliche Funktionen</h2>
-                  <FieldSet>
-                    {additionalFeatures.map(f => (
-                      <Feature key={f.name}>
-                        <label htmlFor={f.name}>
-                          <FeatureInput
-                            // eslint-disable-next-line react/destructuring-assignment
-                            checked={this.state[f.name]}
-                            id={f.name}
-                            type="checkbox"
-                            name={f.name}
-                            onClick={this.handleClick}
-                          />
-                          &nbsp; {f.displayName}
-                        </label>
-                      </Feature>
-                    ))}
-                  </FieldSet>
-                </div>
-              </Cols>
-              <Price>CHF {price}</Price>
-              <PriceInfo>pro Monat</PriceInfo>
-              <br />
-              <br />
               <p hidden>
                 <label htmlFor="bot-field">
                   Nicht ausfüllen:{' '}
