@@ -83,7 +83,7 @@ const SpeachBubble = styled.div`
           height: 2em;
           width: 3em;
         }
-      `}
+      `};
 `
 
 const List = styled.ul``
@@ -136,13 +136,14 @@ const IndexPage = ({ data }) => (
             </List>
           </SpeachBubble>
         </div>
-        <Button
-          css="grid-area: c2a; justify-self: center; margin-top: 2em;"
-          as={Link}
-          to="/dienstleistungen"
-        >
-          Zu unseren Dienstleistungen
-        </Button>
+        <div css="grid-area: c2a; justify-self: center; margin-top: 2em;">
+          <Button as={Link} to="/dienstleistungen" css="margin: 1em em">
+            Zu unseren Dienstleistungen
+          </Button>
+          <Button as={Link} to="/preisrechner" css="margin: 1em 1em">
+            Zum Preisrechner
+          </Button>
+        </div>
       </Grid>
     </Section>
     <Section dark>
