@@ -49,7 +49,7 @@ const ValueProposition = styled.p`
   }
 `
 
-const SpeachBubble = styled.div`
+const SpeechBubble = styled.div`
   position: relative;
   display: inline-block;
   font-size: 1em;
@@ -108,6 +108,9 @@ const Customers = styled.div`
   }
 `
 
+// TODO
+const ButtonList = styled.div``
+
 const IndexPage = ({ data }) => (
   <IndexLayout>
     <Seo title="Home" />
@@ -116,7 +119,7 @@ const IndexPage = ({ data }) => (
       <Grid>
         <div css="grid-area: value-prop">
           <ValueProposition>
-            Sorge sie für echte <b>Entlastung</b> mit integrierten, passgenauen{' '}
+            Sorgen sie für echte <b>Entlastung</b> mit integrierten, passgenauen{' '}
             <b>Chatbots</b>, die ihre Anwender begeistern.
           </ValueProposition>
         </div>
@@ -124,26 +127,26 @@ const IndexPage = ({ data }) => (
           <img css="max-width: 300px;" src={pit} alt="Pit" />
         </div>
         <div css="grid-area: services">
-          <SpeachBubble left>
-            Wir untersützen bei Chatbot...
+          <SpeechBubble left>
+            Wir unterstützen sie bei ihrem Chatbot-Projekt hinsichtlich
             <List>
               <li>Strategie</li>
               <li>Konzept und Inhalte</li>
               <li>Entwicklung</li>
-              <li>Integration (tech & org)</li>
+              <li>Integration</li>
               <li>Training und Pflege</li>
               <li>Betrieb</li>
             </List>
-          </SpeachBubble>
+          </SpeechBubble>
         </div>
-        <div css="grid-area: c2a; justify-self: center; margin-top: 2em;">
-          <Button as={Link} to="/dienstleistungen" css="margin: 1em em">
+        <ButtonList>
+          <Button as={Link} to="/dienstleistungen">
             Zu unseren Dienstleistungen
           </Button>
-          <Button as={Link} to="/preisrechner" css="margin: 1em 1em">
+          <Button as={Link} to="/preisrechner">
             Zum Chatbot Preisrechner
           </Button>
-        </div>
+        </ButtonList>
       </Grid>
     </Section>
     <Section dark>

@@ -7,9 +7,7 @@ author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./livechat.svg
 id: 30
-summary: Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten
-  wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde
-  immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+summary: Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob es sich um einfache oder individuelle Anfragen dreht.
 ---
 
-Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob einfache oder individuelle Anfrage.
+Falls sie auch sehr individuelle Anfragen mit einem Chatbot beantworten wollen, bietet sich der Fallback mittels Live-Chat an. So hat der Kunde immer ein gutes Erlebnis, egal ob es sich um einfache oder individuelle Anfragen dreht.
