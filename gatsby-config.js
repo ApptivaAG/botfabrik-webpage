@@ -5,8 +5,7 @@ module.exports = {
     about: `In der Botfabrik entwickeln wir individuelle Chatbot-Lösungen von A-Z für alle Lebenslagen. 
     Wir hecken Strategien aus, erstellen Konzepte und setzen diese schliesslich um. 
     Es entstehen Chatbots für den Kundendienst, das Marketing, die Produktivität oder im Bereich des E-Commerces.
-    Unsere Bots schwatzen nicht nur mit Personen, sondern auch mit Systemen (CRM, CMS, ERP usw.). 
-    Den Erfolg der Bots stellen wir mit einem intensiven Training sicher. 
+    Unsere Bots schwatzen nicht nur mit Personen, sondern auch mit Systemen (CRM, CMS, ERP usw.).
     Seit der Gründung 2016 konnte die Botfabrik namhafte Kunden gewinnen und mit erfolgreichen Projekten überzeugen: 
     Ringier, Sanagate AG, Energie 360° AG, Allianz Cinema, Suva und die Post CH AG. 
     Aber auch kleinere Unternehmen konnte die Botfabrik mit interessanten Lösungen begeistern.`,

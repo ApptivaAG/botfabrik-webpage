@@ -108,13 +108,15 @@ const Customers = styled.div`
   }
 `
 
-// TODO
-const ButtonList = styled.div``
+const ButtonList = styled.div`
+  grid-area: c2a;
+  justify-self: center;
+  margin: 0 -0.5em;
+`
 
 const IndexPage = ({ data }) => (
   <IndexLayout>
     <Seo title="Home" />
-
     <Section css="margin-top: 4em;">
       <Grid>
         <div css="grid-area: value-prop">
@@ -140,10 +142,10 @@ const IndexPage = ({ data }) => (
           </SpeechBubble>
         </div>
         <ButtonList>
-          <Button as={Link} to="/dienstleistungen">
+          <Button as={Link} to="/dienstleistungen" css="margin: 0.5em">
             Zu unseren Dienstleistungen
           </Button>
-          <Button as={Link} to="/preisrechner">
+          <Button as={Link} to="/preisrechner" css="margin: 0.5em">
             Zum Chatbot Preisrechner
           </Button>
         </ButtonList>
