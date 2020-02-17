@@ -10,11 +10,11 @@ templateKey: service
 image: ./systeme.svg
 ---
 
-Was häufig bei Chatbots vergessen geht, aber grosse Auswirkungen auf den Erfolg eines Chatbot-Projekts hat, sind die Integrationen des Chatbots. Dies hat ganz viele Facetten.
+Was häufig bei Chatbots vergessen geht, aber grosse Auswirkungen auf den Erfolg eines Chatbot-Projekts hat, sind die Integrationen des Chatbots. Dies hat ganz viele unterschiedliche Facetten. Folgende Fragen stellen wir uns jeweils bei unseren Projekten:
 
-- Wo erscheint der Chatbot? Auf einer Webseite oder doch auf einer Messenger-Plattform?
-- Auf welche Systeme greift der Chatbot wie zu?
-- Wer und wann wird der Live-Chat betreut?
-- Wer ist für das Pflegen und die Inhalte des Chatbots zuständig?
+- Wo erscheint der Chatbot? Auf einer Webseite oder auf einer Messenger-Plattform?
+- Auf welche Systeme greift der Chatbot zu? Und wie?
+- Wer betreut wann den Live-Chat?
+- Wer ist für die Inhalte des Chatbots und deren Pflege zuständig?
 
 Wir helfen gerne bei der technischen und organisatorischen Integration ihres Chatbots.

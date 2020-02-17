@@ -7,7 +7,7 @@ author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./systeme.svg
 id: 40
-summary: Dank unserem Hintergrund in der Entwicklung von Business-Software fällt uns das Integrieren von Umsystemen leicht. Bei vielen Chatbot-Projekten sorgten wir dafür, dass der Chatbot auch benutzerdefinierte Aktionen ausführt oder dynamische Inhalte anzeigt.
+summary: Dank unserem Hintergrund in der Entwicklung von Business-Software fällt uns das Integrieren von Umsystemen leicht. Bei vielen Chatbot-Projekten sorgen wir dafür, dass der Chatbot auch benutzerdefinierte Aktionen ausführt oder dynamische Inhalte anzeigt.
 ---
 
-Dank unserem Hintergrund in der Entwicklung von Business-Software fällt uns das Integrieren von Umsystemen leicht. Bei vielen Chatbot-Projekten sorgten wir dafür, dass der Chatbot auch benutzerdefinierte Aktionen ausführt oder dynamische Inhalte anzeigt.
+Dank unserem Hintergrund in der Entwicklung von Business-Software fällt uns das Integrieren von Umsystemen leicht. Bei vielen Chatbot-Projekten sorgen wir dafür, dass der Chatbot auch benutzerdefinierte Aktionen ausführt oder dynamische Inhalte anzeigt.
