@@ -98,9 +98,9 @@ export default () => {
       <Container>
         <h2>Team</h2>
         <p>
-          Die Botfabrik besteht heute aus einer statthafter Anzahl
-          Teammitglieder. Zusätzlich verreichten einen Hand voll Bots ihre
-          Arbeit bei uns; unter anderem der Fabrik-Bot Pit.
+          Die Botfabrik besteht aus einer stattlichen Anzahl an Teammitgliedern.
+          Zusätzlich verrichten ein Hand voll Bots ihre Arbeit bei uns; unter
+          anderem der Fabrik-Bot Pit.
         </p>
         <EmployeeList>
           {employees.edges.map(edge => {

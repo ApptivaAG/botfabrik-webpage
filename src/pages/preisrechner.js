@@ -14,7 +14,7 @@ const Price = styled.p`
 `
 const PriceInfo = styled.p`
   text-align: center;
-  margin: 0em;
+  margin: 0em 0em 2em;
 `
 
 const FieldSet = styled.fieldset`

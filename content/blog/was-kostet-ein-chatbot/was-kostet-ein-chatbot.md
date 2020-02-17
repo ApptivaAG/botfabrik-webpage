@@ -13,7 +13,7 @@ tag: []
 seo-title: 'Was kostet ein Chatbot? Was sind die Kostentreiben? - Botfabrik'
 ---
 
-Ein häufige Frage die wir erhalten lautet: „Wieviel kostet ein Chatbot?“ Leider ist die Frage nicht so einfach zu beantworten. Generell gibt es vier Faktoren, welche den grössten Einfluss auf die Kosten haben.
+Ein häufige Frage die wir erhalten lautet: „Wieviel kostet ein Chatbot?“ Leider ist die Frage nicht immer ganz einfach zu beantworten. Generell gibt es vier Faktoren, welche den grössten Einfluss auf die Kosten haben.
 
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="383" src="https://www.youtube.com/embed/u3oXI4POVgI?feature=oembed" width="680"></iframe>
 
@@ -33,6 +33,10 @@ Neben den Faktoren, welche grossen Einfluss auf die Kosten haben, gibt es auch F
 - **Auf welchen Plattformen läuft der Chatbot?** Ob der Chatbot auf Facebook Messenger, Skype, Telegram, Slack oder im Web läuft hat kaum Einfluss auf die Kosten.
 - **Training des Chatbots.** Bei einem Chatbot mit Sprachverarbeitung (NLP) verursacht das Training kosten, diese sind aber viel tiefer als jeweils angenommen. Das Training eines durchschnittlichen Chatbots nimmt bloss einen Bruchteil der Gesamtkosten in Anspruch.
 
+## Preisrechner
+
+Der [Botfabrik Preisrechner](https://www.botfabrik.ch/preisrechner) verschafft einen Überblick über die potenziell anfallenden Kosten. Wählen sie die von ihnen gewünschten Funktionen aus, und erhalten sie vom Preisrechner konkrete Angaben zur Preisgestaltung.
+
 ## Erfahrung zahlt sich aus
 
-Egal wie sich ein Chatbot zusammensetzt, die Erfahrung in der Entwicklung von Chatbots zahlt sich aus. Bei der Botfabrik haben wir die Kostentreiber im Griff und wissen wo Sparpotentiale vorhanden sind. Sich mit uns auszutauschen lohnt sich deshalb immer.
+Egal wie sich ein Chatbot zusammensetzt, die Erfahrung in der Entwicklung von Chatbots zahlt sich aus. Bei der Botfabrik haben wir die Kostentreiber im Griff und wissen, wo Sparpotentiale vorhanden sind. Sich mit uns auszutauschen lohnt sich deshalb immer.

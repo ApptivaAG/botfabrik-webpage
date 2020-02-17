@@ -111,7 +111,7 @@ const Customers = styled.div`
 const ButtonList = styled.div`
   grid-area: c2a;
   justify-self: center;
-  margin: 0 -0.5em;
+  margin: 0 0.5em 0 -0.5em;
 `
 
 const IndexPage = ({ data }) => (
