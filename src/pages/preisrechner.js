@@ -144,7 +144,7 @@ const blogPostQuery = graphql`
           date(formatString: "DD.MM.YYYY")
           image {
             childImageSharp {
-              fixed(width: 300) {
+              fixed(width: 260) {
                 ...GatsbyImageSharpFixed_withWebp
               }
             }
@@ -240,7 +240,7 @@ class Preisrechner extends React.Component {
               Hier können sie herausfinden, wie viel ein Chatbot mit den von
               ihnen gewünschten Funktionen pro Monat kostet.
             </p>
-            <Cols minWidth="20em">
+            <Cols minWidth="400px">
               <div>
                 <h2>Basispaket</h2>
                 <FieldSet>
