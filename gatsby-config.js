@@ -75,6 +75,18 @@ module.exports = {
     },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-preload-fonts`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Botfabrik`,
+        short_name: `Botfabrik`,
+        start_url: `/`,
+        icon: `src/img/logo.svg`,
+        background_color: `#ffffff`,
+        theme_color: `#009FDC`,
+        display: `standalone`,
+      },
+    },
     `gatsby-plugin-netlify-cache`,
   ],
 }
