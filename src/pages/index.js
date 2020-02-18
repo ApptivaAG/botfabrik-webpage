@@ -117,7 +117,7 @@ const ButtonList = styled.div`
 const IndexPage = ({ data }) => (
   <IndexLayout>
     <Seo title="Home" />
-    <Section css="margin-top: 4em;">
+    <Section css="margin-top: 2em;">
       <Grid>
         <div css="grid-area: value-prop">
           <ValueProposition>
