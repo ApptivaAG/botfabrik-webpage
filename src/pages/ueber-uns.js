@@ -45,8 +45,8 @@ const UeberUns = ({ location }) => {
           </p>
           <p>
             Wir sind zu 100% unabhängig und können somit die Tools und
-            Technologien einsetzen, die die geforderten Anforderungen und Ziele
-            ideal erfüllen.
+            Technologien einsetzen, welche die geforderten Anforderungen und
+            Ziele ideal erfüllen.
           </p>
         </Container>
       </Section>

@@ -14,7 +14,7 @@ Egal welche Art von Chatbot gefordert ist, als eine der ersten Aufgaben geht es 
 
 ## Workshop
 
-Mit über zwei Dutzend Chatbot-Projekten und vielzähligen Workshops, sind wir mit dem Erarbeiten der Inhalte äusserst geübt. Grundsätzlich läuft die Erarbeitung folgendermassen ab:
+Mit über zwei Dutzend Chatbot-Projekten und vielzähligen Workshops sind wir mit dem Erarbeiten der Inhalte äusserst geübt. Grundsätzlich läuft die Erarbeitung folgendermassen ab:
 
 ### Bereiche definieren
 
@@ -24,7 +24,7 @@ Mit den Bereichen bestimmt man einerseits die Themen, bei welchen der Chatbot he
 - Rechnung einreichen
 - Kündigen
 
-Antworten, die ausserhalb eines Bereichs liegen, soll der Chatbot nicht beantworten. Erst wenn die Betreiber des Chatbots entscheiden, einen zusätzlichen Bereich zu unterstützen, müsste der Chatbot diese beantworten. Bei welchen Bereichen der Chatbot helfen kann, sollte der Chatbot explizit klar machen, damit die Anwender ein gutes Erlebnis haben.
+Antworten, die ausserhalb eines Bereichs liegen, soll der Chatbot nicht beantworten. Erst wenn die Betreiber des Chatbots entscheiden, einen zusätzlichen Bereich zu unterstützen, müsste der Chatbot diese beantworten. Bei welchen Bereichen der Chatbot helfen kann, sollte der Chatbot explizit klarmachen, damit die Anwender ein gutes Erlebnis haben.
 
 ### Ziel der Konversation
 
@@ -37,7 +37,7 @@ Bei diesem Punkt will man verstehen, weshalb die Anwender den Chatbot nutzen wü
 
 ### Häufige Fragen
 
-Häufig sind viele Anfragen der zukünftigen Anwender des Chatbots bereits bekannt. Entsprechend wird geschaut, welches bis heute die häufigsten Anfragen der Anwender waren. Damit können zusätzliche Anhaltspunkte zu den Zielen ermittelt werden. Daneben wird bestimmt, ob es Fragen gibt, die man nicht beantworten will.
+Häufig ist ein Grossteil der Anfragen der zukünftigen Anwender des Chatbots bereits bekannt. Damit können zusätzliche Anhaltspunkte zu den Zielen ermittelt werden. Zusätzlich wird bestimmt, ob es Fragen gibt, die man nicht beantworten will.
 
 ### Aufforderungen
 
@@ -63,10 +63,10 @@ Mit all den bisherigen Informationen aus dem Workshop gilt es zu bestimmen, was 
 Mit all den Inputs oben geht es darum, Absichten zu erfassen. Eine Absicht besteht auf folgenden Bestandteilen:
 
 - Name der Absicht (z.B. "Dauer der Mindestlaufzeit")
-- Trainingssätze (z.B. "Wie lange ist die Mindestlaufzeit?", "Wie lange muss ich Versicherung mindestens behalten?")
+- Trainingssätze (z.B. "Wie lange ist die Mindestlaufzeit?", "Wie lange muss ich die Versicherung mindestens behalten?")
 - Antwort (z.B. "Die Mindestlaufzeit der Versicherung beträgt ein Jahr.")
 
-Von diesen Absichten gibt es ohne Smalltalk zwischen 10 und 100 Stück. Für jede Absicht braucht es mindestens fünf Trainingssätze. Eine gut trainierte Absicht kann über die Jahre mehr als 30 Trainingssätze enthalten. Zu Beginn eines Projekts sind 10 Trainingssätze aber mehr als ausreichend.
+Von diesen Absichten gibt es ohne Smalltalk im Normalfall zwischen 10 und 100 Stück. Für jede Absicht braucht es mindestens fünf Trainingssätze. Eine gut trainierte Absicht kann über die Jahre mehr als 30 Trainingssätze enthalten. Zu Beginn eines Projekts sind 10 Trainingssätze aber mehr als ausreichend.
 
 ## Tools
 
