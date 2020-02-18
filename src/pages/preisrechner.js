@@ -1,7 +1,9 @@
 /* eslint-disable no-alert */
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled, { css } from 'styled-components'
 import Layout from '../components/Layout'
+import BlogLinkItem from '../components/BlogLinkItem'
 import { Container, Section, Cols, Button } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
@@ -123,6 +125,36 @@ const additionalFeatures = [
   },
 ]
 
+const blogPostQuery = graphql`
+  query BlogPostByTitle {
+    blogs: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "blog-post" }
+          title: { eq: "Was kostet ein Chatbot?" }
+        }
+      }
+    ) {
+      nodes {
+        excerpt(pruneLength: 140)
+        id
+        frontmatter {
+          title
+          permalink
+          date(formatString: "DD.MM.YYYY")
+          image {
+            childImageSharp {
+              fixed(width: 300) {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
 const encode = data =>
   Object.keys(data)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -196,6 +228,7 @@ class Preisrechner extends React.Component {
 
   render() {
     const { price, name, email, message } = this.state
+
     return (
       <Layout callToAction={false}>
         <Seo title="Preisrechner" description="Wie viel kostet ein Bot?" />
@@ -207,7 +240,6 @@ class Preisrechner extends React.Component {
               Hier können sie herausfinden, wie viel ein Chatbot mit den von
               ihnen gewünschten Funktionen pro Monat kostet.
             </p>
-
             <Cols minWidth="20em">
               <div>
                 <h2>Basispaket</h2>
@@ -306,6 +338,22 @@ class Preisrechner extends React.Component {
                 <Button type="submit">Jetzt Offerte einholen</Button>
               </p>
             </form>
+            <br />
+            <br />
+            <StaticQuery
+              query={blogPostQuery}
+              render={
+                data =>
+                  data.blogs.nodes.map(({ excerpt, frontmatter }) => (
+                    <BlogLinkItem
+                      key={excerpt}
+                      frontmatter={frontmatter}
+                      excerpt={excerpt}
+                    />
+                  ))
+                // eslint-disable-next-line react/jsx-curly-newline
+              }
+            />
           </Container>
         </Section>
       </Layout>
