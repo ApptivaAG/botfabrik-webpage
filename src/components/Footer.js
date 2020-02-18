@@ -27,6 +27,24 @@ const CopyWrite = styled(Center)`
   font-size: 0.8em;
   margin: 2em 0;
 `
+const ListLinks = styled.ul`
+  padding-left: 0;
+  list-style-type: none;
+  li {
+    margin-bottom: 1.6em;
+    @media (min-width: 720px) {
+      margin-bottom: 0.8em;
+    }
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #fff3;
+    margin: 1.6em 0;
+    @media (min-width: 720px) {
+      margin: 0.8em 0;
+    }
+  }
+`
 
 const Footer = ({ about }) => (
   <Wrapper>
@@ -46,14 +64,73 @@ const Footer = ({ about }) => (
             Neuenkirchstrasse 19 <br />
             6203 Sempach Station
           </p>
-          <p>+41 79 407 00 83</p>
-          <p>mensch@botfabrik.ch</p>
+          <p>
+            <a href="tel:+41413222626">041 322 26 26</a>
+          </p>
+          <p>
+            <a href="mailto:mensch@botfabrik.ch">mensch@botfabrik.ch</a>
+          </p>
         </div>
         <div>
           <h2>Quick Links</h2>
-          <a href="https://apptiva.ch">Apptiva AG</a>
-          <p>Twitter</p>
-          <Link to="faq">Häufig gestellte Fragen</Link>
+          <ListLinks>
+            <li>
+              <Link to="/dienstleistungen">Dienstleistungen</Link>
+            </li>
+            <li>
+              <Link to="/ueber-uns">Über uns</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/kontakt">Kontakt</Link>
+            </li>
+            <hr />
+            <li>
+              <Link to="/preisrechner">Preisrechner</Link>
+            </li>
+            <li>
+              <Link to="/faq">Häufig gestellte Fragen</Link>
+            </li>
+            <hr />
+            <li>
+              <a
+                href="https://apptiva.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apptiva AG
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://bubblecms.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bubble CMS
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/BotfabrikTeam"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter @BotfabrikTeam
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCfjvBfWviimCo0IS8rEXvgA/featured"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Youtube
+              </a>
+            </li>
+          </ListLinks>
         </div>
       </Grid>
       <CopyWrite>
