@@ -20,7 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
               date(formatString: "DD.MM.YYYY")
               image {
                 childImageSharp {
-                  fixed(width: 300) {
+                  fixed(width: 260) {
                     srcSet
                     srcWebp
                     src

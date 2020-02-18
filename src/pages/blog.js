@@ -29,7 +29,7 @@ export const item = (frontmatter, excerpt) => {
       align="left"
     >
       <h2
-        css="grid-area: title"
+        css="grid-area: title; hyphens: auto;"
         dangerouslySetInnerHTML={{ __html: frontmatter.title }}
       />
       {frontmatter.image && (
@@ -92,7 +92,7 @@ export const blogPageQuery = graphql`
           date(formatString: "DD.MM.YYYY")
           image {
             childImageSharp {
-              fixed(width: 300) {
+              fixed(width: 260) {
                 ...GatsbyImageSharpFixed_withWebp
               }
             }

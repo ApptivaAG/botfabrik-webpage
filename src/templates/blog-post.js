@@ -19,6 +19,7 @@ const HeaderTitle = styled.h1`
   font-weight: 800;
   line-height: 1;
   text-align: center;
+  hyphens: auto;
 `
 const Header = ({ title, image }) => (
   <HeadArea>
@@ -29,19 +30,19 @@ const Header = ({ title, image }) => (
   </HeadArea>
 )
 
+const Div = styled.div`
+  margin-top: 2rem;
+  color: #0009;
+  font-size: 0.8rem;
+`
+const Author = styled.span`
+  font-weight: 400;
+  text-transform: capitalize;
+`
+const Date = styled.span`
+  font-weight: 400;
+`
 const Published = ({ author, date }) => {
-  const Div = styled.div`
-    margin-top: 2rem;
-    color: #0009;
-    font-size: 0.8rem;
-  `
-  const Author = styled.span`
-    font-weight: 400;
-    text-transform: capitalize;
-  `
-  const Date = styled.span`
-    font-weight: 400;
-  `
   return (
     <Div>
       Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
@@ -68,7 +69,15 @@ export const BlogPostTemplate = ({
   navigation,
 }) => {
   const PostContent = contentComponent || Content
-  const { title, image, description, author, date, isoDate,permalink } = metaData
+  const {
+    title,
+    image,
+    description,
+    author,
+    date,
+    isoDate,
+    permalink,
+  } = metaData
 
   const Description = styled.p`
     font-weight: 600;
