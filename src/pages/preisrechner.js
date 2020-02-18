@@ -232,7 +232,6 @@ class Preisrechner extends React.Component {
     return (
       <Layout callToAction={false}>
         <Seo title="Preisrechner" description="Wie viel kostet ein Bot?" />
-
         <Section>
           <Container>
             <h1>Preisrechner</h1>
@@ -240,57 +239,57 @@ class Preisrechner extends React.Component {
               Hier können sie herausfinden, wie viel ein Chatbot mit den von
               ihnen gewünschten Funktionen pro Monat kostet.
             </p>
-            <Cols minWidth="400px">
-              <div>
-                <h2>Basispaket</h2>
-                <FieldSet>
-                  {basicFeatures.map(f => (
-                    <Feature key={f}>
-                      <label htmlFor={f}>
-                        <FeatureInput
-                          checked
-                          readOnly
-                          type="checkbox"
-                          name={f}
-                        />
-                        &nbsp; {f}
-                      </label>
-                    </Feature>
-                  ))}
-                </FieldSet>
-              </div>
-              <div>
-                <h2>Zusätzliche Funktionen</h2>
-                <FieldSet>
-                  {additionalFeatures.map(f => (
-                    <Feature key={f.name}>
-                      <label htmlFor={f.name}>
-                        <FeatureInput
-                          // eslint-disable-next-line react/destructuring-assignment
-                          checked={this.state[f.name]}
-                          id={f.name}
-                          type="checkbox"
-                          name={f.name}
-                          onClick={this.handleClick}
-                          onChange={() => {}}
-                        />
-                        &nbsp; {f.displayName}
-                      </label>
-                    </Feature>
-                  ))}
-                </FieldSet>
-              </div>
-            </Cols>
-            <Price>CHF {price}</Price>
-            <PriceInfo>pro Monat</PriceInfo>
-            <br />
-            <br />
             <form
               name="contact-preisrechner"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
+              <Cols minWidth="20em">
+                <div>
+                  <h2>Basispaket</h2>
+                  <FieldSet>
+                    {basicFeatures.map(f => (
+                      <Feature key={f}>
+                        <label htmlFor={f}>
+                          <FeatureInput
+                            checked
+                            readOnly
+                            type="checkbox"
+                            name={f}
+                          />
+                          &nbsp; {f}
+                        </label>
+                      </Feature>
+                    ))}
+                  </FieldSet>
+                </div>
+                <div>
+                  <h2>Zusätzliche Funktionen</h2>
+                  <FieldSet>
+                    {additionalFeatures.map(f => (
+                      <Feature key={f.name}>
+                        <label htmlFor={f.name}>
+                          <FeatureInput
+                            // eslint-disable-next-line react/destructuring-assignment
+                            checked={this.state[f.name]}
+                            id={f.name}
+                            type="checkbox"
+                            name={f.name}
+                            onClick={this.handleClick}
+                            onChange={() => {}}
+                          />
+                          &nbsp; {f.displayName}
+                        </label>
+                      </Feature>
+                    ))}
+                  </FieldSet>
+                </div>
+              </Cols>
+              <Price>CHF {price}</Price>
+              <PriceInfo>pro Monat</PriceInfo>
+              <br />
+              <br />
               <p hidden>
                 <label htmlFor="bot-field">
                   Nicht ausfüllen:{' '}
