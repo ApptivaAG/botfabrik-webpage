@@ -4,10 +4,10 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
+import BlogLinkItem from '../components/BlogLinkItem'
 import Content, { HTMLContent } from '../components/Content'
 import Seo from '../components/Seo'
 import { Section, Container } from '../styles'
-import { item } from '../pages/blog'
 
 const HeadArea = styled.div``
 
@@ -56,8 +56,12 @@ const LayoutNavigation = styled.div``
 const Navigation = ({ next, prev }) => {
   return (
     <LayoutNavigation>
-      {prev && item(prev.frontmatter, prev.excerpt)}
-      {next && item(next.frontmatter, next.excerpt)}
+      {prev && (
+        <BlogLinkItem frontmatter={prev.frontmatter} excerpt={prev.excerpt} />
+      )}
+      {next && (
+        <BlogLinkItem frontmatter={next.frontmatter} excerpt={next.excerpt} />
+      )}
     </LayoutNavigation>
   )
 }
