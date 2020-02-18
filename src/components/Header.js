@@ -45,7 +45,7 @@ const Logo = styled.div`
 `
 const Navigation = styled.nav`
   margin-right: -1em;
-  @media (max-width: 839px) {
+  @media (max-width: 1239px) {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ const MenuButton = styled.div`
   font-weight: 600;
   cursor: pointer;
 
-  @media (min-width: 840px) {
+  @media (min-width: 1240px) {
     display: none;
   }
 
