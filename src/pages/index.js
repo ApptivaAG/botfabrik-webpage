@@ -10,7 +10,7 @@ import LinkItem from '../components/LinkItem'
 import { Section, Container, Button, Cols } from '../styles'
 
 import pit from '../img/pit.svg'
-import bubbleArrow from '../img/bubblearrow.svg'
+import arrowBottom from '../img/arrowBottom.svg'
 import arrowLeft from '../img/arrowLeft.svg'
 
 import ringier from '../img/ringier-logo-3.svg'
@@ -28,13 +28,13 @@ const IndexLayout = styled(Layout)`
 `
 
 const Grid = styled(Container)`
-  grid: 'value-prop' 'pit' 'services' 'c2a';
+  grid: 'value-prop' 'services' 'pit' 'c2a';
   display: grid;
   gap: 2em;
-  @media (min-width: 640px) and (max-width: 1240px) {
+  @media (min-width: 640px) and (max-width: 1380px) {
     grid: 'value-prop value-prop' 'pit services' 'c2a c2a' / 190px 320px;
   }
-  @media (min-width: 1240px) {
+  @media (min-width: 1381px) {
     grid: 'value-prop pit services' auto 'c2a c2a c2a' / 1fr 190px 320px;
   }
 `
@@ -57,33 +57,31 @@ const SpeechBubble = styled.div`
   padding: 1em 1em;
   color: ${p => p.theme.text};
   background-color: ${p => p.theme.darkBg};
-
-  ${p =>
-    p.left
-      ? css`
-        margin-left: 1em;
-        
-        ::after {
-          display: block;
-          position: absolute;
-          content: url("${arrowLeft}");
-          left: -1.3em;
-          top: 1.4em;
-          height: 3em;
-          width: 1.4em;
-        }
-      `
-      : css`
-        ::after {
-          display: block;
-          position: absolute;
-          content: url("${bubbleArrow}");
-          right: 2em;
-          bottom: -2em;
-          height: 2em;
-          width: 3em;
-        }
-      `};
+  margin-left: 1em;
+  
+  @media (min-width: 641px) {  
+    ::after {
+      display: block;
+      position: absolute;
+      content: url("${arrowLeft}");
+      left: -1.3em;
+      top: 1.4em;
+      height: 3em;
+      width: 1.4em;
+    }
+  }
+  @media (max-width: 640px) {
+    margin-left: 0;
+    ::after {
+      display: block;
+      position: absolute;
+      content: url("${arrowBottom}");
+      right: 2em;
+      bottom: -2em;
+      height: 2em;
+      width: 3em;
+    }
+  }
 `
 
 const List = styled.ul``
@@ -114,6 +112,19 @@ const ButtonList = styled.div`
   margin: 0 0.5em 0 -0.5em;
 `
 
+const Pit = styled.div`
+  grid-area: pit;
+  img {
+    max-width: 300px;
+  }
+  @media (max-width: 640px) {
+    text-align: right;
+    img {
+      max-width: 150px;
+    }
+  }
+`
+
 const IndexPage = ({ data }) => (
   <IndexLayout>
     <Seo title="Home" />
@@ -125,9 +136,9 @@ const IndexPage = ({ data }) => (
             <b>Chatbots</b>, die ihre Anwender begeistern.
           </ValueProposition>
         </div>
-        <div css="grid-area: pit">
-          <img css="max-width: 300px;" src={pit} alt="Pit" />
-        </div>
+        <Pit>
+          <img src={pit} alt="Pit" />
+        </Pit>
         <div css="grid-area: services">
           <SpeechBubble left>
             Wir unterstützen sie bei ihrem Chatbot-Projekt hinsichtlich
