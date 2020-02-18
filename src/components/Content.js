@@ -17,6 +17,9 @@ const Markdown = styled.div`
   video {
     max-width: 100%;
   }
+  img[src$='.svg'] {
+    max-height: 22rem;
+  }
 
   a {
     word-break: break-all;
