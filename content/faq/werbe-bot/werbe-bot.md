@@ -59,14 +59,14 @@ Basiert eine Bot-Konversation auf einem Messenger, so bleibt dieser Kommunikatio
 ### E-Commerce Bot
 
 Unser E-Commerce eignet sich für Betreiber von Webshops und Webseiten, welche das Ziel haben, ihren Besuchern etwas zu verkaufen oder diese zu identifizieren.  
-[Mehr erfahren](/e-commerce-bot/)
+[Mehr erfahren](/faq/e-commerce-bot/)
 
 ### Kundendienst Bot
 
 Unser Kundendienst Bot ist prädestiniert dafür, um Routinefragen zu beantworten. Er kann dies im Chat tun oder automatisiert E-Mails beantworten.  
-[Mehr erfahren](/kundendienst-bot/)
+[Mehr erfahren](/faq/kundendienst-bot/)
 
 ### Produktivitäts Bots
 
 Unsere Produktivitäts-Bots helfen Ihnen wiederkehrende Abläufe effizienter zu organisieren, Fehler zu reduzieren und Mitarbeiter von Routinearbeiten zu entlasten.  
-[Mehr erfahren](/produktivitaets-bot/)
+[Mehr erfahren](/faq/produktivitaets-bot/)

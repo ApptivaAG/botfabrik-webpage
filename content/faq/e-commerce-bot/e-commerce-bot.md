@@ -78,14 +78,14 @@ Auch wenn du auf deiner Seite nicht direkt verkaufst, sondern nur Informationen 
 ### Kundendienst Bot
 
 Unser Kundendienst Bot ist prädestiniert dafür, um Routinefragen zu beantworten. Er kann dies im Chat tun oder automatisiert E-Mails beantworten.  
-[Mehr erfahren](/kundendienst-bot/)
+[Mehr erfahren](/faq/kundendienst-bot/)
 
 ### Werbe Bots
 
 Bots bieten gerade im Marketing unzählige Einsatzmöglichkeiten. Der Fantasie sind kaum Grenzen gesetzt.  
-[Mehr erfahren](/werbe-bot/)
+[Mehr erfahren](/faq/werbe-bot/)
 
 ### Produktivitäts Bots
 
 Unsere Produktivitäts-Bots helfen Ihnen wiederkehrende Abläufe effizienter zu organisieren, Fehler zu reduzieren und Mitarbeiter von Routinearbeiten zu entlasten.  
-[Mehr erfahren](/produktivitaets-bot/)
+[Mehr erfahren](/faq/produktivitaets-bot/)
