@@ -127,26 +127,19 @@ const additionalFeatures = [
 
 const blogPostQuery = graphql`
   query BlogPostByTitle {
-    blogs: allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          templateKey: { eq: "blog-post" }
-          title: { eq: "Was kostet ein Chatbot?" }
-        }
-      }
+    blog: markdownRemark(
+      frontmatter: { title: { eq: "Was kostet ein Chatbot?" } }
     ) {
-      nodes {
-        excerpt(pruneLength: 140)
-        id
-        frontmatter {
-          title
-          permalink
-          date(formatString: "DD.MM.YYYY")
-          image {
-            childImageSharp {
-              fixed(width: 260) {
-                ...GatsbyImageSharpFixed_withWebp
-              }
+      excerpt(pruneLength: 140)
+      id
+      frontmatter {
+        title
+        permalink
+        date(formatString: "DD.MM.YYYY")
+        image {
+          childImageSharp {
+            fixed(width: 260) {
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -341,17 +334,12 @@ class Preisrechner extends React.Component {
             <br />
             <StaticQuery
               query={blogPostQuery}
-              render={
-                data =>
-                  data.blogs.nodes.map(({ excerpt, frontmatter }) => (
-                    <BlogLinkItem
-                      key={excerpt}
-                      frontmatter={frontmatter}
-                      excerpt={excerpt}
-                    />
-                  ))
-                // eslint-disable-next-line react/jsx-curly-newline
-              }
+              render={data => (
+                <BlogLinkItem
+                  frontmatter={data.blog.frontmatter}
+                  excerpt={data.blog.excerpt}
+                />
+              )}
             />
           </Container>
         </Section>
