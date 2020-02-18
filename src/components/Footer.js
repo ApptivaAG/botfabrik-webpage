@@ -61,7 +61,8 @@ const Footer = ({ about }) => (
           <span role="img" aria-label="copywrite">
             ©
           </span>{' '}
-          2018 Botfabrik - eine Initiative der Apptiva AG
+          2016 - {new Date().getFullYear()} Botfabrik - eine Initiative der
+          Apptiva AG
         </p>
       </CopyWrite>
     </Container>
