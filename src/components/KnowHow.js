@@ -71,20 +71,7 @@ const KnowHow = () => {
       <Container>
         <h2>Unsere Kompetenzen</h2>
       </Container>
-
       {list.nodes.map(KnowHowItem)}
-      <Container>
-        <h3 css="margin-top: 3em;">Weitere Kompetenzen</h3>
-        <ul>
-          <li>Konzeption von Chatbots</li>
-          <li>
-            Optimierung von Intents und Entities (Absichten und Entitäten)
-          </li>
-          <li>Chatbot-Architektur und -Entwicklung</li>
-          <li>Verwaltung von Chatbot-Inhalten</li>
-          <li>hohe Usability und ansprechendes Design</li>
-        </ul>
-      </Container>
     </Section>
   )
 }
