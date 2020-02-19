@@ -81,11 +81,9 @@ const BUBBLE_LINK = (
 const basicFeatures = [
   'WebClient (Avatars & Farben anpassbar)',
   'Integration in die bestehende Webseite',
-  <label htmlFor="bubbleCMS">
-    {BUBBLE_LINK} für die Bearbeitung der Inhalte
-  </label>,
+  <label htmlFor="bubbleCMS">Bearbeitung der Inhalte mit {BUBBLE_LINK}</label>,
   'NLP mit Google Dialogflow',
-  'Absichtserkennung durch künstliche Intelligenz',
+  'Absichtserkennung durch KI',
   'Smalltalk Skills',
   'Spracheingabe',
   'Hosting in der Schweiz bei Swisscom',
@@ -105,7 +103,7 @@ const additionalFeatures = [
   },
   {
     name: 'custom-actions',
-    displayName: 'Ausführung benutzerdefinierter Aktionen',
+    displayName: 'Benutzerdefinierte Aktionen',
     price: 80,
   },
   {
@@ -117,6 +115,16 @@ const additionalFeatures = [
   {
     name: 'whatsapp',
     displayName: 'WhatsApp Client',
+    price: 50,
+  },
+  {
+    name: 'teams',
+    displayName: 'Microsoft Teams Client',
+    price: 50,
+  },
+  {
+    name: 'slack',
+    displayName: 'Slack Client',
     price: 50,
   },
   {
