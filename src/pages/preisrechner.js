@@ -16,6 +16,12 @@ const Price = styled.p`
 `
 const PriceInfo = styled.p`
   text-align: center;
+  margin: 0em 0em 1em;
+`
+
+const PriceAlternative = styled.p`
+  text-align: center;
+  font-size: 0.8em;
   margin: 0em 0em 2em;
 `
 
@@ -281,6 +287,12 @@ class Preisrechner extends React.Component {
               </Cols>
               <Price>CHF {price}</Price>
               <PriceInfo>pro Monat</PriceInfo>
+              <PriceAlternative>
+                Sind sie eher an einem fixen Projektpreis interessiert?
+                <br />
+                Kein Problem, melden sie sich einfach via Kontaktformular bei
+                uns.
+              </PriceAlternative>
               <br />
               <br />
               <p hidden>
