@@ -16,6 +16,12 @@ const Price = styled.p`
 `
 const PriceInfo = styled.p`
   text-align: center;
+  margin: 0em 0em 1em;
+`
+
+const PriceAlternative = styled.p`
+  text-align: center;
+  font-size: 0.8em;
   margin: 0em 0em 2em;
 `
 
@@ -75,11 +81,9 @@ const BUBBLE_LINK = (
 const basicFeatures = [
   'WebClient (Avatars & Farben anpassbar)',
   'Integration in die bestehende Webseite',
-  <label htmlFor="bubbleCMS">
-    {BUBBLE_LINK} für die Bearbeitung der Inhalte
-  </label>,
+  <label htmlFor="bubbleCMS">Bearbeitung der Inhalte mit {BUBBLE_LINK}</label>,
   'NLP mit Google Dialogflow',
-  'Absichtserkennung durch künstliche Intelligenz',
+  'Absichtserkennung durch KI',
   'Smalltalk Skills',
   'Spracheingabe',
   'Hosting in der Schweiz bei Swisscom',
@@ -99,7 +103,7 @@ const additionalFeatures = [
   },
   {
     name: 'custom-actions',
-    displayName: 'Ausführung benutzerdefinierter Aktionen',
+    displayName: 'Benutzerdefinierte Aktionen',
     price: 80,
   },
   {
@@ -111,6 +115,16 @@ const additionalFeatures = [
   {
     name: 'whatsapp',
     displayName: 'WhatsApp Client',
+    price: 50,
+  },
+  {
+    name: 'teams',
+    displayName: 'Microsoft Teams Client',
+    price: 50,
+  },
+  {
+    name: 'slack',
+    displayName: 'Slack Client',
     price: 50,
   },
   {
@@ -127,26 +141,19 @@ const additionalFeatures = [
 
 const blogPostQuery = graphql`
   query BlogPostByTitle {
-    blogs: allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          templateKey: { eq: "blog-post" }
-          title: { eq: "Was kostet ein Chatbot?" }
-        }
-      }
+    blog: markdownRemark(
+      frontmatter: { title: { eq: "Was kostet ein Chatbot?" } }
     ) {
-      nodes {
-        excerpt(pruneLength: 140)
-        id
-        frontmatter {
-          title
-          permalink
-          date(formatString: "DD.MM.YYYY")
-          image {
-            childImageSharp {
-              fixed(width: 260) {
-                ...GatsbyImageSharpFixed_withWebp
-              }
+      excerpt(pruneLength: 140)
+      id
+      frontmatter {
+        title
+        permalink
+        date(formatString: "DD.MM.YYYY")
+        image {
+          childImageSharp {
+            fixed(width: 260) {
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -288,6 +295,12 @@ class Preisrechner extends React.Component {
               </Cols>
               <Price>CHF {price}</Price>
               <PriceInfo>pro Monat</PriceInfo>
+              <PriceAlternative>
+                Sind sie eher an einem fixen Projektpreis interessiert?
+                <br />
+                Kein Problem, melden sie sich einfach via Kontaktformular bei
+                uns.
+              </PriceAlternative>
               <br />
               <br />
               <p hidden>
@@ -341,17 +354,12 @@ class Preisrechner extends React.Component {
             <br />
             <StaticQuery
               query={blogPostQuery}
-              render={
-                data =>
-                  data.blogs.nodes.map(({ excerpt, frontmatter }) => (
-                    <BlogLinkItem
-                      key={excerpt}
-                      frontmatter={frontmatter}
-                      excerpt={excerpt}
-                    />
-                  ))
-                // eslint-disable-next-line react/jsx-curly-newline
-              }
+              render={data => (
+                <BlogLinkItem
+                  frontmatter={data.blog.frontmatter}
+                  excerpt={data.blog.excerpt}
+                />
+              )}
             />
           </Container>
         </Section>
