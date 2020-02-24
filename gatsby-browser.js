@@ -1,10 +1,7 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// IE/Edge polyfill needed for plugin "gatsby-remark-images-medium-zoom"
+require('@fastly/performance-observer-polyfill/polyfill')
 
-// You can delete this file if you're not using it
+// Lazy loading images
 const lozad = require('lozad')
 
 exports.onRouteUpdate = () => {

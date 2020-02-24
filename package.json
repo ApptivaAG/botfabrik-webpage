@@ -1,9 +1,10 @@
 {
   "name": "botfabrik-webpage",
   "description": "Webpage botfabrik.ch",
-  "version": "0.1.0",
-  "author": "Philip Schönholzer",
+  "version": "1.0.1",
+  "author": "Apptiva AG",
   "dependencies": {
+    "@fastly/performance-observer-polyfill": "^1.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.12",
     "gatsby-image": "^2.2.40",
@@ -34,11 +35,12 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "serve ./public",
     "preload-fonts": "gatsby-preload-fonts",
     "clean": "gatsby clean",
     "update": "npx npm-check-updates -u",
@@ -52,15 +54,11 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "serve": "^11.3.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
   }
 }
