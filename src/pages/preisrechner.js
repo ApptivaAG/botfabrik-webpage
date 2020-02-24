@@ -1,7 +1,9 @@
 /* eslint-disable no-alert */
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import fetch from 'unfetch'
 import styled, { css } from 'styled-components'
+
 import Layout from '../components/Layout'
 import BlogLinkItem from '../components/BlogLinkItem'
 import { Container, Section, Cols, Button } from '../styles'
