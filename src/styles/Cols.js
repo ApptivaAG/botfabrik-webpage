@@ -5,10 +5,10 @@ const Cols = styled.div`
   grid-auto-rows: 1fr;
   gap: 1em;
 
-  @media (min-width: ${p => p.minWidth || '12em'}) {
+  @media (min-width: calc(${p => p.minWidth || '240px'} + 40px)) {
     grid-template-columns: repeat(
       auto-fill,
-      minmax(${p => p.minWidth || '12em'}, 1fr)
+      minmax(${p => p.minWidth || '240px'}, 1fr)
     );
   }
 `

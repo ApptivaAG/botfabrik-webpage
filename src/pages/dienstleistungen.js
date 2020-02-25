@@ -40,7 +40,7 @@ const Dienstleistungen = ({ location }) => {
         <Container>
           <h1>Dienstleistungen</h1>
 
-          <Cols minWidth="16em">
+          <Cols minWidth="320px">
             {services.nodes.map(
               ({ frontmatter: { title, subtitle, permalink, image } }) => (
                 <LinkItem

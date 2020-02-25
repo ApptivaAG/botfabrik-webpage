@@ -254,7 +254,7 @@ class Preisrechner extends React.Component {
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
-              <Cols minWidth="20em">
+              <Cols minWidth="400px">
                 <div>
                   <h2>Basispaket</h2>
                   <FieldSet>
