@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
     } else if (this.state['bot-field'] === undefined) {
       const body = encode({
         'form-name': 'contact',
-        subject: 'Kontaktformular apptiva.ch',
+        subject: 'Kontaktformular botfabrik.ch',
         ...this.state,
       })
       fetch('/', {
@@ -85,6 +85,7 @@ class ContactForm extends React.Component {
             Nicht ausfüllen:{' '}
             <input type="text" name="bot-field" onChange={this.handleChange} />
           </label>
+          <input type="text" name="subject" />
         </p>
         <p>
           <label htmlFor="name">
