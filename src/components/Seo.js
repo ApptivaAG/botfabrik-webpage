@@ -8,7 +8,7 @@ const query = graphql`
       siteMetadata {
         title
         description
-        baseUrl
+        siteUrl
         logo
         twitter
         fbAppId
@@ -103,7 +103,7 @@ const Seo = ({
   const {
     title: titleDefault,
     description: descriptionDefault,
-    baseUrl: urlDefault,
+    siteUrl: urlDefault,
     logo: imageDefault,
     twitter,
     fbAppId,
