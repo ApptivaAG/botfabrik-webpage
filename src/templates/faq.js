@@ -11,7 +11,7 @@ const HeadArea = styled.div``
 
 const HeaderTitle = styled.h1`
   font-size: 2rem;
-  @media (min-width: 400px) {
+  @media (min-width: 640px) {
     font-size: 4rem;
   }
   font-weight: 800;
