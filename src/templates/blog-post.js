@@ -31,7 +31,6 @@ const Header = ({ title, image }) => (
 )
 
 const Div = styled.div`
-  margin-top: 2rem;
   color: #0009;
   font-size: 0.8rem;
 `
@@ -66,6 +65,11 @@ const Navigation = ({ next, prev }) => {
   )
 }
 
+const Description = styled.p`
+  margin-bottom: 0.4em;
+  font-weight: 600;
+`
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -83,9 +87,6 @@ export const BlogPostTemplate = ({
     permalink,
   } = metaData
 
-  const Description = styled.p`
-    font-weight: 600;
-  `
   return (
     <Layout calltoActionDark>
       <Seo
