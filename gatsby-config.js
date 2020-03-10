@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Botfabrik',
-    siteUrl: 'https://botfabrik.ch',
+    siteUrl: 'https://botfabrik.ch', // also needed in gatsby-plugin-sitemap
     about: `In der Botfabrik entwickeln wir individuelle Chatbot-Lösungen von A-Z für alle Lebenslagen. 
     Wir hecken Strategien aus, erstellen Konzepte und setzen diese schliesslich um. 
     Es entstehen Chatbots für den Kundendienst, das Marketing, die Produktivität oder im Bereich des E-Commerces.
@@ -87,7 +87,7 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`, // siteUrl needs to be in siteMetadata for this plugin to work
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-preload-fonts`,
     {
