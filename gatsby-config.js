@@ -54,13 +54,8 @@ module.exports = {
             },
           },
           `gatsby-remark-images-medium-zoom`,
+          `gatsby-remark-static-images`,
           `gatsby-remark-embedder`,
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
-            },
-          },
           `gatsby-remark-external-links`,
         ],
       },
