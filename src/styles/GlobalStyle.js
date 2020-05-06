@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
-import styledNormalize from 'styled-normalize'
-import fontFace from './font-face'
 
 const GlobalStyle = createGlobalStyle`
-  ${styledNormalize}
-  ${fontFace}
-
   html, body, #___gatsby {
     height: 100%;
   }
