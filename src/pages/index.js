@@ -53,11 +53,15 @@ const SpeechBubble = styled.div`
   position: relative;
   display: inline-block;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 200;
   padding: 1em 1em;
   color: ${p => p.theme.text};
   background-color: ${p => p.theme.darkBg};
   margin-left: 1em;
+
+  b {
+    font-weight: 600;
+  }
   
   @media (min-width: 641px) {  
     ::after {
@@ -141,7 +145,7 @@ const IndexPage = ({ data }) => (
         </Pit>
         <div css="grid-area: services">
           <SpeechBubble left>
-            Wir unterstützen sie bei ihrem Chatbot-Projekt hinsichtlich
+            Wir unterstützen sie bei ihrem <b>Chatbot-Projekt</b> hinsichtlich
             <List>
               <li>Strategie</li>
               <li>Konzept und Inhalte</li>
