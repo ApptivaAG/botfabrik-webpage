@@ -126,6 +126,9 @@ const Header = () => (
         <NavItemsLink to="/dienstleistungen" partiallyActive>
           Dienstleistungen
         </NavItemsLink>
+        <NavItemsLink to="/starterkit" partiallyActive>
+          Starterkit
+        </NavItemsLink>
         <NavItemsLink to="/ueber-uns" partiallyActive>
           Über uns
         </NavItemsLink>

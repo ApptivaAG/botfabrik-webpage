@@ -72,7 +72,7 @@ const Input = styled.input`
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Textarea = props => <Input as="textarea" {...props} />
 
-const BASE_PRICE = 199
+const BASE_PRICE = 19
 
 const BUBBLE_LINK = (
   <a target="_blank" rel="noopener noreferrer" href="https://bubblecms.io/de">
@@ -256,7 +256,7 @@ class Preisrechner extends React.Component {
             >
               <Cols minWidth="400px">
                 <div>
-                  <h2>Basispaket</h2>
+                  <h2>Starterkit</h2>
                   <FieldSet>
                     {basicFeatures.map(f => (
                       <Feature key={f}>
