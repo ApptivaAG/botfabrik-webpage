@@ -25,7 +25,7 @@ const encode = data =>
 class ContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: '', email: '', message: '' }
+    this.state = { name: '', email: '', message: '', company: '' }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
     } else if (this.state['bot-field'] === undefined) {
       const body = encode({
         'form-name': 'contact',
-        subject: 'Kontaktformular botfabrik.ch',
+        subject: this.props.subject || 'Kontaktformular botfabrik.ch',
         ...this.state,
       })
       fetch('/', {
@@ -72,7 +72,8 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const { name, email, message } = this.state
+    const { name, email, message, company } = this.state
+    const { buttonText } = this.props
     return (
       <form
         name="contact"
@@ -110,6 +111,17 @@ class ContactForm extends React.Component {
           </label>
         </p>
         <p>
+          <label htmlFor="company">
+            Firma{' '}
+            <Input
+              type="text"
+              name="company"
+              value={company}
+              onChange={this.handleChange}
+            />
+          </label>
+        </p>
+        <p>
           <label htmlFor="message">
             Ihre Nachricht{' '}
             <Textarea
@@ -120,7 +132,7 @@ class ContactForm extends React.Component {
           </label>
         </p>
         <p css="text-align: right;">
-          <Button type="submit">Senden</Button>
+          <Button type="submit">{buttonText || 'Senden'}</Button>
         </p>
       </form>
     )

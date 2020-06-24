@@ -111,14 +111,10 @@ const Starterkit = ({ location }) => {
             <b css="font-size:1.2em">CHF 19.- pro Monat.</b>
           </p>
           <ButtonList justify="left">
-            <Button as={Link} to="/preisrechner" css="margin: 0.5em">
+            <Button as={Link} to="/order-starterkit" css="margin: 0.5em">
               Jetzt bestellen
             </Button>
-            <Button
-              as={Link}
-              to="https://bubblecms.io/de/sign-up/"
-              css="margin: 0.5em"
-            >
+            <Button as={Link} to="/try-starterkit" css="margin: 0.5em">
               Jetzt gratis ausprobieren
             </Button>
           </ButtonList>
