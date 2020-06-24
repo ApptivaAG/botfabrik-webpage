@@ -16,14 +16,15 @@ const BUBBLE_LINK = (
 )
 
 const basicFeatures = [
-  'WebClient (Avatars & Farben anpassbar)',
-  'Integration in die bestehende Webseite',
+  'Integration in ihre Webseite',
+  'Angepasst auf ihr Corporate Design',
   <label htmlFor="bubbleCMS">Bearbeitung der Inhalte mit {BUBBLE_LINK}</label>,
-  'NLP mit Google Dialogflow',
-  'Absichtserkennung durch KI',
-  'Smalltalk Skills',
-  'Spracheingabe',
-  'Analytics',
+  'Einsatz von KI (Künstliche Intelligenz)',
+  'Einsatz von NLP (Natural Language Processing)',
+  'Vortrainiert mit Smalltalk-Fähigkeiten',
+  'Sprach- und Texteingabe',
+  'Analytics und Chatbot KPIs',
+  'Flexibel erweiterbar',
 ]
 
 const FieldSet = styled.fieldset`
@@ -88,16 +89,13 @@ const Starterkit = ({ location }) => {
           <p>
             Durch die zahlreichen Chatbots, die wir inzwischen entwickelt haben,
             ist ein Grundgerüst entstanden, das wir oft als Basis für neue
-            Chatbots verwenden. Intern nennen wir dieses Grundgerüst die
-            <b> Botengine</b>. Diese deckt wesentliche Grundfunktionen eines
-            Chatbots ab und ist beliebig erweiterbar. Zusammen mit dem ebenfalls
-            von uns entwickelten <a href="https://bubblecms.io">BubbleCMS</a>{' '}
-            können bereits simple Chatbots realisiert, und deren Inhalte
-            komfortabel gepflegt werden.
+            Chatbots verwenden. Intern nennen wir dieses Grundgerüst
+            <b> Botengine</b>. Sie deckt wesentliche Grundfunktionen eines
+            Chatbots ab und ist beliebig erweiterbar.
           </p>
           <p>
-            Diese Sammlung an Basisfunktionen bieten wir nun als unser
-            <b> Starterkit </b> an.
+            Einen Teil dieser Basisfunktionen bieten wir als <b> Starterkit </b>{' '}
+            an.
           </p>
           <img src={toolbox} alt="toolbox" css="float:right;width:50%" />
           <h2>Funktionen</h2>
@@ -111,10 +109,16 @@ const Starterkit = ({ location }) => {
               </Feature>
             ))}
           </FieldSet>
-          <h2>Preis</h2>
-          <p>CHF 19.- pro Monat</p>
+
           <h2 css="margin-top:20px">Klingt interessant?</h2>
+          <p>
+            Sie erhalten das Starterkit zum unschlagbaren Preis von{' '}
+            <b>CHF 19.- pro Monat.</b>
+          </p>
           <ButtonList justify="left">
+            <Button as={Link} to="/preisrechner" css="margin: 0.5em">
+              Jetzt bestellen
+            </Button>
             <Button
               as={Link}
               to="https://bubblecms.io/de/sign-up/"
@@ -122,17 +126,17 @@ const Starterkit = ({ location }) => {
             >
               Jetzt gratis ausprobieren
             </Button>
-            <Button as={Link} to="/preisrechner" css="margin: 0.5em">
-              Bestellen
-            </Button>
           </ButtonList>
-          <h2>Gewünschtes Feature nicht vorhanden?</h2>
-          <p>
-            Nichts ist unmöglich! Gerne offerieren wir Ihnen erweiterte
-            Funktionen.
-          </p>
-          <Button as={Link} to="/preisrechner" css="margin: 0.5em">
-            Offerte anfordern
+          <br />
+          <br />
+        </Container>
+      </Section>
+      <Section css="padding-bottom: 6em;" dark>
+        <Container>
+          <h2>Haben sie Fragen?</h2>
+          <p>Gerne beraten wir sie rund um das Thema Chatbot-Entwicklung.</p>
+          <Button as={Link} to="/kontakt">
+            Jetzt Kontakt aufnehmen
           </Button>
         </Container>
       </Section>
