@@ -81,21 +81,16 @@ const Starterkit = ({ location }) => {
         <Container>
           <h1>Starterkit</h1>
           <p>
-            Möchten Sie erstmal nur einen sehr simplen Chatbot z.B. zum
-            beantworten von häufig gestellten Fragen erstellen, sich aber alle
-            Möglichkeiten zur Erweiterungen offen halten? Dann ist das
-            Starterkit genau das richtige für Sie.
-          </p>
-          <p>
             Durch die zahlreichen Chatbots, die wir inzwischen entwickelt haben,
             ist ein Grundgerüst entstanden, das wir oft als Basis für neue
-            Chatbots verwenden. Intern nennen wir dieses Grundgerüst
-            <b> Botengine</b>. Sie deckt wesentliche Grundfunktionen eines
+            Chatbots verwenden. Es deckt die wesentlichen Funktionen eines
             Chatbots ab und ist beliebig erweiterbar.
           </p>
           <p>
-            Einen Teil dieser Basisfunktionen bieten wir als <b> Starterkit </b>{' '}
-            an.
+            Einen Teil dieser Basisfunktionen bieten wir als Starterkit an.
+            Dieses öffnet ihnen den Weg in die Chatbot Welt. Mit dem Starterkit
+            lassen sich z.B. häufig gestellte Fragen auf einfache Art und Weise
+            beantworten.
           </p>
           <img src={toolbox} alt="toolbox" css="float:right;width:50%" />
           <h2>Funktionen</h2>
@@ -113,7 +108,7 @@ const Starterkit = ({ location }) => {
           <h2 css="margin-top:20px">Klingt interessant?</h2>
           <p>
             Sie erhalten das Starterkit zum unschlagbaren Preis von{' '}
-            <b>CHF 19.- pro Monat.</b>
+            <b css="font-size:1.2em">CHF 19.- pro Monat.</b>
           </p>
           <ButtonList justify="left">
             <Button as={Link} to="/preisrechner" css="margin: 0.5em">
