@@ -2,59 +2,42 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import fetch from 'unfetch'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import BlogLinkItem from '../components/BlogLinkItem'
 import { Container, Section, Cols, Button } from '../styles'
 import Seo from '../components/Seo'
-import checkmark from '../img/checkmark.svg'
 
-const Price = styled.p`
+const ItemBox = styled.div`
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 1em 0em 0em 0em;
-`
-const PriceInfo = styled.p`
-  text-align: center;
-  margin: 0em 0em 1em;
+  font-size: 0.9em;
+  border: 1px solid rgb(0, 159, 220);
+  padding: 0.5em;
+
+  & ${Button} {
+    margin-top: auto;
+  }
 `
 
-const PriceAlternative = styled.p`
-  text-align: center;
-  font-size: 0.8em;
-  margin: 0em 0em 2em;
+const ItemDescription = styled.p`
+  color: rgb(0, 159, 220);
+  font-weight: 500;
 `
 
-const FieldSet = styled.fieldset`
-  border: none;
-  padding-block-start: 0em;
+const ItemFeatures = styled.ul`
+  text-align: left;
+  font-size: 0.9em;
+  padding-inline-start: 30px;
+  padding-bottom: 1em;
 `
 
-const Feature = styled.p`
-  margin-block-start: 0em;
-  margin-block-end: 0.5em;
-`
-
-const FeatureInput = styled.input`
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  ${({ checked }) =>
-    checked
-      ? checked &&
-        css`
-            content: url("${checkmark}");
-        `
-      : css`
-          width: 0.3em !important;
-          height: 0.3em !important;
-          outline: 2px solid #009fdc;
-          box-shadow: none;
-          font-size: 2em;
-        `}
+const ItemPrice = styled.div`
+  margin-top: auto;
+  padding: 0.5em;
+  font-weight: 500;
 `
 
 const Input = styled.input`
@@ -74,71 +57,32 @@ const Textarea = props => <Input as="textarea" {...props} />
 
 const BASE_PRICE = 19
 
-const BUBBLE_LINK = (
-  <a target="_blank" rel="noopener noreferrer" href="https://bubblecms.io/de">
-    Bubble CMS
-  </a>
-)
-
-const basicFeatures = [
-  'WebClient (Avatars & Farben anpassbar)',
-  'Integration in die bestehende Webseite',
-  <label htmlFor="bubbleCMS">Bearbeitung der Inhalte mit {BUBBLE_LINK}</label>,
-  'NLP mit Google Dialogflow',
-  'Absichtserkennung durch KI',
-  'Smalltalk Skills',
-  'Spracheingabe',
-  'Hosting in der Schweiz bei Swisscom',
-  'Analytics',
+const lightWeightFeatures = [
+  'Integriert in ihre Webseite',
+  'Angepasst an ihr Corporate Design',
+  'Statische Inhalte (Frage / Antwort)',
+  'Trainiert mit Smalltalk-Fähigkeiten',
+  'Konversation mit Unterstützung von künstlicher Intelligenz',
+  'Workshop zur Erarbeitung von Inhalten',
 ]
 
-const additionalFeatures = [
-  {
-    name: 'language',
-    displayName: 'Mehrsprachigkeit',
-    price: 30,
-  },
-  {
-    name: 'live-agent',
-    displayName: 'Integration Live-Agents',
-    price: 150,
-  },
-  {
-    name: 'custom-actions',
-    displayName: 'Benutzerdefinierte Aktionen',
-    price: 80,
-  },
-  {
-    name: 'facebook',
-    displayName: 'Facebook Client',
-    price: 50,
-  },
+const middleWeightFeatures = [
+  'Aufbauend auf Leichtgewicht',
+  'Dynamische Inhalte',
+  'Entscheidungsbäume',
+  'Integration Messaging Apps (z.B. Facebook Messenger, WhatsApp)',
+  'Live Chat mit Kundendienst (z.B. via Slack, Microsoft Teams, Skype for Business)',
+  'Aktionen ausführen (z.B. Tickets erfassen, E-Mails versenden)',
+  'Unterstützung durch unsere Chatbot Architekten',
+]
 
-  {
-    name: 'whatsapp',
-    displayName: 'WhatsApp Client',
-    price: 50,
-  },
-  {
-    name: 'teams',
-    displayName: 'Microsoft Teams Client',
-    price: 50,
-  },
-  {
-    name: 'slack',
-    displayName: 'Slack Client',
-    price: 50,
-  },
-  {
-    name: 'swiss-data',
-    displayName: 'Daten in der Schweiz',
-    price: 100,
-  },
-  {
-    name: 'on-premises',
-    displayName: 'On-Premises Installation',
-    price: 250,
-  },
+const heavyWeightFeatures = [
+  'Aufbauend auf Mittelgewicht',
+  'Schnittstellen zu ihren Systemen (CRM, ERP)',
+  'Benutzer identifizieren; benutzerspezifische Aktionen ausführen',
+  'Installation im eigenen Rechencenter',
+  'Integration in proprietäre Chatsysteme (z.B. eigene Mobile-App)',
+  'Mehrsprachigkeit',
 ]
 
 const blogPostQuery = graphql`
@@ -173,25 +117,9 @@ class Preisrechner extends React.Component {
   constructor(props) {
     super(props)
     const initialState = { price: BASE_PRICE, name: '', email: '', message: '' }
-    additionalFeatures.forEach(f => {
-      initialState[f.name] = false
-    })
     this.state = initialState
-    this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  handleClick(e) {
-    const { price } = this.state
-    this.setState({ [e.target.name]: e.target.checked })
-    additionalFeatures
-      .filter(f => f.name === e.target.name)
-      .map(f =>
-        e.target.checked
-          ? this.setState({ price: price + f.price })
-          : this.setState({ price: price - f.price })
-      )
   }
 
   handleChange(e) {
@@ -236,74 +164,83 @@ class Preisrechner extends React.Component {
   }
 
   render() {
-    const { price, name, email, message } = this.state
+    const { name, email, message } = this.state
 
     return (
       <Layout callToAction={false}>
         <Seo title="Preisrechner" description="Wie viel kostet ein Bot?" />
         <Section>
           <Container>
-            <h1>Preisrechner</h1>
+            <h1>Preise</h1>
             <p>
-              Hier können sie herausfinden, wie viel ein Chatbot mit den von
-              ihnen gewünschten Funktionen pro Monat kostet.
+              Wir behandeln jeden Chatbot als Unikat. Dies machen wir, weil wir
+              glauben, dass jeder Chatbot optimal an seinen Auftraggeber
+              angepasst sein muss, damit er seine Aufgabe gut erfüllen kann. Wir
+              geben ihrem Chatbot eine Persönlichkeit, die zu ihrem
+              einzigartigen Unternehmen passt. Die Individualität der Bots hat
+              einen direkten Einfluss auf den Preis. Um ihnen eine Idee über die
+              Preisgestaltung zu vermitteln, haben wir hier drei Beispiele
+              zusammengestellt.
             </p>
+            <br />
+            <br />
             <form
               name="contact-preisrechner"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
-              <Cols minWidth="400px">
-                <div>
-                  <h2>Starterkit</h2>
-                  <FieldSet>
-                    {basicFeatures.map(f => (
-                      <Feature key={f}>
-                        <label htmlFor={f}>
-                          <FeatureInput
-                            checked
-                            readOnly
-                            type="checkbox"
-                            name={f}
-                          />
-                          &nbsp; {f}
-                        </label>
-                      </Feature>
+              <Cols minWidth="240px">
+                <ItemBox>
+                  <h2>Leichtgewicht</h2>
+                  <ItemDescription>
+                    Häufig gestellte Fragen automatisiert beantworten
+                  </ItemDescription>
+                  <ItemFeatures>
+                    {lightWeightFeatures.map(f => (
+                      <li key={f}>{f}</li>
                     ))}
-                  </FieldSet>
-                </div>
-                <div>
-                  <h2>Zusätzliche Funktionen</h2>
-                  <FieldSet>
-                    {additionalFeatures.map(f => (
-                      <Feature key={f.name}>
-                        <label htmlFor={f.name}>
-                          <FeatureInput
-                            // eslint-disable-next-line react/destructuring-assignment
-                            checked={this.state[f.name]}
-                            id={f.name}
-                            type="checkbox"
-                            name={f.name}
-                            onClick={this.handleClick}
-                            onChange={() => {}}
-                          />
-                          &nbsp; {f.displayName}
-                        </label>
-                      </Feature>
+                  </ItemFeatures>
+                  <ItemPrice>ab CHF 3&apos;000</ItemPrice>
+                </ItemBox>
+                <ItemBox>
+                  <h2>Mittelgewicht</h2>
+                  <ItemDescription>
+                    Komplexe Abläufe abarbeiten und Übergabe an Kundendienst
+                  </ItemDescription>
+                  <ItemFeatures>
+                    {middleWeightFeatures.map(f => (
+                      <li key={f}>{f}</li>
                     ))}
-                  </FieldSet>
-                </div>
+                  </ItemFeatures>
+                  <ItemPrice>ab CHF 20&apos;000</ItemPrice>
+                </ItemBox>
+                <ItemBox>
+                  <h2>Schwergewicht</h2>
+                  <ItemDescription>
+                    Nahtlose Integration in ihre Geschäftsprozesse
+                  </ItemDescription>
+                  <ItemFeatures>
+                    {heavyWeightFeatures.map(f => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ItemFeatures>
+                  <ItemPrice>ab CHF 40&apos;000</ItemPrice>
+                </ItemBox>
               </Cols>
-              <Price>CHF {price}</Price>
-              <PriceInfo>pro Monat</PriceInfo>
-              <PriceAlternative>
-                Sind sie eher an einem fixen Projektpreis interessiert?
-                <br />
-                Kein Problem, melden sie sich einfach via Kontaktformular bei
-                uns.
-              </PriceAlternative>
               <br />
+              <br />
+              <p>
+                Egal wie gross ihre Ambitionen sind, wir begleiten sie durch das
+                gesamte Chatbot Projekt. Angefangen bei der Inhaltsaufbereitung
+                und -strukturierung, über die Entwicklung und Integration in
+                ihre Umgebung, bis hin zum Training und Betrieb des Chatbots.
+                Gerne stellen wir ein Angebot zusammen, welches zu ihren
+                Bedürfnissen passt.
+              </p>
+              <br />
+              <br />
+              <h3>Kontaktieren sie uns</h3>
               <br />
               <p hidden>
                 <label htmlFor="bot-field">
@@ -349,7 +286,7 @@ class Preisrechner extends React.Component {
                 </label>
               </p>
               <p css="text-align: right;">
-                <Button type="submit">Jetzt Offerte einholen</Button>
+                <Button type="submit">Botfabrik kontaktieren</Button>
               </p>
             </form>
             <br />
