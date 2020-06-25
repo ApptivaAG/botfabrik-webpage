@@ -16,10 +16,6 @@ const ItemBox = styled.div`
   font-size: 0.9em;
   border: 1px solid rgb(0, 159, 220);
   padding: 0.5em;
-
-  & ${Button} {
-    margin-top: auto;
-  }
 `
 
 const ItemDescription = styled.p`
@@ -136,7 +132,7 @@ class Preisrechner extends React.Component {
     } else if (this.state['bot-field'] === undefined) {
       const body = encode({
         'form-name': 'contact-preisrechner',
-        subject: 'Kontaktformular Preisrechner botfabrik.ch',
+        subject: 'Kontaktformular Preisgestaltung botfabrik.ch',
         ...this.state,
       })
       // eslint-disable-next-line no-undef

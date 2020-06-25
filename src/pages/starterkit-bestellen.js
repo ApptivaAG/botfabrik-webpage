@@ -13,7 +13,7 @@ const OrderStarterkit = ({ location }) => {
         <Container>
           <h1>Starterkit bestellen</h1>
           <p>
-            Bitte teilen Sie uns ihre Kontaktdaten mit, um mit der Bestellung
+            Bitte teilen sie uns ihre Kontaktdaten mit, um mit der Bestellung
             fortzufahren.
           </p>
           <ContactForm subject="Starterkit Bestellung" buttonText="Bestellen" />

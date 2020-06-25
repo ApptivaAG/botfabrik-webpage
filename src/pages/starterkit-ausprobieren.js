@@ -13,7 +13,7 @@ const TryStarterkit = ({ location }) => {
         <Container>
           <h1>Starterkit ausprobieren</h1>
           <p>
-            Bitte teilen Sie uns ihre Kontaktdaten mit, damit wir ihren Chatbot
+            Bitte teilen sie uns ihre Kontaktdaten mit, damit wir ihren Chatbot
             erstellen und ihnen die Zugangsdaten zusenden können.
           </p>
           <ContactForm subject="Starterkit ausprobieren" />
