@@ -161,7 +161,7 @@ const IndexPage = ({ data }) => (
             Zu unseren Dienstleistungen
           </Button>
           <Button as={Link} to="/preisrechner" css="margin: 0.5em">
-            Zum Chatbot Preisrechner
+            Zur Chatbot Preisgestaltung
           </Button>
         </ButtonList>
       </Grid>

@@ -171,7 +171,7 @@ class Preisrechner extends React.Component {
         <Seo title="Preisrechner" description="Wie viel kostet ein Bot?" />
         <Section>
           <Container>
-            <h1>Preise</h1>
+            <h1>Preisgestaltung</h1>
             <p>
               Wir behandeln jeden Chatbot als Unikat. Dies machen wir, weil wir
               glauben, dass jeder Chatbot optimal an seinen Auftraggeber
