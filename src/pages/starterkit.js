@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import { Container, Section, Button } from '../styles'
+import { Container, Section, Button, Cols } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
-import toolbox from '../img/toolbox.jpg'
+import toolbox from '../img/toolbox.svg'
 import ButtonList from '../components/ButtonList'
 
 const BUBBLE_LINK = (
@@ -56,6 +56,17 @@ const FeatureInput = styled.input`
         `}
 `
 
+const ToolboxImage = styled.img`
+  max-width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  flex: 1;
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`
+
 const Starterkit = ({ location }) => {
   return (
     <Layout callToAction={false}>
@@ -80,18 +91,23 @@ const Starterkit = ({ location }) => {
             lassen sich z.B. häufig gestellte Fragen auf einfache Art und Weise
             beantworten.
           </p>
-          <img src={toolbox} alt="toolbox" css="float:right;width:50%" />
-          <h2>Funktionen</h2>
-          <FieldSet>
-            {basicFeatures.map(f => (
-              <Feature key={f}>
-                <label htmlFor={f}>
-                  <FeatureInput checked readOnly type="checkbox" name={f} />
-                  &nbsp; {f}
-                </label>
-              </Feature>
-            ))}
-          </FieldSet>
+
+          <div css="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+            <div css="min-width:300px">
+              <h2>Funktionen</h2>
+              <FieldSet>
+                {basicFeatures.map(f => (
+                  <Feature key={f}>
+                    <label htmlFor={f}>
+                      <FeatureInput checked readOnly type="checkbox" name={f} />
+                      &nbsp; {f}
+                    </label>
+                  </Feature>
+                ))}
+              </FieldSet>
+            </div>
+            <ToolboxImage src={toolbox} alt="toolbox" />
+          </div>
 
           <h2 css="margin-top:20px">Klingt interessant?</h2>
           <p>
