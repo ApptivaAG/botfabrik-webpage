@@ -33,9 +33,9 @@ Neben den Faktoren, welche grossen Einfluss auf die Kosten haben, gibt es auch F
 - **Auf welchen Plattformen läuft der Chatbot?** Ob der Chatbot auf Facebook Messenger, Skype, Telegram, Slack oder im Web läuft hat kaum Einfluss auf die Kosten.
 - **Training des Chatbots.** Bei einem Chatbot mit Sprachverarbeitung (NLP) verursacht das Training kosten, diese sind aber viel tiefer als jeweils angenommen. Das Training eines durchschnittlichen Chatbots nimmt bloss einen Bruchteil der Gesamtkosten in Anspruch.
 
-## Preisrechner
+## Preisgestaltung
 
-Der [Botfabrik Preisrechner](https://www.botfabrik.ch/preisrechner) verschafft einen Überblick über die potenziell anfallenden Kosten. Wählen sie die von ihnen gewünschten Funktionen aus, und erhalten sie vom Preisrechner konkrete Angaben zur Preisgestaltung.
+Auf der Seite [Preisgestaltung](https://www.botfabrik.ch/preisrechner) haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
 
 ## Erfahrung zahlt sich aus
 
