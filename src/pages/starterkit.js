@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import { Container, Section, Button, Cols } from '../styles'
@@ -56,7 +57,7 @@ const FeatureInput = styled.input`
         `}
 `
 
-const ToolboxImage = styled.img`
+const ToolboxImage = styled(Img)`
   max-width: 300px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -67,7 +68,20 @@ const ToolboxImage = styled.img`
   }
 `
 
+const query = graphql`
+  query {
+    toolboxImage: file(absolutePath: { regex: "/toolbox.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
 const Starterkit = ({ location }) => {
+  const { toolboxImage } = useStaticQuery(query)
   return (
     <Layout callToAction={false}>
       <Seo
@@ -106,7 +120,7 @@ const Starterkit = ({ location }) => {
                 ))}
               </FieldSet>
             </div>
-            <ToolboxImage src={toolbox} alt="toolbox" />
+            <ToolboxImage fluid={toolboxImage.childImageSharp.fluid} />
           </div>
 
           <h2 css="margin-top:20px">Klingt interessant?</h2>
