@@ -17,11 +17,10 @@ const BUBBLE_LINK = (
 
 const basicFeatures = [
   'Integration in ihre Webseite',
-  'Angepasst auf ihr Corporate Design',
   <label htmlFor="bubbleCMS">Bearbeitung der Inhalte mit {BUBBLE_LINK}</label>,
   'Einsatz von KI (Künstliche Intelligenz)',
   'Einsatz von NLP (Natural Language Processing)',
-  'Vortrainiert mit Smalltalk-Fähigkeiten',
+  'Trainiert mit Smalltalk-Fähigkeiten',
   'Sprach- und Texteingabe',
   'Analytics und Chatbot KPIs',
   'Flexibel erweiterbar',
