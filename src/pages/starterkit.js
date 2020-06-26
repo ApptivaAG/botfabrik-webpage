@@ -4,10 +4,9 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
-import { Container, Section, Button, Cols } from '../styles'
+import { Container, Section, Button } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
-import toolbox from '../img/toolbox.png'
 import ButtonList from '../components/ButtonList'
 
 const BUBBLE_LINK = (
