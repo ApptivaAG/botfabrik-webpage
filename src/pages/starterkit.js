@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import { Container, Section, Button, Cols } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
-import toolbox from '../img/toolbox.svg'
+import toolbox from '../img/toolbox.png'
 import ButtonList from '../components/ButtonList'
 
 const BUBBLE_LINK = (
