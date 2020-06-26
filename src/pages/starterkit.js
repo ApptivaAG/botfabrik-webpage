@@ -1,13 +1,12 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-
+import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import { Container, Section, Button } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
 import ButtonList from '../components/ButtonList'
+import toolbox from '../img/toolbox.svg'
 
 const BUBBLE_LINK = (
   <a target="_blank" rel="noopener noreferrer" href="https://bubblecms.io/de">
@@ -56,7 +55,7 @@ const FeatureInput = styled.input`
         `}
 `
 
-const ToolboxImage = styled(Img)`
+const ToolboxImage = styled.img`
   max-width: 300px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -67,20 +66,7 @@ const ToolboxImage = styled(Img)`
   }
 `
 
-const query = graphql`
-  query {
-    toolboxImage: file(absolutePath: { regex: "/toolbox.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
-
 const Starterkit = ({ location }) => {
-  const { toolboxImage } = useStaticQuery(query)
   return (
     <Layout callToAction={false}>
       <Seo
@@ -119,7 +105,7 @@ const Starterkit = ({ location }) => {
                 ))}
               </FieldSet>
             </div>
-            <ToolboxImage fluid={toolboxImage.childImageSharp.fluid} />
+            <ToolboxImage src={toolbox} />
           </div>
 
           <h2 css="margin-top:20px">Klingt interessant?</h2>
