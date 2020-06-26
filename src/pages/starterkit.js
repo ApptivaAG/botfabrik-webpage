@@ -56,17 +56,6 @@ const FeatureInput = styled.input`
         `}
 `
 
-const Price = styled.p`
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 1em 0em 0em 0em;
-`
-const PriceInfo = styled.p`
-  text-align: center;
-  margin: 0em 0em 1em;
-`
-
 const Starterkit = ({ location }) => {
   return (
     <Layout callToAction={false}>
@@ -110,10 +99,10 @@ const Starterkit = ({ location }) => {
             <b css="font-size:1.2em">CHF 19.- pro Monat.</b>
           </p>
           <ButtonList justify="left">
-            <Button as={Link} to="/order-starterkit" css="margin: 0.5em">
+            <Button as={Link} to="/starterkit-bestellen" css="margin: 0.5em">
               Jetzt bestellen
             </Button>
-            <Button as={Link} to="/try-starterkit" css="margin: 0.5em">
+            <Button as={Link} to="/starterkit-ausprobieren" css="margin: 0.5em">
               Jetzt gratis ausprobieren
             </Button>
           </ButtonList>

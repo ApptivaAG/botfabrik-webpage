@@ -53,7 +53,7 @@ class ContactForm extends React.Component {
           alert(
             'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
           )
-          this.setState({ name: '', email: '', message: '' })
+          this.setState({ name: '', email: '', message: '', company: '' })
         })
         .catch(error => {
           /* eslint-disable-next-line no-console */
