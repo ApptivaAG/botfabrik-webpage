@@ -7,7 +7,7 @@ module.exports = {
     Es entstehen Chatbots für den Kundendienst, das Marketing, die Produktivität oder im Bereich des E-Commerces.
     Unsere Bots schwatzen nicht nur mit Personen, sondern auch mit Systemen (CRM, CMS, ERP usw.).
     Seit der Gründung 2016 konnte die Botfabrik namhafte Kunden gewinnen und mit erfolgreichen Projekten überzeugen: 
-    Ringier, Sanagate AG, Energie 360° AG, Allianz Cinema, Suva und die Post CH AG. 
+    Ringier, Roche AG, Energie 360° AG, Allianz Cinema, Suva und die Post CH AG. 
     Aber auch kleinere Unternehmen konnte die Botfabrik mit interessanten Lösungen begeistern.`,
     description:
       'Sorgen sie für echte Entlastung mit integrierten, passgenauen Chatbots, die ihre Anwender begeistern.',
@@ -55,6 +55,7 @@ module.exports = {
           },
           `gatsby-remark-images-medium-zoom`,
           `gatsby-remark-static-images`,
+          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-embedder`,
           `gatsby-remark-external-links`,
         ],

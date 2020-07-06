@@ -14,7 +14,7 @@ import arrowBottom from '../img/arrowBottom.svg'
 import arrowLeft from '../img/arrowLeft.svg'
 
 import ringier from '../img/ringier-logo-3.svg'
-import sanagate from '../img/sanagate.svg'
+import roche from '../img/roche.svg'
 import allianz from '../img/allianz-cinema-logo.png'
 import post from '../img/post-2.svg'
 import energie360 from '../img/energie360.svg'
@@ -180,9 +180,9 @@ const IndexPage = ({ data }) => (
           />
           <img
             className="lozad"
-            data-src={sanagate}
+            data-src={roche}
             loading="lazy"
-            alt="Sanagate Logo"
+            alt="Berufsbildung von F. Hoffmann-La Roche AG"
             width="160"
             height="50"
           />

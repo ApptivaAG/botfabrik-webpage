@@ -5,6 +5,7 @@ status: publish
 permalink: /blog/2017/10/31/kundendienst-chatbot-der-sanagate
 author: 'Philip Schönholzer'
 templateKey: blog-post
+description: Seit Kurzem beantwortet unser neuster Kundendienst-Chatbot einen Teil der Kundenanfragen der Sanagate.
 id: 577
 image: ./Blog.png
 category:
@@ -15,13 +16,23 @@ seo-keywords:
   - Kundendienst-Chatbot
 ---
 
-Seit Kurzem beantwortet unser neuster Kundendienst-Chatbot einen Teil der Kundenanfragen der [Sanagate](https://www.sanagate.ch/de/home.html). 🚀
+&nbsp;
+
+> ## Update vom 06.07.2020
+>
+> Inzwischen hat die Sanagate AG keinen eigenständigen Markenauftritt mehr und ist stattdessen ein Teil der CSS Gruppe geworden. Aus diesem Grund wird unser Chatbot nicht mehr benötigt und wurde offline genommen.
+>
+> An dieser Stelle möchten wir uns für die hervorragende Zusammenarbeit mit der Sanagate bedanken und hoffen in Zukunft mit den involvierten Personen in anderen Projekt zusammenarbeiten zu dürfen.
+>
+> &nbsp;
 
 ## Anforderungen an den Kundendienst-Chatbot
 
 Der Sanagate Chatbot erkennt heute über 200 Absichten, ist aber immer noch in der Trainingsphase und lernt somit täglich dazu. Dies ist auch nötig, da das Spektrum beim Kundendienst sehr breit ist. Vom Fitness-Abo über die Schwangerschaft bis hin zu den Vorteilen von Sanagate soll der Chatbot sinnvolle Antworten geben. Zudem unterstützt der Chatbot Kunden bei der Wahl der passenden Grund- und Zusatzversicherung.
 
-<video autoplay="1" class="wp-video-shortcode" controls="controls" height="640" id="video-0-3" loop="1" preload="auto" width="360"><source src="Sanagate_720p.mp4" type="video/mp4"></source>[Sanagate_720p.mp4](Sanagate_720p.mp4)</video>
+<video autoplay controls height="640" loop preload="auto" width="360" muted>
+  <source src="Sanagate_720p.mp4" type="video/mp4" />
+</video>
 
 ## Umsetzung des Chatbots
 
