@@ -10,7 +10,7 @@ categories:
   - Projekte
 ---
 
-## Wieso ein Chatbot Lehrstellensuchende
+## Wieso ein Chatbot für Lehrstellensuchende
 
 Lehrstellensuchende haben viele Fragen zum reichhaltigen Angebot an Lehrstellen bei der Roche. Zwar sind viele dieser Fragen auf der Webseite der Roche beantwortet, aber diese zu finden ist nicht immer so einfach. Es gibt zwar immer die Möglichkeit seine Fragen per Mail zu stellen, aber dies bedeutet auch viel Aufwand auf Seite der Roche. Mit dem Chatbot hofft die Roche potentielle Lernende besser zu informieren und so als moderner attraktiver Arbeitgeber aufzutreten.
 
