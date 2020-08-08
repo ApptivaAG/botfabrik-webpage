@@ -12,7 +12,7 @@ categories:
 
 ## Wieso ein Chatbot für Lehrstellensuchende
 
-Lehrstellensuchende haben viele Fragen zum reichhaltigen Angebot an Lehrstellen bei der Roche. Zwar sind viele dieser Fragen auf der Webseite der Roche beantwortet, aber diese zu finden ist nicht immer so einfach. Es gibt zwar immer die Möglichkeit seine Fragen per Mail zu stellen, aber dies bedeutet auch viel Aufwand auf Seite der Roche. Mit dem Chatbot hofft die Roche potentielle Lernende besser zu informieren und so als moderner attraktiver Arbeitgeber aufzutreten.
+Lehrstellensuchende, aber auch Eltern und Oberstufenlehrer die im Suchprozess eines Lehrberufs und Lehrbetriebs eine bedeutende Rolle einnehmen, haben viele Fragen zum reichhaltigen Angebot an Lehrstellen bei der Roche. Zwar sind viele dieser Fragen auf der Webseite der Roche beantwortet, aber diese zu finden ist nicht immer so einfach. Es gibt zwar immer die Möglichkeit seine Fragen per Mail zu stellen, aber dies bedeutet auch viel Aufwand auf Seite der Roche. Mit dem Chatbot hofft die Roche potentielle Lernende und deren Umfeld besser zu informieren und so als moderner attraktiver Arbeitgeber aufzutreten.
 
 Mit den vielen Berufen, für welche Roche Lehrstellen anbietet, gibt ein weiterer Punkt, welcher für einen Chatbot spricht: Berufsspezifische Fragen. Bei solchen Fragen ist die Antwort je nach Beruf eine andere. So zum Beispiel die Frage nach den Anforderungen für eine Lehre bei der Roche. Hier kann der Chatbot nachfragen, für welchen Beruf man die Anforderungen kennen möchte. Entsprechend gibt der Chatbot dann die passenden Antworten.
 
@@ -20,7 +20,7 @@ Mit den vielen Berufen, für welche Roche Lehrstellen anbietet, gibt ein weitere
 
 Eine grosse Besonderheit bei der Entwicklung dieses Chatbots, war die aktive Mitarbeit von Lernenden. Diese haben nicht nur Inhalte für den Chatbot zusammengestellt, sondern diesen gleich selber in den Chatbot eingebaut.
 
-Dieses Vorgehen wurden von Peter Heiniger und seiner [Lehrlingsberatung](https://www.heiniger-lehrlingsberatung.ch) initiiert und begleitet. So war Peter Heiniger auch massgeblich am Ausarbeiten des Ziels des Chatbots und dem definieren der Bereiche wo der Chatbot Auskunft geben soll involviert.
+Verantwortlich für Grundidee und Rohkonzept war dabei Peter Heiniger von [Heiniger Lehrlingsberatung](https://www.heiniger-lehrlingsberatung.ch). Er initiierte und begleitete das Projekt gemeinsam mit der leitenden Roche Berufsbildung auf der fachlichen Seite
 
 Zu Beginn des Projekts haben wir von der Botfabrik zwei Workshops durchgeführt, wo wir die Funktionsweise von Chatbots vermittelten und aufzeigten wie Inhalte erarbeitet werden. Danach standen wir vor allem bei Fragen oder Problemen mit Antworten und Tipps zur Seite. Teilweise kamen auch neue Anforderungen zum Vorschein, welche wir gemeinsam gestalteten.
 
