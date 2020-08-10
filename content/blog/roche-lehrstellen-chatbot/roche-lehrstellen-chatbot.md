@@ -12,22 +12,22 @@ categories:
 
 ## Wieso ein Chatbot für Lehrstellensuchende
 
-Lehrstellensuchende, aber auch Eltern und Oberstufenlehrer die im Suchprozess eines Lehrberufs und Lehrbetriebs eine bedeutende Rolle einnehmen, haben viele Fragen zum reichhaltigen Angebot an Lehrstellen bei der Roche. Zwar sind viele dieser Fragen auf der Webseite der Roche beantwortet, aber diese zu finden ist nicht immer so einfach. Es gibt zwar immer die Möglichkeit seine Fragen per Mail zu stellen, aber dies bedeutet auch viel Aufwand auf Seite der Roche. Mit dem Chatbot hofft die Roche potentielle Lernende und deren Umfeld besser zu informieren und so als moderner attraktiver Arbeitgeber aufzutreten.
+Lehrstellensuchende, aber auch Eltern und Oberstufenlehrer die im Suchprozess eines Lehrberufs und Lehrbetriebs eine bedeutende Rolle einnehmen, haben viele Fragen zum reichhaltigen Angebot an Lehrstellen bei der Roche. Zwar sind viele dieser Fragen auf der Webseite der Roche beantwortet, aber diese zu finden ist nicht immer so einfach. Es gibt zwar immer die Möglichkeit, seine Fragen per Mail zu stellen, aber dies bedeutet auch viel Aufwand auf Seite der Roche. Mit dem Chatbot hofft die Roche potentielle Lernende und deren Umfeld besser zu informieren und so als moderner attraktiver Arbeitgeber aufzutreten.
 
-Mit den vielen Berufen, für welche Roche Lehrstellen anbietet, gibt ein weiterer Punkt, welcher für einen Chatbot spricht: Berufsspezifische Fragen. Bei solchen Fragen ist die Antwort je nach Beruf eine andere. So zum Beispiel die Frage nach den Anforderungen für eine Lehre bei der Roche. Hier kann der Chatbot nachfragen, für welchen Beruf man die Anforderungen kennen möchte. Entsprechend gibt der Chatbot dann die passenden Antworten.
+Mit den vielen Berufen, für welche die Roche Lehrstellen anbietet, gibt es einen weiteren Punkt, welcher für einen Chatbot spricht: Berufsspezifische Fragen. Bei solchen Fragen ist die Antwort je nach Beruf eine andere. So zum Beispiel die Frage nach den Anforderungen für eine Lehre bei der Roche. Hier kann der Chatbot nachfragen, für welchen Beruf man die Anforderungen kennen möchte. Entsprechend gibt der Chatbot dann die passenden Antworten.
 
 ## Chatbot mit Lernenden entwickeln
 
-Eine grosse Besonderheit bei der Entwicklung dieses Chatbots, war die aktive Mitarbeit von Lernenden. Diese haben nicht nur Inhalte für den Chatbot zusammengestellt, sondern diesen gleich selber in den Chatbot eingebaut.
+Eine grosse Besonderheit bei der Entwicklung dieses Chatbots war die aktive Mitarbeit von Lernenden. Diese haben nicht nur Inhalte für den Chatbot zusammengestellt, sondern diese gleich selber in den Chatbot eingebaut.
 
-Verantwortlich für Grundidee und Rohkonzept war dabei Peter Heiniger von [Heiniger Lehrlingsberatung](https://www.heiniger-lehrlingsberatung.ch). Er initiierte und begleitete das Projekt gemeinsam mit der leitenden Roche Berufsbildung auf der fachlichen Seite
+Verantwortlich für Grundidee und Rohkonzept war dabei Peter Heiniger von [Heiniger Lehrlingsberatung](https://www.heiniger-lehrlingsberatung.ch). Er initiierte und begleitete das Projekt gemeinsam mit der leitenden Roche Berufsbildung auf der fachlichen Seite.
 
-Zu Beginn des Projekts haben wir von der Botfabrik zwei Workshops durchgeführt, wo wir die Funktionsweise von Chatbots vermittelten und aufzeigten wie Inhalte erarbeitet werden. Danach standen wir vor allem bei Fragen oder Problemen mit Antworten und Tipps zur Seite. Teilweise kamen auch neue Anforderungen zum Vorschein, welche wir gemeinsam gestalteten.
+Zu Beginn des Projekts haben wir von der Botfabrik zwei Workshops durchgeführt, bei welchen wir die Funktionsweise von Chatbots vermittelten und aufzeigten, wie Inhalte erarbeitet werden. Danach standen wir vor allem bei Fragen oder Problemen mit Antworten und Tipps zur Seite. Teilweise kamen auch neue Anforderungen zum Vorschein, welche wir gemeinsam gestalteten.
 
 ![Inhalte erarbeiten](inhalte-erarbeiten.jpg)
 Bild oben: Erarbeitete Inhalte des Workshops
 
-Für das Speichern der der Chatbot-Inhalte haben wir [Bubble CMS](https://bubblecms.io) verwendet, welches eine einfache pflege der Inhalte erlaubt. Vor der Veröffentlichung haben die Lernenden den Chatbot zwei Mal intern auf Herz und Nieren getestet und danach im Bubble CMS entsprechend trainiert. So stand im Juli 2020 einer erfolgreichen Lancierung nichts mehr im Weg.
+Für das Speichern der Chatbot-Inhalte haben wir [Bubble CMS](https://bubblecms.io) verwendet, welches eine einfache Pflege der Inhalte erlaubt. Vor der Veröffentlichung haben die Lernenden den Chatbot zwei Mal intern auf Herz und Nieren getestet und danach im Bubble CMS entsprechend trainiert. So stand im Juli 2020 einer erfolgreichen Lancierung nichts mehr im Weg.
 
 ## Was bringt die Chatbot-Zukunft
 
