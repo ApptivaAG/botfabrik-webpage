@@ -20,7 +20,7 @@ Mit den vielen Berufen, für welche die Roche Lehrstellen anbietet, gibt es eine
 
 Eine grosse Besonderheit bei der Entwicklung dieses Chatbots war die aktive Mitarbeit von Lernenden. Diese haben nicht nur Inhalte für den Chatbot zusammengestellt, sondern diese gleich selber in den Chatbot eingebaut.
 
-Verantwortlich für Grundidee und Rohkonzept war dabei Peter Heiniger von [Heiniger Lehrlingsberatung](https://www.heiniger-lehrlingsberatung.ch). Er initiierte und begleitete das Projekt gemeinsam mit der leitenden Roche Berufsbildung auf der fachlichen Seite.
+Verantwortlich für Grundidee und Rohkonzept war dabei Peter Heiniger von [Heiniger Lehrlingsberatung](https://www.heiniger-lehrlingsberatung.ch). Er initiierte und begleitete das Projekt gemeinsam mit der Leitung der Roche Berufsbildung auf der fachlichen Seite.
 
 Zu Beginn des Projekts haben wir von der Botfabrik zwei Workshops durchgeführt, bei welchen wir die Funktionsweise von Chatbots vermittelten und aufzeigten, wie Inhalte erarbeitet werden. Danach standen wir vor allem bei Fragen oder Problemen mit Antworten und Tipps zur Seite. Teilweise kamen auch neue Anforderungen zum Vorschein, welche wir gemeinsam gestalteten.
 
