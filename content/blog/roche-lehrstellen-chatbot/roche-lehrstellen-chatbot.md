@@ -16,6 +16,8 @@ Lehrstellensuchende, aber auch Eltern und Oberstufenlehrer die im Suchprozess ei
 
 Mit den vielen Berufen, für welche die Roche Lehrstellen anbietet, gibt es einen weiteren Punkt, welcher für einen Chatbot spricht: Berufsspezifische Fragen. Bei solchen Fragen ist die Antwort je nach Beruf eine andere. So zum Beispiel die Frage nach den Anforderungen für eine Lehre bei der Roche. Hier kann der Chatbot nachfragen, für welchen Beruf man die Anforderungen kennen möchte. Entsprechend gibt der Chatbot dann die passenden Antworten.
 
+https://youtu.be/g3gF39yijdU
+
 ## Chatbot mit Lernenden entwickeln
 
 Eine grosse Besonderheit bei der Entwicklung dieses Chatbots war die aktive Mitarbeit von Lernenden. Diese haben nicht nur Inhalte für den Chatbot zusammengestellt, sondern diese gleich selber in den Chatbot eingebaut.
