@@ -33,4 +33,4 @@ Für das Speichern der Chatbot-Inhalte haben wir [Bubble CMS](https://bubblecms.
 
 Ein Wunsch, welcher nicht im Rahmen des Projekts umgesetzt wurde, ist Live-Chat. Damit wäre der Chatbot in der Lage Anfragen, die er nicht versteht an Roche-Mitarbeiter weiterzuleiten. Falls wir dies in Zukunft angehen, wäre die Idee, dass die Lernenden gleich selber Fragen der Lehrstellensuchenden beantworten. In der Zwischenzeit sammelt die Roche Erfahrungen mit dem aktuellen Setup, um zu schauen, wohin die Reise mit den Chatbot gehen soll.
 
-Der Chatbot kann auf der Seite der [Roche für Lernende](<(https://www.roche.com/de/careers/country/switzerland/ch-your-job/lernende.htm)>) aufgerufen werden.
+Der Chatbot kann auf der Seite der [Roche für Lernende](https://www.roche.com/de/careers/country/switzerland/ch-your-job/lernende.htm) aufgerufen werden.
