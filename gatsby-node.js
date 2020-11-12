@@ -7,6 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
     query {
       allMarkdownRemark(
         limit: 1000
+        sort: { order: DESC, fields: [frontmatter___date] }
         filter: { frontmatter: { templateKey: { regex: "/blog-post/" } } }
       ) {
         edges {
