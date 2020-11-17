@@ -49,7 +49,14 @@ class ContactForm extends React.Component {
         body,
       })
         .then(() => {
-          /* eslint-disable-next-line no-alert */
+          // eslint-disable-next-line no-unused-expressions
+          typeof window !== 'undefined' &&
+            window.gtag('event', 'submit', {
+              event_category: 'form',
+              event_label: this.props.subject,
+              value: 50,
+            })
+          // eslint-disable-next-line no-alert, no-undef
           alert(
             'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
           )
