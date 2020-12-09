@@ -10,6 +10,15 @@ categories:
   - Projekte
 ---
 
+&nbsp;
+
+> ## Update: Gewinner der "Goldenen Feder"
+>
+> Der Schweizerische Verband für interne und integrierte Kommunikation (SVIK) hat an der diesjährigen Preisverleihung den Lehrlings-Chatbot der Roche mit der "Goldenen Feder" prämiert! Dies ist eine schöne Bestätigung der geleisteten Arbeit aller Beteiligten. Wir möchten uns bei der Jury für die Auszeichnung bedanken.
+>
+> ![Goldene Feder](./goldene-feder.jpg)  
+> &nbsp;
+
 ## Wieso ein Chatbot für Lehrstellensuchende
 
 Lehrstellensuchende, aber auch Eltern und Oberstufenlehrer die im Suchprozess eines Lehrberufs und Lehrbetriebs eine bedeutende Rolle einnehmen, haben viele Fragen zum reichhaltigen Angebot an Lehrstellen bei der Roche. Zwar sind viele dieser Fragen auf der Webseite der Roche beantwortet, aber diese zu finden ist nicht immer so einfach. Es gibt zwar immer die Möglichkeit, seine Fragen per Mail zu stellen, aber dies bedeutet auch viel Aufwand auf Seite der Roche. Mit dem Chatbot hofft die Roche potentielle Lernende und deren Umfeld besser zu informieren und so als moderner attraktiver Arbeitgeber aufzutreten.
