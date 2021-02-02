@@ -12,25 +12,25 @@ description: 'Allgemeines Vorgehen bei einem Chatbot-Projekt.'
 
 Jedes Projekt ist ein bisschen anders und wir passen unser Vorgehen jeweils an. Allerdings kann man einen Roten Faden erkennen, der Ihnen ein Bild von einem Chatbot-Projekt vermitteln kann.
 
-## Inhalte erarbeiten
+## 1. Inhalte erarbeiten
 
-Egal welche Art von Chatbot gefordert ist, als eine der ersten Aufgaben geht es darum, den Inhalt des Chatbots zu bestimmen.
+Egal welche Art von Chatbot gefordert ist, als eine der ersten Aufgaben geht es darum, den Inhalt des Chatbots zu erarbeiten.
 
 [Mehr erfahren](/dienstleistungen/inhalte-erarbeiten/)
 
-## Chatbot-Entwicklung
+## 2. Chatbot-Entwicklung
 
 Nachdem geklärt ist, was der Chatbot alles können soll, geht es an die Entwicklung. Jetzt entsteht der eigentliche Chatbot.
 
 [Mehr erfahren](/dienstleistungen/entwicklung/)
 
-## Chatbot-Integration
+## 3. Chatbot-Integration
 
-Ein wichtiger Schritt, der nicht immer im Voraus bedacht wird, ist die Integration des Chatbots in das produktive Umfeld.
+Ein wichtiger Schritt, der nicht immer im Voraus bedacht wird, ist die Integration des Chatbots in das produktive Umfeld. Also wo der Chatbot erscheinen und wie er den Besucher begrüssen soll.
 
 [Mehr erfahren](/dienstleistungen/integration/)
 
-## Chatbot-Training
+## 4. Chatbot-Training
 
 Bereits während des gesamten Projekts wird der Chatbot laufend trainiert. Dieses Training hört auch nach der Integration nicht auf. Mit Hilfe von [Bubble CMS](https://bubblecms.io/de/) nehmen Sie das selbst in die Hand.
 
