@@ -10,7 +10,7 @@ question: Wie läuft ein Projekt normalerweise ab?
 description: 'Allgemeines Vorgehen bei einem Chatbot-Projekt.'
 ---
 
-Jedes Projekt ist ein bisschen anders und wir passen unser Vorgehen jeweils an. Allerdings kann man einen Roten Faden erkennen, der Ihnen ein Bild von einem Chatbot-Projekt vermitteln kann.
+Jedes Projekt ist ein bisschen anders und wir passen unser Vorgehen jeweils an. Allerdings kann man einen roten Faden erkennen, der Ihnen ein Bild von einem Chatbot-Projekt vermitteln kann.
 
 ## 1. Inhalte erarbeiten
 
