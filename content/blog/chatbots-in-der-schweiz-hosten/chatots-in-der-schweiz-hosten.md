@@ -16,7 +16,7 @@ tag:
   - snips
 ---
 
-Chatbotsysteme verwenden oft Dienste von Drittanbietern auf Servern im Ausland. Dies muss aber nicht so sein!
+Chatbotsysteme verwenden oft NLU-Dienste von Drittanbietern auf Servern im Ausland. Dabei kann der Drittanbieter jedes Gespräch mitlesen und man muss darauf vertrauen, dass er verantwortungsvoll mit den Daten umgeht. Dies muss aber nicht so sein!
 
 <div style="text-align:center"><img src="./picto-safe-mountain.svg" style="padding-bottom:1em ;"/></div>
 
