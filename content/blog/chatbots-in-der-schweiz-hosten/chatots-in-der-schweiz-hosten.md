@@ -46,3 +46,5 @@ Etwas weniger bekannt, aber mehr als ebenbürtig ist [Snips](https://snips.ai/).
 
 Auch wenn das Verwenden von Cloud-Diensten wie Dialogflow sehr einfach und komfortabel ist, so ist es keineswegs alternativlos!
 Sehr sensible Gesprächsdaten müssen also nicht zwingend aus der Hand gegeben werden. Die etwas höheren Entwicklungskosten werden durch die zusätzlich gewonnene Sicherheit wieder wettgemacht.
+
+Wir helfen Ihnen gerne dabei einen sicheren Chatbot zu entwickeln.
