@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
@@ -26,10 +26,10 @@ const Employee = styled.div`
   margin-left: auto;
   margin-right: auto;
 `
-const Avatar = styled(Img)`
-  border: 3px solid ${p => p.theme.primary};
-  border-radius: 50%;
+const Avatar = styled(GatsbyImage)`
+  border: 1px solid ${p => p.theme.primary};
   margin-right: 1em;
+  margin-bottom: 0.5em;
   transform: translateZ(0); /* Safari bug rounded image flicker  */
 `
 const Info = styled.div``
@@ -58,7 +58,7 @@ const Contact = styled.div`
   }
 `
 const query = graphql`
-  query {
+  {
     employees: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___name] }
       filter: { frontmatter: { templateKey: { eq: "employee" } } }
@@ -78,9 +78,7 @@ const query = graphql`
             }
             preview {
               childImageSharp {
-                fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed_withWebp
-                }
+                gatsbyImageData(width: 200, height: 200, layout: FIXED)
               }
             }
           }
@@ -109,7 +107,7 @@ export default () => {
               <EmployeeWrapper key={edge.node.id}>
                 <Employee>
                   <Info>
-                    <Avatar fixed={preview.childImageSharp.fixed} />
+                    <Avatar image={preview.childImageSharp.gatsbyImageData} />
                     <Name>{name}</Name>
                     <Claim>{claim}</Claim>
                   </Info>

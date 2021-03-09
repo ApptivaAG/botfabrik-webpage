@@ -24,7 +24,7 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-export const ServiceTemplate = ({ content, contentComponent, metaData }) => {
+const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const { title, subtitle, permalink } = metaData
 
@@ -45,7 +45,7 @@ export const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-export default ({ data }) => {
+const Service = ({ data }) => {
   const { service } = data
 
   service.frontmatter.excerpt = service.excerpt
@@ -58,6 +58,8 @@ export default ({ data }) => {
     />
   )
 }
+
+export default Service
 
 export const serviceQuery = graphql`
   query ServiceByID($id: String!) {

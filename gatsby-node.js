@@ -4,7 +4,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const posts = graphql(`
-    query {
+    {
       allMarkdownRemark(
         limit: 1000
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -21,17 +21,11 @@ exports.createPages = ({ actions, graphql }) => {
               date(formatString: "DD.MM.YYYY")
               image {
                 childImageSharp {
-                  fixed(width: 260) {
-                    srcSet
-                    srcWebp
-                    src
-                    base64
-                    width
-                    srcSetWebp
-                    aspectRatio
-                    height
-                    originalName
-                  }
+                  gatsbyImageData(
+                    width: 260
+                    placeholder: BLURRED
+                    layout: FIXED
+                  )
                 }
               }
             }

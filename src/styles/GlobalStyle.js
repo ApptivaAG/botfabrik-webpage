@@ -67,6 +67,10 @@ const GlobalStyle = createGlobalStyle`
   iframe {
     border: 0;
   }
+
+  .gatsby-image-wrapper [data-placeholder-image] {
+    filter: blur(26px);
+  }
 `
 
 export default GlobalStyle

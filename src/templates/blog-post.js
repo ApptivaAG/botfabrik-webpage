@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
@@ -25,7 +25,10 @@ const Header = ({ title, image }) => (
   <HeadArea>
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
     {image && (
-      <Img style={{ width: '100%' }} sizes={image.childImageSharp.fluid} />
+      <GatsbyImage
+        loading="eager"
+        image={image.childImageSharp.gatsbyImageData}
+      />
     )}
   </HeadArea>
 )
@@ -41,36 +44,32 @@ const Author = styled.span`
 const Date = styled.span`
   font-weight: 400;
 `
-const Published = ({ author, date }) => {
-  return (
-    <Div>
-      Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
-      <Date>{date}</Date>
-    </Div>
-  )
-}
+const Published = ({ author, date }) => (
+  <Div>
+    Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
+    <Date>{date}</Date>
+  </Div>
+)
 
 const LayoutNavigation = styled.div``
 
-const Navigation = ({ next, prev }) => {
-  return (
-    <LayoutNavigation>
-      {prev && (
-        <BlogLinkItem frontmatter={prev.frontmatter} excerpt={prev.excerpt} />
-      )}
-      {next && (
-        <BlogLinkItem frontmatter={next.frontmatter} excerpt={next.excerpt} />
-      )}
-    </LayoutNavigation>
-  )
-}
+const Navigation = ({ next, prev }) => (
+  <LayoutNavigation>
+    {prev && (
+      <BlogLinkItem frontmatter={prev.frontmatter} excerpt={prev.excerpt} />
+    )}
+    {next && (
+      <BlogLinkItem frontmatter={next.frontmatter} excerpt={next.excerpt} />
+    )}
+  </LayoutNavigation>
+)
 
 const Description = styled.p`
   margin-bottom: 0.4em;
   font-weight: 600;
 `
 
-export const BlogPostTemplate = ({
+const BlogPostTemplate = ({
   content,
   contentComponent,
   metaData,
@@ -111,7 +110,7 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default ({ data, pageContext }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
@@ -125,6 +124,8 @@ export default ({ data, pageContext }) => {
     />
   )
 }
+
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -141,9 +142,11 @@ export const pageQuery = graphql`
         permalink
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              width: 960
+            )
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
             }
@@ -153,11 +156,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// {
-//   childImageSharp {
-//     sizes {
-//       ...GatsbyImageSharpSizes
-//     }
-//   }
-// }

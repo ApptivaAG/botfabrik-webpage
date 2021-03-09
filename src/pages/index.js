@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
@@ -62,12 +63,12 @@ const SpeechBubble = styled.div`
   b {
     font-weight: 600;
   }
-  
-  @media (min-width: 641px) {  
+
+  @media (min-width: 641px) {
     ::after {
       display: block;
       position: absolute;
-      content: url("${arrowLeft}");
+      content: url('${arrowLeft}');
       left: -1.3em;
       top: 1.4em;
       height: 3em;
@@ -79,7 +80,7 @@ const SpeechBubble = styled.div`
     ::after {
       display: block;
       position: absolute;
-      content: url("${arrowBottom}");
+      content: url('${arrowBottom}');
       right: 2em;
       bottom: -2em;
       height: 2em;
@@ -141,7 +142,7 @@ const IndexPage = ({ data }) => (
           </ValueProposition>
         </div>
         <Pit>
-          <img src={pit} alt="Pit" />
+          <img src={pit} alt="Pit" width="190" height="277" />
         </Pit>
         <div css="grid-area: services">
           <SpeechBubble left>
@@ -242,8 +243,16 @@ const IndexPage = ({ data }) => (
               css={`
                 background: ${p => p.theme.white};
                 border: 1px solid ${p => p.theme.primary};
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
               `}
             >
+              <GatsbyImage
+                image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                alt="Vorschau"
+              />
               {node.frontmatter.title}
             </LinkItem>
           ))}
@@ -275,12 +284,11 @@ export const indexPageQuery = graphql`
             date(formatString: "DD.MM.YYYY")
             image {
               childImageSharp {
-                fixed(height: 150, width: 300) {
-                  ...GatsbyImageSharpFixed_withWebp_noBase64
-                }
-                # sqip(numberOfPrimitives: 8, blur: 6) {
-                #   dataURI
-                # }
+                gatsbyImageData(
+                  width: 300
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                )
               }
             }
           }

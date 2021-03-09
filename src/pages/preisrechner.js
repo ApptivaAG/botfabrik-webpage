@@ -94,9 +94,7 @@ const blogPostQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         image {
           childImageSharp {
-            fixed(width: 260) {
-              ...GatsbyImageSharpFixed_withWebp
-            }
+            gatsbyImageData(width: 260, layout: FIXED)
           }
         }
       }
