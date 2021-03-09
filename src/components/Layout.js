@@ -49,7 +49,12 @@ export default ({
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Grid>
-        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title} />
+        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title}>
+          <link
+            rel="prefetch"
+            href="https://www.googletagmanager.com/gtag/js?id=UA-66015649-4"
+          />
+        </Helmet>
         <Header siteTitle={title} />
         <Content className={className} callToAction={callToAction}>
           {children}

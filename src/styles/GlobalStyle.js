@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
-  .gatsby-image-wrapper  [data-placeholder-image] {
+  .gatsby-image-wrapper [data-placeholder-image] {
     filter: blur(26px);
   }
 `
