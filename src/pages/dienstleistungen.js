@@ -57,7 +57,7 @@ const Dienstleistungen = ({ location }) => {
                     loading="lazy"
                     alt={title}
                     width="240"
-                    height="160"
+                    height="268"
                   />
                 </LinkItem>
               )
