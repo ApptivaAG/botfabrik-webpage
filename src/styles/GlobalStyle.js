@@ -67,6 +67,10 @@ const GlobalStyle = createGlobalStyle`
   iframe {
     border: 0;
   }
+
+  .gatsby-image-wrapper > img {
+    filter: blur(40px);
+  }
 `
 
 export default GlobalStyle

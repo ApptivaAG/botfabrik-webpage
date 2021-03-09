@@ -18,7 +18,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        // Defaults used for gatsbyImageData and StaticImage
+        defaults: { formats: ['auto', 'avif'] },
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -98,6 +105,5 @@ module.exports = {
         display: `standalone`,
       },
     },
-    `gatsby-plugin-netlify-cache`,
   ],
 }

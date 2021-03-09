@@ -25,7 +25,7 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-export const FaqTemplate = ({ content, contentComponent, metaData }) => {
+const FaqTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const { title, description, permalink } = metaData
 
@@ -46,7 +46,7 @@ export const FaqTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-export default ({ data }) => {
+const FAQ = ({ data }) => {
   const { faq } = data
 
   faq.frontmatter.excerpt = faq.excerpt
@@ -59,6 +59,8 @@ export default ({ data }) => {
     />
   )
 }
+
+export default FAQ
 
 export const faqQuery = graphql`
   query FaqByID($id: String!) {
@@ -77,11 +79,3 @@ export const faqQuery = graphql`
     }
   }
 `
-
-// {
-//   childImageSharp {
-//     sizes {
-//       ...GatsbyImageSharpSizes
-//     }
-//   }
-// }

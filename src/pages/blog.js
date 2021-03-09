@@ -19,15 +19,14 @@ const BlogPage = ({ data, location }) => {
         <Container>
           <h1>Botfabrik Blog</h1>
           <p>Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots.</p>
-          {blogs.nodes.map(({ excerpt, frontmatter }) => {
-            return (
-              <BlogLinkItem
-                key={excerpt}
-                frontmatter={frontmatter}
-                excerpt={excerpt}
-              />
-            )
-          })}
+          {blogs.nodes.map(({ excerpt, frontmatter }) => (
+            <BlogLinkItem
+              key={excerpt}
+              frontmatter={frontmatter}
+              excerpt={excerpt}
+            />
+          ))}
+          )
         </Container>
       </Section>
     </Layout>
@@ -51,9 +50,7 @@ export const blogPageQuery = graphql`
           date(formatString: "DD.MM.YYYY")
           image {
             childImageSharp {
-              fixed(width: 260) {
-                ...GatsbyImageSharpFixed_withWebp
-              }
+              gatsbyImageData(width: 260, layout: FIXED, placeholder: BLURRED)
             }
           }
         }

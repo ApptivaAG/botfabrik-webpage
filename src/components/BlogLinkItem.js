@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import LinkItemDefault from './LinkItem'
 
 const LinkItem = styled(LinkItemDefault)`
@@ -24,9 +24,9 @@ const BlogLinkItem = ({ frontmatter, excerpt }) => (
       dangerouslySetInnerHTML={{ __html: frontmatter.title }}
     />
     {frontmatter.image && (
-      <Img
+      <GatsbyImage
+        image={frontmatter.image.childImageSharp.gatsbyImageData}
         css="grid-area: image; justify-self: center;"
-        fixed={frontmatter.image.childImageSharp.fixed}
       />
     )}
     <p css="grid-area: excerpt">{excerpt}</p>

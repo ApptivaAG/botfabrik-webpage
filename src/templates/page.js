@@ -25,7 +25,7 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-export const PageTemplate = ({ content, contentComponent, metaData }) => {
+const PageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const { title, description, permalink } = metaData
 
@@ -46,7 +46,7 @@ export const PageTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-export default ({ data }) => {
+const Page = ({ data }) => {
   const { page } = data
 
   page.frontmatter.excerpt = page.excerpt
@@ -59,6 +59,8 @@ export default ({ data }) => {
     />
   )
 }
+
+export default Page
 
 export const pageQuery = graphql`
   query PageByID($id: String!) {
@@ -77,11 +79,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// {
-//   childImageSharp {
-//     sizes {
-//       ...GatsbyImageSharpSizes
-//     }
-//   }
-// }
