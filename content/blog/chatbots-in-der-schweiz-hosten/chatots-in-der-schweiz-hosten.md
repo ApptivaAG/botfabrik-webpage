@@ -3,6 +3,7 @@ title: Chatbots in der Schweiz hosten
 date: '2021-03-08T17:00:00+00:00'
 status: publish
 permalink: /blog/2021/03/08/chatbots-in-der-schweiz-hosten
+image: ./picto-safe-mountain.png
 author: Patrik Stutz
 templateKey: blog-post
 id: 948
@@ -17,8 +18,6 @@ tag:
 ---
 
 Chatbotsysteme verwenden oft NLU-Dienste von Drittanbietern auf Servern im Ausland. Dabei kann der Drittanbieter jedes Gespräch mitlesen und man muss darauf vertrauen, dass er verantwortungsvoll mit den Daten umgeht. Dies muss aber nicht so sein!
-
-<div style="text-align:center"><img src="./picto-safe-mountain.svg" style="padding-bottom:1em ;"/></div>
 
 Sprache zu verstehen ist sehr komplex. So komplex, dass es sich nicht lohnt, dies für jeden Chatbot neu zu erfinden. Deshalb benutzen Chatbots zu diesem Zweck oft Dienste von Drittanbietern.
 Ein gutes Beispiel für einen solchen Dienst, den wir auch selbst sehr oft benutzen, ist Google Dialogflow. In Dialogflow kann man verschiedenste sogenannte "Absichten" definieren, welche dann automatisch anhand eines vom Benutzer eingegebenen Textes erkannt werden sollen. Gibt man Dialogflow zu jeder Absicht ein paar Beispielsätze, funktioniert das sehr zuverlässig und schnell.

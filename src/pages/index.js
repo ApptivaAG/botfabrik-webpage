@@ -249,10 +249,12 @@ const IndexPage = ({ data }) => (
                 align-items: center;
               `}
             >
-              <GatsbyImage
-                image={node.frontmatter.image.childImageSharp.gatsbyImageData}
-                alt="Vorschau"
-              />
+              {node.frontmatter.image && (
+                <GatsbyImage
+                  image={node.frontmatter.image.childImageSharp.gatsbyImageData}
+                  alt="Vorschau"
+                />
+              )}
               {node.frontmatter.title}
             </LinkItem>
           ))}
