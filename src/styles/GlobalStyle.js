@@ -68,8 +68,8 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
-  .gatsby-image-wrapper > img {
-    filter: blur(40px);
+  .gatsby-image-wrapper  [data-placeholder-image] {
+    filter: blur(26px);
   }
 `
 
