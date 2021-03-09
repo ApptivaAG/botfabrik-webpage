@@ -142,7 +142,7 @@ const IndexPage = ({ data }) => (
           </ValueProposition>
         </div>
         <Pit>
-          <img src={pit} alt="Pit" />
+          <img src={pit} alt="Pit" width="190" height="277" />
         </Pit>
         <div css="grid-area: services">
           <SpeechBubble left>
