@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Section, Container } from '../styles'
 
 const Grid = styled(Container)`
-  padding: 0;
   div {
     display: grid;
     grid: 'title' 'pit' 'content';
