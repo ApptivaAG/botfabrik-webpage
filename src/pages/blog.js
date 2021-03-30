@@ -26,7 +26,6 @@ const BlogPage = ({ data, location }) => {
               excerpt={excerpt}
             />
           ))}
-          )
         </Container>
       </Section>
     </Layout>
