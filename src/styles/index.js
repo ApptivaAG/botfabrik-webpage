@@ -6,6 +6,7 @@ import Button from './Button'
 import Cols from './Cols'
 import theme from './theme'
 import fontFace from './font-face'
+import DeemphasizedTitle from './DeemphasizedTitle'
 
 export {
   Center,
@@ -16,4 +17,5 @@ export {
   Cols,
   theme,
   fontFace,
+  DeemphasizedTitle,
 }

@@ -23,6 +23,7 @@ import maxonMotor from '../img/maxon-motor-2.svg'
 import suva from '../img/suva.svg'
 import luks from '../img/luzerner-kantonsspital.svg'
 import DeemphasizedTitle from '../styles/DeemphasizedTitle'
+import Testimonials from '../components/Testimonials'
 
 const IndexLayout = styled(Layout)`
   h2 {
@@ -91,13 +92,14 @@ const SpeechBubble = styled.div`
   }
 `
 
-const List = styled.ul``
-const CustomerTitle = styled.h1`
-  font-size: 1.7em;
-  color: #cbcbcb;
-  text-align: center;
-  margin-bottom: 1em;
+const List = styled.ul`
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  li {
+    margin-bottom: 0.1em;
+  }
 `
+
 const Customers = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -171,7 +173,7 @@ const IndexPage = ({ data }) => (
     </Section>
     <Section dark>
       <Container>
-        <CustomerTitle>Auswahl unserer Kunden</CustomerTitle>
+        <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
         <Customers>
           <img
             className="lozad"
@@ -240,6 +242,11 @@ const IndexPage = ({ data }) => (
             width="160"
           />
         </Customers>
+        <DeemphasizedTitle css="margin-top: 3em;">
+          Testimonials
+        </DeemphasizedTitle>
+
+        <Testimonials />
       </Container>
     </Section>
     <KnowHow />
