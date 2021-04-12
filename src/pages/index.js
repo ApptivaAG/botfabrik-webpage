@@ -21,6 +21,8 @@ import post from '../img/post-2.svg'
 import energie360 from '../img/energie360.svg'
 import maxonMotor from '../img/maxon-motor-2.svg'
 import suva from '../img/suva.svg'
+import luks from '../img/luzerner-kantonsspital.svg'
+import DeemphasizedTitle from '../styles/DeemphasizedTitle'
 
 const IndexLayout = styled(Layout)`
   h2 {
@@ -227,6 +229,15 @@ const IndexPage = ({ data }) => (
             alt="Suva"
             width="160"
             height="50"
+          />
+          <img
+            className="lozad"
+            css="height: 2em;"
+            data-src={luks}
+            loading="lazy"
+            alt="Luzerner Kantonsspital"
+            height="24"
+            width="160"
           />
         </Customers>
       </Container>
