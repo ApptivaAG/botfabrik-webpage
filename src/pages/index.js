@@ -7,8 +7,9 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import KnowHow from '../components/KnowHow'
 import LinkItem from '../components/LinkItem'
+import Testimonials from '../components/Testimonials'
 
-import { Section, Container, Button, Cols } from '../styles'
+import { Section, Container, Button, Cols, DeemphasizedTitle } from '../styles'
 
 import pit from '../img/pit.svg'
 import arrowBottom from '../img/arrowBottom.svg'
@@ -22,8 +23,7 @@ import energie360 from '../img/energie360.svg'
 import maxonMotor from '../img/maxon-motor-2.svg'
 import suva from '../img/suva.svg'
 import luks from '../img/luzerner-kantonsspital.svg'
-import DeemphasizedTitle from '../styles/DeemphasizedTitle'
-import Testimonials from '../components/Testimonials'
+import kaio from '../img/kanton-bern.svg'
 
 const IndexLayout = styled(Layout)`
   h2 {
@@ -239,6 +239,15 @@ const IndexPage = ({ data }) => (
             loading="lazy"
             alt="Luzerner Kantonsspital"
             height="24"
+            width="160"
+          />
+          <img
+            className="lozad"
+            css="height: 4em;"
+            data-src={kaio}
+            loading="lazy"
+            alt="Amt für Informatik und Organisation des Kantons Bern (KAIO)"
+            height="50"
             width="160"
           />
         </Customers>
