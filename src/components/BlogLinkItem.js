@@ -18,7 +18,11 @@ const LinkItem = styled(LinkItemDefault)`
 `
 
 const BlogLinkItem = ({ frontmatter, excerpt }) => (
-  <LinkItem to={frontmatter.permalink} key={frontmatter.permalink} align="left">
+  <LinkItem
+    to={`${frontmatter.permalink}/`}
+    key={frontmatter.permalink}
+    align="left"
+  >
     <h2
       css="grid-area: title"
       dangerouslySetInnerHTML={{ __html: frontmatter.title }}
