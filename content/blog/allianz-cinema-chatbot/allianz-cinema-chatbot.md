@@ -25,4 +25,4 @@ Der Bot verlost zudem jeden Tag selbständig Tickets. Dafür müssen die Besuche
 
 Du kannst den Bot gleich hier ausprobieren: <http://m.me/AllianzCinemaZurich>
 
-Weitere Projekt von uns findest du hier: [Auswahl unserer Projekte](https://www.botfabrik.ch/projekte/)
+Weitere Projekt von uns findest du hier: [Auswahl unserer Projekte](/projekte/)

@@ -32,7 +32,7 @@ Auch Skype bietet die Möglichkeit Bots zu integrieren. Wie bei anderen Messenge
 
 ## Skype for Business
 
-Skype for Business ist das ehemalige Microsoft Lync, das oft in Unternehmen eingesetzt wird. Es fehlen zwar einige Bot-Features wie Buttons oder HTML-Ausgabe, dafür ist es wohl der einfachste und schnellste Weg in einem mittleren oder grösseren Unternehmen einen internen Chatbot einzuführen. Lesen Sie dazu auch unseren detaillierteren Beitrag über [Skype for Business](https://www.botfabrik.ch/2018/01/08/chatbot-fuer-skype-for-business/).
+Skype for Business ist das ehemalige Microsoft Lync, das oft in Unternehmen eingesetzt wird. Es fehlen zwar einige Bot-Features wie Buttons oder HTML-Ausgabe, dafür ist es wohl der einfachste und schnellste Weg in einem mittleren oder grösseren Unternehmen einen internen Chatbot einzuführen. Lesen Sie dazu auch unseren detaillierteren Beitrag über [Skype for Business](/2018/01/08/chatbot-fuer-skype-for-business/).
 
 ## Whatsapp
 

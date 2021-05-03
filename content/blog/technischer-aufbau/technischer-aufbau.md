@@ -46,7 +46,7 @@ Gute Chatbots geben nicht nur statisch Antwort, sondern können aktuelle Informa
 
 NLP steht für Natural Language Processing (Sprachverarbeitung). Dies wird manchmal auch als NLU (Natural Language Understanding) beschrieben. Dabei geht es grundsätzlich darum Nachrichten einer Absicht zuzuweisen. Diese Absichten werden im Voraus erfasst und mit Trainingssätzen und teilweise mit Antworten versehen. Schreibt ein Anwender beispielsweise "Ich hätte gerne eine Pizza" so interpretiert eine gut trainierte NLP-Komponente diesen Text als "Absicht: Pizza bestellen; Antwort: Sehr gerne! Wohin soll ich die Pizza liefern?".
 
-Zusätzlich zur Absichtserkennung, wird NLP für weitere aber weniger häufige Aufgaben verwendet. Diese sind Entitätserkennung und teilweise auch Slotfilling und Kontextverarbeitung. Details dazu haben wir im Artikel [Konversationsstränge](https://www.botfabrik.ch/2018/12/17/chatbot-konversationsstraenge-wie-geht-denn-das/) beschrieben.
+Zusätzlich zur Absichtserkennung, wird NLP für weitere aber weniger häufige Aufgaben verwendet. Diese sind Entitätserkennung und teilweise auch Slotfilling und Kontextverarbeitung. Details dazu haben wir im Artikel [Konversationsstränge](/2018/12/17/chatbot-konversationsstraenge-wie-geht-denn-das/) beschrieben.
 
 Nicht jeder Chatbot verwendet NLP. Falls der Chatbot "nur" vorgefertigte Fragen zulässt (Klickbot), so ist NLP nicht nötig. NLP ist nur notwendig, wenn die Anwender frei Text eingeben können.
 
