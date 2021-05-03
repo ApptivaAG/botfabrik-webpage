@@ -123,19 +123,19 @@ const Header = () => (
 
       <MenuButton tabIndex="0">Menu</MenuButton>
       <Navigation>
-        <NavItemsLink to="/dienstleistungen" partiallyActive>
+        <NavItemsLink to="/dienstleistungen/" partiallyActive>
           Dienstleistungen
         </NavItemsLink>
-        <NavItemsLink to="/starterkit" partiallyActive>
+        <NavItemsLink to="/starterkit/" partiallyActive>
           Starterkit
         </NavItemsLink>
-        <NavItemsLink to="/ueber-uns" partiallyActive>
+        <NavItemsLink to="/ueber-uns/" partiallyActive>
           Über uns
         </NavItemsLink>
-        <NavItemsLink to="/blog" partiallyActive>
+        <NavItemsLink to="/blog/" partiallyActive>
           Blog
         </NavItemsLink>
-        <NavItemsLink to="/kontakt" partiallyActive>
+        <NavItemsLink to="/kontakt/" partiallyActive>
           Kontakt
         </NavItemsLink>
       </Navigation>

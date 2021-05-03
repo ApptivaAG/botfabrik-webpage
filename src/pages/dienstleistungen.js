@@ -44,8 +44,8 @@ const Dienstleistungen = ({ location }) => {
             {services.nodes.map(
               ({ frontmatter: { title, subtitle, permalink, image } }) => (
                 <LinkItem
-                  to={permalink}
                   key={permalink}
+                  to={`${permalink}/`}
                   css="display: flex; flex-direction: column;"
                 >
                   <h2>{title}</h2>
@@ -74,7 +74,7 @@ const Dienstleistungen = ({ location }) => {
                 background: white;
                 border: 1px solid ${p => p.theme.primary};
               `}
-              to="/dienstleistungen/kennenlern-angebot"
+              to="/dienstleistungen/kennenlern-angebot/"
             >
               <h3>Chatbots kennenlernen</h3>
               <p>
@@ -87,7 +87,7 @@ const Dienstleistungen = ({ location }) => {
                 background: white;
                 border: 1px solid ${p => p.theme.primary};
               `}
-              to="/dienstleistungen/chatbot-check"
+              to="/dienstleistungen/chatbot-check/"
             >
               <h3>Chatbot-Check</h3>
               <p>Fragen, Chance und Strategien um Chatbots klären</p>
@@ -97,7 +97,7 @@ const Dienstleistungen = ({ location }) => {
                 background: white;
                 border: 1px solid ${p => p.theme.primary};
               `}
-              to="/dienstleistungen/can"
+              to="/dienstleistungen/can/"
             >
               <h3>CAN</h3>
 

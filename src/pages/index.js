@@ -162,10 +162,10 @@ const IndexPage = ({ data }) => (
           </SpeechBubble>
         </div>
         <ButtonList>
-          <Button as={Link} to="/dienstleistungen" css="margin: 0.5em">
+          <Button as={Link} to="/dienstleistungen/" css="margin: 0.5em">
             Zu unseren Dienstleistungen
           </Button>
-          <Button as={Link} to="/preisrechner" css="margin: 0.5em">
+          <Button as={Link} to="/preisrechner/" css="margin: 0.5em">
             Zur Chatbot Preisgestaltung
           </Button>
         </ButtonList>
@@ -266,7 +266,7 @@ const IndexPage = ({ data }) => (
           {data.blogs.edges.map(({ node }) => (
             <LinkItem
               key={node.frontmatter.permalink}
-              to={node.frontmatter.permalink}
+              to={`${node.frontmatter.permalink}/`}
               css={`
                 background: ${p => p.theme.white};
                 border: 1px solid ${p => p.theme.primary};
@@ -286,7 +286,7 @@ const IndexPage = ({ data }) => (
             </LinkItem>
           ))}
         </Cols>
-        <Button as={Link} to="blog">
+        <Button as={Link} to="/blog/">
           Zum Botfabrik Blog
         </Button>
       </Container>

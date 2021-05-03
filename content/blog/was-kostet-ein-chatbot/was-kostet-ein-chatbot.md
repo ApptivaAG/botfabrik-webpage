@@ -35,7 +35,7 @@ Neben den Faktoren, welche grossen Einfluss auf die Kosten haben, gibt es auch F
 
 ## Preisgestaltung
 
-Auf der Seite [Preisgestaltung](https://www.botfabrik.ch/preisrechner) haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
+Auf der Seite [Preisgestaltung](/preisrechner/) haben wir Beispiele für Chatbots zusammengestellt, welche zeigen, mit welchen Kosten in etwa zu rechnen ist.
 
 ## Erfahrung zahlt sich aus
 

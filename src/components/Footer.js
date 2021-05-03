@@ -75,23 +75,23 @@ const Footer = ({ about }) => (
           <h2>Quick Links</h2>
           <ListLinks>
             <li>
-              <Link to="/dienstleistungen">Dienstleistungen</Link>
+              <Link to="/dienstleistungen/">Dienstleistungen</Link>
             </li>
             <li>
-              <Link to="/ueber-uns">Über uns</Link>
+              <Link to="/ueber-uns/">Über uns</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog/">Blog</Link>
             </li>
             <li>
-              <Link to="/kontakt">Kontakt</Link>
+              <Link to="/kontakt/">Kontakt</Link>
             </li>
             <hr />
             <li>
-              <Link to="/preisrechner">Preisrechner</Link>
+              <Link to="/preisrechner/">Preisrechner</Link>
             </li>
             <li>
-              <Link to="/faq">Häufig gestellte Fragen</Link>
+              <Link to="/faq/">Häufig gestellte Fragen</Link>
             </li>
             <hr />
             <li>
