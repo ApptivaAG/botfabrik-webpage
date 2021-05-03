@@ -54,7 +54,7 @@ In der Masse gleichen sich die Anfragen an einen Kundendienst sehr: Passwort ver
 
 ### Bestellung verfolgen
 
-Hat der Bot einen offenen Kommunikationskanal zum Besteller, z.B. über den [Facebook-Messenger](/plattformen/), so kann er ihn über den Status seiner Bestellung auf dem Laufenden halten. Der Besteller selber kann auch Updates anfragen und die Lieferung noch beeinflussen indem der beispielsweise noch die Zustelladresse ändert.
+Hat der Bot einen offenen Kommunikationskanal zum Besteller, z.B. über den [Facebook-Messenger](/faq/plattformen/), so kann er ihn über den Status seiner Bestellung auf dem Laufenden halten. Der Besteller selber kann auch Updates anfragen und die Lieferung noch beeinflussen indem der beispielsweise noch die Zustelladresse ändert.
 
 ### Aftersales aktivieren
 
