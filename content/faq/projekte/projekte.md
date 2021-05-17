@@ -11,6 +11,16 @@ question: Was für Chatbot-Projekte hat die Botfabrik bereits umgesetzt?
 
 Eine Auswahl der Bots, welche erfolgreich in der Botfabrik aufgewachsen sind.
 
+## Roche Lehrstellen-Chatbot
+
+![Roche Lehrstellen-Chatbot](roche-chatbot.png)
+
+Der Roche Lehrstellen-Chatbot beantwortet viele Fragen von Lehrstellensuchende, Eltern und Oberstufenlehrer zum reichhaltigen Angebot an Lehrstellen bei der Roche.
+
+Eine grosse Besonderheit bei der Entwicklung dieses Chatbots war die aktive Mitarbeit von Lernenden. Diese haben nicht nur Inhalte für den Chatbot zusammengestellt, sondern diese gleich selber in den Chatbot eingebaut.
+
+Für Unternehmen: **F. Hoffmann-La Roche AG**
+
 ## Allianz Cinema Chatbot
 
 ![Allianz Cinema Chatbot](allianz-cinema-chatbot.png)
