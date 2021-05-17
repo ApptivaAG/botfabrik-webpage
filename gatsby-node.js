@@ -46,7 +46,7 @@ exports.createPages = ({ actions, graphql }) => {
       const next = index === edges.length - 1 ? null : edges[index + 1].node
       const { id } = node
       createPage({
-        path: node.frontmatter.permalink,
+        path: path.join('/', node.frontmatter.permalink, '/'),
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`
         ),
