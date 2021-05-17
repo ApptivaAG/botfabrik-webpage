@@ -195,7 +195,10 @@ class Preisrechner extends React.Component {
                       <li key={f}>{f}</li>
                     ))}
                   </ItemFeatures>
-                  <ItemPrice>ab CHF 2&apos;900</ItemPrice>
+                  <ItemPrice>
+                    <p css="margin:0; opacity: 0.5;">Initialkosten</p>
+                    ab CHF 2&apos;900
+                  </ItemPrice>
                 </ItemBox>
                 <ItemBox>
                   <h2>Mittelgewicht</h2>
@@ -207,7 +210,10 @@ class Preisrechner extends React.Component {
                       <li key={f}>{f}</li>
                     ))}
                   </ItemFeatures>
-                  <ItemPrice>ab CHF 19&apos;900</ItemPrice>
+                  <ItemPrice>
+                    <p css="margin:0; opacity: 0.5;">Initialkosten</p>
+                    ab CHF 19&apos;900
+                  </ItemPrice>
                 </ItemBox>
                 <ItemBox>
                   <h2>Schwergewicht</h2>
@@ -219,7 +225,10 @@ class Preisrechner extends React.Component {
                       <li key={f}>{f}</li>
                     ))}
                   </ItemFeatures>
-                  <ItemPrice>ab CHF 39&apos;900</ItemPrice>
+                  <ItemPrice>
+                    <p css="margin:0; opacity: 0.5;">Initialkosten</p>ab CHF
+                    39&apos;900
+                  </ItemPrice>
                 </ItemBox>
               </Cols>
               <br />
