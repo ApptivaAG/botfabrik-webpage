@@ -137,9 +137,15 @@ const Pit = styled.div`
 const IndexPage = ({ data }) => (
   <IndexLayout>
     <Seo title="Home" />
-    <Section css="margin-top: 2em;">
+    <Section css="@media (min-width: 1380px) {margin-top: 2em;}">
       <Grid>
         <div css="grid-area: value-prop">
+          <h1 css="font-size: 3em; line-height: 0.4em; margin-top: 0.1em;">
+            Botfabrik <br />
+            <small css="font-size: 0.32em; font-weight: 200;">
+              Passgenaue Chatbot-Lösungen
+            </small>
+          </h1>
           <ValueProposition>
             Sorgen sie für echte <b>Entlastung</b> mit integrierten, passgenauen{' '}
             <b>Chatbots</b>, die ihre Anwender begeistern.
