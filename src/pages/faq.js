@@ -13,7 +13,7 @@ const FaqPage = ({ data, location }) => {
     <Layout>
       <Seo
         title="Häufig gestellte Fragen"
-        description="Was wir immer mal wieder gefragt werden."
+        description="Häufig gestellte Fragen zu Chatbots, der Funktionsweise von Chatbots, der Entwicklung von Chatbots und zur Botfabrik."
         slug={location.pathname}
       />
 
