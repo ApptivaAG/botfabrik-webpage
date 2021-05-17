@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Helmet from 'react-helmet'
-import { compose } from '../util'
+import { composeUrl } from '../util'
 
 const query = graphql`
   query SeoQuery {
@@ -91,10 +91,6 @@ const getSchemaOrgJSONLD = ({
       ]
     : schemaOrgJSONLD
 }
-
-const addSlash = url => (url.endsWith('/') ? url : `${url}/`)
-const baseOrSlugUrl = (baseUrl, slug) => new URL(slug || '', baseUrl).href
-const composeUrl = compose(addSlash, baseOrSlugUrl)
 
 const Seo = ({
   title: titleCurrent,

@@ -44,7 +44,7 @@ const FeatureInput = styled.input`
     checked
       ? checked &&
         css`
-            content: url("${checkmark}");
+          content: url('${checkmark}');
         `
       : css`
           width: 0.3em !important;
@@ -66,76 +66,74 @@ const ToolboxImage = styled.img`
   }
 `
 
-const Starterkit = ({ location }) => {
-  return (
-    <Layout callToAction={false}>
-      <Seo
-        title="Starterkit"
-        description="Der einfache Einstieg in die Chatbot-Welt?"
-        slug={location.pathname}
-      />
+const Starterkit = ({ location }) => (
+  <Layout callToAction={false}>
+    <Seo
+      title="Starterkit"
+      description="Der einfache Einstieg in die Chatbot-Welt?"
+      slug={location.pathname}
+    />
 
-      <Section>
-        <Container>
-          <h1>Starterkit</h1>
-          <p>
-            Durch die zahlreichen Chatbots, die wir inzwischen entwickelt haben,
-            ist ein Grundgerüst entstanden, das wir oft als Basis für neue
-            Chatbots verwenden. Es deckt die wesentlichen Funktionen eines
-            Chatbots ab und ist beliebig erweiterbar.
-          </p>
-          <p>
-            Einen Teil dieser Basisfunktionen bieten wir als Starterkit an.
-            Dieses öffnet ihnen den Weg in die Chatbot Welt. Mit dem Starterkit
-            lassen sich z.B. häufig gestellte Fragen auf einfache Art und Weise
-            beantworten.
-          </p>
+    <Section>
+      <Container>
+        <h1>Starterkit</h1>
+        <p>
+          Durch die zahlreichen Chatbots, die wir inzwischen entwickelt haben,
+          ist ein Grundgerüst entstanden, das wir oft als Basis für neue
+          Chatbots verwenden. Es deckt die wesentlichen Funktionen eines
+          Chatbots ab und ist beliebig erweiterbar.
+        </p>
+        <p>
+          Einen Teil dieser Basisfunktionen bieten wir als Starterkit an. Dieses
+          öffnet ihnen den Weg in die Chatbot Welt. Mit dem Starterkit lassen
+          sich z.B. häufig gestellte Fragen auf einfache Art und Weise
+          beantworten.
+        </p>
 
-          <div css="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;">
-            <div css="min-width:300px">
-              <h2>Funktionen</h2>
-              <FieldSet>
-                {basicFeatures.map(f => (
-                  <Feature key={f}>
-                    <label htmlFor={f}>
-                      <FeatureInput checked readOnly type="checkbox" name={f} />
-                      &nbsp; {f}
-                    </label>
-                  </Feature>
-                ))}
-              </FieldSet>
-            </div>
-            <ToolboxImage src={toolbox} />
+        <div css="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+          <div css="min-width:300px">
+            <h2>Funktionen</h2>
+            <FieldSet>
+              {basicFeatures.map(f => (
+                <Feature key={f}>
+                  <label htmlFor={f}>
+                    <FeatureInput checked readOnly type="checkbox" name={f} />
+                    &nbsp; {f}
+                  </label>
+                </Feature>
+              ))}
+            </FieldSet>
           </div>
+          <ToolboxImage src={toolbox} />
+        </div>
 
-          <h2 css="margin-top:20px">Klingt interessant?</h2>
-          <p>
-            Sie erhalten das Starterkit zum unschlagbaren Preis von{' '}
-            <b css="font-size:1.2em">CHF 19.- pro Monat.</b>
-          </p>
-          <ButtonList justify="left">
-            <Button as={Link} to="/starterkit-bestellen" css="margin: 0.5em">
-              Jetzt bestellen
-            </Button>
-            <Button as={Link} to="/starterkit-ausprobieren" css="margin: 0.5em">
-              Jetzt gratis ausprobieren
-            </Button>
-          </ButtonList>
-          <br />
-          <br />
-        </Container>
-      </Section>
-      <Section css="padding-bottom: 6em;" dark>
-        <Container>
-          <h2>Haben sie Fragen?</h2>
-          <p>Gerne beraten wir sie rund um das Thema Chatbot-Entwicklung.</p>
-          <Button as={Link} to="/kontakt">
-            Jetzt Kontakt aufnehmen
+        <h2 css="margin-top:20px">Klingt interessant?</h2>
+        <p>
+          Sie erhalten das Starterkit zum unschlagbaren Preis von{' '}
+          <b css="font-size:1.2em">CHF 19.- pro Monat.</b>
+        </p>
+        <ButtonList justify="left">
+          <Button as={Link} to="/starterkit-bestellen/" css="margin: 0.5em">
+            Jetzt bestellen
           </Button>
-        </Container>
-      </Section>
-    </Layout>
-  )
-}
+          <Button as={Link} to="/starterkit-ausprobieren/" css="margin: 0.5em">
+            Jetzt gratis ausprobieren
+          </Button>
+        </ButtonList>
+        <br />
+        <br />
+      </Container>
+    </Section>
+    <Section css="padding-bottom: 6em;" dark>
+      <Container>
+        <h2>Haben sie Fragen?</h2>
+        <p>Gerne beraten wir sie rund um das Thema Chatbot-Entwicklung.</p>
+        <Button as={Link} to="/kontakt/">
+          Jetzt Kontakt aufnehmen
+        </Button>
+      </Container>
+    </Section>
+  </Layout>
+)
 
 export default Starterkit

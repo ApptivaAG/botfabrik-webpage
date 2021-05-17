@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
 import Seo from '../components/Seo'
+import { surroundWithSlashes } from '../util'
 
 const FaqPage = ({ data, location }) => {
   const { faqs } = data
@@ -24,7 +25,7 @@ const FaqPage = ({ data, location }) => {
             {faqs.nodes.map(({ frontmatter }) => (
               <LinkItem
                 align="left"
-                to={frontmatter.permalink}
+                to={surroundWithSlashes(frontmatter.permalink)}
                 key={frontmatter.permalink}
               >
                 <h2 css="margin: 0; font-size: 1em;">{frontmatter.question}</h2>
