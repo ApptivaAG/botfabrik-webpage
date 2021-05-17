@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Helmet from 'react-helmet'
+import { compose } from '../util'
 
 const query = graphql`
   query SeoQuery {
@@ -91,6 +92,10 @@ const getSchemaOrgJSONLD = ({
     : schemaOrgJSONLD
 }
 
+const addSlash = url => (url.endsWith('/') ? url : `${url}/`)
+const baseOrSlugUrl = (baseUrl, slug) => new URL(slug || '', baseUrl).href
+const composeUrl = compose(addSlash, baseOrSlugUrl)
+
 const Seo = ({
   title: titleCurrent,
   description: descriptionCurrent,
@@ -111,7 +116,7 @@ const Seo = ({
 
   const title = titleCurrent || titleDefault
   const description = descriptionCurrent || descriptionDefault
-  const url = slug ? `${urlDefault}${slug}` : urlDefault
+  const url = composeUrl(urlDefault, slug)
   const image = urlDefault + (imageCurrent || imageDefault)
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -130,9 +135,16 @@ const Seo = ({
   return (
     <Helmet htmlAttributes={{ lang: 'de-CH' }}>
       <title>{title}</title>
+
       {/* General tags */}
       <meta name="description" content={description} />
       <meta name="image" content={image} />
+      <link
+        rel="canonical"
+        href={url}
+        data-baseprotocol="https:"
+        data-basehost="botfabrik.ch"
+      />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">
