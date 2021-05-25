@@ -11,7 +11,7 @@ const Grid = styled(Container)`
       grid: ${props =>
           props.left
             ? '"pit title title" "pit content content" auto "pit . button" 1fr'
-            : '"title title pit" "content content pit" auto ". button pit" 1fr'} / 16em 1fr 16em;
+            : '"title title pit" "content content pit" auto ". button pit" 1fr'} / 14em 1fr 14em;
     }
     gap: 1em 2em;
     margin: 2em 0;
@@ -54,8 +54,8 @@ const KnowHowItem = (
           className="lozad"
           loading="lazy"
           alt={title}
-          width="300"
-          height="160"
+          width="240"
+          height="140"
         />
         <p css="grid-area: content; margin: 0;">{summary}</p>
       </div>

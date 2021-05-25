@@ -116,7 +116,9 @@ const Header = () => (
           <img src={logo} alt="Logo" />
           <div>
             <p css="font-size: 2em; font-weight: 600;">Botfabrik</p>
-            <p css="font-weight: 200;">Passgenaue Chatbot-Lösungen</p>
+            <p css="font-size: 0.8em; font-weight: 200;">
+              Passgenaue Chatbot-Lösungen
+            </p>
           </div>
         </Link>
       </Logo>
