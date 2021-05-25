@@ -69,8 +69,9 @@ const ToolboxImage = styled.img`
 const Starterkit = ({ location }) => (
   <Layout callToAction={false}>
     <Seo
-      title="Starterkit"
-      description="Der einfache Einstieg in die Chatbot-Welt?"
+      title="Starterkit - Schnell und einfach zum eigenen Chatbot"
+      description={`Der Starterkit der Botfabrik erlaubt es, schnell und einfach 
+        mit einem Chatbot häufig gestellte Fragen auf der eigenen Webseite zu beantworten.`}
       slug={location.pathname}
     />
 
