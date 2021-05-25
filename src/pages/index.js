@@ -136,7 +136,7 @@ const Pit = styled.div`
 
 const IndexPage = ({ data }) => (
   <IndexLayout>
-    <Seo title="Home" />
+    <Seo title="Passgenaue Chatbot-Lösungen" />
     <Section css="@media (min-width: 1380px) {margin-top: 2em;}">
       <Grid>
         <div css="grid-area: value-prop">
