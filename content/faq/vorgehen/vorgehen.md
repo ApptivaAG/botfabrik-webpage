@@ -32,7 +32,7 @@ Ein wichtiger Schritt, der nicht immer im Voraus bedacht wird, ist die Integrati
 
 ## 4. Chatbot-Training
 
-Bereits während des gesamten Projekts wird der Chatbot laufend trainiert. Dieses Training hört auch nach der Integration nicht auf. Mit Hilfe von [Bubble CMS](https://bubblecms.io/de/) nehmen Sie das selbst in die Hand.
+Bereits während des gesamten Projekts wird der Chatbot laufend trainiert. Dieses Training hört auch nach der Integration nicht auf. Mit Hilfe von [Bubble Chat](https://bubble-chat.ch) nehmen Sie das selbst in die Hand.
 
 [Mehr erfahren](/dienstleistungen/training/)
 

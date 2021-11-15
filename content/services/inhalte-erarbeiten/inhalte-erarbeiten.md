@@ -70,7 +70,7 @@ Von diesen Absichten gibt es ohne Smalltalk im Normalfall zwischen 10 und 100 St
 
 ## Tools
 
-Während den Workshops und beim Erfassen der Absichten werden gängige Tools eingesetzt. Dies sind zu Beginn des Workshops **Post-it's** und später für das Festhalten der Absichten **Excel**. Im Verlauf eines Projekts werden die Absichten vom Excel häufig in ein CMS (z.B. [Bubble CMS](https://bubblecms.io)) abgefüllt.
+Während den Workshops und beim Erfassen der Absichten werden gängige Tools eingesetzt. Dies sind zu Beginn des Workshops **Post-it's** und später für das Festhalten der Absichten **Excel**. Im Verlauf eines Projekts werden die Absichten vom Excel häufig in ein CMS (z.B. [Bubble Chat](https://bubble-chat.ch)) abgefüllt.
 
 ## Rahmenbedingungen
 

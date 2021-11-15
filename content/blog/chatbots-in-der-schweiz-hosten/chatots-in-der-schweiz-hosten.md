@@ -35,7 +35,7 @@ Zum Glück gibt es für solche Fälle gleich zwei hochkarätige Alternativen zu 
 [Rasa](https://rasa.com/) ist die wohl bekannteste Alternative zu Dialogflow, die man auf den eigenen Servern betreiben kann. Entwickelt und gepflegt wird Rasa von der gleichnamigen Firma Rasa Technologies Inc., welche sich hauptsächlich mit dem Verkauf der konstenpflichtigen Enterprise Version von Rasa finanziert. Für das Erstellen von Chatbots reicht die kostenlose Open-Source Version völlig aus. Der Funktionsumfang, die Performance und auch Qualität der Spracherkennung steht Dialogflow in nichts nach.
 
 Lediglich die Verwaltung der einzelnen Absichten, Trainingssätze, etc. gestaltet sich bei Rasa mit dem Editieren von Markdown- und YAML Dateien nicht ganz so intuitiv.
-Durch den Einsatz von einem Chatbot-CMS wie [Bubble](https://bubblecms.io), ist das aber nicht länger ein Problem.
+Durch den Einsatz von einem Chatbot-CMS wie [Bubble Chat](https://bubble-chat.ch), ist das aber nicht länger ein Problem.
 
 ### Snips
 

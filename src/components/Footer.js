@@ -108,11 +108,11 @@ const Footer = ({ about }) => (
             </li>
             <li>
               <a
-                href="https://bubblecms.io"
+                href="https://bubble-chat.ch"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bubble CMS
+                Bubble Chat
               </a>
             </li>
             <li>

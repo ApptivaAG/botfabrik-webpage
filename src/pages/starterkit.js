@@ -9,8 +9,8 @@ import ButtonList from '../components/ButtonList'
 import toolbox from '../img/toolbox.svg'
 
 const BUBBLE_LINK = (
-  <a target="_blank" rel="noopener noreferrer" href="https://bubblecms.io/de">
-    Bubble CMS
+  <a target="_blank" rel="noopener noreferrer" href="https://bubble-chat.ch">
+    Bubble Chat
   </a>
 )
 

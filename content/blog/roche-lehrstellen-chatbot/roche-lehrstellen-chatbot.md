@@ -38,7 +38,7 @@ Zu Beginn des Projekts haben wir von der Botfabrik zwei Workshops durchgeführt,
 ![Inhalte erarbeiten](inhalte-erarbeiten.jpg)
 Bild oben: Erarbeitete Inhalte des Workshops
 
-Für das Speichern der Chatbot-Inhalte haben wir [Bubble CMS](https://bubblecms.io) verwendet, welches eine einfache Pflege der Inhalte erlaubt. Vor der Veröffentlichung haben die Lernenden den Chatbot zwei Mal intern auf Herz und Nieren getestet und danach im Bubble CMS entsprechend trainiert. So stand im Juli 2020 einer erfolgreichen Lancierung nichts mehr im Weg.
+Für das Speichern der Chatbot-Inhalte haben wir [Bubble Chat](https://bubble-chat.ch) verwendet, welches eine einfache Pflege der Inhalte erlaubt. Vor der Veröffentlichung haben die Lernenden den Chatbot zwei Mal intern auf Herz und Nieren getestet und danach im Bubble Chat entsprechend trainiert. So stand im Juli 2020 einer erfolgreichen Lancierung nichts mehr im Weg.
 
 ## Was bringt die Chatbot-Zukunft
 

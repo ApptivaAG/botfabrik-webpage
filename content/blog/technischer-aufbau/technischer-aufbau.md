@@ -69,7 +69,7 @@ Bei der Entwicklung eines Chatbots von Grund auf stehen einem viele Möglichkeit
 - Auf welchen Kanälen soll der Chatbot verfügbar sein? Nur im Web? Oder auch im Facebook-Messenger oder WhatsApp? Entsprechend hat dies auf den Datenschutz und die folgenden Punkte Einfluss.
 - Wo soll der Chatbot-Server stehen? In der Schweiz, im DACH-Raum, in Europa oder auch ausserhalb Europas möglich? Hier spielen vor allem die Datenschutzanforderungen und entstehende Kosten eine Rolle.
 - Wird NLP benötigt oder reicht ein einfaches Skript? Und falls NLP benötigt wird, welche Lösung soll verwendet werden? Bei der Wahl der NLP-Lösung spielt wieder der Datenschutz eine entscheidende Rolle. Falls die Daten das Unternehmen oder das Land wo der Chatbot-Server in Zukunft laufen soll nicht verlassen dürfen, so kommt beispielsweise RASA als NLP-Lösung zum Zug. Spielt dieser Datenschutz-Aspekt aber keine Rolle, so ist RASA zu aufwändig, um in jedem Projekt zu verwenden. Stattdessen setzen wir meistens Dialogflow von Google ein.
-- Wo sollen die Inhalte gespeichert werden? Direkt im NLP-Tool, dem Skript oder doch lieber in einem dedizierten CMS? Diese Entscheidung hängt von der Grösse des Projekts und den späteren Pflegepersonen des Chatbots ab. Bei ganz kleinen Projekten wo immer eine technische Person den Chatbot pflegen wird, verwalten wir die Inhalte wahrscheinlich direkt im NLP-Tool oder dem Skript in der Bot-Engine. In allen anderen Fällen empfehlen wir den Einsatz von Bubble CMS.
+- Wo sollen die Inhalte gespeichert werden? Direkt im NLP-Tool, dem Skript oder doch lieber in einem dedizierten CMS? Diese Entscheidung hängt von der Grösse des Projekts und den späteren Pflegepersonen des Chatbots ab. Bei ganz kleinen Projekten wo immer eine technische Person den Chatbot pflegen wird, verwalten wir die Inhalte wahrscheinlich direkt im NLP-Tool oder dem Skript in der Bot-Engine. In allen anderen Fällen empfehlen wir den Einsatz von [Bubble Chat](https://bubble-chat.ch).
 
 Sind die Anforderungen klar und die Entscheidungen getroffen und mit dem Kunden besprochen, geht es darum dien Chatbot zu entwickeln. Die Entwicklung eines individuellen Chatbots läuft in der Regel folgendermassen ab.
 
@@ -103,7 +103,7 @@ Verwendet ein Chatbot andere Systeme, so wird die Integration mittels Middleware
 
 Sobald das CMS läuft, können die Inhalte darin erfasst werden. Dies kann als einziger Schritt auch vom Chatbot-Kunden übernommen werden. Teil der Inhalte sind auch die Trainingssätze. Diese werden während der Entwicklung, aber auch nach dem Publizieren laufend verbessert. Diesem Vorgang wird auch "Trainieren" gesagt.
 
-![Inhalte im Bubble CMS erfassen](bubble-cms.png)
+![Inhalte im Bubble Chat erfassen](bubble-chat.png)
 
 ### Chatbot publizieren
 
