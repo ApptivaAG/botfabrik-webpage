@@ -24,6 +24,8 @@ import maxonMotor from '../img/maxon-motor-2.svg'
 import suva from '../img/suva.svg'
 import luks from '../img/luzerner-kantonsspital.svg'
 import kaio from '../img/kanton-bern.svg'
+import stzhfd from '../img/stadt-zuerich-finanzdepartement.svg'
+import akso from '../img/akso.svg'
 
 const IndexLayout = styled(Layout)`
   h2 {
@@ -254,6 +256,24 @@ const IndexPage = ({ data }) => (
             loading="lazy"
             alt="Amt für Informatik und Organisation des Kantons Bern (KAIO)"
             height="50"
+            width="160"
+          />
+          <img
+            className="lozad"
+            css="height: 4em;"
+            data-src={stzhfd}
+            loading="lazy"
+            alt="Stadt Zürich Finanzdepartement"
+            height="60"
+            width="160"
+          />
+          <img
+            className="lozad"
+            css="height: 4em;"
+            data-src={akso}
+            loading="lazy"
+            alt="Ausgleichskasse Solothurn"
+            height="80"
             width="160"
           />
         </Customers>
