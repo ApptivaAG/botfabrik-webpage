@@ -6,22 +6,19 @@ import { Container, Section, Button } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
 import ButtonList from '../components/ButtonList'
-import toolbox from '../img/toolbox.svg'
-
-const BUBBLE_LINK = (
-  <a target="_blank" rel="noopener noreferrer" href="https://bubble-chat.ch">
-    Bubble Chat
-  </a>
-)
+import toolbox from '../img/bubble-chat-toolbox.svg'
+import bubbleChatIntents from '../img/bubble-chat-intents.png'
 
 const basicFeatures = [
-  'Integration in ihre Webseite',
-  <label htmlFor="bubbleCMS">Bearbeitung der Inhalte mit {BUBBLE_LINK}</label>,
+  'Einfache und übersichtliche Verwaltung von Inhalten',
   'Einsatz von KI (Künstliche Intelligenz)',
   'Einsatz von NLP (Natural Language Processing)',
-  'Trainiert mit Smalltalk-Fähigkeiten',
+  'Vordefinierte Smalltalk-Fähigkeiten',
   'Sprach- und Texteingabe',
   'Analytics und Chatbot KPIs',
+  'Mitverfolgung von Konversationen',
+  'Handover an Live-Chat',
+  'Integration in Webseite',
   'Flexibel erweiterbar',
 ]
 
@@ -61,38 +58,61 @@ const ToolboxImage = styled.img`
   margin-bottom: 50px;
   margin-left: 20px;
   flex: 1;
+`
+
+const BubbleChatImageFigure = styled.figure`
+  width: 100%;
+  margin: 0;
   @media (max-width: 1100px) {
     display: none;
   }
 `
 
-const Starterkit = ({ location }) => (
+const BubbleChatImage = styled.img`
+  width: 100%;
+`
+
+const BubbleChat = ({ location }) => (
   <Layout callToAction={false}>
     <Seo
-      title="Starterkit - Schnell und einfach zum eigenen Chatbot"
-      description={`Der Starterkit der Botfabrik erlaubt es, schnell und einfach 
+      title="Bubble Chat - Schnell und einfach zum eigenen Chatbot"
+      description={`Bubble Chat erlaubt es, schnell und einfach 
         mit einem Chatbot häufig gestellte Fragen auf der eigenen Webseite zu beantworten.`}
       slug={location.pathname}
     />
 
     <Section>
       <Container>
-        <h1>Starterkit</h1>
+        <h1>Bubble Chat</h1>
         <p>
-          Durch die zahlreichen Chatbots, die wir inzwischen entwickelt haben,
-          ist ein Grundgerüst entstanden, das wir oft als Basis für neue
-          Chatbots verwenden. Es deckt die wesentlichen Funktionen eines
-          Chatbots ab und ist beliebig erweiterbar.
+          Dank einer Vielzahl an Projekten konnten wir in den vergangenen Jahren
+          eine Menge Erfahrungen bei der Entwicklung von Chatbots sammeln. Zu
+          diesen Erfahrungen gehört auch ein Tooling, welches wir laufend
+          verbessert haben. Aus einem Teil dieses Toolings ist inzwischen ein
+          Produkt entstanden:&nbsp;
+          <a href="https://www.bubble-chat.ch" rel="noreferrer" target="_blank">
+            Bubble Chat
+          </a>
         </p>
         <p>
-          Einen Teil dieser Basisfunktionen bieten wir als Starterkit an. Dieses
-          öffnet ihnen den Weg in die Chatbot Welt. Mit dem Starterkit lassen
-          sich z.B. häufig gestellte Fragen auf einfache Art und Weise
-          beantworten.
+          Mit Bubble Chat ist ein Chatbot im Handumdrehen aufgesetzt. Von Anfang
+          an haben wir bei der Entwicklung der Benutzeroberfläche auf
+          Einfachheit geachtet. Daher ist Bubble Chat simpel zu bedienen und
+          setzt kein grosses technisches Fachwissen voraus. Sofort kann man sich
+          mit Bubble Chat darauf konzentrieren, den Kundendialog effizienter zu
+          gestalten.
         </p>
 
+        <BubbleChatImageFigure>
+          <BubbleChatImage
+            alt="Bubble Chat - Absichten verwalten"
+            src={bubbleChatIntents}
+          />
+          <figcaption>Bubble Chat - Absichten verwalten</figcaption>
+        </BubbleChatImageFigure>
+
         <div css="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;">
-          <div css="min-width:300px">
+          <div css="min-width:300px;margin-top:20px">
             <h2>Funktionen</h2>
             <FieldSet>
               {basicFeatures.map(f => (
@@ -108,16 +128,12 @@ const Starterkit = ({ location }) => (
           <ToolboxImage src={toolbox} />
         </div>
 
-        <h2 css="margin-top:20px">Klingt interessant?</h2>
-        <p>
-          Sie erhalten das Starterkit zum unschlagbaren Preis von{' '}
-          <b css="font-size:1.2em">CHF 19.- pro Monat.</b>
-        </p>
+        <h2 css="margin-top:20px">Bubble Chat klingt interessant?</h2>
         <ButtonList justify="left">
-          <Button as={Link} to="/starterkit-bestellen/" css="margin: 0.5em">
+          <Button as={Link} to="/bubblechat-bestellen/" css="margin: 0.5em">
             Jetzt bestellen
           </Button>
-          <Button as={Link} to="/starterkit-ausprobieren/" css="margin: 0.5em">
+          <Button as={Link} to="/bubblechat-ausprobieren/" css="margin: 0.5em">
             Jetzt gratis ausprobieren
           </Button>
         </ButtonList>
@@ -137,4 +153,4 @@ const Starterkit = ({ location }) => (
   </Layout>
 )
 
-export default Starterkit
+export default BubbleChat
