@@ -78,7 +78,7 @@ const Footer = ({ about }) => (
               <Link to="/dienstleistungen/">Dienstleistungen</Link>
             </li>
             <li>
-              <Link to="/bubblechat/">Bubble Chat</Link>
+              <Link to="/bubble-chat/">Bubble Chat</Link>
             </li>
             <li>
               <Link to="/ueber-uns/">Über uns</Link>

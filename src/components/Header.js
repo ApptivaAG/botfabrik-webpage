@@ -128,7 +128,7 @@ const Header = () => (
         <NavItemsLink to="/dienstleistungen/" partiallyActive>
           Dienstleistungen
         </NavItemsLink>
-        <NavItemsLink to="/bubblechat/" partiallyActive>
+        <NavItemsLink to="/bubble-chat/" partiallyActive>
           Produkt
         </NavItemsLink>
         <NavItemsLink to="/ueber-uns/" partiallyActive>
