@@ -1,13 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import { Container, Section, Button } from '../styles'
 import Seo from '../components/Seo'
 import checkmark from '../img/checkmark.svg'
 import ButtonList from '../components/ButtonList'
 import toolbox from '../img/bubble-chat-toolbox.svg'
-import bubbleChatIntents from '../img/bubble-chat-intents.png'
 
 const basicFeatures = [
   'Einfache und übersichtliche Verwaltung von Inhalten',
@@ -62,14 +62,16 @@ const ToolboxImage = styled.img`
 
 const BubbleChatImageFigure = styled.figure`
   width: 100%;
-  margin: 0;
-  @media (max-width: 1100px) {
-    display: none;
-  }
-`
+  max-width: 36em;
+  margin: 2em auto;
+  text-align: center;
 
-const BubbleChatImage = styled.img`
-  width: 100%;
+  .imageStyle {
+    width: 100%;
+    border: 1px solid #722ed1;
+    border-radius: 0.3em;
+    box-shadow: 0em 1em 4em 0em #0001;
+  }
 `
 
 const BubbleChat = ({ location }) => (
@@ -104,9 +106,10 @@ const BubbleChat = ({ location }) => (
         </p>
 
         <BubbleChatImageFigure>
-          <BubbleChatImage
+          <StaticImage
             alt="Bubble Chat - Absichten verwalten"
-            src={bubbleChatIntents}
+            src="../img/bubble-chat-intents.png"
+            className="imageStyle"
           />
           <figcaption>Bubble Chat - Absichten verwalten</figcaption>
         </BubbleChatImageFigure>
