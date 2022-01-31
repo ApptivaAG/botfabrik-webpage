@@ -162,7 +162,11 @@ class Preisrechner extends React.Component {
 
     return (
       <Layout callToAction={false}>
-        <Seo title="Preisrechner" description="Wie viel kostet ein Bot?" />
+        <Seo
+          title="Preisrechner"
+          description="Wie viel kostet ein Bot?"
+          slug="preisrechner"
+        />
         <Section>
           <Container>
             <h1>Preisgestaltung</h1>
