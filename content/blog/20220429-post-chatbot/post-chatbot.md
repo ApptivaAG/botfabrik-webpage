@@ -19,7 +19,8 @@ Der Chatbot kann über die Website [«Hilfe und Kontakt»](https://www.post.ch/d
 
 Anfänglich verstand der Chatbot nur Anfragen auf Deutsch. Nachdem wir eine genügend grosse Menge an konkreten Kundenanfragen hatten, konnten wir diese übersetzen und dem Chatbot auch Französisch und Italienisch beibringen. Mittlerweile werden die Daten fürs Trainieren des Chatbots fortlaufend automatisch übersetzt, um so eine ähnlich hohe Qualität über alle drei Sprachen zu gewährleisten.
 
-*Evtl Infos, wie viele Anfragen es gibt und wie viele der bot selber beantworten kann. -> Raphi klärt ab, ob wir hier Zahlen veröffentlichen dürfen.*
+>TODO: Evtl. Infos, wie viele Anfragen es gibt und wie viele der Bot selber beantworten kann.
+<br>Raphi klärt ab, ob wir hier Zahlen veröffentlichen dürfen.
 
 ## Live-Chat
 
