@@ -15,14 +15,23 @@ categories:
 
 Um diesen Ansturm zu bewältigen, bieten neue Technologien wie der Chatbot und der Live-Chat den Mitarbeitenden des Kundendienstes zusätzliche Unterstützung und ermöglichen ein flexibles und kundenorientiertes Arbeiten.
 
+&nbsp;
+
+> ### Eckdaten
+>
+> - Der Chatbot verarbeitet jede Woche rund 6'000 Chats.
+> - 73% aller Anfragen löst der Chatbot selbstständig.
+> - 27% aller Anfragen leitet er als Live-Chat zum Kundendienst weiter.
+>
+> <p style="font-size:small">Stand April 2022</p>
+
+&nbsp;
+
 ## Chatbot
 
 Der Chatbot kann über die Website [«Hilfe und Kontakt»](https://www.post.ch/de/hilfe-und-kontakt) der Post aufgerufen werden. Er ist rund um die Uhr erreichbar und beantwortet einfache Kundenanfragen alleine. Komplexere Angelegenheiten leitet er an die Mitarbeitenden weiter. So kann er beispielsweise bei der Statusprüfung eines Pakets direkt weiterhelfen oder auf bereits publizierten Inhalt zum angesprochenen Thema auf der Post-Website verlinken.
 
 Anfänglich verstand der Chatbot nur Anfragen auf Deutsch. Nachdem wir eine genügend grosse Menge an konkreten Kundenanfragen hatten, konnten wir diese übersetzen und dem Chatbot auch Französisch und Italienisch beibringen. Mittlerweile werden die Daten fürs Trainieren des Chatbots fortlaufend automatisch übersetzt, um so eine ähnlich hohe Qualität über alle drei Sprachen zu gewährleisten.
-
-> TODO: Evtl. Infos, wie viele Anfragen es gibt und wie viele der Bot selber beantworten kann.
-> <br>Raphi klärt ab, ob wir hier Zahlen veröffentlichen dürfen.
 
 ## Live-Chat
 
