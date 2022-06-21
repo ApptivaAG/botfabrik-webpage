@@ -1,6 +1,6 @@
-const path = require('path')
+import path from 'path'
 
-exports.createPages = ({ actions, graphql }) => {
+export const createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const posts = graphql(`

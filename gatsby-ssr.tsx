@@ -1,6 +1,4 @@
-const React = require('react')
-
-exports.onRenderBody = ({ setPostBodyComponents }) => {
+export const onRenderBody = ({ setPostBodyComponents }) => {
   setPostBodyComponents([
     <script
       id="chatbot"

@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: 'Botfabrik',
     siteUrl: 'https://botfabrik.ch', // also needed in gatsby-plugin-sitemap
@@ -100,3 +102,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

@@ -1,9 +1,9 @@
 // IE/Edge polyfill needed for plugin "gatsby-remark-images-medium-zoom"
-require('@fastly/performance-observer-polyfill/polyfill')
+import '@fastly/performance-observer-polyfill/polyfill'
 // Lazy loading images
-const lozad = require('lozad')
+import lozad from 'lozad'
 
-exports.onRouteUpdate = () => {
+export const onRouteUpdate = () => {
   const observer = lozad()
   observer.observe()
 }
