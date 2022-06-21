@@ -19,13 +19,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-image',
-    {
-      resolve: 'gatsby-plugin-sharp',
-      options: {
-        // Defaults used for gatsbyImageData and StaticImage
-        defaults: { formats: ['auto', 'avif'] },
-      },
-    },
+    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -53,11 +47,10 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 1024,
               linkImagesToOriginal: false, // because of zoom
-              wrapperStyle: fluidResult => {
-                return fluidResult.aspectRatio < 1.2
+              wrapperStyle: fluidResult =>
+                fluidResult.aspectRatio < 1.2
                   ? 'max-width: 360px !important;'
-                  : 'width: 100%;'
-              },
+                  : 'width: 100%;',
             },
           },
           `gatsby-remark-images-medium-zoom`,

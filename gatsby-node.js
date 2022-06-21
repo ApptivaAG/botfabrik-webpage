@@ -12,22 +12,10 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
-            excerpt(pruneLength: 140)
             id
             frontmatter {
-              title
               permalink
               templateKey
-              date(formatString: "DD.MM.YYYY")
-              image {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 260
-                    placeholder: BLURRED
-                    layout: FIXED
-                  )
-                }
-              }
             }
           }
         }
@@ -42,8 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
     const { edges } = result.data.allMarkdownRemark
 
     return edges.forEach(({ node }, index) => {
-      const prev = index === 0 ? null : edges[index - 1].node
-      const next = index === edges.length - 1 ? null : edges[index + 1].node
+      const prevId = index === 0 ? null : edges[index - 1].node.id
+      const nextId =
+        index === edges.length - 1 ? null : edges[index + 1].node.id
       const { id } = node
       createPage({
         path: path.join('/', node.frontmatter.permalink, '/'),
@@ -53,8 +42,8 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          prev,
-          next,
+          prevId,
+          nextId,
         },
       })
     })

@@ -73,7 +73,8 @@ const BlogPostTemplate = ({
   content,
   contentComponent,
   metaData,
-  navigation,
+  prev,
+  next,
 }) => {
   const PostContent = contentComponent || Content
   const {
@@ -103,14 +104,14 @@ const BlogPostTemplate = ({
           <Description>{description}</Description>
           {author && <Published author={author} date={date} />}
           <PostContent content={content} />
-          <Navigation next={navigation.next} prev={navigation.prev} />
+          <Navigation next={next} prev={prev} />
         </Container>
       </Section>
     </Layout>
   )
 }
 
-const BlogPost = ({ data, pageContext }) => {
+const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   post.frontmatter.excerpt = post.excerpt
@@ -120,7 +121,8 @@ const BlogPost = ({ data, pageContext }) => {
       content={post.html}
       contentComponent={HTMLContent}
       metaData={post.frontmatter}
-      navigation={pageContext}
+      prev={data.prev}
+      next={data.next}
     />
   )
 }
@@ -128,7 +130,7 @@ const BlogPost = ({ data, pageContext }) => {
 export default BlogPost
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BlogPostByID($id: String!, $prevId: String, $nextId: String) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -150,6 +152,36 @@ export const pageQuery = graphql`
             resize(width: 1200, height: 630, cropFocus: ENTROPY) {
               src
             }
+          }
+        }
+      }
+    }
+    next: markdownRemark(id: { eq: $nextId }) {
+      id
+      excerpt(pruneLength: 140)
+      frontmatter {
+        title
+        permalink
+        templateKey
+        date(formatString: "DD.MM.YYYY")
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 240, placeholder: BLURRED, layout: FIXED)
+          }
+        }
+      }
+    }
+    prev: markdownRemark(id: { eq: $prevId }) {
+      id
+      excerpt(pruneLength: 140)
+      frontmatter {
+        title
+        permalink
+        templateKey
+        date(formatString: "DD.MM.YYYY")
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 240, placeholder: BLURRED, layout: FIXED)
           }
         }
       }
