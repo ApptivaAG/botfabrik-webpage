@@ -76,15 +76,8 @@ const BlogPostTemplate = ({
   next,
 }) => {
   const PostContent = contentComponent || Content
-  const {
-    title,
-    image,
-    description,
-    author,
-    date,
-    isoDate,
-    permalink,
-  } = metaData
+  const { title, image, description, author, date, isoDate, permalink } =
+    metaData
 
   return (
     <Layout calltoActionDark>

@@ -4,7 +4,11 @@ const addSlashToEnd = url => (url.endsWith('/') ? url : `${url}/`)
 const addSlashToStart = url => (url.startsWith('/') ? url : `${url}/`)
 
 export const compose = (...fns) =>
-  fns.reduce((f, g) => (...args) => f(g(...args)))
+  fns.reduce(
+    (f, g) =>
+      (...args) =>
+        f(g(...args))
+  )
 
 export const composeUrl = compose(addSlashToEnd, baseOrSlugUrl)
 
