@@ -49,6 +49,7 @@
     "clean": "gatsby clean",
     "update": "npx npm-check-updates -u",
     "format": "prettier --write 'src/**/*.js'",
+    "optimize-image-dimensions": "node scripts/optimize-image-dimensions.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -59,7 +60,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
     "prettier": "^2.7.1",
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "sharp": "^0.30.6"
   },
   "repository": {
     "type": "git",
