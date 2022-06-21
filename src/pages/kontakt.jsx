@@ -1,11 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
 
-import Layout from '../components/Layout'
-import { Container, Section } from '../styles'
 import ContactForm from '../components/ContactForm'
+import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import { Container, Section } from '../styles'
 
 const Grid = styled.div`
   display: grid;

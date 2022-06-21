@@ -1,7 +1,6 @@
-import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Container, Center } from '../styles'
+import { Center, Container } from '../styles'
 
 const Wrapper = styled.footer`
   font-size: 0.8em;

@@ -1,14 +1,13 @@
-import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled, { ThemeProvider, css } from 'styled-components'
 import 'normalize.css/normalize.css'
+import Helmet from 'react-helmet'
+import styled, { css, ThemeProvider } from 'styled-components'
 
-import Header from './Header'
-import Footer from './Footer'
 import { GlobalStyle, theme } from '../styles'
 import '../styles/fonts.css'
 import CallToAction from './CallToAction'
+import Footer from './Footer'
+import Header from './Header'
 
 const Grid = styled.div`
   display: grid;
@@ -37,7 +36,7 @@ const query = graphql`
   }
 `
 
-export default ({
+const Layout = ({
   children,
   className,
   callToAction = true,
@@ -65,3 +64,4 @@ export default ({
     </ThemeProvider>
   )
 }
+export default Layout

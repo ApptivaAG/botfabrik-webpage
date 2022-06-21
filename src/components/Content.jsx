@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 require('prismjs/themes/prism.css')
@@ -141,12 +140,15 @@ const Markdown = styled.div`
   }
 `
 
-export default ({ content, className }) => (
+const Content = ({ content, className }) => (
   <Markdown className={className}>{content}</Markdown>
 )
+
 export const HTMLContent = ({ content, className }) => (
   <Markdown
     className={className}
     dangerouslySetInnerHTML={{ __html: content }}
   />
 )
+
+export default Content

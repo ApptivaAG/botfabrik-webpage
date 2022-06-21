@@ -1,11 +1,10 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import { Section, Container } from '../styles'
+import { Container, Section } from '../styles'
 
 const HeadArea = styled.div``
 
@@ -25,7 +24,7 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-const FaqTemplate = ({ content, contentComponent, metaData }) => {
+const PageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const { title, description, permalink } = metaData
 
@@ -46,25 +45,25 @@ const FaqTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-const FAQ = ({ data }) => {
-  const { faq } = data
+const Page = ({ data }) => {
+  const { page } = data
 
-  faq.frontmatter.excerpt = faq.excerpt
+  page.frontmatter.excerpt = page.excerpt
 
   return (
-    <FaqTemplate
-      content={faq.html}
+    <PageTemplate
+      content={page.html}
       contentComponent={HTMLContent}
-      metaData={faq.frontmatter}
+      metaData={page.frontmatter}
     />
   )
 }
 
-export default FAQ
+export default Page
 
-export const faqQuery = graphql`
-  query FaqByID($id: String!) {
-    faq: markdownRemark(id: { eq: $id }) {
+export const pageQuery = graphql`
+  query PageByID($id: String!) {
+    page: markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(pruneLength: 300)

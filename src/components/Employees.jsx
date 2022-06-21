@@ -1,9 +1,8 @@
-import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Section, Container } from '../styles'
+import { Container, Section } from '../styles'
 
 const EmployeeList = styled.div`
   display: flex;
@@ -88,7 +87,7 @@ const query = graphql`
   }
 `
 
-export default () => {
+const Employees = () => {
   const { employees } = useStaticQuery(query)
 
   return (
@@ -102,13 +101,13 @@ export default () => {
         </p>
         <EmployeeList>
           {employees.edges.map(edge => {
-            const { name, claim, contact, preview } = edge.node.frontmatter
+            const { claim, contact, preview } = edge.node.frontmatter
             return (
               <EmployeeWrapper key={edge.node.id}>
                 <Employee>
                   <Info>
                     <Avatar image={preview.childImageSharp.gatsbyImageData} />
-                    <Name>{name}</Name>
+                    <Name />
                     <Claim>{claim}</Claim>
                   </Info>
                   <Contact>
@@ -129,3 +128,5 @@ export default () => {
     </Section>
   )
 }
+
+export default Employees

@@ -1,10 +1,8 @@
-/* eslint-disable react/no-danger */
-import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
 import BlogLinkItem from '../components/BlogLinkItem'
-import { Container, Section } from '../styles'
+import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import { Container, Section } from '../styles'
 
 const BlogPage = ({ data, location }) => {
   const { blogs } = data

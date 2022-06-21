@@ -1,6 +1,7 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react'
-import fetch from 'unfetch'
 import styled from 'styled-components'
+import fetch from 'unfetch'
 import { Button } from '../styles'
 
 const Input = styled.input`
@@ -15,6 +16,7 @@ const Input = styled.input`
   border-radius: 2px;
   box-sizing: border-box;
 `
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Textarea = props => <Input as="textarea" {...props} />
 
 const encode = data =>
@@ -35,7 +37,7 @@ class ContactForm extends React.Component {
 
   handleSubmit(e) {
     if (this.state.email === '' || this.state.name === '') {
-      /* eslint-disable-next-line no-alert */
+      /* eslint-disable-next-line no-alert, no-undef */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
     } else if (this.state['bot-field'] === undefined) {
       const body = encode({
@@ -51,6 +53,7 @@ class ContactForm extends React.Component {
         .then(() => {
           // eslint-disable-next-line no-unused-expressions
           typeof window !== 'undefined' &&
+            // eslint-disable-next-line no-undef
             window.gtag('event', 'submit', {
               event_category: 'form',
               event_label: this.props.subject,
@@ -65,7 +68,7 @@ class ContactForm extends React.Component {
         .catch(error => {
           /* eslint-disable-next-line no-console */
           console.log('Error', error)
-          /* eslint-disable-next-line no-alert */
+          /* eslint-disable-next-line no-alert, no-undef */
           alert(
             `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken melden wir uns sofort bei Ihnen.`
           )

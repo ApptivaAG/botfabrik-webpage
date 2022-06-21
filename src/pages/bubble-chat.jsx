@@ -1,13 +1,12 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import Layout from '../components/Layout'
-import { Container, Section, Button } from '../styles'
-import Seo from '../components/Seo'
-import checkmark from '../img/checkmark.svg'
+import styled, { css } from 'styled-components'
 import ButtonList from '../components/ButtonList'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import toolbox from '../img/bubble-chat-toolbox.svg'
+import checkmark from '../img/checkmark.svg'
+import { Button, Container, Section } from '../styles'
 
 const basicFeatures = [
   'Einfache und übersichtliche Verwaltung von Inhalten',

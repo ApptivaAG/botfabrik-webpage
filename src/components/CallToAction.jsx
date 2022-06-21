@@ -1,6 +1,5 @@
-import React from 'react'
 import { Link } from 'gatsby'
-import { Button, Section, Container } from '../styles'
+import { Button, Container, Section } from '../styles'
 
 const CallToAction = ({ dark }) => (
   <Section css="padding-bottom: 6em;" dark={dark}>

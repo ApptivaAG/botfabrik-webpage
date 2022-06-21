@@ -1,7 +1,6 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import { Section, Container } from '../styles'
+import { Container, Section } from '../styles'
 
 const Grid = styled(Container)`
   div {
@@ -43,25 +42,23 @@ const query = graphql`
 const KnowHowItem = (
   { frontmatter: { title, summary, image, permalink } },
   index
-) => {
-  return (
-    <Grid left={index % 2} key={permalink}>
-      <div>
-        <h3 css="grid-area: title; margin: 0;">{title}</h3>
-        <img
-          css="grid-area: pit; max-width: 16em; max-height: 8em;"
-          data-src={image.publicURL}
-          className="lozad"
-          loading="lazy"
-          alt={title}
-          width="240"
-          height="140"
-        />
-        <p css="grid-area: content; margin: 0;">{summary}</p>
-      </div>
-    </Grid>
-  )
-}
+) => (
+  <Grid left={index % 2} key={permalink}>
+    <div>
+      <h3 css="grid-area: title; margin: 0;">{title}</h3>
+      <img
+        css="grid-area: pit; max-width: 16em; max-height: 8em;"
+        data-src={image.publicURL}
+        className="lozad"
+        loading="lazy"
+        alt={title}
+        width="240"
+        height="140"
+      />
+      <p css="grid-area: content; margin: 0;">{summary}</p>
+    </div>
+  </Grid>
+)
 
 const KnowHow = () => {
   const { list } = useStaticQuery(query)

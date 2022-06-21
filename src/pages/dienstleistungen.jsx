@@ -1,10 +1,9 @@
-import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/Layout'
-import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
 import Seo from '../components/Seo'
+import { Cols, Container, Section } from '../styles'
 
 const query = graphql`
   query {

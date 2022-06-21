@@ -1,10 +1,9 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import { Container, Section, Cols } from '../styles'
 import LinkItem from '../components/LinkItem'
 import Seo from '../components/Seo'
+import { Cols, Container, Section } from '../styles'
 import { surroundWithSlashes } from '../util'
 
 const FaqPage = ({ data, location }) => {

@@ -1,9 +1,8 @@
-import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { Container as DefaultContainer } from '../styles'
 import logo from '../img/logo.svg'
+import { Container as DefaultContainer } from '../styles'
 
 const HeaderElement = styled.header`
   position: sticky;

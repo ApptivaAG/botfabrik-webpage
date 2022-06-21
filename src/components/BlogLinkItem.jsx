@@ -1,6 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
 import LinkItemDefault from './LinkItem'
 
 const LinkItem = styled(LinkItemDefault)`
@@ -25,6 +24,7 @@ const BlogLinkItem = ({ frontmatter, excerpt }) => (
   >
     <h2
       css="grid-area: title"
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: frontmatter.title }}
     />
     {frontmatter.image && (

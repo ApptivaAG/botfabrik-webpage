@@ -37,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: path.join('/', node.frontmatter.permalink, '/'),
         component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.js`
+          `src/templates/${String(node.frontmatter.templateKey)}.jsx`
         ),
         // additional data can be passed via context
         context: {
@@ -79,7 +79,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: path.join('/', node.frontmatter.permalink, '/'),
         component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.js`
+          `src/templates/${String(node.frontmatter.templateKey)}.jsx`
         ),
         // additional data can be passed via context
         context: {

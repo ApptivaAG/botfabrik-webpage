@@ -1,13 +1,13 @@
 /* eslint-disable no-alert */
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import fetch from 'unfetch'
 import styled from 'styled-components'
+import fetch from 'unfetch'
 
-import Layout from '../components/Layout'
 import BlogLinkItem from '../components/BlogLinkItem'
-import { Container, Section, Cols, Button } from '../styles'
+import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import { Button, Cols, Container, Section } from '../styles'
 
 const ItemBox = styled.div`
   display: flex;
@@ -147,6 +147,7 @@ class Preisrechner extends React.Component {
           this.setState({ name: '', email: '', message: '' })
         })
         .catch(error => {
+          // eslint-disable-next-line no-console
           console.error('Error', error)
           // eslint-disable-next-line no-undef
           alert(
