@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 mkShell{
   buildInputs = [
-    nodejs
+    nodejs-16_x
     autoconf
     automake
     libtool
@@ -10,7 +10,4 @@ mkShell{
     nasm
     python
   ];
-  shellHook = ''
-      export PATH="$PWD/node_modules/.bin/:$PATH"
-  '';
 }
