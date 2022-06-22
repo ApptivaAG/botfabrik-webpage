@@ -1,4 +1,4 @@
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import LinkItemDefault from './LinkItem'
 
@@ -16,20 +16,30 @@ const LinkItem = styled(LinkItemDefault)`
   }
 `
 
-const BlogLinkItem = ({ frontmatter, excerpt }) => (
-  <LinkItem
-    to={`${frontmatter.permalink}/`}
-    key={frontmatter.permalink}
-    align="left"
-  >
+export type BlogLinkItemProps = {
+  excerpt: string
+  permalink: string
+  title: string
+  date: string
+  image?: IGatsbyImageData
+}
+const BlogLinkItem = ({
+  excerpt,
+  permalink,
+  title,
+  date,
+  image,
+}: BlogLinkItemProps) => (
+  <LinkItem to={`${permalink}/`} key={permalink} align="left">
     <h2
       css="grid-area: title"
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: frontmatter.title }}
+      dangerouslySetInnerHTML={{ __html: title }}
     />
-    {frontmatter.image && (
+    {image && (
       <GatsbyImage
-        image={frontmatter.image.childImageSharp.gatsbyImageData}
+        alt={title}
+        image={image}
         css="grid-area: image; justify-self: center;"
       />
     )}
@@ -42,7 +52,7 @@ const BlogLinkItem = ({ frontmatter, excerpt }) => (
         }
       `}
     >
-      <small>{frontmatter.date}</small>
+      {<small>{date}</small>}
     </p>
   </LinkItem>
 )

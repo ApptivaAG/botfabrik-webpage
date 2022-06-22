@@ -7,8 +7,8 @@ import { Container as DefaultContainer } from '../styles'
 const HeaderElement = styled.header`
   position: sticky;
   top: 0;
-  background-color: ${props => props.theme.lightBg};
-  border-bottom: 1px solid ${p => p.theme.darkBg};
+  background-color: ${(props) => props.theme.lightBg};
+  border-bottom: 1px solid ${(p) => p.theme.darkBg};
   z-index: 90;
 `
 
@@ -33,7 +33,7 @@ const Logo = styled.div`
   a {
     display: flex;
     align-items: center;
-    color: ${p => p.theme.text};
+    color: ${(p) => p.theme.text};
     text-decoration: none;
   }
   img {
@@ -53,8 +53,8 @@ const Navigation = styled.nav`
     bottom: 0;
     right: -20rem;
     padding: 1em 1em 1em 0;
-    color: ${props => props.theme.white};
-    background-color: ${p => p.theme.primary};
+    color: ${(props) => props.theme.white};
+    background-color: ${(p) => p.theme.primary};
     transition: all 200ms ease 200ms;
   }
 `
@@ -63,7 +63,7 @@ const MenuButton = styled.div`
   margin-right: -0.5em;
   border: none;
   background-color: transparent;
-  color: ${p => p.theme.text};
+  color: ${(p) => p.theme.text};
   font-weight: 600;
   cursor: pointer;
 
@@ -87,12 +87,12 @@ const NavItemsLink = styled(Link).attrs({
   color: inherit;
 
   &.active {
-    color: ${props => props.theme.lightPrimary};
+    color: ${(props) => props.theme.lightPrimary};
   }
 
   @media (min-width: 840px) {
     &.active {
-      color: ${props => props.theme.primary};
+      color: ${(props) => props.theme.primary};
     }
   }
 
@@ -122,7 +122,7 @@ const Header = () => (
         </Link>
       </Logo>
 
-      <MenuButton tabIndex="0">Menu</MenuButton>
+      <MenuButton tabIndex={0}>Menu</MenuButton>
       <Navigation>
         <NavItemsLink to="/dienstleistungen/" partiallyActive>
           Dienstleistungen

@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, PageProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled, { css } from 'styled-components'
 import ButtonList from '../components/ButtonList'
@@ -73,7 +73,7 @@ const BubbleChatImageFigure = styled.figure`
   }
 `
 
-const BubbleChat = ({ location }) => (
+const BubbleChat = ({ location }: PageProps) => (
   <Layout callToAction={false}>
     <Seo
       title="Bubble Chat - Schnell und einfach zum eigenen Chatbot"

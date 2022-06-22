@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-export default styled.p`
+type ButtonList = { readonly justify?: 'left' | 'center' | 'right' }
+const ButtonList = styled.p<ButtonList>`
   text-align: right;
   display: flex;
   justify-content: ${({ justify = 'center' }) => justify};
@@ -9,3 +10,5 @@ export default styled.p`
     margin-right: 5px;
   }
 `
+
+export default ButtonList

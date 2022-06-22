@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 
 import Layout from '../components/Layout'
 import LinkItem from '../components/LinkItem'
@@ -6,7 +6,7 @@ import Seo from '../components/Seo'
 import { Cols, Container, Section } from '../styles'
 import { surroundWithSlashes } from '../util'
 
-const FaqPage = ({ data, location }) => {
+const FaqPage = ({ data, location }: PageProps<Queries.FaqPageQuery>) => {
   const { faqs } = data
   return (
     <Layout>
@@ -24,10 +24,12 @@ const FaqPage = ({ data, location }) => {
             {faqs.nodes.map(({ frontmatter }) => (
               <LinkItem
                 align="left"
-                to={surroundWithSlashes(frontmatter.permalink)}
-                key={frontmatter.permalink}
+                to={surroundWithSlashes(frontmatter?.permalink)}
+                key={frontmatter?.permalink}
               >
-                <h2 css="margin: 0; font-size: 1em;">{frontmatter.question}</h2>
+                <h2 css="margin: 0; font-size: 1em;">
+                  {frontmatter?.question}
+                </h2>
               </LinkItem>
             ))}
           </Cols>

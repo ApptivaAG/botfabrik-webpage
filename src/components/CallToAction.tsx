@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import { Button, Container, Section } from '../styles'
 
-const CallToAction = ({ dark }) => (
+const CallToAction = ({ dark }: { dark?: boolean }) => (
   <Section css="padding-bottom: 6em;" dark={dark}>
     <Container>
       <h2>Interessiert?</h2>

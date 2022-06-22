@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components'
 
-const Section = styled.section`
+type Section = { readonly dark?: boolean }
+const Section = styled.section<Section>`
   position: relative;
   padding-top: 2em;
   padding-bottom: 4em;
 
-  ${props =>
+  ${(props) =>
     props.dark &&
     css`
       background-color: ${props.theme.lightBg};

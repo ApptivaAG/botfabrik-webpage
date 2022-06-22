@@ -4,15 +4,15 @@ import { Center, Container } from '../styles'
 
 const Wrapper = styled.footer`
   font-size: 0.8em;
-  color: ${p => p.theme.white};
-  background-color: ${p => p.theme.primary};
+  color: ${(p) => p.theme.white};
+  background-color: ${(p) => p.theme.primary};
 
   h2 {
     margin: 2em 0 1em;
   }
 
   a {
-    color: ${p => p.theme.white};
+    color: ${(p) => p.theme.white};
   }
 `
 const Grid = styled.div`
@@ -45,7 +45,7 @@ const ListLinks = styled.ul`
   }
 `
 
-const Footer = ({ about }) => (
+const Footer = ({ about }: { about: string }) => (
   <Wrapper>
     <Container>
       <Grid>

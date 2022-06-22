@@ -38,10 +38,24 @@ const Statement = styled.p`
   font-style: italic;
   margin-top: 0.8em;
 `
-const Testimonial = ({ name, position, statement, avatar, company }) => (
+type Testimonial = NonNullable<
+  Queries.TestimonialsComponentQuery['testimonials']['edges'][number]['node']['frontmatter']
+>
+const Testimonial = ({
+  name,
+  position,
+  statement,
+  avatar,
+  company,
+}: Testimonial) => (
   <TestimonialStyle>
     <Person>
-      <Avatar image={avatar.childImageSharp.gatsbyImageData} alt={name} />
+      {avatar?.childImageSharp?.gatsbyImageData && (
+        <Avatar
+          image={avatar.childImageSharp.gatsbyImageData}
+          alt={name ?? 'Keine Beschreibung'}
+        />
+      )}
       <div>
         <Name>{name}</Name>
         <Position>{position}</Position>
@@ -63,7 +77,7 @@ const TestimonialsStyle = styled.ul`
   list-style: none;
 `
 const query = graphql`
-  {
+  query TestimonialsComponent {
     testimonials: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "testimonial-data" } } }
     ) {
@@ -89,12 +103,13 @@ const query = graphql`
 `
 
 const Testimonials = () => {
-  const { testimonials } = useStaticQuery(query)
+  const { testimonials } =
+    useStaticQuery<Queries.TestimonialsComponentQuery>(query)
   return (
     <TestimonialsStyle>
-      {testimonials.edges.map(edge => {
+      {testimonials.edges.map((edge) => {
         const { name, position, statement, avatar, company } =
-          edge.node.frontmatter
+          edge.node.frontmatter ?? {}
         return (
           <Testimonial
             key={edge.node.id}

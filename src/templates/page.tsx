@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
@@ -24,7 +24,7 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-const FaqTemplate = ({ content, contentComponent, metaData }) => {
+const PageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
   const { title, description, permalink } = metaData
 
@@ -32,7 +32,7 @@ const FaqTemplate = ({ content, contentComponent, metaData }) => {
     font-weight: 600;
   `
   return (
-    <Layout calltoActionDark>
+    <Layout callToActionDark>
       <Seo title={title} description={description} slug={permalink} />
       <Section>
         <Container>
@@ -45,25 +45,25 @@ const FaqTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-const FAQ = ({ data }) => {
-  const { faq } = data
+const Page = ({ data }: PageProps<Queries.PageTemplateQuery>) => {
+  const { page } = data
 
-  faq.frontmatter.excerpt = faq.excerpt
+  page.frontmatter.excerpt = page.excerpt
 
   return (
-    <FaqTemplate
-      content={faq.html}
+    <PageTemplate
+      content={page.html}
       contentComponent={HTMLContent}
-      metaData={faq.frontmatter}
+      metaData={page.frontmatter}
     />
   )
 }
 
-export default FAQ
+export default Page
 
-export const faqQuery = graphql`
-  query FaqByID($id: String!) {
-    faq: markdownRemark(id: { eq: $id }) {
+export const pageQuery = graphql`
+  query PageTemplate($id: String!) {
+    page: markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(pruneLength: 300)

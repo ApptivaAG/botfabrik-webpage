@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
@@ -15,6 +15,7 @@ const HeaderTitle = styled.h1`
   }
   font-weight: 800;
   line-height: 1;
+  text-align: center;
 `
 
 const Header = ({ title }) => (
@@ -23,20 +24,20 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-const ServiceTemplate = ({ content, contentComponent, metaData }) => {
+const FaqTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, subtitle, permalink } = metaData
+  const { title, description, permalink } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
-    <Layout calltoActionDark>
-      <Seo title={title} description={subtitle} slug={permalink} />
+    <Layout callToActionDark>
+      <Seo title={title} description={description} slug={permalink} />
       <Section>
         <Container>
           <Header title={title} />
-          <Description>{subtitle}</Description>
+          <Description>{description}</Description>
           <PostContent content={content} />
         </Container>
       </Section>
@@ -44,31 +45,31 @@ const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-const Service = ({ data }) => {
-  const { service } = data
+const FAQ = ({ data }: PageProps<Queries.FaqTemplateQuery>) => {
+  const { faq } = data
 
-  service.frontmatter.excerpt = service.excerpt
+  faq.frontmatter.excerpt = faq.excerpt
 
   return (
-    <ServiceTemplate
-      content={service.html}
+    <FaqTemplate
+      content={faq.html}
       contentComponent={HTMLContent}
-      metaData={service.frontmatter}
+      metaData={faq.frontmatter}
     />
   )
 }
 
-export default Service
+export default FAQ
 
-export const serviceQuery = graphql`
-  query ServiceByID($id: String!) {
-    service: markdownRemark(id: { eq: $id }) {
+export const faqQuery = graphql`
+  query FaqTemplate($id: String!) {
+    faq: markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        subtitle
+        description
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")

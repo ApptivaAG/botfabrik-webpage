@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, PageProps, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/Layout'
 import LinkItem from '../components/LinkItem'
@@ -6,7 +6,7 @@ import Seo from '../components/Seo'
 import { Cols, Container, Section } from '../styles'
 
 const query = graphql`
-  query {
+  query ServicesPage {
     services: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { regex: "/service/" } } }
       sort: { order: ASC, fields: frontmatter___id }
@@ -25,8 +25,8 @@ const query = graphql`
     }
   }
 `
-const Dienstleistungen = ({ location }) => {
-  const { services } = useStaticQuery(query)
+const Dienstleistungen = ({ location }: PageProps) => {
+  const { services } = useStaticQuery<Queries.ServicesPageQuery>(query)
   return (
     <Layout>
       <Seo
@@ -40,27 +40,25 @@ const Dienstleistungen = ({ location }) => {
           <h1>Dienstleistungen</h1>
 
           <Cols minWidth="320px">
-            {services.nodes.map(
-              ({ frontmatter: { title, subtitle, permalink, image } }) => (
-                <LinkItem
-                  key={permalink}
-                  to={`${permalink}/`}
-                  css="display: flex; flex-direction: column;"
-                >
-                  <h2>{title}</h2>
-                  <p>{subtitle}</p>
-                  <img
-                    css="flex: 1; max-width: 80%; align-self: center; margin-top: 1em; height: 10em;"
-                    data-src={image.publicURL}
-                    className="lozad"
-                    loading="lazy"
-                    alt={title}
-                    width="240"
-                    height="268"
-                  />
-                </LinkItem>
-              )
-            )}
+            {services.nodes.map(({ frontmatter }) => (
+              <LinkItem
+                key={frontmatter?.permalink}
+                to={`${frontmatter?.permalink}/`}
+                css="display: flex; flex-direction: column;"
+              >
+                <h2>{frontmatter?.title}</h2>
+                <p>{frontmatter?.subtitle}</p>
+                <img
+                  css="flex: 1; max-width: 80%; align-self: center; margin-top: 1em; height: 10em;"
+                  data-src={frontmatter?.image?.publicURL}
+                  className="lozad"
+                  loading="lazy"
+                  alt={frontmatter?.title ?? 'Keine Beschreibung'}
+                  width="240"
+                  height="268"
+                />
+              </LinkItem>
+            ))}
           </Cols>
         </Container>
       </Section>
@@ -71,7 +69,7 @@ const Dienstleistungen = ({ location }) => {
             <LinkItem
               css={`
                 background: white;
-                border: 1px solid ${p => p.theme.primary};
+                border: 1px solid ${(p) => p.theme.primary};
               `}
               to="/dienstleistungen/kennenlern-angebot/"
             >
@@ -84,7 +82,7 @@ const Dienstleistungen = ({ location }) => {
             <LinkItem
               css={`
                 background: white;
-                border: 1px solid ${p => p.theme.primary};
+                border: 1px solid ${(p) => p.theme.primary};
               `}
               to="/dienstleistungen/chatbot-check/"
             >
@@ -94,7 +92,7 @@ const Dienstleistungen = ({ location }) => {
             <LinkItem
               css={`
                 background: white;
-                border: 1px solid ${p => p.theme.primary};
+                border: 1px solid ${(p) => p.theme.primary};
               `}
               to="/dienstleistungen/can/"
             >

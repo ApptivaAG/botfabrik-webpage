@@ -26,7 +26,7 @@ const Employee = styled.div`
   margin-right: auto;
 `
 const Avatar = styled(GatsbyImage)`
-  border: 1px solid ${p => p.theme.primary};
+  border: 1px solid ${(p) => p.theme.primary};
   margin-right: 1em;
   margin-bottom: 0.5em;
   transform: translateZ(0); /* Safari bug rounded image flicker  */
@@ -35,7 +35,7 @@ const Info = styled.div``
 
 const Name = styled.h2`
   margin: 0;
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
 `
 const Claim = styled.div`
   font-size: 0.8em;
@@ -57,7 +57,7 @@ const Contact = styled.div`
   }
 `
 const query = graphql`
-  {
+  query EmployeesComponent {
     employees: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___name] }
       filter: { frontmatter: { templateKey: { eq: "employee" } } }
@@ -88,7 +88,7 @@ const query = graphql`
 `
 
 const Employees = () => {
-  const { employees } = useStaticQuery(query)
+  const { employees } = useStaticQuery<Queries.EmployeesComponentQuery>(query)
 
   return (
     <Section id="team" dark>
@@ -100,25 +100,32 @@ const Employees = () => {
           anderem der Fabrik-Bot Pit.
         </p>
         <EmployeeList>
-          {employees.edges.map(edge => {
-            const { claim, contact, preview } = edge.node.frontmatter
+          {employees.edges.map(({ node }) => {
+            const { claim, contact, preview, name } = node.frontmatter ?? {}
             return (
-              <EmployeeWrapper key={edge.node.id}>
+              <EmployeeWrapper key={node.id}>
                 <Employee>
                   <Info>
-                    <Avatar image={preview.childImageSharp.gatsbyImageData} />
-                    <Name />
+                    {preview?.childImageSharp?.gatsbyImageData && (
+                      <Avatar
+                        alt={name ?? 'Anonym'}
+                        image={preview.childImageSharp.gatsbyImageData}
+                      />
+                    )}
+                    <Name>{name}</Name>
                     <Claim>{claim}</Claim>
                   </Info>
-                  <Contact>
-                    <a href={`tel:${contact.tel}`}>{contact.tel}</a>
-                    <a href={`mailto:${contact.mail}`}>{contact.mail}</a>
-                    {contact.twitter && (
-                      <a href={`https://twitter.com/${contact.twitter}`}>
-                        @{contact.twitter}
-                      </a>
-                    )}
-                  </Contact>
+                  {contact && (
+                    <Contact>
+                      <a href={`tel:${contact.tel}`}>{contact.tel}</a>
+                      <a href={`mailto:${contact.mail}`}>{contact.mail}</a>
+                      {contact.twitter && (
+                        <a href={`https://twitter.com/${contact.twitter}`}>
+                          @{contact.twitter}
+                        </a>
+                      )}
+                    </Contact>
+                  )}
                 </Employee>
               </EmployeeWrapper>
             )

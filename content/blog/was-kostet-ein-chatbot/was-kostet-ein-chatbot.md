@@ -10,10 +10,9 @@ image: ./money.jpg
 category:
   - Allgemein
 tag: []
+description: 'Ein häufige Frage die wir erhalten lautet: „Wieviel kostet ein Chatbot?“ Leider ist die Frage nicht immer ganz einfach zu beantworten. Generell gibt es vier Faktoren, welche den grössten Einfluss auf die Kosten haben.'
 seo-title: 'Was kostet ein Chatbot? Was sind die Kostentreiben? - Botfabrik'
 ---
-
-Ein häufige Frage die wir erhalten lautet: „Wieviel kostet ein Chatbot?“ Leider ist die Frage nicht immer ganz einfach zu beantworten. Generell gibt es vier Faktoren, welche den grössten Einfluss auf die Kosten haben.
 
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="383" src="https://www.youtube.com/embed/u3oXI4POVgI?feature=oembed" width="680"></iframe>
 

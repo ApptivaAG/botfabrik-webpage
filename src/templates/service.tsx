@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import styled from 'styled-components'
 
 import Content, { HTMLContent } from '../components/Content'
@@ -15,7 +15,6 @@ const HeaderTitle = styled.h1`
   }
   font-weight: 800;
   line-height: 1;
-  text-align: center;
 `
 
 const Header = ({ title }) => (
@@ -24,20 +23,20 @@ const Header = ({ title }) => (
   </HeadArea>
 )
 
-const PageTemplate = ({ content, contentComponent, metaData }) => {
+const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, description, permalink } = metaData
+  const { title, subtitle, permalink } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
-    <Layout calltoActionDark>
-      <Seo title={title} description={description} slug={permalink} />
+    <Layout callToActionDark>
+      <Seo title={title} description={subtitle} slug={permalink} />
       <Section>
         <Container>
           <Header title={title} />
-          <Description>{description}</Description>
+          <Description>{subtitle}</Description>
           <PostContent content={content} />
         </Container>
       </Section>
@@ -45,31 +44,31 @@ const PageTemplate = ({ content, contentComponent, metaData }) => {
   )
 }
 
-const Page = ({ data }) => {
-  const { page } = data
+const Service = ({ data }: PageProps<Queries.ServiceTemplateQuery>) => {
+  const { service } = data
 
-  page.frontmatter.excerpt = page.excerpt
+  service.frontmatter.excerpt = service.excerpt
 
   return (
-    <PageTemplate
-      content={page.html}
+    <ServiceTemplate
+      content={service.html}
       contentComponent={HTMLContent}
-      metaData={page.frontmatter}
+      metaData={service.frontmatter}
     />
   )
 }
 
-export default Page
+export default Service
 
-export const pageQuery = graphql`
-  query PageByID($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
+export const serviceQuery = graphql`
+  query ServiceTemplate($id: String!) {
+    service: markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        description
+        subtitle
         author
         date(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "DD-MM-YYYY")

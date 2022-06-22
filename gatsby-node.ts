@@ -1,10 +1,14 @@
 import path from 'path'
+import type { GatsbyNode } from 'gatsby'
 
-export const createPages = ({ actions, graphql }) => {
+export const createPages: GatsbyNode['createPages'] = async ({
+  actions,
+  graphql,
+}) => {
   const { createPage } = actions
 
-  const posts = graphql(`
-    {
+  const posts = await graphql<Queries.GatsbyNodeBlogsQuery>(`
+    query GatsbyNodeBlogs {
       allMarkdownRemark(
         limit: 1000
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -21,37 +25,41 @@ export const createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       // eslint-disable-next-line no-console
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+      result.errors.forEach((e: any) => console.error(e.toString()))
+      throw Error(`Error while getting blog posts: ${result.errors}`)
     }
+    if (result.data === undefined) {
+      throw Error('Error: Blog posts query in gatsby-node returned undefined.')
+    }
+    return result.data.allMarkdownRemark.edges
+  })
 
-    const { edges } = result.data.allMarkdownRemark
-
-    return edges.forEach(({ node }, index) => {
-      const prevId = index === 0 ? null : edges[index - 1].node.id
-      const nextId =
-        index === edges.length - 1 ? null : edges[index + 1].node.id
-      const { id } = node
-      createPage({
-        path: path.join('/', node.frontmatter.permalink, '/'),
-        component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.jsx`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-          prevId,
-          nextId,
-        },
-      })
+  posts.forEach(({ node }, index) => {
+    const prevId = index === 0 ? null : posts[index - 1].node.id
+    const nextId = index === posts.length - 1 ? null : posts[index + 1].node.id
+    const { id } = node
+    if (node.frontmatter?.permalink == null) {
+      throw Error(`Error: Permalink no defined for blog post ${id}`)
+    }
+    createPage({
+      path: path.join('/', node.frontmatter.permalink, '/'),
+      component: path.resolve(
+        `src/templates/${String(node.frontmatter.templateKey)}.tsx`
+      ),
+      // additional data can be passed via context
+      context: {
+        id,
+        prevId,
+        nextId,
+      },
     })
   })
 
-  const pages = graphql(`
-    query {
+  const pages = await graphql<Queries.GatsbyNodePagesQuery>(`
+    query GatsbyNodePages {
       allMarkdownRemark(
         limit: 1000
         filter: {
@@ -69,26 +77,31 @@ export const createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
+    if (result.data === undefined) {
+      throw Error('Error: Pages query in gatsby-node returned undefined.')
+    }
 
-    const { edges } = result.data.allMarkdownRemark
-
-    return edges.forEach(({ node }) => {
-      createPage({
-        path: path.join('/', node.frontmatter.permalink, '/'),
-        component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.jsx`
-        ),
-        // additional data can be passed via context
-        context: {
-          id: node.id,
-        },
-      })
-    })
+    return result.data.allMarkdownRemark.edges
   })
 
-  return Promise.all([posts, pages])
+  pages.forEach(({ node }) => {
+    if (node.frontmatter?.permalink == null) {
+      throw Error(`Error: Permalink no defined for page ${node.id}`)
+    }
+
+    createPage({
+      path: path.join('/', node.frontmatter.permalink, '/'),
+      component: path.resolve(
+        `src/templates/${String(node.frontmatter.templateKey)}.tsx`
+      ),
+      // additional data can be passed via context
+      context: {
+        id: node.id,
+      },
+    })
+  })
 }

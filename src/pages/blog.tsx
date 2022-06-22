@@ -1,13 +1,14 @@
-import { graphql } from 'gatsby'
-import BlogLinkItem from '../components/BlogLinkItem'
+import { graphql, PageProps } from 'gatsby'
+import BlogLinkItem, { BlogLinkItemProps } from '../components/BlogLinkItem'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
+import { mapBlogLinkItemData } from '../templates/blog-post'
 
-const BlogPage = ({ data, location }) => {
-  const { blogs } = data
+const BlogPage = ({ data, location }: PageProps<Queries.BlogPageQuery>) => {
+  const blogs = data.blogs.nodes.map(mapBlogLinkItemData) as BlogLinkItemProps[]
   return (
-    <Layout calltoActionDark>
+    <Layout callToActionDark>
       <Seo
         title="Blog"
         description="Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots."
@@ -17,11 +18,14 @@ const BlogPage = ({ data, location }) => {
         <Container>
           <h1>Botfabrik Blog</h1>
           <p>Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots.</p>
-          {blogs.nodes.map(({ excerpt, frontmatter }) => (
+          {blogs.map((blogPost) => (
             <BlogLinkItem
-              key={excerpt}
-              frontmatter={frontmatter}
-              excerpt={excerpt}
+              key={blogPost.excerpt}
+              title={blogPost.title}
+              excerpt={blogPost.excerpt}
+              permalink={blogPost.permalink}
+              date={blogPost.date}
+              image={blogPost.image}
             />
           ))}
         </Container>

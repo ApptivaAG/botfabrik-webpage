@@ -3,7 +3,9 @@ import '@fastly/performance-observer-polyfill/polyfill'
 // Lazy loading images
 import lozad from 'lozad'
 
-export const onRouteUpdate = () => {
+import type { GatsbyBrowser } from 'gatsby'
+
+export const onRouteUpdate: GatsbyBrowser['onRouteUpdate'] = () => {
   const observer = lozad()
   observer.observe()
 }

@@ -139,12 +139,12 @@ const Markdown = styled.div`
     font-size: 0.8em;
   }
 `
-
-const Content = ({ content, className }) => (
+type Props = { content: string; className?: string }
+const Content = ({ content, className }: Props) => (
   <Markdown className={className}>{content}</Markdown>
 )
 
-export const HTMLContent = ({ content, className }) => (
+export const HTMLContent = ({ content, className }: Props) => (
   <Markdown
     className={className}
     dangerouslySetInnerHTML={{ __html: content }}

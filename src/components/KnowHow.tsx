@@ -2,12 +2,13 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Container, Section } from '../styles'
 
-const Grid = styled(Container)`
+type Grid = { readonly left?: boolean }
+const Grid = styled(Container)<Grid>`
   div {
     display: grid;
     grid: 'title' 'pit' 'content';
     @media (min-width: 1024px) {
-      grid: ${props =>
+      grid: ${(props) =>
           props.left
             ? '"pit title title" "pit content content" auto "pit . button" 1fr'
             : '"title title pit" "content content pit" auto ". button pit" 1fr'} / 14em 1fr 14em;
@@ -15,7 +16,7 @@ const Grid = styled(Container)`
     gap: 1em 2em;
     margin: 2em 0;
     padding: 1.5em;
-    background: ${p => p.theme.lightBg};
+    background: ${(p) => p.theme.lightBg};
   }
 `
 
@@ -40,28 +41,31 @@ const query = graphql`
 `
 
 const KnowHowItem = (
-  { frontmatter: { title, summary, image, permalink } },
-  index
-) => (
-  <Grid left={index % 2} key={permalink}>
-    <div>
-      <h3 css="grid-area: title; margin: 0;">{title}</h3>
-      <img
-        css="grid-area: pit; max-width: 16em; max-height: 8em;"
-        data-src={image.publicURL}
-        className="lozad"
-        loading="lazy"
-        alt={title}
-        width="240"
-        height="140"
-      />
-      <p css="grid-area: content; margin: 0;">{summary}</p>
-    </div>
-  </Grid>
-)
+  { frontmatter }: Queries.ListAllKnowHowsQuery['list']['nodes'][number],
+  index: number
+) => {
+  const { title, summary, image, permalink } = frontmatter ?? {}
+  return (
+    <Grid left={Boolean(index % 2)} key={permalink}>
+      <div>
+        <h3 css="grid-area: title; margin: 0;">{title}</h3>
+        <img
+          css="grid-area: pit; max-width: 16em; max-height: 8em;"
+          data-src={image?.publicURL}
+          className="lozad"
+          loading="lazy"
+          alt={title ?? 'Keine Beschreibung'}
+          width="240"
+          height="140"
+        />
+        <p css="grid-area: content; margin: 0;">{summary}</p>
+      </div>
+    </Grid>
+  )
+}
 
 const KnowHow = () => {
-  const { list } = useStaticQuery(query)
+  const { list } = useStaticQuery<Queries.ListAllKnowHowsQuery>(query)
   return (
     <Section>
       <Container>

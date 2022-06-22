@@ -16,6 +16,18 @@ const query = graphql`
     }
   }
 `
+type JSONSchema = {
+  isBlogPost: boolean
+  url: string | undefined
+  urlDefault: string
+  title: string | undefined
+  titleDefault: string
+  image: string | undefined
+  imageDefault: string
+  description: string
+  author: string | undefined
+  date: string | undefined
+}
 const getSchemaOrgJSONLD = ({
   isBlogPost,
   url,
@@ -27,13 +39,13 @@ const getSchemaOrgJSONLD = ({
   description,
   author,
   date,
-}) => {
+}: JSONSchema) => {
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
       url,
-      name: title,
+      name: title || titleDefault,
       alternateName: titleDefault,
     },
   ]
@@ -90,7 +102,25 @@ const getSchemaOrgJSONLD = ({
       ]
     : schemaOrgJSONLD
 }
-
+type BlogPost = {
+  title: string
+  description: string | null
+  image: string | undefined
+  slug: string
+  author: string
+  date: string
+  isBlogPost: true
+}
+type Page = {
+  title: string
+  description?: string
+  image?: string
+  slug: string
+  author?: undefined
+  date?: undefined
+  isBlogPost?: false
+}
+type Props = BlogPost | Page
 const Seo = ({
   title: titleCurrent,
   description: descriptionCurrent,
@@ -98,8 +128,8 @@ const Seo = ({
   slug,
   author,
   date,
-  isBlogPost,
-}) => {
+  isBlogPost = false,
+}: Props) => {
   const {
     title: titleDefault,
     description: descriptionDefault,
@@ -107,22 +137,22 @@ const Seo = ({
     logo: imageDefault,
     twitter,
     fbAppId,
-  } = useStaticQuery(query).site.siteMetadata
+  } = useStaticQuery<Queries.SeoQueryQuery>(query)!.site!.siteMetadata!
 
-  const title = titleCurrent || titleDefault
-  const description = descriptionCurrent || descriptionDefault
-  const url = composeUrl(urlDefault, slug)
-  const image = urlDefault + (imageCurrent || imageDefault)
+  const title = titleCurrent || titleDefault!
+  const description = descriptionCurrent || descriptionDefault!
+  const url = composeUrl(urlDefault!, slug)
+  const image = urlDefault! + (imageCurrent || imageDefault!)
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
     isBlogPost,
     title,
-    titleDefault,
+    titleDefault: titleDefault!,
     image,
-    imageDefault,
+    imageDefault: imageDefault!,
     description,
     url,
-    urlDefault,
+    urlDefault: urlDefault!,
     author,
     date,
   })
@@ -159,11 +189,11 @@ const Seo = ({
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="fb:app_id" content={fbAppId} />
+      <meta property="fb:app_id" content={fbAppId!} />
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={twitter} />
+      <meta name="twitter:creator" content={twitter!} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

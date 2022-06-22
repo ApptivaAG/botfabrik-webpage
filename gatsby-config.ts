@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
     twitter: '@ApptivaTeam',
     fbAppId: '',
   },
+  graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -49,7 +50,7 @@ const config: GatsbyConfig = {
               // base for generating different widths of each image.
               maxWidth: 1024,
               linkImagesToOriginal: false, // because of zoom
-              wrapperStyle: fluidResult =>
+              wrapperStyle: (fluidResult: any) =>
                 fluidResult.aspectRatio < 1.2
                   ? 'max-width: 360px !important;'
                   : 'width: 100%;',

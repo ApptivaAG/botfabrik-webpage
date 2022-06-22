@@ -1,3 +1,4 @@
+import { PageProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import Employees from '../components/Employees'
@@ -5,7 +6,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
 
-const UeberUns = ({ location }) => (
+const UeberUns = ({ location }: PageProps) => (
   <Layout>
     <Seo
       title="Über uns"

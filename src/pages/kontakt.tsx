@@ -1,3 +1,4 @@
+import { PageProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
@@ -34,7 +35,7 @@ const Address = styled.address`
   font-style: normal;
 `
 
-const Kontakt = ({ location }) => (
+const Kontakt = ({ location }: PageProps) => (
   <Layout callToAction={false}>
     <Seo
       title="Kontakt"
@@ -82,8 +83,8 @@ const Kontakt = ({ location }) => (
           title="Google Maps"
           frameBorder="0"
           height="550px"
-          marginHeight="0"
-          marginWidth="0"
+          marginHeight={0}
+          marginWidth={0}
           scrolling="no"
           src="https://maps.google.com/maps?q=Apptiva%20AG,%20Neuenkirchstrasse%2019,%20Sempach%20Station&hl=de&geocode=+&hnear=Apptiva%20AG+Neuenkirchstrasse%2019,+Sempach%20Station&t=m&z=10&iwloc=A&output=embed"
           width="100%"

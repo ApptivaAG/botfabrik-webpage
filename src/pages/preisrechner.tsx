@@ -49,7 +49,7 @@ const Input = styled.input`
   box-sizing: border-box;
 `
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Textarea = props => <Input as="textarea" {...props} />
+const Textarea = (props) => <Input as="textarea" {...props} />
 
 const BASE_PRICE = 19
 
@@ -82,7 +82,7 @@ const heavyWeightFeatures = [
 ]
 
 const blogPostQuery = graphql`
-  query BlogPostByTitle {
+  query BlogPostChatbotCosts {
     blog: markdownRemark(
       frontmatter: { title: { eq: "Was kostet ein Chatbot?" } }
     ) {
@@ -102,9 +102,9 @@ const blogPostQuery = graphql`
   }
 `
 
-const encode = data =>
+const encode = (data) =>
   Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
 
 class Preisrechner extends React.Component {
@@ -146,7 +146,7 @@ class Preisrechner extends React.Component {
           )
           this.setState({ name: '', email: '', message: '' })
         })
-        .catch(error => {
+        .catch((error) => {
           // eslint-disable-next-line no-console
           console.error('Error', error)
           // eslint-disable-next-line no-undef
@@ -196,7 +196,7 @@ class Preisrechner extends React.Component {
                     Häufig gestellte Fragen automatisiert beantworten
                   </ItemDescription>
                   <ItemFeatures>
-                    {lightWeightFeatures.map(f => (
+                    {lightWeightFeatures.map((f) => (
                       <li key={f}>{f}</li>
                     ))}
                   </ItemFeatures>
@@ -211,7 +211,7 @@ class Preisrechner extends React.Component {
                     Komplexe Abläufe abarbeiten und Übergabe an Kundendienst
                   </ItemDescription>
                   <ItemFeatures>
-                    {middleWeightFeatures.map(f => (
+                    {middleWeightFeatures.map((f) => (
                       <li key={f}>{f}</li>
                     ))}
                   </ItemFeatures>
@@ -226,7 +226,7 @@ class Preisrechner extends React.Component {
                     Nahtlose Integration in ihre Geschäftsprozesse
                   </ItemDescription>
                   <ItemFeatures>
-                    {heavyWeightFeatures.map(f => (
+                    {heavyWeightFeatures.map((f) => (
                       <li key={f}>{f}</li>
                     ))}
                   </ItemFeatures>
@@ -301,10 +301,15 @@ class Preisrechner extends React.Component {
             <br />
             <StaticQuery
               query={blogPostQuery}
-              render={data => (
+              render={({ blog }: Queries.BlogPostChatbotCostsQuery) => (
                 <BlogLinkItem
-                  frontmatter={data.blog.frontmatter}
-                  excerpt={data.blog.excerpt}
+                  title={blog?.frontmatter?.title!}
+                  excerpt={blog?.excerpt!}
+                  permalink={blog?.frontmatter?.permalink!}
+                  date={blog?.frontmatter?.date!}
+                  image={
+                    blog?.frontmatter?.image?.childImageSharp?.gatsbyImageData
+                  }
                 />
               )}
             />

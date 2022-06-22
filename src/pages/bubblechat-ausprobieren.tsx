@@ -1,9 +1,10 @@
+import { PageProps } from 'gatsby'
 import ContactForm from '../components/ContactForm'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
 
-const TryBubbleChat = ({ location }) => (
+const TryBubbleChat = ({ location }: PageProps) => (
   <Layout callToAction={false}>
     <Seo title="Bubble Chat ausprobieren" slug={location.pathname} />
     <Section>

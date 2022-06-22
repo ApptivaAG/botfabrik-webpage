@@ -1,4 +1,8 @@
-export const onRenderBody = ({ setPostBodyComponents }) => {
+import type { GatsbySSR } from 'gatsby'
+
+export const onRenderBody: GatsbySSR['onRenderBody'] = ({
+  setPostBodyComponents,
+}) => {
   setPostBodyComponents([
     <script
       id="chatbot"

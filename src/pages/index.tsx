@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, PageProps } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
@@ -60,8 +60,8 @@ const SpeechBubble = styled.div`
   font-size: 1em;
   font-weight: 200;
   padding: 1em 1em;
-  color: ${p => p.theme.text};
-  background-color: ${p => p.theme.darkBg};
+  color: ${(p) => p.theme.text};
+  background-color: ${(p) => p.theme.darkBg};
   margin-left: 1em;
 
   b {
@@ -135,9 +135,9 @@ const Pit = styled.div`
   }
 `
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
   <IndexLayout>
-    <Seo title="Passgenaue Chatbot-Lösungen" />
+    <Seo title="Passgenaue Chatbot-Lösungen" slug="/" />
     <Section css="@media (min-width: 1380px) {margin-top: 2em;}">
       <Grid>
         <div css="grid-area: value-prop">
@@ -156,7 +156,7 @@ const IndexPage = ({ data }) => (
           <img src={pit} alt="Pit" width="190" height="277" />
         </Pit>
         <div css="grid-area: services">
-          <SpeechBubble left>
+          <SpeechBubble>
             Wir unterstützen sie bei ihrem <b>Chatbot-Projekt</b> hinsichtlich
             <List>
               <li>Strategie</li>
@@ -290,24 +290,24 @@ const IndexPage = ({ data }) => (
         <Cols css="margin-bottom: 2em;">
           {data.blogs.edges.map(({ node }) => (
             <LinkItem
-              key={node.frontmatter.permalink}
-              to={`${node.frontmatter.permalink}/`}
+              key={node.frontmatter?.permalink}
+              to={`${node.frontmatter?.permalink}/`}
               css={`
-                background: ${p => p.theme.white};
-                border: 1px solid ${p => p.theme.primary};
+                background: ${(p) => p.theme.white};
+                border: 1px solid ${(p) => p.theme.primary};
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
               `}
             >
-              {node.frontmatter.image && (
+              {node.frontmatter?.image?.childImageSharp?.gatsbyImageData && (
                 <GatsbyImage
                   image={node.frontmatter.image.childImageSharp.gatsbyImageData}
                   alt="Vorschau"
                 />
               )}
-              {node.frontmatter.title}
+              {node.frontmatter?.title}
             </LinkItem>
           ))}
         </Cols>

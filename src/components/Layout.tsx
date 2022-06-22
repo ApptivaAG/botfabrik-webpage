@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import 'normalize.css/normalize.css'
+import { ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import styled, { css, ThemeProvider } from 'styled-components'
 
@@ -14,9 +15,10 @@ const Grid = styled.div`
   grid: auto 1fr auto / auto;
   min-height: 100%;
 `
-const Content = styled.main`
+type Content = { readonly callToAction?: boolean }
+const Content = styled.main<Content>`
   display: block;
-  ${p =>
+  ${(p) =>
     p.callToAction === false &&
     css`
       section:last-child {
@@ -35,31 +37,37 @@ const query = graphql`
     }
   }
 `
-
+type Props = {
+  children: ReactNode
+  className?: string
+  callToAction?: boolean
+  callToActionDark?: boolean
+}
 const Layout = ({
   children,
   className,
   callToAction = true,
-  calltoActionDark,
-}) => {
-  const { about, title } = useStaticQuery(query).site.siteMetadata
+  callToActionDark = false,
+}: Props) => {
+  const { about, title } =
+    useStaticQuery<Queries.LayoutQueryQuery>(query)!.site!.siteMetadata!
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Grid>
-        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title}>
+        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title!}>
           <link
             rel="prefetch"
             href="https://www.googletagmanager.com/gtag/js?id=UA-66015649-4"
           />
         </Helmet>
-        <Header siteTitle={title} />
+        <Header />
         <Content className={className} callToAction={callToAction}>
           {children}
         </Content>
-        {callToAction && <CallToAction dark={calltoActionDark} />}
-        <Footer about={about} />
+        {callToAction && <CallToAction dark={callToActionDark} />}
+        <Footer about={about!} />
       </Grid>
     </ThemeProvider>
   )
