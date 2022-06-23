@@ -1,14 +1,14 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import 'normalize.css/normalize.css'
 import { ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import styled, { css, ThemeProvider } from 'styled-components'
-
 import { GlobalStyle, theme } from '../styles'
-import '../styles/fonts.css'
 import CallToAction from './CallToAction'
 import Footer from './Footer'
 import Header from './Header'
+
+import 'normalize.css/normalize.css'
+import '../styles/fonts.css'
 
 const Grid = styled.div`
   display: grid;

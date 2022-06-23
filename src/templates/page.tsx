@@ -1,8 +1,9 @@
+// Layout needs to be on the top for the css order to be correct
+import Layout from '../components/Layout'
+
 import { graphql, PageProps } from 'gatsby'
 import styled from 'styled-components'
-
 import Content, { HTMLContent } from '../components/Content'
-import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
 

@@ -1,11 +1,12 @@
+// Layout needs to be on the top for the css order to be correct
+import Layout from '../components/Layout'
+
 import { graphql, PageProps } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import { FC } from 'react'
 import styled from 'styled-components'
-
 import BlogLinkItem, { BlogLinkItemProps } from '../components/BlogLinkItem'
 import Content, { HTMLContent } from '../components/Content'
-import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
 

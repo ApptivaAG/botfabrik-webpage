@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-require('prismjs/themes/prism.css')
+import 'prismjs/themes/prism.css'
 
 const Markdown = styled.div`
   margin-bottom: 4rem;
