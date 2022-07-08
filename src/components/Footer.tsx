@@ -60,7 +60,7 @@ const Footer = ({ about }: { about: string }) => (
             by Apptiva AG
           </p>
           <p>
-            Neuenkirchstrasse 19 <br />
+            Eichweid 1 <br />
             6203 Sempach Station
           </p>
           <p>
