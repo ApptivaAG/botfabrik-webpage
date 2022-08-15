@@ -56,12 +56,7 @@ const Layout = ({
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Grid>
-        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title!}>
-          <link
-            rel="prefetch"
-            href="https://www.googletagmanager.com/gtag/js?id=UA-66015649-4"
-          />
-        </Helmet>
+        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title!} />
         <Header />
         <Content className={className} callToAction={callToAction}>
           {children}
