@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react'
+import { navigate } from 'gatsby'
+import React, { ChangeEvent, FormEvent, HTMLProps } from 'react'
 import styled from 'styled-components'
 import fetch from 'unfetch'
 import { Button } from '../styles'
@@ -51,21 +52,9 @@ class ContactForm extends React.Component {
         body,
       })
         .then(() => {
-          // eslint-disable-next-line no-unused-expressions
-          typeof window !== 'undefined' &&
-            // eslint-disable-next-line no-undef
-            window.gtag('event', 'submit', {
-              event_category: 'form',
-              event_label: this.props.subject,
-              value: 50,
-            })
-          // eslint-disable-next-line no-alert, no-undef
-          alert(
-            'Danke! Wir haben Ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
-          )
-          this.setState({ name: '', email: '', message: '', company: '' })
+          navigate('/formular-gesendet/')
         })
-        .catch(error => {
+        .catch((error) => {
           /* eslint-disable-next-line no-console */
           console.log('Error', error)
           /* eslint-disable-next-line no-alert, no-undef */
