@@ -18,15 +18,34 @@ const Input = styled.input`
   box-sizing: border-box;
 `
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Textarea = props => <Input as="textarea" {...props} />
+const Textarea = (props: HTMLProps<HTMLInputElement>) => (
+  <Input as="textarea" {...props} />
+)
 
-const encode = data =>
-  Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+type Props = {
+  subject?: string
+  buttonText?: string
+}
+type State = {
+  name: string
+  email: string
+  message: string
+  company: string
+  'bot-field'?: string
+}
+
+type FormFields = State & {
+  'form-name': string
+  subject: string
+}
+const encode = (data: FormFields) =>
+  (Object.keys(data) as (keyof FormFields)[])
+    .map(
+      (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key]!)}`
+    )
     .join('&')
-
-class ContactForm extends React.Component {
-  constructor(props) {
+class ContactForm extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props)
     this.state = { name: '', email: '', message: '', company: '' }
 
@@ -36,7 +55,7 @@ class ContactForm extends React.Component {
 
   /* Here’s the juicy bit for posting the form submission */
 
-  handleSubmit(e) {
+  handleSubmit(e: FormEvent<HTMLFormElement>) {
     if (this.state.email === '' || this.state.name === '') {
       /* eslint-disable-next-line no-alert, no-undef */
       alert('Ups, ein zwingendes Feld ist noch nicht ausgefüllt.')
@@ -66,8 +85,8 @@ class ContactForm extends React.Component {
     e.preventDefault()
   }
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+  handleChange(e: ChangeEvent<HTMLInputElement>) {
+    this.setState({ [e.target.name]: e.target.value } as FormFields)
   }
 
   render() {
