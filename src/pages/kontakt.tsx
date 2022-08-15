@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import ContactForm from '../components/ContactForm'
+import GoogleTag from '../components/GoogleTag'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
@@ -37,6 +38,7 @@ const Address = styled.address`
 
 const Kontakt = ({ location }: PageProps) => (
   <Layout callToAction={false}>
+    <GoogleTag />
     <Seo
       title="Kontakt"
       description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."

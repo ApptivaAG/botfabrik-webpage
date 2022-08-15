@@ -1,5 +1,5 @@
-import { Link, PageProps } from 'gatsby'
-import styled from 'styled-components'
+import { navigate, PageProps } from 'gatsby'
+import GoogleTag from '../components/GoogleTag'
 
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
@@ -7,6 +7,7 @@ import { Container, Section } from '../styles'
 
 const FormularGesendet = ({ location }: PageProps) => (
   <Layout callToAction={false}>
+    <GoogleTag />
     <Seo
       title="Formular gesendet"
       description="Vielen Danke für Ihre Kontaktaufnahme."
@@ -20,7 +21,9 @@ const FormularGesendet = ({ location }: PageProps) => (
           bei Ihnen.
         </p>
         <p>
-          <Link to="/kontakt/">Zurück</Link>
+          <a css="cursor: pointer;" onClick={() => navigate(-1)}>
+            Zurück
+          </a>
         </p>
       </Container>
     </Section>
