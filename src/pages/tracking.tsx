@@ -6,13 +6,13 @@ const useLocalStorage = <T,>(
   storageKey: string,
   fallbackState: T
 ): [T, (t: T) => void] => {
-  const storedValue = localStorage.getItem(storageKey)
+  const storedValue = isBrowser ? localStorage.getItem(storageKey) : null
   const [value, setValue] = useState<T>(
     storedValue ? JSON.parse(storedValue) : fallbackState
   )
 
   useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(value))
+    isBrowser && localStorage.setItem(storageKey, JSON.stringify(value))
   }, [value, storageKey])
 
   return [value, setValue]
@@ -50,5 +50,7 @@ const Tracking = () => {
     </Layout>
   )
 }
+
+const isBrowser = typeof window !== 'undefined'
 
 export default Tracking
