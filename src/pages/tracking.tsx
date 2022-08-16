@@ -1,28 +1,16 @@
-import { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
+import { useLocalStorage } from '../components/useLocalStorage'
 import { Container } from '../styles'
-
-const useLocalStorage = <T,>(
-  storageKey: string,
-  fallbackState: T
-): [T, (t: T) => void] => {
-  const storedValue = isBrowser ? localStorage.getItem(storageKey) : null
-  const [value, setValue] = useState<T>(
-    storedValue ? JSON.parse(storedValue) : fallbackState
-  )
-
-  useEffect(() => {
-    isBrowser && localStorage.setItem(storageKey, JSON.stringify(value))
-  }, [value, storageKey])
-
-  return [value, setValue]
-}
 
 const Tracking = () => {
   const [ignore, setIgnore] = useLocalStorage('plausible_ignore', false)
 
   return (
     <Layout>
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <Container>
         <h1>Analytics Exclude</h1>
         <p>
@@ -50,7 +38,4 @@ const Tracking = () => {
     </Layout>
   )
 }
-
-const isBrowser = typeof window !== 'undefined'
-
 export default Tracking

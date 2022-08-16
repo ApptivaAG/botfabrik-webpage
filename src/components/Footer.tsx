@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { Center, Container } from '../styles'
+import TrackingPreview from './TrackingPreview'
 
 const Wrapper = styled.footer`
   font-size: 0.8em;
@@ -141,7 +142,8 @@ const Footer = ({ about }: { about: string }) => (
             ©
           </span>{' '}
           2016 - {new Date().getFullYear()} Botfabrik - eine Initiative der
-          Apptiva AG
+          Apptiva AG&ensp;|&ensp;
+          <TrackingPreview />
         </p>
       </CopyWrite>
     </Container>
