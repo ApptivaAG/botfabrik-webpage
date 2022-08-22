@@ -1,5 +1,6 @@
 ---
-templateKey: employee-page
+templateKey: employee
+permalink: /robin-geissmann
 slug: /robin-geissmann
 name: Robin Geissmann
 claim: Findiger Forscher

@@ -1,5 +1,6 @@
 ---
-templateKey: employee-page
+templateKey: employee
+permalink: /mariana-barbosa
 slug: /mariana-barbosa
 name: Mariana Barbosa
 claim: Furchtlose Macherin
