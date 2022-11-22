@@ -5,6 +5,7 @@
   "author": "Apptiva AG",
   "dependencies": {
     "@fastly/performance-observer-polyfill": "^2.0.0",
+    "@gatsbyjs/reach-router": "^1.3.9",
     "babel-plugin-styled-components": "^2.0.7",
     "clean-css": "^5.3.1",
     "gatsby": "^4.21.1",
@@ -13,8 +14,8 @@
     "gatsby-plugin-image": "^2.21.0",
     "gatsby-plugin-manifest": "^4.21.0",
     "gatsby-plugin-plausible": "^0.0.7",
+    "gatsby-plugin-pnpm": "^1.2.10",
     "gatsby-plugin-preload-fonts": "^3.21.0",
-    "gatsby-plugin-react-helmet": "^5.21.0",
     "gatsby-plugin-sharp": "^4.21.0",
     "gatsby-plugin-sitemap": "^5.21.0",
     "gatsby-plugin-styled-components": "^5.21.0",
