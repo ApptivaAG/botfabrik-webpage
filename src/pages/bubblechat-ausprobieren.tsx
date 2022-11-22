@@ -21,3 +21,13 @@ const TryBubbleChat = ({ location }: PageProps) => (
 )
 
 export default TryBubbleChat
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Bubble Chat ausprobieren"
+      description="Probieren sie Bubble Chat aus und überzeugen sie sich von der Leistung von Bubble Chat."
+      slug={location.pathname}
+    />
+  )
+}

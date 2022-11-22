@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import Helmet from 'react-helmet'
 import { composeUrl } from '../util'
 
 const query = graphql`
@@ -110,6 +109,7 @@ type BlogPost = {
   author: string
   date: string
   isBlogPost: true
+  children?: React.ReactNode
 }
 type Page = {
   title: string
@@ -119,6 +119,7 @@ type Page = {
   author?: undefined
   date?: undefined
   isBlogPost?: false
+  children?: React.ReactNode
 }
 type Props = BlogPost | Page
 const Seo = ({
@@ -129,6 +130,7 @@ const Seo = ({
   author,
   date,
   isBlogPost = false,
+  children,
 }: Props) => {
   const {
     title: titleDefault,
@@ -139,7 +141,7 @@ const Seo = ({
     fbAppId,
   } = useStaticQuery<Queries.SeoQueryQuery>(query)!.site!.siteMetadata!
 
-  const title = titleCurrent || titleDefault!
+  const title = `${titleCurrent} | ${titleDefault}` || titleDefault!
   const description = descriptionCurrent || descriptionDefault!
   const url = composeUrl(urlDefault!, slug)
   const image = urlDefault! + (imageCurrent || imageDefault!)
@@ -158,7 +160,7 @@ const Seo = ({
   })
 
   return (
-    <Helmet htmlAttributes={{ lang: 'de-CH' }}>
+    <>
       <title>{title}</title>
 
       {/* General tags */}
@@ -197,7 +199,8 @@ const Seo = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-    </Helmet>
+      {children}
+    </>
   )
 }
 

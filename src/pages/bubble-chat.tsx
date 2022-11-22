@@ -75,13 +75,6 @@ const BubbleChatImageFigure = styled.figure`
 
 const BubbleChat = ({ location }: PageProps) => (
   <Layout callToAction={false}>
-    <Seo
-      title="Bubble Chat - Schnell und einfach zum eigenen Chatbot"
-      description={`Bubble Chat erlaubt es, schnell und einfach 
-        mit einem Chatbot häufig gestellte Fragen auf der eigenen Webseite zu beantworten.`}
-      slug={location.pathname}
-    />
-
     <Section>
       <Container>
         <h1>Bubble Chat</h1>
@@ -117,7 +110,7 @@ const BubbleChat = ({ location }: PageProps) => (
           <div css="min-width:300px;margin-top:20px">
             <h2>Funktionen</h2>
             <FieldSet>
-              {basicFeatures.map(f => (
+              {basicFeatures.map((f) => (
                 <Feature key={f}>
                   <label htmlFor={f}>
                     <FeatureInput checked readOnly type="checkbox" name={f} />
@@ -156,3 +149,14 @@ const BubbleChat = ({ location }: PageProps) => (
 )
 
 export default BubbleChat
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Bubble Chat - Schnell und einfach zum eigenen Chatbot"
+      description={`Bubble Chat erlaubt es, schnell und einfach 
+        mit einem Chatbot häufig gestellte Fragen auf der eigenen Webseite zu beantworten.`}
+      slug={location.pathname}
+    />
+  )
+}

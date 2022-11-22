@@ -10,12 +10,6 @@ const FaqPage = ({ data, location }: PageProps<Queries.FaqPageQuery>) => {
   const { faqs } = data
   return (
     <Layout>
-      <Seo
-        title="Häufig gestellte Fragen"
-        description="Häufig gestellte Fragen zu Chatbots, der Funktionsweise von Chatbots, der Entwicklung von Chatbots und zur Botfabrik."
-        slug={location.pathname}
-      />
-
       <Section>
         <Container>
           <h1>Häufig gestellte Fragen</h1>
@@ -40,6 +34,16 @@ const FaqPage = ({ data, location }: PageProps<Queries.FaqPageQuery>) => {
 }
 
 export default FaqPage
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Häufig gestellte Fragen"
+      description="Häufig gestellte Fragen zu Chatbots, der Funktionsweise von Chatbots, der Entwicklung von Chatbots und zur Botfabrik."
+      slug={location.pathname}
+    />
+  )
+}
 
 export const faqPageQuery = graphql`
   query FaqPage {

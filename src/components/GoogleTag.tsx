@@ -1,21 +1,20 @@
-import { Helmet } from 'react-helmet'
-
 const GoogleTag = () => {
   return (
-    <Helmet>
+    <>
       <script
+        id="gtm-script"
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-869564557"
       ></script>
-      <script>
+      <script id="gtm-push-config">
         {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-869564557');
-        `}
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-869564557');
+          `}
       </script>
-    </Helmet>
+    </>
   )
 }
 

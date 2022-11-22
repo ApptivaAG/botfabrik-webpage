@@ -21,3 +21,13 @@ const OrderBubbleChat = ({ location }: PageProps) => (
 )
 
 export default OrderBubbleChat
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Bubble Chat bestellen"
+      description="Bestellen sie Bubble Chat und starten mit uns in die Chatbot-Zukunft."
+      slug={location.pathname}
+    />
+  )
+}

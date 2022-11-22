@@ -29,12 +29,6 @@ const Dienstleistungen = ({ location }: PageProps) => {
   const { services } = useStaticQuery<Queries.ServicesPageQuery>(query)
   return (
     <Layout>
-      <Seo
-        title="Dienstleistungen"
-        description="Wir bieten Dienstleistungen rund um die Entwicklung und den Betrieb von Chatbots."
-        slug={location.pathname}
-      />
-
       <Section>
         <Container>
           <h1>Dienstleistungen</h1>
@@ -108,3 +102,13 @@ const Dienstleistungen = ({ location }: PageProps) => {
 }
 
 export default Dienstleistungen
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Dienstleistungen"
+      description="Wir bieten Dienstleistungen rund um die Entwicklung und den Betrieb von Chatbots."
+      slug={location.pathname}
+    />
+  )
+}

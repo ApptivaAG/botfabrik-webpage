@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { ReactNode } from 'react'
-import Helmet from 'react-helmet'
 import styled, { css, ThemeProvider } from 'styled-components'
 import { GlobalStyle, theme } from '../styles'
 import CallToAction from './CallToAction'
@@ -56,7 +55,6 @@ const Layout = ({
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Grid>
-        <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title!} />
         <Header />
         <Content className={className} callToAction={callToAction}>
           {children}
@@ -68,3 +66,13 @@ const Layout = ({
   )
 }
 export default Layout
+
+export const Head = () => {
+  const { title } =
+    useStaticQuery<Queries.LayoutQueryQuery>(query)!.site!.siteMetadata!
+  return (
+    <>
+      <title>{title}</title>
+    </>
+  )
+}

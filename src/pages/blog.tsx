@@ -9,11 +9,6 @@ const BlogPage = ({ data, location }: PageProps<Queries.BlogPageQuery>) => {
   const blogs = data.blogs.nodes.map(mapBlogLinkItemData) as BlogLinkItemProps[]
   return (
     <Layout callToActionDark>
-      <Seo
-        title="Blog"
-        description="Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots."
-        slug={location.pathname}
-      />
       <Section>
         <Container>
           <h1>Botfabrik Blog</h1>
@@ -35,6 +30,16 @@ const BlogPage = ({ data, location }: PageProps<Queries.BlogPageQuery>) => {
 }
 
 export default BlogPage
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Blog"
+      description="Im Botfabrik Blog teilen wir unsere Erfahrung rund um Chatbots."
+      slug={location.pathname}
+    />
+  )
+}
 
 export const blogPageQuery = graphql`
   query BlogPage {

@@ -5,14 +5,8 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
 
-const FormularGesendet = ({ location }: PageProps) => (
+const FormularGesendet = () => (
   <Layout callToAction={false}>
-    <GoogleTag />
-    <Seo
-      title="Formular gesendet"
-      description="Vielen Danke für Ihre Kontaktaufnahme."
-      slug={location.pathname}
-    />
     <Section>
       <Container>
         <h1>Danke!</h1>
@@ -31,3 +25,16 @@ const FormularGesendet = ({ location }: PageProps) => (
 )
 
 export default FormularGesendet
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <>
+      <Seo
+        title="Formular gesendet"
+        description="Vielen Danke für Ihre Kontaktaufnahme."
+        slug={location.pathname}
+      />
+      <GoogleTag />
+    </>
+  )
+}

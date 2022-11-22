@@ -61,6 +61,11 @@ const Service = ({ data }: PageProps<Queries.ServiceTemplateQuery>) => {
 
 export default Service
 
+export const Head = ({ data }: PageProps<Queries.ServiceTemplateQuery>) => {
+  const { title, subtitle, permalink } = data.service?.frontmatter ?? {}
+  return <Seo title={title} description={subtitle} slug={permalink} />
+}
+
 export const serviceQuery = graphql`
   query ServiceTemplate($id: String!) {
     service: markdownRemark(id: { eq: $id }) {

@@ -27,14 +27,13 @@ const Header = ({ title }) => (
 
 const FaqTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, description, permalink } = metaData
+  const { title, description } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
     <Layout callToActionDark>
-      <Seo title={title} description={description} slug={permalink} />
       <Section>
         <Container>
           <Header title={title} />
@@ -61,6 +60,11 @@ const FAQ = ({ data }: PageProps<Queries.FaqTemplateQuery>) => {
 }
 
 export default FAQ
+
+export const Head = ({ data }: PageProps<Queries.FaqTemplateQuery>) => {
+  const { title, description, permalink } = data.faq?.frontmatter ?? {}
+  return <Seo title={title} description={description} slug={permalink} />
+}
 
 export const faqQuery = graphql`
   query FaqTemplate($id: String!) {

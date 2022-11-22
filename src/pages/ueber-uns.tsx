@@ -41,3 +41,13 @@ const UeberUns = ({ location }: PageProps) => (
 )
 
 export default UeberUns
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Über uns"
+      description="Wer und was ist die Botfabrik? Entwickler von über 30 Chatbots für kleine und grosse Unternehmen. Seit 2016 mit 7 Mitarbeiter in Luzern stationiert."
+      slug={location.pathname}
+    />
+  )
+}

@@ -137,7 +137,6 @@ const Pit = styled.div`
 
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
   <IndexLayout>
-    <Seo title="Passgenaue Chatbot-Lösungen" slug="/" />
     <Section css="@media (min-width: 1380px) {margin-top: 2em;}">
       <Grid>
         <div css="grid-area: value-prop">
@@ -320,6 +319,10 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
 )
 
 export default IndexPage
+
+export const Head = () => {
+  return <Seo title="Passgenaue Chatbot-Lösungen" slug="/" />
+}
 
 export const indexPageQuery = graphql`
   query IndexPage {

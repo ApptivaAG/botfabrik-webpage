@@ -2,7 +2,9 @@ import type { GatsbySSR } from 'gatsby'
 
 export const onRenderBody: GatsbySSR['onRenderBody'] = ({
   setPostBodyComponents,
+  setHtmlAttributes,
 }) => {
+  setHtmlAttributes({ lang: 'de-CH' })
   setPostBodyComponents([
     <script
       id="chatbot"

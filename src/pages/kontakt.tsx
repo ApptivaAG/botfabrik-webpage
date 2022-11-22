@@ -38,12 +38,6 @@ const Address = styled.address`
 
 const Kontakt = ({ location }: PageProps) => (
   <Layout callToAction={false}>
-    <GoogleTag />
-    <Seo
-      title="Kontakt"
-      description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."
-      slug={location.pathname}
-    />
     <Section>
       <Container>
         <h1>Kontakt</h1>
@@ -97,3 +91,16 @@ const Kontakt = ({ location }: PageProps) => (
 )
 
 export default Kontakt
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <>
+      <Seo
+        title="Kontakt"
+        description="Haben sie ein Anliegen im Berich von Chatbots? Nehmens sie Kontakt mit uns auf."
+        slug={location.pathname}
+      />
+      <GoogleTag />
+    </>
+  )
+}

@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import { useLocalStorage } from '../components/useLocalStorage'
 import { Container } from '../styles'
@@ -8,9 +7,6 @@ const Tracking = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
       <Container>
         <h1>Analytics Exclude</h1>
         <p>
@@ -39,3 +35,5 @@ const Tracking = () => {
   )
 }
 export default Tracking
+
+export const Head = () => <meta name="robots" content="noindex" />

@@ -27,14 +27,13 @@ const Header = ({ title }) => (
 
 const PageTemplate = ({ content, contentComponent, metaData }) => {
   const PostContent = contentComponent || Content
-  const { title, description, permalink } = metaData
+  const { title, description } = metaData
 
   const Description = styled.p`
     font-weight: 600;
   `
   return (
     <Layout callToActionDark>
-      <Seo title={title} description={description} slug={permalink} />
       <Section>
         <Container>
           <Header title={title} />
@@ -61,6 +60,11 @@ const Page = ({ data }: PageProps<Queries.PageTemplateQuery>) => {
 }
 
 export default Page
+
+export const Head = ({ data }: PageProps<Queries.PageTemplateQuery>) => {
+  const { title, description, permalink } = data.page?.frontmatter ?? {}
+  return <Seo title={title} description={description} slug={permalink} />
+}
 
 export const pageQuery = graphql`
   query PageTemplate($id: String!) {

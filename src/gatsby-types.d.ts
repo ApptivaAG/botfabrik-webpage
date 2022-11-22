@@ -1367,7 +1367,7 @@ type GatsbyImageFormat =
   | 'auto'
   | 'avif'
   | 'jpg'
-  | 'NO_CHANGE'
+  | ''
   | 'png'
   | 'webp';
 
@@ -1384,7 +1384,7 @@ type GatsbyImagePlaceholder =
 
 type ImageCropFocus =
   | 17
-  | 'CENTER'
+  | 0
   | 2
   | 16
   | 1
@@ -1403,10 +1403,10 @@ type ImageFit =
   | 'outside';
 
 type ImageFormat =
-  | 'AUTO'
+  | ''
   | 'avif'
   | 'jpg'
-  | 'NO_CHANGE'
+  | ''
   | 'png'
   | 'webp';
 
@@ -3257,6 +3257,7 @@ type SiteFieldsEnum =
   | 'children.parent.internal.type'
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
+  | 'graphqlTypegen.generateOnBuild'
   | 'graphqlTypegen.typesOutputPath'
   | 'host'
   | 'id'
@@ -3561,10 +3562,12 @@ type SiteFunctionSortInput = {
 };
 
 type SiteGraphqlTypegen = {
+  readonly generateOnBuild: Maybe<Scalars['Boolean']>;
   readonly typesOutputPath: Maybe<Scalars['String']>;
 };
 
 type SiteGraphqlTypegenFilterInput = {
+  readonly generateOnBuild: InputMaybe<BooleanQueryOperatorInput>;
   readonly typesOutputPath: InputMaybe<StringQueryOperatorInput>;
 };
 

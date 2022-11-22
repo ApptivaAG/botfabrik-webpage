@@ -217,6 +217,12 @@ export const mapBlogPostData = (
 
 export default BlogPost
 
+export const Head = ({ data }: PageProps<Queries.BlogPostTemplateQuery>) => {
+  const { title, description, permalink } =
+    data.markdownRemark?.frontmatter ?? {}
+  return <Seo title={title} description={description} slug={permalink} />
+}
+
 export const pageQuery = graphql`
   query BlogPostTemplate($id: String!, $prevId: String, $nextId: String) {
     markdownRemark(id: { eq: $id }) {

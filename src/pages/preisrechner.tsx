@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, PageProps, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import fetch from 'unfetch'
@@ -163,11 +163,6 @@ class Preisrechner extends React.Component {
 
     return (
       <Layout callToAction={false}>
-        <Seo
-          title="Preisrechner"
-          description="Wie viel kostet ein Bot?"
-          slug="preisrechner"
-        />
         <Section>
           <Container>
             <h1>Preisgestaltung</h1>
@@ -321,3 +316,13 @@ class Preisrechner extends React.Component {
 }
 
 export default Preisrechner
+
+export const Head = ({ location }: PageProps) => {
+  return (
+    <Seo
+      title="Preisrechner"
+      description="Wie viel kostet ein Bot?"
+      slug={location.pathname}
+    />
+  )
+}
