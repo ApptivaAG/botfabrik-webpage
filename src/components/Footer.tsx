@@ -98,13 +98,7 @@ const Footer = ({ about }: { about: string }) => (
             </li>
             <hr />
             <li>
-              <a
-                href="https://apptiva.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apptiva AG
-              </a>
+              <Link to="/apptiva/">Apptiva AG</Link>
             </li>
             <li>
               <a
@@ -141,8 +135,8 @@ const Footer = ({ about }: { about: string }) => (
           <span role="img" aria-label="copywrite">
             ©
           </span>{' '}
-          2016 - {new Date().getFullYear()} Botfabrik - eine Initiative der
-          Apptiva AG&ensp;|&ensp;
+          2016 - {new Date().getFullYear()} Botfabrik - eine Initiative der{' '}
+          <Link to="/apptiva/">Apptiva</Link> AG&ensp;|&ensp;
           <TrackingPreview />
         </p>
       </CopyWrite>
