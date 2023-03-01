@@ -19,12 +19,12 @@ Die Softwarelösungen sind flexibel und können an die individuellen Anforderung
 
 Zu den Dienstleistungen der Apptiva gehören:
 
-- Webapp- und mobile App-Entwicklung
-- Chatbots
-- Produkt-Konfiguratoren
-- Individuelle Webshops für grosse Unternehmen
-- Digitalisierung von Geschäftsprozessen
-- Weiterentwicklung von bestehenden Apps und Produkten
+- [Webapp- und mobile App-Entwicklung](https://apptiva.ch/individuelle-entwicklung/)
+- [Chatbots](https://apptiva.ch/chatbots/)
+- [Produkt-Konfiguratoren](https://apptiva.ch/produktkonfiguratoren/)
+- [Individuelle Webshops für grosse Unternehmen](https://apptiva.ch/einzigartiger-webshop/)
+- [Digitalisierung von Geschäftsprozessen](https://apptiva.ch/digitalisierung-unternehmen/)
+- [Weiterentwicklung von bestehenden Apps und Produkten](https://apptiva.ch/unterstuetzung/)
 
 Zusätzlich zu den Dienstleistungen bietet die Apptiva AG auch folgende Produkte an:
 
