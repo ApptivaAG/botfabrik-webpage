@@ -7,7 +7,7 @@ author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./org.svg
 id: 50
-summary: Ein Chatbot hat auch Einfluss auf die tägliche Arbeit einer Organisation. Wer pflegt den Chatbot? Wer macht Live-Chat? Wie arbeiten Fachabteilungen zusammen? Wir helfen ihnen, den Chatbot optimal in ihr Unternehmen einzubinden.
+summary: Ein Chatbot hat auch Einfluss auf die tägliche Arbeit einer Organisation. Wer pflegt den Chatbot? Wer macht Live-Chat? Wie arbeiten Fachabteilungen zusammen? Wir helfen Ihnen, den Chatbot optimal in Ihr Unternehmen einzubinden.
 ---
 
-Ein Chatbot hat auch Einfluss auf die tägliche Arbeit einer Organisation. Wer pflegt den Chatbot? Wer macht Live-Chat? Wie arbeiten Fachabteilungen zusammen? Wir helfen ihnen, den Chatbot optimal in ihr Unternehmen einzubinden.
+Ein Chatbot hat auch Einfluss auf die tägliche Arbeit einer Organisation. Wer pflegt den Chatbot? Wer macht Live-Chat? Wie arbeiten Fachabteilungen zusammen? Wir helfen Ihnen, den Chatbot optimal in Ihr Unternehmen einzubinden.
