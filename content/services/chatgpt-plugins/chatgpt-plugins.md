@@ -1,7 +1,7 @@
 ---
-id: 70
+id: 1
 title: ChatGPT Plugins
-subtitle: Dank OpenAPI-Plugins kann ChatGPT mit Anwendungen von Drittanbietern verbunden werden.
+subtitle: Implementierung von ChatGPT Plugins
 date: '2023-04-10T11:09:49+00:00'
 status: publish
 permalink: /dienstleistungen/chatgpt-plugins
