@@ -7,7 +7,7 @@ author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./nlp.svg
 id: 20
-summary: Wir haben Erfahrung bei der Wahl der passenden NLP-Komponente (Natural Language Processing), um ihre Anforderungen zu decken. Mit unserer Unterstützung können sie die besten Resultate erzielen.
+summary: Wir haben Erfahrung bei der Wahl der passenden NLP-Komponente (Natural Language Processing), um Ihre Anforderungen zu decken. Mit unserer Unterstützung können Sie die besten Resultate erzielen.
 ---
 
-Wir haben Erfahrung bei der Wahl der passenden NLP-Komponente (Natural Language Processing), um ihre Anforderungen zu decken. Mit unserer Unterstützung können sie die besten Resultate erzielen.
+Wir haben Erfahrung bei der Wahl der passenden NLP-Komponente (Natural Language Processing), um Ihre Anforderungen zu decken. Mit unserer Unterstützung können Sie die besten Resultate erzielen.

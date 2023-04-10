@@ -7,7 +7,7 @@ author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./inhalte.svg
 id: 10
-summary: Nach über zwei Dutzend Chatbot-Projekten und vielzähligen Workshops zusammen mit unseren Kunden ist das Erarbeiten von Chatbots mit ansprechendem Inhalt für uns nichts Aussergewöhnliches mehr. Nutzen sie unser Knowhow.
+summary: Nach über zwei Dutzend Chatbot-Projekten und vielzähligen Workshops zusammen mit unseren Kunden ist das Erarbeiten von Chatbots mit ansprechendem Inhalt für uns nichts Aussergewöhnliches mehr. Nutzen Sie unser Knowhow.
 ---
 
-Nach über zwei Dutzend Chatbot-Projekten und vielzähligen Workshops zusammen mit unseren Kunden ist das Erarbeiten von Chatbots mit ansprechendem Inhalt für uns nichts Aussergewöhnliches mehr. Nutzen sie unser Knowhow.
+Nach über zwei Dutzend Chatbot-Projekten und vielzähligen Workshops zusammen mit unseren Kunden ist das Erarbeiten von Chatbots mit ansprechendem Inhalt für uns nichts Aussergewöhnliches mehr. Nutzen Sie unser Knowhow.
