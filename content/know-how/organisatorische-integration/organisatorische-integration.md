@@ -2,7 +2,7 @@
 title: 'Organisatorische Integration'
 date: '2020-01-26T11:09:49+00:00'
 status: publish
-permalink: /know-how/organisatorische-integration
+permalink: integration
 author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./org.svg

@@ -2,7 +2,7 @@
 title: 'Chatbot-Konversation und Inhalte'
 date: '2020-01-26T11:09:49+00:00'
 status: publish
-permalink: /know-how/chatbot-inhalte
+permalink: inhalte-erarbeiten
 author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./inhalte.svg

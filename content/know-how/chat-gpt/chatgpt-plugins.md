@@ -2,7 +2,7 @@
 title: 'ChatGPT Plugins'
 date: '2023-04-10T11:09:49+00:00'
 status: publish
-permalink: /know-how/chatgpt-plugins
+permalink: chatgpt-plugins
 author: 'Markus Tanner'
 templateKey: know-how
 image: ./OpenAI_Logo.svg

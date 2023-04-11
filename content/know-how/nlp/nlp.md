@@ -2,7 +2,7 @@
 title: 'Natürliche Sprachverarbeitung (NLP)'
 date: '2020-01-26T12:09:49+00:00'
 status: publish
-permalink: /know-how/nlp
+permalink: entwicklung
 author: 'Philip Schönholzer'
 templateKey: know-how
 image: ./nlp.svg

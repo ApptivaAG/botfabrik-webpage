@@ -30,11 +30,11 @@ Für einen Anwendungsfall können mehrere Plugins kombiniert werden. So kann z.B
 
 Mithilfe von Plugins kann man ChatGPT ermöglichen, Dinge zu tun wie zum Beispiel:
 
-- Abrufen von Echtzeit-Informationen
+- Abrufen von Echtzeit-Informationen<br/>
   z.B. Sportergebnisse, Börsenkurse, die neuesten Nachrichten, etc.
-- Abrufen von Informationen aus der Wissensdatenbank
+- Abrufen von Informationen aus der Wissensdatenbank<br/>
   z.B. Firmendokumente, persönliche Notizen, etc.
-- Aktionen im Namen des Benutzers durchführen
+- Aktionen im Namen des Benutzers durchführen<br/>
   z.B. Essen bestellen, Zutaten zur Einkaufsliste hinzufügen, etc.
 
 ### Funktionsweise
