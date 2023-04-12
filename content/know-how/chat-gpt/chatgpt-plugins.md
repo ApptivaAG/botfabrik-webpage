@@ -5,7 +5,7 @@ status: publish
 permalink: chatgpt-plugins
 author: 'Markus Tanner'
 templateKey: know-how
-image: ./OpenAI_Logo.svg
+image: ./chatgpt.svg
 id: 5
 summary: OpenAI wirbelt die Chatbot-Welt mit ChatGPT gerade ziemlich durcheinander. Dank Plugins kann ChatGPT mit eigenen Inhalten erweitert werden. Gerne setzen wir ChatGPT-Plugins für Sie um.
 ---

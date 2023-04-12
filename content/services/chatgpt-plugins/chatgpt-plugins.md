@@ -7,7 +7,7 @@ status: publish
 permalink: /dienstleistungen/chatgpt-plugins
 author: 'Markus Tanner'
 templateKey: service
-image: ./OpenAI_Logo.svg
+image: ./chatgpt.svg
 ---
 
 Plugins helfen ChatGPT (Chatbot Generative Pre-trained Transformer), auf aktuelle Informationen zuzugreifen, Berechnungen durchzuführen oder Dienste von Drittanbietern zu nutzen. Mit Ihrem eigenen ChatGPT Plugin können Sie Ihren Mitarbeitern und Kunden Zugang zu Daten Ihres Unternehmens ermöglichen.
