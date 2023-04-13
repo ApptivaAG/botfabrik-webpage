@@ -147,8 +147,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
             </small>
           </h1>
           <ValueProposition>
-            Sorgen sie für echte <b>Entlastung</b> mit integrierten, passgenauen{' '}
-            <b>Chatbots</b>, die ihre Anwender begeistern.
+            Sorgen Sie für echte <b>Entlastung</b> mit integrierten, passgenauen{' '}
+            <b>Chatbots</b>, die Ihre Anwender begeistern.
           </ValueProposition>
         </div>
         <Pit>
@@ -156,7 +156,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
         </Pit>
         <div css="grid-area: services">
           <SpeechBubble>
-            Wir unterstützen sie bei ihrem <b>Chatbot-Projekt</b> hinsichtlich
+            Wir unterstützen Sie bei Ihrem <b>Chatbot-Projekt</b> hinsichtlich
             <List>
               <li>Strategie</li>
               <li>Konzept und Inhalte</li>
