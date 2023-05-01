@@ -13,12 +13,12 @@ import { Container, Section } from '../styles'
 const HeadArea = styled.div``
 
 const HeaderTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 1.8rem;
   @media (min-width: 640px) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   font-weight: 800;
-  line-height: 1;
+  line-height: 0.9em;
   text-align: center;
   hyphens: auto;
 `

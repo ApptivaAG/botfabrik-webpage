@@ -2,7 +2,7 @@
 title: 'Hohe Usability und ansprechendes Design'
 date: '2020-02-18T10:09:49+00:00'
 status: publish
-permalink: /know-how/usability-design
+permalink: entwicklung
 author: 'Markus Tanner'
 templateKey: know-how
 image: ./ansprechend.svg

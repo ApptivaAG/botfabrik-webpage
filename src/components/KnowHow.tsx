@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Container, Section } from '../styles'
 
@@ -17,6 +17,18 @@ const Grid = styled(Container)<Grid>`
     margin: 2em 0;
     padding: 1.5em;
     background: ${(p) => p.theme.lightBg};
+  }
+`
+
+const KnowHowCard = styled.div`
+  color: black;
+
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:active {
+    transform: scale(0.98);
   }
 `
 
@@ -47,19 +59,24 @@ const KnowHowItem = (
   const { title, summary, image, permalink } = frontmatter ?? {}
   return (
     <Grid left={Boolean(index % 2)} key={permalink}>
-      <div>
-        <h3 css="grid-area: title; margin: 0;">{title}</h3>
-        <img
-          css="grid-area: pit; max-width: 16em; max-height: 8em;"
-          data-src={image?.publicURL}
-          className="lozad"
-          loading="lazy"
-          alt={title ?? 'Keine Beschreibung'}
-          width="240"
-          height="140"
-        />
-        <p css="grid-area: content; margin: 0;">{summary}</p>
-      </div>
+      <Link
+        key={frontmatter?.permalink}
+        to={`../dienstleistungen/${frontmatter?.permalink}/`}
+      >
+        <KnowHowCard>
+          <h3 css="grid-area: title; margin: 0;">{title}</h3>
+          <img
+            css="grid-area: pit; max-width: 16em; max-height: 8em;"
+            data-src={image?.publicURL}
+            className="lozad"
+            loading="lazy"
+            alt={title ?? 'Keine Beschreibung'}
+            width="240"
+            height="140"
+          />
+          <p css="grid-area: content; margin: 0;">{summary}</p>
+        </KnowHowCard>
+      </Link>
     </Grid>
   )
 }

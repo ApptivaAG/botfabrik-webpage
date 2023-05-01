@@ -142,7 +142,7 @@ class Preisrechner extends React.Component {
         .then(() => {
           // eslint-disable-next-line no-undef
           alert(
-            'Danke! Wir haben ihre Nachricht erhalten und melden uns so bald wie möglich bei ihnen.'
+            'Danke! Wir haben ihre Nachricht erhalten und melden uns so bald wie möglich bei Ihnen.'
           )
           this.setState({ name: '', email: '', message: '' })
         })
@@ -151,7 +151,7 @@ class Preisrechner extends React.Component {
           console.error('Error', error)
           // eslint-disable-next-line no-undef
           alert(
-            `Leider hat dies nicht funktioniert. Entschuldigen sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken, melden wir uns sofort bei ihnen.`
+            `Leider hat dies nicht funktioniert. Entschuldigen Sie die Umstände. Wenn Sie uns auf info@apptiva.ch ein Email schicken, melden wir uns sofort bei ihnen.`
           )
         })
     }
@@ -172,7 +172,7 @@ class Preisrechner extends React.Component {
               angepasst sein muss, damit er seine Aufgabe gut erfüllen kann. Wir
               geben ihrem Chatbot eine Persönlichkeit, die zu ihrem
               einzigartigen Unternehmen passt. Die Individualität der Bots hat
-              einen direkten Einfluss auf den Preis. Um ihnen eine Idee über die
+              einen direkten Einfluss auf den Preis. Um Ihnen eine Idee über die
               Preisgestaltung zu vermitteln, haben wir hier drei Beispiele
               zusammengestellt.
             </p>
@@ -234,7 +234,7 @@ class Preisrechner extends React.Component {
               <br />
               <br />
               <p>
-                Egal wie gross ihre Ambitionen sind, wir begleiten sie durch das
+                Egal wie gross ihre Ambitionen sind, wir begleiten Sie durch das
                 gesamte Chatbot Projekt. Angefangen bei der Inhaltsaufbereitung
                 und -strukturierung, über die Entwicklung und Integration in
                 ihre Umgebung, bis hin zum Training und Betrieb des Chatbots.
@@ -243,7 +243,7 @@ class Preisrechner extends React.Component {
               </p>
               <br />
               <br />
-              <h3>Kontaktieren sie uns</h3>
+              <h3>Kontaktieren Sie uns</h3>
               <br />
               <p hidden>
                 <label htmlFor="bot-field">

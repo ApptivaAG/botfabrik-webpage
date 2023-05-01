@@ -32,7 +32,7 @@ Neue Benutzer sind notwendig, um eine aktive Benutzerzahl zu behalten. Attraktiv
 
 ### Anzahl wiederkehrende Benutzer
 
-Wiederkehrende Benutzer sind ein Zeichen dafür, dass ihnen der Chatbot einen konkreten Nutzen gebracht hat und sie ihn wohl auch weiterempfehlen würden.
+Wiederkehrende Benutzer sind ein Zeichen dafür, dass Ihnen der Chatbot einen konkreten Nutzen gebracht hat und sie ihn wohl auch weiterempfehlen würden.
 
 ### Anzahl Chats
 
