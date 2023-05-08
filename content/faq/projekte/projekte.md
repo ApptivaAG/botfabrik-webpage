@@ -9,7 +9,26 @@ id: 228
 question: Was für Chatbot-Projekte hat die Botfabrik bereits umgesetzt?
 ---
 
-Eine Auswahl der Bots, welche erfolgreich in der Botfabrik aufgewachsen sind.
+Eine Auswahl der Bots, welche erfolgreich mit der Botfabrik gewachsen sind.
+
+## Die Schweizerische Post
+
+![Post Chatbot](post-chatbot.png)
+
+Der Post Chatbot unterstützt den Kundendienst der Schweizerischen Post. Der Chatbot bewältigt ein grosses Volumen von Anfragen rund um den Versand und den Empfang von Briefen und Paketen.
+Wenn der Chatbot eine komplexere Anfrage nicht selbst beantworten kann, hat er die Möglichkeit, diese an den Live-Chat weiterzuleiten. Nebst der Weboberfläche steht der Chatbot auch via WhatsApp zur Verfügung.
+
+Seit 2018 unterstützen wir die Post bei der Entwicklung des Chatbots. Zum einen stehen wir von der Botfabrik beratend zur Seite, zum anderen entwickeln wir aktiv an der Logik und am Content Management System des Chatbots mit.
+
+Für Unternehmen: **Die Post**
+
+## Ausgleichskasse Solothurn
+
+![Ausgleichskasse Solothurn Chatbot](akso-chatbot.jpg)
+
+Öufi ist der Chatbot der Ausgleichskasse Solothurn (AKSO). Vor allem Anfang Jahr gehen beim Kundendienst sehr viele Anfragen ein. Öufi sorgt für Entlastung und hilft weiter bei Fragen zum Thema "Individuelle Prämienverbilligung". So können sich die Mitarbeiter den komplexeren Anfragen widmen.
+
+Für Unternehmen: **Ausgleichskasse Solothurn**
 
 ## Roche Lehrstellen-Chatbot
 
