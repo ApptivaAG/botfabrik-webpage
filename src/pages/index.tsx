@@ -153,9 +153,11 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
     </Section>
     <Section>
       <Container>
-        <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
-        <Customers />
+        <DeemphasizedTitle css="margin-bottom: 0;">
+          Auswahl unserer Kunden
+        </DeemphasizedTitle>
       </Container>
+      <Customers />
     </Section>
     <Section dark>
       <Container>

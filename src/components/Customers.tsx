@@ -27,7 +27,7 @@ const CustomerList = () => (
         src="../img/post-2.svg"
         loading="eager"
         alt="Die Post"
-        height={60}
+        height={80}
         placeholder="none"
       />
     </li>
@@ -42,7 +42,7 @@ const CustomerList = () => (
     </li>
     <li>
       <StaticImage
-        style={{ marginTop: '.2em' }}
+        style={{ marginTop: '.6em' }}
         src="../img/allianz-cinema-logo.png"
         loading="eager"
         alt="Allianz Cinema Logo"
@@ -57,7 +57,7 @@ const CustomerList = () => (
         loading="eager"
         alt="Suva"
         placeholder="none"
-        height={50}
+        height={30}
       />
     </li>
     <li>
@@ -92,7 +92,7 @@ const CustomerList = () => (
         src="../img/akso.svg"
         loading="eager"
         alt="Ausgleichskasse Solothurn"
-        height={50}
+        height={40}
         placeholder="none"
       />
     </li>
@@ -114,11 +114,10 @@ const Customers = () => (
 
 const MarqueeStyle = styled.div`
   overflow: hidden;
-  width: 100vw;
   max-width: 100%;
 
   .marquee {
-    width: clamp(160rem, 300%, 240rem);
+    width: clamp(100rem, 200%, 150rem);
     margin-block: 1rem;
     position: relative;
   }
