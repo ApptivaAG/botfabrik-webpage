@@ -18,7 +18,7 @@ const CustomerList = () => (
         src="../img/roche.svg"
         loading="eager"
         alt="Berufsbildung von F. Hoffmann-La Roche AG"
-        height={45}
+        height={50}
         placeholder="none"
       />
     </li>
@@ -47,6 +47,16 @@ const CustomerList = () => (
         loading="eager"
         alt="Allianz Cinema Logo"
         height={50}
+        placeholder="none"
+      />
+    </li>
+    <li>
+      <StaticImage
+        style={{ marginTop: '.8em' }}
+        src="../img/energie360.svg"
+        loading="eager"
+        alt="Energie 360°"
+        height={30}
         placeholder="none"
       />
     </li>
