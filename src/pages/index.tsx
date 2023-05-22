@@ -151,15 +151,17 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
         </ButtonList>
       </Grid>
     </Section>
-    <Section dark>
+    <Section>
       <Container>
         <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
         <Customers />
-
-        <DeemphasizedTitle css="margin-top: 3em;">
+      </Container>
+    </Section>
+    <Section dark>
+      <Container>
+        <DeemphasizedTitle css="margin-top: 2em;">
           Testimonials
         </DeemphasizedTitle>
-
         <Testimonials />
       </Container>
     </Section>
