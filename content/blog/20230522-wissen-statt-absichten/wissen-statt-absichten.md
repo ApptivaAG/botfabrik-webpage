@@ -6,10 +6,10 @@ image: ./wissen-extrahieren.jpeg
 date: '2023-05-22'
 author: Philip Schönholzer
 description: Ein revolutionärer Durchbruch hat den Aufwand für das Aufsetzen und Pflegen von Chatbots drastisch reduziert. Erfahre, wie Chatbots heute innerhalb eines Tages eingerichtet werden können und kaum noch menschliche Pflege benötigen.
-categories: 
+categories:
 ---
 
-Herzlich willkommen zum heutigen Blogpost! Heute möchte ich über eine bemerkenswerte Entwicklung im Bereich der Chatbots sprechen, die den Aufwand für ihr Aufsetzen und ihre Pflege förmlich in Luft aufgelöst hat. Bis vor kurzem war es eine zeitaufwendige Aufgabe, einen Chatbot zu trainieren und zu warten. Man musste sich um die Erstellung und Aktualisierung von Absichten und Antworten kümmern, was einen beträchtlichen Aufwand bedeutete. Doch heute ist alles anders.
+Heute möchte ich über eine bemerkenswerte Entwicklung im Bereich der Chatbots schreiben, die den Aufwand fürs Aufsetzen und die Pflege förmlich in Luft aufgelöst hat. Bis vor kurzem war es eine zeitraubende Aufgabe, einen Chatbot zu trainieren und zu warten. Man musste sich um die Erstellung und Aktualisierung von Absichten und Antworten kümmern, was einen beträchtlichen Aufwand bedeutete. Doch heute ist alles anders.
 
 ## Gestern: Absichten trainieren und Antworten erfassen
 
@@ -31,6 +31,6 @@ Durch diese automatisierte Extraktion können Unternehmen und Organisationen erh
 
 ## Fazit
 
-Insgesamt hat sich der Aufwand für das Aufsetzen und Pflegen von Chatbots drastisch reduziert. Dank der automatisierten Extraktion von Antworten aus Webseiten oder Dokumenten können Unternehmen nun innerhalb kürzester Zeit einen hochfunktionalen Chatbot bereitstellen. Der Chatbot ist in der Lage, eine Vielzahl von Fragen zu beantworten und seine Antworten dynamisch zu aktualisieren, wenn sich der zugrunde liegende Inhalt ändert.
+Insgesamt hat sich der Aufwand für das Aufsetzen und Pflegen von Chatbots drastisch reduziert. Dank der automatisierten Extraktion von Antworten aus Webseiten oder Dokumenten können Unternehmen nun innerhalb kürzester Zeit einen hochfunktionalen Chatbot bereitstellen. Der Chatbot ist in der Lage, eine Vielzahl von Fragen zu beantworten und seine Antworten dynamisch zu aktualisieren, wenn sich der zur Verfügung gestellte Inhalt ändert.
 
 Es ist faszinierend zu sehen, wie der Einsatz von künstlicher Intelligenz und automatisierter Extraktion von Informationen die Art und Weise, wie wir mit Wissen interagieren, grundlegend verändert.
