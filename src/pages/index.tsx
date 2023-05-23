@@ -13,18 +13,7 @@ import { Button, Cols, Container, DeemphasizedTitle, Section } from '../styles'
 import arrowBottom from '../img/arrowBottom.svg'
 import arrowLeft from '../img/arrowLeft.svg'
 import pit from '../img/pit.svg'
-
-import akso from '../img/akso.svg'
-import allianz from '../img/allianz-cinema-logo.png'
-import energie360 from '../img/energie360.svg'
-import kaio from '../img/kanton-bern.svg'
-import luks from '../img/luzerner-kantonsspital.svg'
-import maxonMotor from '../img/maxon-motor-2.svg'
-import post from '../img/post-2.svg'
-import ringier from '../img/ringier-logo-3.svg'
-import roche from '../img/roche.svg'
-import stzhfd from '../img/stadt-zuerich-finanzdepartement.svg'
-import suva from '../img/suva.svg'
+import Customers from '../components/Customers'
 
 const IndexLayout = styled(Layout)`
   h2 {
@@ -101,21 +90,6 @@ const List = styled.ul`
   }
 `
 
-const Customers = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 -0.5rem;
-
-  & > img {
-    flex: 0 1 8rem;
-    width: 100%;
-    margin: 1em 2em;
-    max-width: 8em;
-  }
-`
-
 const ButtonList = styled.div`
   grid-area: c2a;
   justify-self: center;
@@ -177,108 +151,19 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
         </ButtonList>
       </Grid>
     </Section>
+    <Section>
+      <Container>
+        <DeemphasizedTitle css="margin-bottom: 0;">
+          Auswahl unserer Kunden
+        </DeemphasizedTitle>
+      </Container>
+      <Customers />
+    </Section>
     <Section dark>
       <Container>
-        <DeemphasizedTitle>Auswahl unserer Kunden</DeemphasizedTitle>
-        <Customers>
-          <img
-            className="lozad"
-            data-src={ringier}
-            loading="lazy"
-            alt="Ringier Logo"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            data-src={roche}
-            loading="lazy"
-            alt="Berufsbildung von F. Hoffmann-La Roche AG"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            data-src={allianz}
-            loading="lazy"
-            alt="Allianz Cinema Logo"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            data-src={energie360}
-            loading="lazy"
-            alt="Energie 360°"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            data-src={maxonMotor}
-            loading="lazy"
-            alt="maxon motor"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            data-src={post}
-            loading="lazy"
-            alt="Die Post"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            css="height: 1.2em;"
-            data-src={suva}
-            loading="lazy"
-            alt="Suva"
-            width="160"
-            height="50"
-          />
-          <img
-            className="lozad"
-            css="height: 2em;"
-            data-src={luks}
-            loading="lazy"
-            alt="Luzerner Kantonsspital"
-            height="24"
-            width="160"
-          />
-          <img
-            className="lozad"
-            css="height: 4em;"
-            data-src={kaio}
-            loading="lazy"
-            alt="Amt für Informatik und Organisation des Kantons Bern (KAIO)"
-            height="50"
-            width="160"
-          />
-          <img
-            className="lozad"
-            css="height: 4em;"
-            data-src={stzhfd}
-            loading="lazy"
-            alt="Stadt Zürich Finanzdepartement"
-            height="60"
-            width="160"
-          />
-          <img
-            className="lozad"
-            css="height: 4em;"
-            data-src={akso}
-            loading="lazy"
-            alt="Ausgleichskasse Solothurn"
-            height="80"
-            width="160"
-          />
-        </Customers>
-        <DeemphasizedTitle css="margin-top: 3em;">
+        <DeemphasizedTitle css="margin-top: 2em;">
           Testimonials
         </DeemphasizedTitle>
-
         <Testimonials />
       </Container>
     </Section>
@@ -292,8 +177,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => (
               key={node.frontmatter?.permalink}
               to={`${node.frontmatter?.permalink}/`}
               css={`
-                background: ${(p) => p.theme.white};
-                border: 1px solid ${(p) => p.theme.primary};
+                background: ${(p: any) => p.theme.white};
+                border: 1px solid ${(p: any) => p.theme.primary};
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
