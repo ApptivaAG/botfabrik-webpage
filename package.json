@@ -42,9 +42,9 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "start": "npm run develop",
+    "start": "npm run dev",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "serve": "serve ./public",
     "preload-fonts": "gatsby-preload-fonts",
     "clean": "gatsby clean",

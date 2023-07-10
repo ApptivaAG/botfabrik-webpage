@@ -20,10 +20,6 @@ const Markdown = styled.div`
     max-height: 22rem;
   }
 
-  a {
-    word-break: break-all;
-  }
-
   .container {
     margin-right: auto;
     margin-left: auto;

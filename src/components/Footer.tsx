@@ -137,6 +137,8 @@ const Footer = ({ about }: { about: string }) => (
           </span>{' '}
           2016 - {new Date().getFullYear()} Botfabrik - eine Initiative der{' '}
           <Link to="/apptiva/">Apptiva</Link> AG&ensp;|&ensp;
+          <Link to="/datenschutzerklaerung/">Datenschutzerklärung</Link>{' '}
+          &ensp;|&ensp;
           <TrackingPreview />
         </p>
       </CopyWrite>
