@@ -46,10 +46,23 @@ const Author = styled.span`
 const Date = styled.span`
   font-weight: 400;
 `
-const Published = ({ author, date }: { author: string; date: string }) => (
+const Published = ({
+  author,
+  date,
+  update,
+}: {
+  author: string
+  date: string
+  update: string | null
+}) => (
   <Div>
     Publiziert von <Author>{author.replace('-', ' ')}</Author> am{' '}
     <Date>{date}</Date>
+    {update && (
+      <span>
+        , Update am <Date>{update}</Date>
+      </span>
+    )}
   </Div>
 )
 
@@ -98,6 +111,8 @@ type BlogPostTemplate = {
     author: string
     date: string
     isoDate: string
+    update: string | null
+    isoUpdate: string | null
     permalink: string
   }
   renderComponent: FC<{ content: string; className?: string }>
@@ -119,6 +134,8 @@ const BlogPostTemplate = ({
     author,
     date,
     isoDate,
+    update,
+    isoUpdate,
     permalink,
     content,
   } = post
@@ -131,6 +148,7 @@ const BlogPostTemplate = ({
         image={imageUrl ?? undefined}
         author={author}
         date={isoDate}
+        update={isoUpdate}
         slug={permalink}
         isBlogPost
       />
@@ -138,7 +156,7 @@ const BlogPostTemplate = ({
         <Container>
           <Header title={title} image={image} />
           <Description>{description}</Description>
-          {author && <Published author={author} date={date} />}
+          {author && <Published author={author} date={date} update={update} />}
           <PostContent content={content} />
           <Navigation next={next} prev={prev} />
         </Container>
@@ -208,6 +226,8 @@ export const mapBlogPostData = (
     description: blogPost.frontmatter.description,
     date: blogPost.frontmatter.date,
     isoDate: blogPost.frontmatter.isoDate,
+    update: blogPost.frontmatter.update,
+    isoUpdate: blogPost.frontmatter.isoUpdate,
     author: blogPost.frontmatter.author,
     image: blogPost.frontmatter.image?.childImageSharp?.gatsbyImageData ?? null,
     imageUrl: blogPost.frontmatter.image?.childImageSharp?.resize?.src ?? null,
@@ -234,7 +254,9 @@ export const pageQuery = graphql`
         description
         author
         date(formatString: "DD.MM.YYYY")
+        update(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "YYYY-MM-DD")
+        isoUpdate: date(formatString: "YYYY-MM-DD")
         permalink
         image {
           childImageSharp {
