@@ -6,7 +6,9 @@ import { Container, Section } from '../styles'
 import { mapBlogLinkItemData } from '../templates/blog-post'
 
 const BlogPage = ({ data, location }: PageProps<Queries.BlogPageQuery>) => {
-  const blogs = data.blogs.nodes.map(mapBlogLinkItemData) as BlogLinkItemProps[]
+  const blogs = data.blogs.nodes.map(
+    mapBlogLinkItemData
+  ) as (BlogLinkItemProps & { update: string | null })[]
   return (
     <Layout callToActionDark>
       <Section>
@@ -19,7 +21,7 @@ const BlogPage = ({ data, location }: PageProps<Queries.BlogPageQuery>) => {
               title={blogPost.title}
               excerpt={blogPost.excerpt}
               permalink={blogPost.permalink}
-              date={blogPost.date}
+              date={blogPost.update ?? blogPost.date}
               image={blogPost.image}
             />
           ))}
@@ -54,6 +56,7 @@ export const blogPageQuery = graphql`
           title
           permalink
           date(formatString: "DD.MM.YYYY")
+          update(formatString: "DD.MM.YYYY")
           image {
             childImageSharp {
               gatsbyImageData(width: 260, layout: FIXED, placeholder: BLURRED)

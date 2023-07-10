@@ -126,32 +126,10 @@ const BlogPostTemplate = ({
   next,
 }: BlogPostTemplate) => {
   const PostContent = renderComponent || Content
-  const {
-    title,
-    image,
-    imageUrl,
-    description,
-    author,
-    date,
-    isoDate,
-    update,
-    isoUpdate,
-    permalink,
-    content,
-  } = post
+  const { title, image, description, author, date, update, content } = post
 
   return (
     <Layout callToActionDark>
-      <Seo
-        title={title}
-        description={description}
-        image={imageUrl ?? undefined}
-        author={author}
-        date={isoDate}
-        update={isoUpdate}
-        slug={permalink}
-        isBlogPost
-      />
       <Section>
         <Container>
           <Header title={title} image={image} />
@@ -238,9 +216,20 @@ export const mapBlogPostData = (
 export default BlogPost
 
 export const Head = ({ data }: PageProps<Queries.BlogPostTemplateQuery>) => {
-  const { title, description, permalink } =
-    data.markdownRemark?.frontmatter ?? {}
-  return <Seo title={title} description={description} slug={permalink} />
+  const post = mapBlogPostData(data.markdownRemark)
+
+  return (
+    <Seo
+      title={post.title}
+      description={post.description}
+      image={post.imageUrl ?? undefined}
+      author={post.author}
+      date={post.isoDate}
+      update={post.isoUpdate}
+      slug={post.permalink}
+      isBlogPost
+    />
+  )
 }
 
 export const pageQuery = graphql`
@@ -256,7 +245,7 @@ export const pageQuery = graphql`
         date(formatString: "DD.MM.YYYY")
         update(formatString: "DD.MM.YYYY")
         isoDate: date(formatString: "YYYY-MM-DD")
-        isoUpdate: date(formatString: "YYYY-MM-DD")
+        isoUpdate: update(formatString: "YYYY-MM-DD")
         permalink
         image {
           childImageSharp {

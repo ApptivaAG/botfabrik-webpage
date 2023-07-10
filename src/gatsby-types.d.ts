@@ -821,6 +821,7 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.frontmatter.tag'
   | 'childMarkdownRemark.frontmatter.templateKey'
   | 'childMarkdownRemark.frontmatter.title'
+  | 'childMarkdownRemark.frontmatter.update'
   | 'childMarkdownRemark.headings'
   | 'childMarkdownRemark.headings.depth'
   | 'childMarkdownRemark.headings.id'
@@ -1101,6 +1102,7 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.frontmatter.tag'
   | 'childrenMarkdownRemark.frontmatter.templateKey'
   | 'childrenMarkdownRemark.frontmatter.title'
+  | 'childrenMarkdownRemark.frontmatter.update'
   | 'childrenMarkdownRemark.headings'
   | 'childrenMarkdownRemark.headings.depth'
   | 'childrenMarkdownRemark.headings.id'
@@ -2332,6 +2334,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.tag'
   | 'frontmatter.templateKey'
   | 'frontmatter.title'
+  | 'frontmatter.update'
   | 'headings'
   | 'headings.depth'
   | 'headings.id'
@@ -2450,10 +2453,19 @@ type MarkdownRemarkFrontmatter = {
   readonly tag: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly templateKey: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
+  readonly update: Maybe<Scalars['Date']>;
 };
 
 
 type MarkdownRemarkFrontmatter_dateArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type MarkdownRemarkFrontmatter_updateArgs = {
   difference: InputMaybe<Scalars['String']>;
   formatString: InputMaybe<Scalars['String']>;
   fromNow: InputMaybe<Scalars['Boolean']>;
@@ -2508,6 +2520,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly tag: InputMaybe<StringQueryOperatorInput>;
   readonly templateKey: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly update: InputMaybe<DateQueryOperatorInput>;
 };
 
 type MarkdownRemarkFrontmatterSkills = {
@@ -4573,7 +4586,7 @@ type WebPOptions = {
 type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogPageQuery = { readonly blogs: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly id: string, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
+type BlogPageQuery = { readonly blogs: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly id: string, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly update: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null }> } };
 
 type BlogPostChatbotCostsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -4587,7 +4600,7 @@ type BlogPostTemplateQueryVariables = Exact<{
 }>;
 
 
-type BlogPostTemplateQuery = { readonly markdownRemark: { readonly id: string, readonly html: string | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly date: string | null, readonly permalink: string | null, readonly isoDate: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly resize: { readonly src: string | null } | null } | null } | null } | null } | null, readonly next: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly prev: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null };
+type BlogPostTemplateQuery = { readonly markdownRemark: { readonly id: string, readonly html: string | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly date: string | null, readonly update: string | null, readonly permalink: string | null, readonly isoDate: string | null, readonly isoUpdate: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly resize: { readonly src: string | null } | null } | null } | null } | null } | null, readonly next: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly prev: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null };
 
 type EmployeesComponentQueryVariables = Exact<{ [key: string]: never; }>;
 

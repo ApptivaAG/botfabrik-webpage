@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { composeUrl } from '../util'
+import { ReactNode } from 'react'
 
 const query = graphql`
   query SeoQuery {
@@ -26,6 +27,7 @@ type JSONSchema = {
   description: string
   author: string | undefined
   date: string | undefined
+  update: string | undefined
 }
 const getSchemaOrgJSONLD = ({
   isBlogPost,
@@ -38,6 +40,7 @@ const getSchemaOrgJSONLD = ({
   description,
   author,
   date,
+  update,
 }: JSONSchema) => {
   const schemaOrgJSONLD = [
     {
@@ -97,6 +100,7 @@ const getSchemaOrgJSONLD = ({
             '@id': urlDefault,
           },
           datePublished: date,
+          dateModified: update,
         },
       ]
     : schemaOrgJSONLD
@@ -108,6 +112,7 @@ type BlogPost = {
   slug: string
   author: string
   date: string
+  update: string | null
   isBlogPost: true
   children?: React.ReactNode
 }
@@ -121,17 +126,9 @@ type Page = {
   isBlogPost?: false
   children?: React.ReactNode
 }
-type Props = BlogPost | Page
-const Seo = ({
-  title: titleCurrent,
-  description: descriptionCurrent,
-  image: imageCurrent,
-  slug,
-  author,
-  date,
-  isBlogPost = false,
-  children,
-}: Props) => {
+type Props = (BlogPost | Page) & { children?: ReactNode }
+
+const Seo = (props: Props) => {
   const {
     title: titleDefault,
     description: descriptionDefault,
@@ -141,13 +138,13 @@ const Seo = ({
     fbAppId,
   } = useStaticQuery<Queries.SeoQueryQuery>(query)!.site!.siteMetadata!
 
-  const title = `${titleCurrent} | ${titleDefault}` || titleDefault!
-  const description = descriptionCurrent || descriptionDefault!
-  const url = composeUrl(urlDefault!, slug)
-  const image = urlDefault! + (imageCurrent || imageDefault!)
+  const title = `${props.title} | ${titleDefault}` || titleDefault!
+  const description = props.description || descriptionDefault!
+  const url = composeUrl(urlDefault!, props.slug)
+  const image = urlDefault! + (props.image || imageDefault!)
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
-    isBlogPost,
+    isBlogPost: props.isBlogPost ?? false,
     title,
     titleDefault: titleDefault!,
     image,
@@ -155,8 +152,9 @@ const Seo = ({
     description,
     url,
     urlDefault: urlDefault!,
-    author,
-    date,
+    author: props.author,
+    date: props.date,
+    update: props.isBlogPost ? props.update ?? undefined : undefined,
   })
 
   return (
@@ -180,7 +178,7 @@ const Seo = ({
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
-      {isBlogPost ? (
+      {props.isBlogPost ? (
         <meta property="og:type" content="article" />
       ) : (
         <meta property="og:type" content="website" />
@@ -199,7 +197,7 @@ const Seo = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      {children}
+      {props.children}
     </>
   )
 }
