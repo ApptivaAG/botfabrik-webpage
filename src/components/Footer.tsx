@@ -89,6 +89,9 @@ const Footer = ({ about }: { about: string }) => (
             <li>
               <Link to="/kontakt/">Kontakt</Link>
             </li>
+            <li>
+              <Link to="/jobs/">Jobs</Link>
+            </li>
             <hr />
             <li>
               <Link to="/preisrechner/">Preisrechner</Link>
