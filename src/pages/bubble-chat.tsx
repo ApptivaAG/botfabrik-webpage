@@ -12,12 +12,14 @@ const basicFeatures = [
   'Einfache und übersichtliche Verwaltung von Inhalten',
   'Einsatz von KI (Künstliche Intelligenz)',
   'Einsatz von NLP (Natural Language Processing)',
+  'GPT Features',
   'Vordefinierte Smalltalk-Fähigkeiten',
   'Sprach- und Texteingabe',
   'Analytics und Chatbot KPIs',
   'Mitverfolgung von Konversationen',
   'Handover an Live-Chat',
   'Integration in Webseite',
+  'WhatsApp',
   'Flexibel erweiterbar',
 ]
 
@@ -99,11 +101,20 @@ const BubbleChat = ({ location }: PageProps) => (
 
         <BubbleChatImageFigure>
           <StaticImage
-            alt="Bubble Chat - Absichten verwalten"
-            src="../img/bubble-chat-intents.png"
+            alt="Bubble Chat - Konversationen"
+            src="../img/bubble-chat-conversations.png"
             className="imageStyle"
           />
-          <figcaption>Bubble Chat - Absichten verwalten</figcaption>
+          <figcaption>Bubble Chat - Konversationen</figcaption>
+        </BubbleChatImageFigure>
+
+        <BubbleChatImageFigure>
+          <StaticImage
+            alt="Bubble Chat - Analytics"
+            src="../img/bubble-chat-analytics.png"
+            className="imageStyle"
+          />
+          <figcaption>Bubble Chat - Analytics</figcaption>
         </BubbleChatImageFigure>
 
         <div css="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;">
