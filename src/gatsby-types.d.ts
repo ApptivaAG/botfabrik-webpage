@@ -2977,7 +2977,7 @@ type Query_staticImageArgs = {
   ext: InputMaybe<StringQueryOperatorInput>;
   extension: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
-  ino: InputMaybe<IntQueryOperatorInput>;
+  ino: InputMaybe<FloatQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
   mode: InputMaybe<IntQueryOperatorInput>;
   modifiedTime: InputMaybe<DateQueryOperatorInput>;
@@ -4221,7 +4221,7 @@ type StaticImage = Node & {
   readonly ext: Maybe<Scalars['String']>;
   readonly extension: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
-  readonly ino: Maybe<Scalars['Int']>;
+  readonly ino: Maybe<Scalars['Float']>;
   readonly internal: Internal;
   readonly mode: Maybe<Scalars['Int']>;
   readonly modifiedTime: Maybe<Scalars['Date']>;
@@ -4496,7 +4496,7 @@ type StaticImageFilterInput = {
   readonly ext: InputMaybe<StringQueryOperatorInput>;
   readonly extension: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly ino: InputMaybe<IntQueryOperatorInput>;
+  readonly ino: InputMaybe<FloatQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
   readonly mode: InputMaybe<IntQueryOperatorInput>;
   readonly modifiedTime: InputMaybe<DateQueryOperatorInput>;
