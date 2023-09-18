@@ -10,7 +10,21 @@ import Content, { HTMLContent } from '../components/Content'
 import Seo from '../components/Seo'
 import { Container, Section } from '../styles'
 
-const HeadArea = styled.div``
+const HeadArea = styled.div`
+  figure {
+    margin: 0;
+  }
+  figcaption {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    color: #0006;
+    text-align: center;
+  }
+  a {
+    font-weight: 300;
+    opacity: 0.8;
+  }
+`
 
 const HeaderTitle = styled.h1`
   font-size: 1.8rem;
@@ -25,13 +39,22 @@ const HeaderTitle = styled.h1`
 const Header = ({
   title,
   image,
+  imageAlt,
 }: {
   title: string
   image: IGatsbyImageData | null
+  imageAlt: string | null
 }) => (
   <HeadArea>
     <HeaderTitle dangerouslySetInnerHTML={{ __html: title }} />
-    {image && <GatsbyImage alt={title} loading="eager" image={image} />}
+    {image && (
+      <figure>
+        <GatsbyImage alt={imageAlt ?? title} loading="eager" image={image} />
+        {imageAlt && (
+          <figcaption dangerouslySetInnerHTML={{ __html: imageAlt }} />
+        )}
+      </figure>
+    )}
   </HeadArea>
 )
 
@@ -107,6 +130,7 @@ type BlogPostTemplate = {
     title: string
     image: IGatsbyImageData | null
     imageUrl: string | null
+    imageAlt: string | null
     description: string | null
     author: string
     date: string
@@ -126,13 +150,14 @@ const BlogPostTemplate = ({
   next,
 }: BlogPostTemplate) => {
   const PostContent = renderComponent || Content
-  const { title, image, description, author, date, update, content } = post
+  const { title, image, imageAlt, description, author, date, update, content } =
+    post
 
   return (
     <Layout callToActionDark>
       <Section>
         <Container>
-          <Header title={title} image={image} />
+          <Header title={title} image={image} imageAlt={imageAlt} />
           <Description>{description}</Description>
           {author && <Published author={author} date={date} update={update} />}
           <PostContent content={content} />
@@ -209,6 +234,7 @@ export const mapBlogPostData = (
     author: blogPost.frontmatter.author,
     image: blogPost.frontmatter.image?.childImageSharp?.gatsbyImageData ?? null,
     imageUrl: blogPost.frontmatter.image?.childImageSharp?.resize?.src ?? null,
+    imageAlt: blogPost.frontmatter.imageAlt,
   }
   return blogPostTemplateData
 }
@@ -259,6 +285,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        imageAlt
       }
     }
     next: markdownRemark(id: { eq: $nextId }) {

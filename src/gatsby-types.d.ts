@@ -725,6 +725,7 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.frontmatter.description'
   | 'childMarkdownRemark.frontmatter.education'
   | 'childMarkdownRemark.frontmatter.id'
+  | 'childMarkdownRemark.frontmatter.imageAlt'
   | 'childMarkdownRemark.frontmatter.image.absolutePath'
   | 'childMarkdownRemark.frontmatter.image.accessTime'
   | 'childMarkdownRemark.frontmatter.image.atime'
@@ -1006,6 +1007,7 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.frontmatter.description'
   | 'childrenMarkdownRemark.frontmatter.education'
   | 'childrenMarkdownRemark.frontmatter.id'
+  | 'childrenMarkdownRemark.frontmatter.imageAlt'
   | 'childrenMarkdownRemark.frontmatter.image.absolutePath'
   | 'childrenMarkdownRemark.frontmatter.image.accessTime'
   | 'childrenMarkdownRemark.frontmatter.image.atime'
@@ -2154,6 +2156,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.description'
   | 'frontmatter.education'
   | 'frontmatter.id'
+  | 'frontmatter.imageAlt'
   | 'frontmatter.image.absolutePath'
   | 'frontmatter.image.accessTime'
   | 'frontmatter.image.atime'
@@ -2434,6 +2437,7 @@ type MarkdownRemarkFrontmatter = {
   readonly education: Maybe<Scalars['String']>;
   readonly id: Maybe<Scalars['Int']>;
   readonly image: Maybe<File>;
+  readonly imageAlt: Maybe<Scalars['String']>;
   readonly inline_featured_image: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly name: Maybe<Scalars['String']>;
   readonly permalink: Maybe<Scalars['String']>;
@@ -2501,6 +2505,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly education: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<IntQueryOperatorInput>;
   readonly image: InputMaybe<FileFilterInput>;
+  readonly imageAlt: InputMaybe<StringQueryOperatorInput>;
   readonly inline_featured_image: InputMaybe<StringQueryOperatorInput>;
   readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly permalink: InputMaybe<StringQueryOperatorInput>;
@@ -4600,7 +4605,7 @@ type BlogPostTemplateQueryVariables = Exact<{
 }>;
 
 
-type BlogPostTemplateQuery = { readonly markdownRemark: { readonly id: string, readonly html: string | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly date: string | null, readonly update: string | null, readonly permalink: string | null, readonly isoDate: string | null, readonly isoUpdate: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly resize: { readonly src: string | null } | null } | null } | null } | null } | null, readonly next: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly prev: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null };
+type BlogPostTemplateQuery = { readonly markdownRemark: { readonly id: string, readonly html: string | null, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly description: string | null, readonly author: string | null, readonly date: string | null, readonly update: string | null, readonly permalink: string | null, readonly imageAlt: string | null, readonly isoDate: string | null, readonly isoUpdate: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData, readonly resize: { readonly src: string | null } | null } | null } | null } | null } | null, readonly next: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly prev: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly title: string | null, readonly permalink: string | null, readonly date: string | null, readonly image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null };
 
 type EmployeesComponentQueryVariables = Exact<{ [key: string]: never; }>;
 
