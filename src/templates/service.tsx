@@ -33,7 +33,6 @@ const ServiceTemplate = ({ content, contentComponent, metaData }) => {
   `
   return (
     <Layout callToActionDark>
-      <Seo title={title} description={subtitle} slug={permalink} />
       <Section>
         <Container>
           <Header title={title} />
