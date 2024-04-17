@@ -1,3 +1,388 @@
 [build]
 publish = "public"
 command = "pnpm run build"
+
+[[redirects]]
+  from = "/blog/kein-aufwand-fuer-aufsetzen-und-pflegen-von-chatbots"
+  to = "https://apptiva.ch/blog/kein-aufwand-fuer-aufsetzen-und-pflegen-von-chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/chat-als-schnittstelle-zu-informationen"
+  to = "https://apptiva.ch/blog/chat-als-schnittstelle-zu-informationen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/unternehmens-chatbots-mit-chat-gpt" 
+  to = "https://apptiva.ch/blog/unternehmens-chatbots-mit-chat-gpt" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/hybrid-chatbots"
+  to = "https://apptiva.ch/blog/hybrid-chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/post-chatbot"
+  to = "https://apptiva.ch/blog/post-chatbot" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/akso-chatbot"
+  to = "https://apptiva.ch/blog/akso-chatbot" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/einblicke-in-die-kundenbeduerfnisse-erhalten"
+  to = "https://apptiva.ch/blog/einblicke-in-die-kundenbeduerfnisse-erhalten" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2021/03/08/chatbots-in-der-schweiz-hosten"
+  to = "https://apptiva.ch/blog/chatbots-in-der-schweiz-hosten" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/chatbot-metriken"
+  to = "https://apptiva.ch/blog/chatbot-metriken" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/roche-lehrstellen-chatbot"
+  to = "https://apptiva.ch/blog/roche-lehrstellen-chatbot" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/suva-chatbot-fuer-abredeversicherung"
+  to = "https://apptiva.ch/blog/suva-chatbot-fuer-abredeversicherung" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/technischer-aufbau-von-chatbots"
+  to = "https://apptiva.ch/blog/technischer-aufbau-von-chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2019/11/08/chatbot-mit-spracheingabe-steuern"
+  to = "https://apptiva.ch/blog/chatbot-mit-spracheingabe-steuern" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2019/03/08/alexa-skill-pollenprognose-schweiz"
+  to = "https://apptiva.ch/blog/alexa-skill-pollenprognose-schweiz/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/12/19/der-bot-dein-freund-und-helfer"
+  to = "https://apptiva.ch/blog/der-bot-dein-freund-und-helfer/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/12/17/chatbot-konversationsstraenge-wie-geht-denn-das"
+  to = "https://apptiva.ch/blog/chatbot-konversationsstraenge-wie-geht-denn-das/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/07/26/ein-chatbot-am-empfang"
+  to = "https://apptiva.ch/blog/ein-chatbot-am-empfang/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/07/24/zeig-mir-meine-huefte-von-gestern"
+  to = "https://apptiva.ch/blog/zeig-mir-meine-huefte-von-gestern/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/07/09/auch-bots-haben-gefuehle"
+  to = "https://apptiva.ch/blog/auch-bots-haben-gefuehle/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/05/17/training-von-chatbots"
+  to = "https://apptiva.ch/blog/training-von-chatbots/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/05/08/facebook-chatbot-unterhaltung-an-echte-person-uebergeben"
+  to = "https://apptiva.ch/blog/facebook-chatbot-unterhaltung-an-echte-person-uebergeben/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/04/03/was-kostet-ein-chatbot"
+  to = "https://apptiva.ch/blog/was-kostet-ein-chatbot/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2018/01/08/chatbot-fuer-skype-for-business"
+  to = "https://apptiva.ch/blog/chatbot-fuer-skype-for-business/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2017/10/31/kundendienst-chatbot-der-sanagate"
+  to = "https://apptiva.ch/blog/kundendienst-chatbot-der-sanagate/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2017/07/20/allianz-cinema-chatbot"
+  to = "https://apptiva.ch/blog/allianz-cinema-chatbot/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2017/07/11/pit-antwortet-jetzt-auch-im-facebook-messenger"
+  to = "https://apptiva.ch/blog/pit-antwortet-jetzt-auch-im-facebook-messenger/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog/2017/06/23/den-patiente-begleiten-mit-einem-chatbot"
+  to = "https://apptiva.ch/blog/den-patiente-begleiten-mit-einem-chatbot/" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/bestell-und-postsales-bot"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/bot-beispiele"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/e-commerce-bot"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/faq-bot"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/kundendienst-bot"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/plattformen"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/produktivitaets-bot"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/projekte"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/technologien"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/vorgehen"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/werbe-bot"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/apptiva"
+  to = "https://apptiva.ch/ueber-uns" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/chatbot-check"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/kennenlern-angebot"
+  to = "https://apptiva.ch/angebot/chatbots/kennenlern-angebot" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/betrieb"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/chatgpt-plugins"
+  to = "https://apptiva.ch/blog/implementierung-von-chatgpt-plugins" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/entwicklung"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/integration"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/can"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/inhalte-erarbeiten"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/training"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen/live-chat"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq/akquise-bot"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/datenschutzerklaerung"
+  to = "https://apptiva.ch/datenschutzerklaerung" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/blog"
+  to = "https://apptiva.ch/blog" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/bubble-chat"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/bubblechat-ausprobieren"
+  to = "https://apptiva.ch/angebot/chatbots/demo-vereinbaren" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/bubblechat-bestellen"
+  to = "https://apptiva.ch/angebot/chatbots/demo-vereinbaren" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/dienstleistungen"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/faq"
+  to = "https://apptiva.ch/wissen" 
+  force=true
+  status=301
+
+
+[[redirects]]
+  from = ""
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/jobs"
+  to = "https://apptiva.ch/ueber-uns" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/kontakt"
+  to = "https://apptiva.ch/kontakt" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/preisrechner"
+  to = "https://apptiva.ch/angebot/chatbots" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/tracking"
+  to = "https://apptiva.ch" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/ueber-uns"
+  to = "https://apptiva.ch/ueber-uns" 
+  force=true
+  status=301
+
+[[redirects]]
+  from = "/*" 
+  to = "https://apptiva.ch/:splat"
+  force = true
+  status = 301
