@@ -344,13 +344,6 @@ command = "pnpm run build"
   force=true
   status=301
 
-
-[[redirects]]
-  from = ""
-  to = "https://apptiva.ch/angebot/chatbots" 
-  force=true
-  status=301
-
 [[redirects]]
   from = "/jobs"
   to = "https://apptiva.ch/ueber-uns" 
@@ -366,12 +359,6 @@ command = "pnpm run build"
 [[redirects]]
   from = "/preisrechner"
   to = "https://apptiva.ch/angebot/chatbots" 
-  force=true
-  status=301
-
-[[redirects]]
-  from = "/tracking"
-  to = "https://apptiva.ch" 
   force=true
   status=301
 
