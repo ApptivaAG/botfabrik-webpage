@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "pnpm run build"
+command = "pnpm start"
 
 [[redirects]]
   from = "/blog/kein-aufwand-fuer-aufsetzen-und-pflegen-von-chatbots"
