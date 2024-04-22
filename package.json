@@ -9,7 +9,7 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "start": "echo \"Error: no script specified\"",
+    "build": "echo \"No build needed\"",
     "dev": "netlify dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
