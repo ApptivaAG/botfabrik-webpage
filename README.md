@@ -1,5 +1,7 @@
 # Botfabrik Webpage
 
+Moved to apptiva.ch -> <https://github.com/ApptivaAG/apptiva-webpage>
+
 ## Dev
 
 - Use PNPM to manage dependencies. If you use NIX shell it is installed automatically by direnv. Otherwise go to <https://pnpm.io> to install it on your machine.
